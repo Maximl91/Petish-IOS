@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F43C886D273167AE00A98C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C886C273167AE00A98C95 /* AppDelegate.swift */; };
 		F43C886F273167AE00A98C95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C886E273167AE00A98C95 /* SceneDelegate.swift */; };
-		F43C8871273167AE00A98C95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C8870273167AE00A98C95 /* ViewController.swift */; };
+		F43C8871273167AE00A98C95 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C8870273167AE00A98C95 /* OnboardingViewController.swift */; };
 		F43C8874273167AE00A98C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43C8872273167AE00A98C95 /* Main.storyboard */; };
 		F43C8876273167AF00A98C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43C8875273167AF00A98C95 /* Assets.xcassets */; };
 		F43C8879273167AF00A98C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		F43C8869273167AE00A98C95 /* Petish-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Petish-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43C886C273167AE00A98C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F43C886E273167AE00A98C95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F43C8870273167AE00A98C95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F43C8870273167AE00A98C95 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F43C8873273167AE00A98C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F43C8875273167AF00A98C95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F43C8878273167AF00A98C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,31 @@
 		F43C886B273167AE00A98C95 /* Petish-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F43C8880273175A500A98C95 /* Controller */,
+				F43C8881273175B100A98C95 /* View */,
 				F43C886C273167AE00A98C95 /* AppDelegate.swift */,
 				F43C886E273167AE00A98C95 /* SceneDelegate.swift */,
-				F43C8870273167AE00A98C95 /* ViewController.swift */,
-				F43C8872273167AE00A98C95 /* Main.storyboard */,
 				F43C8875273167AF00A98C95 /* Assets.xcassets */,
-				F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */,
 				F43C887A273167AF00A98C95 /* Info.plist */,
 			);
 			path = "Petish-iOS";
+			sourceTree = "<group>";
+		};
+		F43C8880273175A500A98C95 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F43C8870273167AE00A98C95 /* OnboardingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F43C8881273175B100A98C95 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F43C8872273167AE00A98C95 /* Main.storyboard */,
+				F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F43C8871273167AE00A98C95 /* ViewController.swift in Sources */,
+				F43C8871273167AE00A98C95 /* OnboardingViewController.swift in Sources */,
 				F43C886D273167AE00A98C95 /* AppDelegate.swift in Sources */,
 				F43C886F273167AE00A98C95 /* SceneDelegate.swift in Sources */,
 			);
