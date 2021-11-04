@@ -8,6 +8,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFCompactDisplay-Medium.otf">
+            <string>SFCompactDisplay-Medium</string>
+        </array>
+        <array key="SFProText-Medium.otf">
+            <string>SFProText-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Onboarding-->
         <scene sceneID="tne-QT-ifu">
@@ -20,15 +28,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30j-IR-q9s">
                                 <rect key="frame" x="335" y="66" width="60" height="5"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="SKIP">
-                                            <attributes>
-                                                <font key="NSFont" size="16" name="SFMono-Medium"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <buttonConfiguration key="configuration" style="plain" title="SKIP">
+                                    <fontDescription key="titleFontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                     <color key="baseForegroundColor" name="violetBlue"/>
                                 </buttonConfiguration>
                             </button>
@@ -38,15 +39,8 @@
                                     <constraint firstAttribute="height" constant="65" id="f5G-T5-UfE"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="NEXT">
-                                            <attributes>
-                                                <font key="NSFont" size="16" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <buttonConfiguration key="configuration" style="filled" title="NEXT">
+                                    <fontDescription key="titleFontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="16"/>
                                     <color key="baseBackgroundColor" name="violetBlue"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -54,37 +48,25 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hz2-0F-RJ7">
-                                <rect key="frame" x="0.0" y="269.5" width="414" height="445.5"/>
+                                <rect key="frame" x="0.0" y="251.5" width="414" height="463.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="468.5" id="q0M-Re-adH"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="H8l-ei-eRb">
-                                    <size key="itemSize" width="300" height="350"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
+                                <collectionViewLayout key="collectionViewLayout" id="1yX-19-tYn"/>
                                 <cells/>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tm-Iz-GYB">
-                                <rect key="frame" x="92" y="128" width="230" height="31.5"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Description">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="28" name=".SFNS-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tm-Iz-GYB">
+                                <rect key="frame" x="92" y="128" width="230" height="33.5"/>
+                                <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8b-kR-TkP">
-                                <rect key="frame" x="42" y="169.5" width="330" height="45"/>
+                                <rect key="frame" x="42" y="171.5" width="330" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="eqA-2J-pDr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
                                 <color key="textColor" name="battleshipGrey"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -117,7 +99,7 @@
                             <constraint firstItem="30j-IR-q9s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="335" id="tcb-YM-VyM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="30j-IR-q9s" secondAttribute="trailing" constant="19" id="txA-RP-a7e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J2Q-7A-uSF" secondAttribute="trailing" constant="18.5" id="xW4-GU-Aif"/>
-                            <constraint firstItem="Hz2-0F-RJ7" firstAttribute="top" secondItem="c8b-kR-TkP" secondAttribute="bottom" constant="55" id="za9-Bp-dyA"/>
+                            <constraint firstItem="Hz2-0F-RJ7" firstAttribute="top" secondItem="c8b-kR-TkP" secondAttribute="bottom" constant="35" id="za9-Bp-dyA"/>
                         </constraints>
                     </view>
                     <connections>
@@ -131,26 +113,91 @@
             </objects>
             <point key="canvasLocation" x="111.59420289855073" y="107.8125"/>
         </scene>
-        <!--View Controller-->
+        <!--SignUpIn-->
         <scene sceneID="faE-K6-Ule">
             <objects>
-                <viewController id="WJM-Zw-MhU" sceneMemberID="viewController">
+                <viewController id="WJM-Zw-MhU" userLabel="SignUpIn" customClass="SignUpInViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bV3-pi-ng4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="WXB-hi-omT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiP-sw-X7N">
+                                <rect key="frame" x="295.5" y="68" width="104.5" height="30.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="NO THANKS">
+                                    <fontDescription key="titleFontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                    <color key="baseForegroundColor" name="violetBlue"/>
+                                </buttonConfiguration>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dxU-tU-uE1">
+                                <rect key="frame" x="48" y="674" width="318" height="112"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ux5-EM-ouu">
+                                        <rect key="frame" x="0.0" y="0.0" width="318" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="nua-Lt-yeV"/>
+                                        </constraints>
+                                        <size key="titleShadowOffset" width="0.0" height="2"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="LOGIN" titleAlignment="center">
+                                            <backgroundConfiguration key="background" cornerRadius="8" strokeWidth="1.5">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="strokeColor" name="violetBlue"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="18"/>
+                                            <color key="baseForegroundColor" name="violetBlue"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY3-1l-njI">
+                                        <rect key="frame" x="0.0" y="64" width="318" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="vaC-WH-XpL"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="CREATE AN ACCOUNT">
+                                            <backgroundConfiguration key="background" cornerRadius="8" strokeWidth="1.5">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="strokeColor" name="violetBlue"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="18"/>
+                                            <color key="baseForegroundColor" name="violetBlue"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="obZ-ci-Rz5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OiP-sw-X7N" firstAttribute="top" secondItem="obZ-ci-Rz5" secondAttribute="top" constant="24" id="7Pj-H5-mEG"/>
+                            <constraint firstItem="obZ-ci-Rz5" firstAttribute="trailing" secondItem="dxU-tU-uE1" secondAttribute="trailing" constant="48" id="JTR-eE-b5J"/>
+                            <constraint firstItem="obZ-ci-Rz5" firstAttribute="bottom" secondItem="dxU-tU-uE1" secondAttribute="bottom" constant="76" id="K0G-Si-RpB"/>
+                            <constraint firstItem="dxU-tU-uE1" firstAttribute="leading" secondItem="obZ-ci-Rz5" secondAttribute="leading" constant="48" id="OjP-DT-8SO"/>
+                            <constraint firstItem="obZ-ci-Rz5" firstAttribute="trailing" secondItem="OiP-sw-X7N" secondAttribute="trailing" constant="14" id="S8u-UG-7aG"/>
+                            <constraint firstAttribute="bottom" secondItem="WXB-hi-omT" secondAttribute="bottom" id="V4Y-SL-mts"/>
+                            <constraint firstItem="WXB-hi-omT" firstAttribute="trailing" secondItem="obZ-ci-Rz5" secondAttribute="trailing" id="W55-PN-MG9"/>
+                            <constraint firstItem="WXB-hi-omT" firstAttribute="leading" secondItem="obZ-ci-Rz5" secondAttribute="leading" id="WGt-fm-rVA"/>
+                            <constraint firstItem="WXB-hi-omT" firstAttribute="top" secondItem="bV3-pi-ng4" secondAttribute="top" id="xQr-N0-hfd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g2R-CA-nGz"/>
+                    <connections>
+                        <outlet property="createAccButton" destination="XY3-1l-njI" id="RJX-eb-ipz"/>
+                        <outlet property="loginButton" destination="ux5-EM-ouu" id="YeX-AJ-61L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cds-GR-Nxc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="963.76811594202911" y="112.5"/>
+            <point key="canvasLocation" x="871" y="108"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Rectangle 2" width="373" height="667"/>
         <namedColor name="battleshipGrey">
-            <color red="0.45882352941176469" green="0.47843137254901957" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.45899999141693115" green="0.4779999852180481" blue="0.49799999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="pinkishGrey">
             <color red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
