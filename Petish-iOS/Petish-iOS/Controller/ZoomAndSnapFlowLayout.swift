@@ -2,7 +2,7 @@ import UIKit
 
 class ZoomAndSnapFlowLayout: UICollectionViewFlowLayout {
 
-    let activeDistance: CGFloat = 100
+    let activeDistance: CGFloat = 150
     let zoomFactor: CGFloat = 0.2
 
     override init() {
@@ -10,8 +10,8 @@ class ZoomAndSnapFlowLayout: UICollectionViewFlowLayout {
 
         scrollDirection = .horizontal
         minimumLineSpacing = 15
-        minimumInteritemSpacing = 15
-        itemSize = CGSize(width: 300, height: 380)
+        minimumInteritemSpacing = 0
+        itemSize = CGSize(width: 300, height: 400)
     }
 
     required init?(coder aDecoder: NSCoder) {
