@@ -19,6 +19,8 @@
 		F4D7C66F27341834002A6F07 /* SignUpInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C66D27341834002A6F07 /* SignUpInViewController.swift */; };
 		F4D7C67227341841002A6F07 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C67027341841002A6F07 /* Constants.swift */; };
 		F4F021B72734199B00776CF5 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F021B62734199B00776CF5 /* OnboardingData.swift */; };
+		F4F021BB27341A6C00776CF5 /* SFCompactDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4F021B927341A6C00776CF5 /* SFCompactDisplay-Medium.otf */; };
+		F4F021BC27341A6C00776CF5 /* SFProText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4F021BA27341A6C00776CF5 /* SFProText-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		F4D7C66D27341834002A6F07 /* SignUpInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInViewController.swift; sourceTree = "<group>"; };
 		F4D7C67027341841002A6F07 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F4F021B62734199B00776CF5 /* OnboardingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
+		F4F021B927341A6C00776CF5 /* SFCompactDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Medium.otf"; sourceTree = "<group>"; };
+		F4F021BA27341A6C00776CF5 /* SFProText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		F43C886B273167AE00A98C95 /* Petish-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F4F021B8273419FD00776CF5 /* Fonts */,
 				F4F021B22734196800776CF5 /* Model */,
 				F4F021B32734196D00776CF5 /* ViewModel */,
 				F43C8880273175A500A98C95 /* Controller */,
@@ -94,10 +99,10 @@
 		F43C8881273175B100A98C95 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F4D7C6682734182D002A6F07 /* PhotoCell.swift */,
-				F4D7C6692734182D002A6F07 /* PhotoCell.xib */,
 				F43C8872273167AE00A98C95 /* Main.storyboard */,
 				F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */,
+				F4D7C6692734182D002A6F07 /* PhotoCell.xib */,
+				F4D7C6682734182D002A6F07 /* PhotoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +120,15 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F4F021B8273419FD00776CF5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F4F021B927341A6C00776CF5 /* SFCompactDisplay-Medium.otf */,
+				F4F021BA27341A6C00776CF5 /* SFProText-Medium.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,7 +191,9 @@
 			files = (
 				F4D7C66B2734182D002A6F07 /* PhotoCell.xib in Resources */,
 				F43C8879273167AF00A98C95 /* LaunchScreen.storyboard in Resources */,
+				F4F021BC27341A6C00776CF5 /* SFProText-Medium.otf in Resources */,
 				F43C8876273167AF00A98C95 /* Assets.xcassets in Resources */,
+				F4F021BB27341A6C00776CF5 /* SFCompactDisplay-Medium.otf in Resources */,
 				F43C8874273167AE00A98C95 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
