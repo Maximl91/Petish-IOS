@@ -24,12 +24,11 @@ class OnboardingViewController: UIViewController {
     func configureCollectionView(){
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.collectionViewLayout = ZoomAndSnapFlowLayout()
+        collectionView.collectionViewLayout = ZoomAndSnapFlowLayout(collection: collectionView)
         collectionView.isPagingEnabled = false
         registerCollectionCells()
     }
 }
-
 // MARK: - UICollectionViewDataSource
 
 extension OnboardingViewController: UICollectionViewDataSource, UICollectionViewDelegate{
@@ -57,3 +56,11 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         currentPagingView(index: indexInBounds)
     }
 }
+
+// MARK: - UICollection Item size
+//extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: collectionView.bounds.width*0.76, height: collectionView.bounds.height*0.7)
+//    }
+//}
+
