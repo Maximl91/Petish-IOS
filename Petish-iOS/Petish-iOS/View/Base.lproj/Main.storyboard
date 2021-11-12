@@ -49,10 +49,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQK-vA-SNW">
-                                <rect key="frame" x="0.0" y="258" width="414" height="469"/>
+                                <rect key="frame" x="0.0" y="241" width="414" height="486"/>
                                 <subviews>
                                     <collectionView multipleTouchEnabled="YES" contentMode="center" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hz2-0F-RJ7">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="469"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="486"/>
                                         <collectionViewLayout key="collectionViewLayout" id="1yX-19-tYn"/>
                                         <cells/>
                                     </collectionView>
@@ -66,13 +66,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tm-Iz-GYB">
-                                <rect key="frame" x="72" y="154" width="270" height="33.5"/>
+                                <rect key="frame" x="72" y="137" width="270" height="33.5"/>
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="28"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8b-kR-TkP">
-                                <rect key="frame" x="42" y="197.5" width="330" height="45"/>
+                                <rect key="frame" x="42" y="180.5" width="330" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="eqA-2J-pDr"/>
                                 </constraints>
@@ -97,7 +97,7 @@
                             <constraint firstItem="c8b-kR-TkP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="N2a-WB-n9S"/>
                             <constraint firstItem="zQK-vA-SNW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OaX-16-fCh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="J2Q-7A-uSF" secondAttribute="bottom" constant="17.5" id="Sm4-Oo-G7D"/>
-                            <constraint firstItem="7Tm-Iz-GYB" firstAttribute="top" secondItem="30j-IR-q9s" secondAttribute="bottom" constant="57" id="SmY-8Q-NJS"/>
+                            <constraint firstItem="7Tm-Iz-GYB" firstAttribute="top" secondItem="30j-IR-q9s" secondAttribute="bottom" constant="40" id="SmY-8Q-NJS"/>
                             <constraint firstItem="J2Q-7A-uSF" firstAttribute="top" secondItem="H6H-7t-lEc" secondAttribute="bottom" constant="18.5" id="XtS-G3-wu2"/>
                             <constraint firstItem="zQK-vA-SNW" firstAttribute="top" secondItem="c8b-kR-TkP" secondAttribute="bottom" constant="15.5" id="dHG-3f-WPd"/>
                             <constraint firstItem="zQK-vA-SNW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gvq-iB-vwc"/>

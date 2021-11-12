@@ -4,23 +4,15 @@ class ZoomAndSnapFlowLayout: UICollectionViewFlowLayout {
 
     let activeDistance: CGFloat = 150
     let zoomFactor: CGFloat = 0.15
-
-    override init() {
-        super.init()
-
-        scrollDirection = .horizontal
-        minimumLineSpacing = 15
-        minimumInteritemSpacing = 15
-        itemSize = CGSize(width: 300, height: 400)
-    }
     
     init(collection: UICollectionView) {
         super.init()
 
         scrollDirection = .horizontal
-        minimumLineSpacing = 10
-        minimumInteritemSpacing = 10
-        itemSize = CGSize(width: collection.frame.width*0.70, height: 400)
+        minimumLineSpacing = 0
+        minimumInteritemSpacing = 0
+        itemSize = CGSize(width: UIScreen.main.bounds.width*0.75, height: UIScreen.main.bounds.height*0.45)
+
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -29,11 +21,10 @@ class ZoomAndSnapFlowLayout: UICollectionViewFlowLayout {
 
     override func prepare() {
         guard let collectionView = collectionView else { fatalError() }
-        let leftScreenSizeOffset = collectionView.frame.width*0.015
       
         let verticalInsets = (collectionView.frame.height - collectionView.adjustedContentInset.top - collectionView.adjustedContentInset.bottom - itemSize.height) / 2
         let horizontalInsets = (collectionView.frame.width - collectionView.adjustedContentInset.right - collectionView.adjustedContentInset.left - itemSize.width) / 2
-        sectionInset = UIEdgeInsets(top: verticalInsets, left: horizontalInsets-leftScreenSizeOffset, bottom: verticalInsets, right: horizontalInsets)
+        sectionInset = UIEdgeInsets(top: verticalInsets, left: horizontalInsets, bottom: verticalInsets, right: horizontalInsets)
 
         super.prepare()
     }
@@ -68,7 +59,7 @@ class ZoomAndSnapFlowLayout: UICollectionViewFlowLayout {
         let horizontalCenter = proposedContentOffset.x + collectionView.frame.width / 2
         
         for layoutAttributes in rectAttributes {
-            let itemHorizontalCenter = layoutAttributes.center.x+5
+            let itemHorizontalCenter = layoutAttributes.center.x
             if (itemHorizontalCenter - horizontalCenter).magnitude < offsetAdjustment.magnitude {
                 offsetAdjustment = itemHorizontalCenter - horizontalCenter
             }
