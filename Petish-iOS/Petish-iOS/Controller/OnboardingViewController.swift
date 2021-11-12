@@ -56,11 +56,3 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         currentPagingView(index: indexInBounds)
     }
 }
-
-// MARK: - UICollection Item size
-//extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: collectionView.bounds.width*0.76, height: collectionView.bounds.height*0.7)
-//    }
-//}
-

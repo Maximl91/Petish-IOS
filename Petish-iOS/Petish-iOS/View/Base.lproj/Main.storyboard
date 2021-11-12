@@ -36,16 +36,14 @@
                                     <segue destination="WJM-Zw-MhU" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="eZp-1O-8ni"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2Q-7A-uSF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2Q-7A-uSF" customClass="PurpleButton" customModule="Petish_iOS" customModuleProvider="target">
                                 <rect key="frame" x="18.5" y="779.5" width="377" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="f5G-T5-UfE"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="NEXT">
-                                    <fontDescription key="titleFontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="16"/>
-                                    <color key="baseBackgroundColor" name="violetBlue"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="NEXT"/>
                                 <connections>
                                     <segue destination="WJM-Zw-MhU" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="6DJ-Wu-QJ2"/>
                                 </connections>
@@ -84,7 +82,7 @@
                             </label>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" defersCurrentPageDisplay="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="H6H-7t-lEc">
                                 <rect key="frame" x="129.5" y="735" width="155" height="26"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="pageIndicatorTintColor" name="pinkishGrey"/>
                                 <color key="currentPageIndicatorTintColor" name="violetBlue"/>
                             </pageControl>
@@ -92,7 +90,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c8b-kR-TkP" secondAttribute="trailing" constant="42" id="8fH-TV-fhN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c8b-kR-TkP" secondAttribute="trailing" constant="42" id="8fH-TV-fhN"/>
                             <constraint firstItem="c8b-kR-TkP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8tc-Mm-g3A"/>
                             <constraint firstItem="J2Q-7A-uSF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18.5" id="Jhv-9d-bDd"/>
                             <constraint firstItem="c8b-kR-TkP" firstAttribute="top" secondItem="7Tm-Iz-GYB" secondAttribute="bottom" constant="10" id="LvH-fp-VGr"/>
@@ -201,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cds-GR-Nxc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="108"/>
+            <point key="canvasLocation" x="869.56521739130437" y="107.8125"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

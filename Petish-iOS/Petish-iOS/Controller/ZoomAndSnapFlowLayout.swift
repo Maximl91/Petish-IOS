@@ -16,8 +16,7 @@ class ZoomAndSnapFlowLayout: UICollectionViewFlowLayout {
     
     init(collection: UICollectionView) {
         super.init()
-        print(collection.frame.height*0.8)
-        print(collection.frame.width*0.69)
+
         scrollDirection = .horizontal
         minimumLineSpacing = 10
         minimumInteritemSpacing = 10
