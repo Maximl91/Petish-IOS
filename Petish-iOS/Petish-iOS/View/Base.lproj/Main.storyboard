@@ -140,6 +140,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="NO THANKS">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="pmp-Q7-8X1" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="GqU-yh-E41"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dxU-tU-uE1">
                                 <rect key="frame" x="48" y="479" width="279" height="112"/>
@@ -211,13 +214,46 @@
                     <view key="view" contentMode="scaleToFill" id="NsK-VP-m0k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGIN PAGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPY-M7-VmA">
+                                <rect key="frame" x="139" y="91" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xv1-q0-NPj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ed6-r0-PF9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857" y="-285"/>
+            <point key="canvasLocation" x="2649" y="-173"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="4uR-AW-NNq">
+            <objects>
+                <viewController id="pmp-Q7-8X1" userLabel="Home" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="45Z-4J-2vf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOME PAGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uz2-6n-TB0">
+                                <rect key="frame" x="139" y="98" width="96" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hg9-xn-y50"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lin-YF-ddj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3617" y="587"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="9Qu-Cw-7oY">
@@ -228,58 +264,171 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7t-DS-9PG" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="289" y="24" width="70" height="31"/>
+                                <rect key="frame" x="304.5" y="16" width="54.5" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="uhz-dp-aXY"/>
+                                    <constraint firstAttribute="height" constant="40" id="jqX-hd-2WY"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="SKIP"/>
+                                <connections>
+                                    <segue destination="pmp-Q7-8X1" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Mer-Ik-enP"/>
+                                </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ClH-pv-gxz">
+                                <rect key="frame" x="30" y="205" width="315" height="180"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vt3-7E-4pQ" customClass="BottomBorderTextField" customModule="Petish_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="m0c-mM-ckH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Phq-WU-ghD" customClass="BottomBorderTextField" customModule="Petish_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70" width="315" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="hqi-Tl-rFz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y7B-pp-Scb" customClass="BottomBorderTextField" customModule="Petish_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="140" width="315" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="S4J-Vb-Yui"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbp-D5-4JD">
+                                <rect key="frame" x="72" y="401" width="269.5" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="GmM-lF-xNg"/>
+                                </constraints>
+                                <string key="text">By signing up you agree to the terms of 
+service and privacy policy</string>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                <color key="textColor" name="gray151"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ifT-sL-cRN">
+                                <rect key="frame" x="31" y="475" width="311" height="112"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5H-kn-9JW" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Ab1-y5-J1F"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SIGN UP"/>
+                                        <connections>
+                                            <action selector="signupPressed:" destination="GK3-uX-X9m" eventType="touchUpInside" id="yiM-Ny-zXl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwb-9z-67I">
+                                        <rect key="frame" x="0.0" y="64" width="311" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="rse-Kf-xkO"/>
+                                        </constraints>
+                                        <size key="titleShadowOffset" width="0.0" height="2"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Sign up with Facebook" titleAlignment="center">
+                                            <backgroundConfiguration key="background" cornerRadius="8" strokeWidth="1.5">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="strokeColor" name="violetBlue"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="16"/>
+                                            <color key="baseForegroundColor" name="violetBlue"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="withFacebookPressed:" destination="GK3-uX-X9m" eventType="touchUpInside" id="JUb-0D-hlF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cwb-9z-67I" secondAttribute="trailing" id="3gh-0e-Et8"/>
+                                    <constraint firstItem="cwb-9z-67I" firstAttribute="leading" secondItem="ifT-sL-cRN" secondAttribute="leading" id="B0M-yS-pVc"/>
+                                    <constraint firstItem="G5H-kn-9JW" firstAttribute="leading" secondItem="ifT-sL-cRN" secondAttribute="leading" id="LDe-qe-TWR"/>
+                                    <constraint firstItem="cwb-9z-67I" firstAttribute="top" secondItem="G5H-kn-9JW" secondAttribute="bottom" constant="16" id="bHP-Uy-R5Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="G5H-kn-9JW" secondAttribute="trailing" id="yd8-Gn-Zj6"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJ1-9e-fPf">
+                                <rect key="frame" x="67" y="612" width="241" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I already have an account." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8Z-NL-MHO">
+                                        <rect key="frame" x="0.0" y="0.0" width="181.5" height="31"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
+                                        <color key="textColor" name="battleshipGray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfc-Ga-B2Q" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="181.5" y="0.0" width="59.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                        <connections>
+                                            <segue destination="NS1-xm-8Tk" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="k98-uF-HMo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocb-Uz-j44">
-                                <rect key="frame" x="31" y="98" width="160.5" height="67"/>
+                                <rect key="frame" x="31" y="76" width="160.5" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="ijB-g5-nkw"/>
+                                </constraints>
                                 <string key="text">Create
 Your account</string>
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vt3-7E-4pQ" customClass="BottomBorderTextField" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="30" y="227" width="315" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="m0c-mM-ckH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Y6-LZ-avh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ifT-sL-cRN" firstAttribute="leading" secondItem="4Y6-LZ-avh" secondAttribute="leading" constant="31" id="6lX-Z1-QkY"/>
+                            <constraint firstItem="ClH-pv-gxz" firstAttribute="leading" secondItem="4Y6-LZ-avh" secondAttribute="leading" constant="30" id="8Qm-6Q-BWG"/>
+                            <constraint firstItem="bbp-D5-4JD" firstAttribute="leading" secondItem="4Y6-LZ-avh" secondAttribute="leading" constant="72" id="DF0-Fg-csl"/>
                             <constraint firstItem="4Y6-LZ-avh" firstAttribute="trailing" secondItem="D7t-DS-9PG" secondAttribute="trailing" constant="16" id="Dat-3M-Keg"/>
-                            <constraint firstItem="vt3-7E-4pQ" firstAttribute="leading" secondItem="4Y6-LZ-avh" secondAttribute="leading" constant="30" id="OeQ-iw-BjD"/>
-                            <constraint firstItem="4Y6-LZ-avh" firstAttribute="trailing" secondItem="vt3-7E-4pQ" secondAttribute="trailing" constant="30" id="UR5-vw-JgK"/>
-                            <constraint firstItem="ocb-Uz-j44" firstAttribute="top" secondItem="D7t-DS-9PG" secondAttribute="bottom" constant="43" id="cPo-zP-foh"/>
+                            <constraint firstItem="ocb-Uz-j44" firstAttribute="top" secondItem="D7t-DS-9PG" secondAttribute="bottom" constant="20" id="Mec-RS-x8m"/>
+                            <constraint firstItem="4Y6-LZ-avh" firstAttribute="bottom" secondItem="RJ1-9e-fPf" secondAttribute="bottom" constant="24" id="Tcz-cx-XcR"/>
+                            <constraint firstItem="4Y6-LZ-avh" firstAttribute="trailing" secondItem="ifT-sL-cRN" secondAttribute="trailing" constant="33" id="UAp-sw-mFl"/>
+                            <constraint firstItem="RJ1-9e-fPf" firstAttribute="centerX" secondItem="RS1-QZ-wP4" secondAttribute="centerX" id="aoz-vf-O8o"/>
+                            <constraint firstItem="ClH-pv-gxz" firstAttribute="top" secondItem="ocb-Uz-j44" secondAttribute="bottom" constant="62" id="cEc-Hr-A7b"/>
                             <constraint firstItem="ocb-Uz-j44" firstAttribute="leading" secondItem="4Y6-LZ-avh" secondAttribute="leading" constant="31" id="edL-cn-5NA"/>
-                            <constraint firstItem="vt3-7E-4pQ" firstAttribute="top" secondItem="ocb-Uz-j44" secondAttribute="bottom" constant="62" id="lcV-cs-9bC"/>
-                            <constraint firstItem="D7t-DS-9PG" firstAttribute="top" secondItem="4Y6-LZ-avh" secondAttribute="top" constant="24" id="ot5-6k-M61"/>
+                            <constraint firstItem="ifT-sL-cRN" firstAttribute="top" secondItem="bbp-D5-4JD" secondAttribute="bottom" constant="40" id="eud-3F-8AU"/>
+                            <constraint firstItem="4Y6-LZ-avh" firstAttribute="trailing" secondItem="ClH-pv-gxz" secondAttribute="trailing" constant="30" id="gSl-XZ-nNe"/>
+                            <constraint firstItem="RJ1-9e-fPf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ifT-sL-cRN" secondAttribute="bottom" constant="25" id="moM-i6-Owe"/>
+                            <constraint firstItem="bbp-D5-4JD" firstAttribute="top" secondItem="ClH-pv-gxz" secondAttribute="bottom" constant="16" id="oiN-Zy-Zco"/>
+                            <constraint firstItem="D7t-DS-9PG" firstAttribute="top" secondItem="4Y6-LZ-avh" secondAttribute="top" constant="16" id="ot5-6k-M61"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="nameField" destination="vt3-7E-4pQ" id="IHY-SB-5mV"/>
+                        <outlet property="emailField" destination="Phq-WU-ghD" id="ViY-BA-P8h"/>
+                        <outlet property="nameField" destination="vt3-7E-4pQ" id="Hwh-nW-xmZ"/>
+                        <outlet property="passwordField" destination="Y7B-pp-Scb" id="Q00-iI-ue9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cO-ku-uwK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857" y="449"/>
+            <point key="canvasLocation" x="1652" y="587"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Mer-Ik-enP"/>
+        <segue reference="k98-uF-HMo"/>
         <segue reference="zNo-ox-YVL"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Rectangle 2" width="373" height="667"/>
         <namedColor name="battleshipGray">
-            <color red="0.45899999141693115" green="0.4779999852180481" blue="0.49799999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.45882352941176469" green="0.4779999852180481" blue="0.49799999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray151">
+            <color red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="pinkishGray">
             <color red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
