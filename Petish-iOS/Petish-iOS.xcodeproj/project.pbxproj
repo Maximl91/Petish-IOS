@@ -13,11 +13,13 @@
 		F43C8874273167AE00A98C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43C8872273167AE00A98C95 /* Main.storyboard */; };
 		F43C8876273167AF00A98C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43C8875273167AF00A98C95 /* Assets.xcassets */; };
 		F43C8879273167AF00A98C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */; };
-		F443E7DF273D620C00065FC2 /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443E7DE273D620C00065FC2 /* PurpleButton.swift */; };
+		F443E7DF273D620C00065FC2 /* FilledPurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443E7DE273D620C00065FC2 /* FilledPurpleButton.swift */; };
+		F4A73BE72741062C00AF85FD /* TransparentPurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */; };
+		F4A73BEA2741178500AF85FD /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */; };
 		F4D7C66A2734182D002A6F07 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C6682734182D002A6F07 /* PhotoCell.swift */; };
 		F4D7C66B2734182D002A6F07 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D7C6692734182D002A6F07 /* PhotoCell.xib */; };
 		F4D7C66E27341834002A6F07 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */; };
-		F4D7C66F27341834002A6F07 /* SignUpInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C66D27341834002A6F07 /* SignUpInViewController.swift */; };
+		F4D7C66F27341834002A6F07 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C66D27341834002A6F07 /* SignUpViewController.swift */; };
 		F4D7C67227341841002A6F07 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C67027341841002A6F07 /* Constants.swift */; };
 		F4F021B72734199B00776CF5 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F021B62734199B00776CF5 /* OnboardingData.swift */; };
 		F4F021BB27341A6C00776CF5 /* SFCompactDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4F021B927341A6C00776CF5 /* SFCompactDisplay-Medium.otf */; };
@@ -33,11 +35,13 @@
 		F43C8875273167AF00A98C95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F43C8878273167AF00A98C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F43C887A273167AF00A98C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F443E7DE273D620C00065FC2 /* PurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
+		F443E7DE273D620C00065FC2 /* FilledPurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledPurpleButton.swift; sourceTree = "<group>"; };
+		F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentPurpleButton.swift; sourceTree = "<group>"; };
+		F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
 		F4D7C6682734182D002A6F07 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F4D7C6692734182D002A6F07 /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
-		F4D7C66D27341834002A6F07 /* SignUpInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInViewController.swift; sourceTree = "<group>"; };
+		F4D7C66D27341834002A6F07 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F4D7C67027341841002A6F07 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F4F021B62734199B00776CF5 /* OnboardingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		F4F021B927341A6C00776CF5 /* SFCompactDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Medium.otf"; sourceTree = "<group>"; };
@@ -92,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				F43C8870273167AE00A98C95 /* OnboardingViewController.swift */,
-				F4D7C66D27341834002A6F07 /* SignUpInViewController.swift */,
+				F4D7C66D27341834002A6F07 /* SignUpViewController.swift */,
 				F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */,
 			);
 			path = Controller;
@@ -105,7 +109,9 @@
 				F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */,
 				F4D7C6692734182D002A6F07 /* PhotoCell.xib */,
 				F4D7C6682734182D002A6F07 /* PhotoCell.swift */,
-				F443E7DE273D620C00065FC2 /* PurpleButton.swift */,
+				F443E7DE273D620C00065FC2 /* FilledPurpleButton.swift */,
+				F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */,
+				F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,15 +214,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A73BEA2741178500AF85FD /* BottomBorderTextField.swift in Sources */,
 				F4D7C66E27341834002A6F07 /* ZoomAndSnapFlowLayout.swift in Sources */,
 				F4D7C66A2734182D002A6F07 /* PhotoCell.swift in Sources */,
-				F443E7DF273D620C00065FC2 /* PurpleButton.swift in Sources */,
+				F443E7DF273D620C00065FC2 /* FilledPurpleButton.swift in Sources */,
 				F43C8871273167AE00A98C95 /* OnboardingViewController.swift in Sources */,
 				F4F021B72734199B00776CF5 /* OnboardingData.swift in Sources */,
 				F43C886D273167AE00A98C95 /* AppDelegate.swift in Sources */,
 				F4D7C67227341841002A6F07 /* Constants.swift in Sources */,
 				F43C886F273167AE00A98C95 /* SceneDelegate.swift in Sources */,
-				F4D7C66F27341834002A6F07 /* SignUpInViewController.swift in Sources */,
+				F4A73BE72741062C00AF85FD /* TransparentPurpleButton.swift in Sources */,
+				F4D7C66F27341834002A6F07 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
