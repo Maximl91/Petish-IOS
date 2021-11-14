@@ -1,6 +1,10 @@
 import Foundation
+import UIKit
 
+
+// READ-ONLY for onboarding screen
 struct OnboardingData{
+    static let images: [UIImage] = [#imageLiteral(resourceName: "Rectangle 2.2"), #imageLiteral(resourceName: "Rectangle 2.2-2"), #imageLiteral(resourceName: "Rectangle 2.2-1")]
     static let descriptionTexts: [String] =
         ["Personalized Fit", "Discover", "Review"]
     static let subtitleTexts: [String] =

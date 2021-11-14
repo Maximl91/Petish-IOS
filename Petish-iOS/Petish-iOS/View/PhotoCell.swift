@@ -14,5 +14,6 @@ class PhotoCell: UICollectionViewCell {
     
     func initCell(image: UIImage){
         imageView.image = image
+        imageView.contentMode = .scaleAspectFit
     }
 }

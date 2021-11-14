@@ -1,8 +1,7 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
-    
-    private let images: [UIImage] = [#imageLiteral(resourceName: "Rectangle 2.2"), #imageLiteral(resourceName: "Rectangle 2.2-2"), #imageLiteral(resourceName: "Rectangle 2.2-1")]
+    private let images = OnboardingData.images
     
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
@@ -24,7 +23,7 @@ class OnboardingViewController: UIViewController {
     func configureCollectionView(){
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.collectionViewLayout = ZoomAndSnapFlowLayout(collection: collectionView)
+        collectionView.collectionViewLayout = ZoomAndSnapFlowLayout()
         collectionView.isPagingEnabled = false
         registerCollectionCells()
     }
