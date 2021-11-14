@@ -3,15 +3,16 @@ import UIKit
 class ZoomAndSnapFlowLayout: UICollectionViewFlowLayout {
 
     let activeDistance: CGFloat = 150
-    let zoomFactor: CGFloat = 0.2
-
+    let zoomFactor: CGFloat = 0.15
+    
     override init() {
         super.init()
 
         scrollDirection = .horizontal
-        minimumLineSpacing = 15
+        minimumLineSpacing = 0
         minimumInteritemSpacing = 0
-        itemSize = CGSize(width: 300, height: 400)
+        itemSize = CGSize(width: UIScreen.main.bounds.width*0.68, height: UIScreen.main.bounds.height*0.45)
+
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -20,6 +21,7 @@ class ZoomAndSnapFlowLayout: UICollectionViewFlowLayout {
 
     override func prepare() {
         guard let collectionView = collectionView else { fatalError() }
+      
         let verticalInsets = (collectionView.frame.height - collectionView.adjustedContentInset.top - collectionView.adjustedContentInset.bottom - itemSize.height) / 2
         let horizontalInsets = (collectionView.frame.width - collectionView.adjustedContentInset.right - collectionView.adjustedContentInset.left - itemSize.width) / 2
         sectionInset = UIEdgeInsets(top: verticalInsets, left: horizontalInsets, bottom: verticalInsets, right: horizontalInsets)
@@ -55,7 +57,7 @@ class ZoomAndSnapFlowLayout: UICollectionViewFlowLayout {
 
         var offsetAdjustment = CGFloat.greatestFiniteMagnitude
         let horizontalCenter = proposedContentOffset.x + collectionView.frame.width / 2
-
+        
         for layoutAttributes in rectAttributes {
             let itemHorizontalCenter = layoutAttributes.center.x
             if (itemHorizontalCenter - horizontalCenter).magnitude < offsetAdjustment.magnitude {

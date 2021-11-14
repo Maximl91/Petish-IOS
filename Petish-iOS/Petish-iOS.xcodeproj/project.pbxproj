@@ -13,6 +13,7 @@
 		F43C8874273167AE00A98C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43C8872273167AE00A98C95 /* Main.storyboard */; };
 		F43C8876273167AF00A98C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43C8875273167AF00A98C95 /* Assets.xcassets */; };
 		F43C8879273167AF00A98C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */; };
+		F443E7DF273D620C00065FC2 /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443E7DE273D620C00065FC2 /* PurpleButton.swift */; };
 		F4D7C66A2734182D002A6F07 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C6682734182D002A6F07 /* PhotoCell.swift */; };
 		F4D7C66B2734182D002A6F07 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D7C6692734182D002A6F07 /* PhotoCell.xib */; };
 		F4D7C66E27341834002A6F07 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */; };
@@ -32,6 +33,7 @@
 		F43C8875273167AF00A98C95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F43C8878273167AF00A98C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F43C887A273167AF00A98C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F443E7DE273D620C00065FC2 /* PurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
 		F4D7C6682734182D002A6F07 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F4D7C6692734182D002A6F07 /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */,
 				F4D7C6692734182D002A6F07 /* PhotoCell.xib */,
 				F4D7C6682734182D002A6F07 /* PhotoCell.swift */,
+				F443E7DE273D620C00065FC2 /* PurpleButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			files = (
 				F4D7C66E27341834002A6F07 /* ZoomAndSnapFlowLayout.swift in Sources */,
 				F4D7C66A2734182D002A6F07 /* PhotoCell.swift in Sources */,
+				F443E7DF273D620C00065FC2 /* PurpleButton.swift in Sources */,
 				F43C8871273167AE00A98C95 /* OnboardingViewController.swift in Sources */,
 				F4F021B72734199B00776CF5 /* OnboardingData.swift in Sources */,
 				F43C886D273167AE00A98C95 /* AppDelegate.swift in Sources */,
