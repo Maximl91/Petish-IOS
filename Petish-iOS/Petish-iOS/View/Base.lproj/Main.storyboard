@@ -233,6 +233,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="SKIP"/>
+                                <connections>
+                                    <segue destination="pmp-Q7-8X1" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="myQ-yW-aI3"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="UCW-eT-fDw">
                                 <rect key="frame" x="30" y="245" width="354" height="110"/>
@@ -293,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ed6-r0-PF9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2649" y="-173"/>
+            <point key="canvasLocation" x="2725" y="108"/>
         </scene>
         <!--Home-->
         <scene sceneID="4uR-AW-NNq">
@@ -303,21 +306,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOME PAGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uz2-6n-TB0">
-                                <rect key="frame" x="139" y="98" width="96" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKw-uB-qru">
+                                <rect key="frame" x="87" y="108" width="240" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="6Vi-nt-qrU"/>
+                                </constraints>
+                                <string key="text">Home Page
+</string>
+                                <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hg9-xn-y50"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FKw-uB-qru" firstAttribute="top" secondItem="Hg9-xn-y50" secondAttribute="top" constant="64" id="BON-XD-Lvv"/>
+                            <constraint firstItem="FKw-uB-qru" firstAttribute="leading" secondItem="Hg9-xn-y50" secondAttribute="leading" constant="87" id="Mgl-Yq-d6g"/>
+                            <constraint firstItem="Hg9-xn-y50" firstAttribute="trailing" secondItem="FKw-uB-qru" secondAttribute="trailing" constant="87" id="qVW-Bn-dhF"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lin-YF-ddj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3617" y="587"/>
+            <point key="canvasLocation" x="1890" y="923"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="9Qu-Cw-7oY">
@@ -493,11 +505,11 @@ service and privacy policy</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cO-ku-uwK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649.2753623188407" y="584.59821428571422"/>
+            <point key="canvasLocation" x="1835" y="-273"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Mer-Ik-enP"/>
+        <segue reference="myQ-yW-aI3"/>
         <segue reference="k98-uF-HMo"/>
         <segue reference="zNo-ox-YVL"/>
     </inferredMetricsTieBreakers>

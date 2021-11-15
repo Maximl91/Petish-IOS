@@ -47,7 +47,7 @@
 		F44706BD27415F4600E972A4 /* Checkbox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Checkbox.xib; sourceTree = "<group>"; };
 		F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentPurpleButton.swift; sourceTree = "<group>"; };
 		F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
-		F4A73BEB274150D400AF85FD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewModel.swift; path = "Petish-iOS/View/SignUpViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		F4A73BEB274150D400AF85FD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewModel.swift; path = "Petish-iOS/ViewModel/SignUpViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		F4D7C6682734182D002A6F07 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F4D7C6692734182D002A6F07 /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
@@ -108,9 +108,9 @@
 		F43C886B273167AE00A98C95 /* Petish-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F4FC788827424F2D000DF270 /* ViewModel */,
 				F4F021B8273419FD00776CF5 /* Fonts */,
 				F4F021B22734196800776CF5 /* Model */,
-				F4F021B32734196D00776CF5 /* ViewModel */,
 				F43C8880273175A500A98C95 /* Controller */,
 				F43C8881273175B100A98C95 /* View */,
 				F43C886C273167AE00A98C95 /* AppDelegate.swift */,
@@ -156,14 +156,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F4F021B32734196D00776CF5 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F4A73BEB274150D400AF85FD /* SignUpViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		F4F021B8273419FD00776CF5 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +163,14 @@
 				F4F021BA27341A6C00776CF5 /* SFProText-Medium.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F4FC788827424F2D000DF270 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F4A73BEB274150D400AF85FD /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
