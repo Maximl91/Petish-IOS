@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -22,11 +22,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="Onboarding" customClass="OnboardingViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30j-IR-q9s" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="286" y="22" width="70" height="31"/>
+                                <rect key="frame" x="325" y="66" width="70" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="xkm-a2-N3t"/>
                                 </constraints>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2Q-7A-uSF" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="18.5" y="584.5" width="338" height="65"/>
+                                <rect key="frame" x="18.5" y="779.5" width="377" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="f5G-T5-UfE"/>
                                 </constraints>
@@ -51,10 +51,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQK-vA-SNW">
-                                <rect key="frame" x="0.0" y="196.5" width="375" height="335.5"/>
+                                <rect key="frame" x="0.0" y="240.5" width="414" height="486.5"/>
                                 <subviews>
                                     <collectionView multipleTouchEnabled="YES" contentMode="center" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hz2-0F-RJ7">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="335.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="486.5"/>
                                         <collectionViewLayout key="collectionViewLayout" id="1yX-19-tYn"/>
                                         <cells/>
                                     </collectionView>
@@ -68,13 +68,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tm-Iz-GYB">
-                                <rect key="frame" x="72" y="93" width="231" height="33"/>
+                                <rect key="frame" x="72" y="137" width="270" height="33"/>
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="28"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8b-kR-TkP">
-                                <rect key="frame" x="42" y="136" width="291" height="45"/>
+                                <rect key="frame" x="42" y="180" width="330" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="eqA-2J-pDr"/>
                                 </constraints>
@@ -83,7 +83,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" defersCurrentPageDisplay="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="H6H-7t-lEc">
-                                <rect key="frame" x="110" y="540" width="155" height="26"/>
+                                <rect key="frame" x="129.5" y="735" width="155" height="26"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="pageIndicatorTintColor" name="pinkishGray"/>
                                 <color key="currentPageIndicatorTintColor" name="violetBlue"/>
@@ -128,14 +128,14 @@
             <objects>
                 <viewController id="WJM-Zw-MhU" userLabel="SignUpIn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bV3-pi-ng4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="WXB-hi-omT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiP-sw-X7N" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="256" y="24" width="105" height="31"/>
+                                <rect key="frame" x="295" y="68" width="105" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="NO THANKS">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
@@ -145,10 +145,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dxU-tU-uE1">
-                                <rect key="frame" x="48" y="479" width="279" height="112"/>
+                                <rect key="frame" x="48" y="674" width="318" height="112"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ux5-EM-ouu">
-                                        <rect key="frame" x="0.0" y="0.0" width="279" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="318" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="nua-Lt-yeV"/>
                                         </constraints>
@@ -166,7 +166,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY3-1l-njI">
-                                        <rect key="frame" x="0.0" y="64" width="279" height="48"/>
+                                        <rect key="frame" x="0.0" y="64" width="318" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="vaC-WH-XpL"/>
                                         </constraints>
@@ -212,7 +212,7 @@
             <objects>
                 <viewController id="NS1-xm-8Tk" userLabel="Login" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NsK-VP-m0k">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGIN PAGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPY-M7-VmA">
@@ -236,7 +236,7 @@
             <objects>
                 <viewController id="pmp-Q7-8X1" userLabel="Home" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="45Z-4J-2vf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOME PAGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uz2-6n-TB0">
@@ -260,11 +260,11 @@
             <objects>
                 <viewController id="GK3-uX-X9m" userLabel="SignUp" customClass="SignUpViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RS1-QZ-wP4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7t-DS-9PG" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="304.5" y="16" width="54.5" height="40"/>
+                                <rect key="frame" x="343.5" y="60" width="54.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="jqX-hd-2WY"/>
                                 </constraints>
@@ -275,10 +275,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ClH-pv-gxz">
-                                <rect key="frame" x="30" y="205" width="315" height="180"/>
+                                <rect key="frame" x="30" y="245" width="354" height="180"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vt3-7E-4pQ" customClass="BottomBorderTextField" customModule="Petish_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="m0c-mM-ckH"/>
                                         </constraints>
@@ -286,7 +286,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Phq-WU-ghD" customClass="BottomBorderTextField" customModule="Petish_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="70" width="315" height="40"/>
+                                        <rect key="frame" x="0.0" y="70" width="354" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="hqi-Tl-rFz"/>
                                         </constraints>
@@ -294,7 +294,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y7B-pp-Scb" customClass="BottomBorderTextField" customModule="Petish_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="140" width="315" height="40"/>
+                                        <rect key="frame" x="0.0" y="140" width="354" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="S4J-Vb-Yui"/>
                                         </constraints>
@@ -303,22 +303,11 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbp-D5-4JD">
-                                <rect key="frame" x="72" y="401" width="269.5" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="GmM-lF-xNg"/>
-                                </constraints>
-                                <string key="text">By signing up you agree to the terms of 
-service and privacy policy</string>
-                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
-                                <color key="textColor" name="gray151"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ifT-sL-cRN">
-                                <rect key="frame" x="31" y="475" width="311" height="112"/>
+                                <rect key="frame" x="31" y="518" width="350" height="112"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5H-kn-9JW" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="Ab1-y5-J1F"/>
                                         </constraints>
@@ -329,7 +318,7 @@ service and privacy policy</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwb-9z-67I">
-                                        <rect key="frame" x="0.0" y="64" width="311" height="48"/>
+                                        <rect key="frame" x="0.0" y="64" width="350" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="rse-Kf-xkO"/>
                                         </constraints>
@@ -351,21 +340,20 @@ service and privacy policy</string>
                                     <constraint firstAttribute="trailing" secondItem="cwb-9z-67I" secondAttribute="trailing" id="3gh-0e-Et8"/>
                                     <constraint firstItem="cwb-9z-67I" firstAttribute="leading" secondItem="ifT-sL-cRN" secondAttribute="leading" id="B0M-yS-pVc"/>
                                     <constraint firstItem="G5H-kn-9JW" firstAttribute="leading" secondItem="ifT-sL-cRN" secondAttribute="leading" id="LDe-qe-TWR"/>
-                                    <constraint firstItem="cwb-9z-67I" firstAttribute="top" secondItem="G5H-kn-9JW" secondAttribute="bottom" constant="16" id="bHP-Uy-R5Z"/>
                                     <constraint firstAttribute="trailing" secondItem="G5H-kn-9JW" secondAttribute="trailing" id="yd8-Gn-Zj6"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJ1-9e-fPf">
-                                <rect key="frame" x="67" y="612" width="241" height="31"/>
+                                <rect key="frame" x="86.5" y="819" width="241" height="19"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I already have an account." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8Z-NL-MHO">
-                                        <rect key="frame" x="0.0" y="0.0" width="181.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="181.5" height="19"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
                                         <color key="textColor" name="battleshipGray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfc-Ga-B2Q" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="181.5" y="0.0" width="59.5" height="31"/>
+                                        <rect key="frame" x="181.5" y="0.0" width="59.5" height="19"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                         <connections>
@@ -373,9 +361,12 @@ service and privacy policy</string>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="Pek-di-m17"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocb-Uz-j44">
-                                <rect key="frame" x="31" y="76" width="160.5" height="67"/>
+                                <rect key="frame" x="31" y="116" width="160.5" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="ijB-g5-nkw"/>
                                 </constraints>
@@ -385,28 +376,52 @@ Your account</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="lnW-lr-DGe">
+                                <rect key="frame" x="30" y="441" width="364" height="34"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qin-PK-tE9" customClass="Checkbox" customModule="Petish_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="Kyf-3T-NaG"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbp-D5-4JD">
+                                        <rect key="frame" x="42" y="0.0" width="322" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="GmM-lF-xNg"/>
+                                        </constraints>
+                                        <string key="text">By signing up you agree to the terms of 
+service and privacy policy</string>
+                                        <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                        <color key="textColor" name="gray151"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Y6-LZ-avh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ifT-sL-cRN" firstAttribute="leading" secondItem="4Y6-LZ-avh" secondAttribute="leading" constant="31" id="6lX-Z1-QkY"/>
                             <constraint firstItem="ClH-pv-gxz" firstAttribute="leading" secondItem="4Y6-LZ-avh" secondAttribute="leading" constant="30" id="8Qm-6Q-BWG"/>
-                            <constraint firstItem="bbp-D5-4JD" firstAttribute="leading" secondItem="4Y6-LZ-avh" secondAttribute="leading" constant="72" id="DF0-Fg-csl"/>
                             <constraint firstItem="4Y6-LZ-avh" firstAttribute="trailing" secondItem="D7t-DS-9PG" secondAttribute="trailing" constant="16" id="Dat-3M-Keg"/>
-                            <constraint firstItem="ocb-Uz-j44" firstAttribute="top" secondItem="D7t-DS-9PG" secondAttribute="bottom" constant="20" id="Mec-RS-x8m"/>
+                            <constraint firstItem="4Y6-LZ-avh" firstAttribute="trailing" secondItem="lnW-lr-DGe" secondAttribute="trailing" constant="20" id="H2m-xk-UTP"/>
+                            <constraint firstItem="ocb-Uz-j44" firstAttribute="top" secondItem="D7t-DS-9PG" secondAttribute="bottom" constant="16" id="Mec-RS-x8m"/>
+                            <constraint firstItem="ifT-sL-cRN" firstAttribute="top" secondItem="lnW-lr-DGe" secondAttribute="bottom" constant="43" id="RW2-P8-wHH"/>
                             <constraint firstItem="4Y6-LZ-avh" firstAttribute="bottom" secondItem="RJ1-9e-fPf" secondAttribute="bottom" constant="24" id="Tcz-cx-XcR"/>
                             <constraint firstItem="4Y6-LZ-avh" firstAttribute="trailing" secondItem="ifT-sL-cRN" secondAttribute="trailing" constant="33" id="UAp-sw-mFl"/>
+                            <constraint firstItem="lnW-lr-DGe" firstAttribute="top" secondItem="ClH-pv-gxz" secondAttribute="bottom" constant="16" id="WbA-WH-4pP"/>
                             <constraint firstItem="RJ1-9e-fPf" firstAttribute="centerX" secondItem="RS1-QZ-wP4" secondAttribute="centerX" id="aoz-vf-O8o"/>
                             <constraint firstItem="ClH-pv-gxz" firstAttribute="top" secondItem="ocb-Uz-j44" secondAttribute="bottom" constant="62" id="cEc-Hr-A7b"/>
                             <constraint firstItem="ocb-Uz-j44" firstAttribute="leading" secondItem="4Y6-LZ-avh" secondAttribute="leading" constant="31" id="edL-cn-5NA"/>
-                            <constraint firstItem="ifT-sL-cRN" firstAttribute="top" secondItem="bbp-D5-4JD" secondAttribute="bottom" constant="40" id="eud-3F-8AU"/>
                             <constraint firstItem="4Y6-LZ-avh" firstAttribute="trailing" secondItem="ClH-pv-gxz" secondAttribute="trailing" constant="30" id="gSl-XZ-nNe"/>
-                            <constraint firstItem="RJ1-9e-fPf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ifT-sL-cRN" secondAttribute="bottom" constant="25" id="moM-i6-Owe"/>
-                            <constraint firstItem="bbp-D5-4JD" firstAttribute="top" secondItem="ClH-pv-gxz" secondAttribute="bottom" constant="16" id="oiN-Zy-Zco"/>
+                            <constraint firstItem="RJ1-9e-fPf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ifT-sL-cRN" secondAttribute="bottom" constant="20" id="moM-i6-Owe"/>
                             <constraint firstItem="D7t-DS-9PG" firstAttribute="top" secondItem="4Y6-LZ-avh" secondAttribute="top" constant="16" id="ot5-6k-M61"/>
+                            <constraint firstItem="lnW-lr-DGe" firstAttribute="leading" secondItem="4Y6-LZ-avh" secondAttribute="leading" constant="30" id="s95-Ul-vAj"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="checkboxView" destination="Qin-PK-tE9" id="0FV-XG-NxN"/>
                         <outlet property="emailField" destination="Phq-WU-ghD" id="ViY-BA-P8h"/>
                         <outlet property="nameField" destination="vt3-7E-4pQ" id="Hwh-nW-xmZ"/>
                         <outlet property="passwordField" destination="Y7B-pp-Scb" id="Q00-iI-ue9"/>
@@ -414,7 +429,7 @@ Your account</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cO-ku-uwK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1652" y="587"/>
+            <point key="canvasLocation" x="1650.4000000000001" y="585.1574212893554"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -425,10 +440,10 @@ Your account</string>
     <resources>
         <image name="Rectangle 2" width="373" height="667"/>
         <namedColor name="battleshipGray">
-            <color red="0.45882352941176469" green="0.4779999852180481" blue="0.49799999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.45899999141693115" green="0.4779999852180481" blue="0.49799999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gray151">
-            <color red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.59200000762939453" green="0.59200000762939453" blue="0.59200000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="pinkishGray">
             <color red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

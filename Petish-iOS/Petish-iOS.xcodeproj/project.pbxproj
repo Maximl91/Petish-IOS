@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA09681D8ACDE024287667D2 /* Pods_Petish_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72932D0E06B7B16FCF215FED /* Pods_Petish_iOS.framework */; };
 		F43C886D273167AE00A98C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C886C273167AE00A98C95 /* AppDelegate.swift */; };
 		F43C886F273167AE00A98C95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C886E273167AE00A98C95 /* SceneDelegate.swift */; };
 		F43C8871273167AE00A98C95 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C8870273167AE00A98C95 /* OnboardingViewController.swift */; };
@@ -14,6 +15,8 @@
 		F43C8876273167AF00A98C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43C8875273167AF00A98C95 /* Assets.xcassets */; };
 		F43C8879273167AF00A98C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */; };
 		F443E7DF273D620C00065FC2 /* FilledPurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443E7DE273D620C00065FC2 /* FilledPurpleButton.swift */; };
+		F44706BC27415F3900E972A4 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44706BB27415F3900E972A4 /* Checkbox.swift */; };
+		F44706BE27415F4600E972A4 /* Checkbox.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44706BD27415F4600E972A4 /* Checkbox.xib */; };
 		F4A73BE72741062C00AF85FD /* TransparentPurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */; };
 		F4A73BEA2741178500AF85FD /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */; };
 		F4A73BEC274150D400AF85FD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A73BEB274150D400AF85FD /* SignUpViewModel.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DABFD290F39C821A0E34088 /* Pods-Petish-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petish-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		72932D0E06B7B16FCF215FED /* Pods_Petish_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Petish_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DFA8F399731CC62A955D223 /* Pods-Petish-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petish-iOS.release.xcconfig"; path = "Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		F43C8869273167AE00A98C95 /* Petish-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Petish-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43C886C273167AE00A98C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F43C886E273167AE00A98C95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +43,8 @@
 		F43C8878273167AF00A98C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F43C887A273167AF00A98C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F443E7DE273D620C00065FC2 /* FilledPurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledPurpleButton.swift; sourceTree = "<group>"; };
+		F44706BB27415F3900E972A4 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		F44706BD27415F4600E972A4 /* Checkbox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Checkbox.xib; sourceTree = "<group>"; };
 		F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentPurpleButton.swift; sourceTree = "<group>"; };
 		F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
 		F4A73BEB274150D400AF85FD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewModel.swift; path = "Petish-iOS/View/SignUpViewModel.swift"; sourceTree = SOURCE_ROOT; };
@@ -55,17 +63,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA09681D8ACDE024287667D2 /* Pods_Petish_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		798B9BFCE39EE5622323798B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72932D0E06B7B16FCF215FED /* Pods_Petish_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFBBEF449ABF92A2A78FC25D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DABFD290F39C821A0E34088 /* Pods-Petish-iOS.debug.xcconfig */,
+				8DFA8F399731CC62A955D223 /* Pods-Petish-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F43C8860273167AE00A98C95 = {
 			isa = PBXGroup;
 			children = (
 				F43C886B273167AE00A98C95 /* Petish-iOS */,
 				F43C886A273167AE00A98C95 /* Products */,
+				798B9BFCE39EE5622323798B /* Frameworks */,
+				BFBBEF449ABF92A2A78FC25D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +142,8 @@
 				F443E7DE273D620C00065FC2 /* FilledPurpleButton.swift */,
 				F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */,
 				F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */,
+				F44706BB27415F3900E972A4 /* Checkbox.swift */,
+				F44706BD27415F4600E972A4 /* Checkbox.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,6 +180,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F43C887D273167AF00A98C95 /* Build configuration list for PBXNativeTarget "Petish-iOS" */;
 			buildPhases = (
+				45AD401CDBCCB44300E8AC5C /* [CP] Check Pods Manifest.lock */,
 				F43C8865273167AE00A98C95 /* Sources */,
 				F43C8866273167AE00A98C95 /* Frameworks */,
 				F43C8867273167AE00A98C95 /* Resources */,
@@ -206,11 +237,37 @@
 				F4F021BC27341A6C00776CF5 /* SFProText-Medium.otf in Resources */,
 				F43C8876273167AF00A98C95 /* Assets.xcassets in Resources */,
 				F4F021BB27341A6C00776CF5 /* SFCompactDisplay-Medium.otf in Resources */,
+				F44706BE27415F4600E972A4 /* Checkbox.xib in Resources */,
 				F43C8874273167AE00A98C95 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45AD401CDBCCB44300E8AC5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Petish-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F43C8865273167AE00A98C95 /* Sources */ = {
@@ -228,6 +285,7 @@
 				F43C886F273167AE00A98C95 /* SceneDelegate.swift in Sources */,
 				F4A73BE72741062C00AF85FD /* TransparentPurpleButton.swift in Sources */,
 				F4A73BEC274150D400AF85FD /* SignUpViewModel.swift in Sources */,
+				F44706BC27415F3900E972A4 /* Checkbox.swift in Sources */,
 				F4D7C66F27341834002A6F07 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +430,7 @@
 		};
 		F43C887E273167AF00A98C95 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DABFD290F39C821A0E34088 /* Pods-Petish-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -399,6 +458,7 @@
 		};
 		F43C887F273167AF00A98C95 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DFA8F399731CC62A955D223 /* Pods-Petish-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
