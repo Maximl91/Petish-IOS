@@ -8,6 +8,9 @@ struct Constants{
     static let checkboxNibName = "Checkbox"
     static let checkboxOn = true
     static let checkboxOff = false
+    // TableViewCell
+    static let textFieldCellNibName = "TextFieldCell"
+    static let textFieldCellReuseId = "TextfieldCellReuseId"
 }
 
 
@@ -23,3 +26,4 @@ struct Fonts{
     static let SFProTextMedium = "SFProText-Medium"
     static let SFCompactDisplayMedium = "SFCompactDisplay-Medium"
 }
+

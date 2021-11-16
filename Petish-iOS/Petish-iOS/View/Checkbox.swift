@@ -2,7 +2,8 @@ import UIKit
 
 class Checkbox: UIView {
     
-    private var state: Bool = Constants.checkboxOff
+    // state indicates if the checkbox is marked or not
+    private var state: Bool = false
     private var image: UIImage = #imageLiteral(resourceName: "Checked")
 
     @IBOutlet weak var imageView: UIImageView!

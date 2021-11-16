@@ -28,6 +28,9 @@
 		F4F021B72734199B00776CF5 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F021B62734199B00776CF5 /* OnboardingData.swift */; };
 		F4F021BB27341A6C00776CF5 /* SFCompactDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4F021B927341A6C00776CF5 /* SFCompactDisplay-Medium.otf */; };
 		F4F021BC27341A6C00776CF5 /* SFProText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4F021BA27341A6C00776CF5 /* SFProText-Medium.otf */; };
+		F4FC788B27426D19000DF270 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC788927426D19000DF270 /* TextFieldCell.swift */; };
+		F4FC788E2742780D000DF270 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4FC788D2742780D000DF270 /* TextFieldCell.xib */; };
+		F4FC789027429AC2000DF270 /* SignUpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC788F27429AC2000DF270 /* SignUpData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		F4F021B62734199B00776CF5 /* OnboardingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		F4F021B927341A6C00776CF5 /* SFCompactDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Medium.otf"; sourceTree = "<group>"; };
 		F4F021BA27341A6C00776CF5 /* SFProText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.otf"; sourceTree = "<group>"; };
+		F4FC788927426D19000DF270 /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		F4FC788D2742780D000DF270 /* TextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
+		F4FC788F27429AC2000DF270 /* SignUpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,8 @@
 				F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */,
 				F44706BB27415F3900E972A4 /* Checkbox.swift */,
 				F44706BD27415F4600E972A4 /* Checkbox.xib */,
+				F4FC788D2742780D000DF270 /* TextFieldCell.xib */,
+				F4FC788927426D19000DF270 /* TextFieldCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				F4F021B62734199B00776CF5 /* OnboardingData.swift */,
+				F4FC788F27429AC2000DF270 /* SignUpData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +244,7 @@
 				F4D7C66B2734182D002A6F07 /* PhotoCell.xib in Resources */,
 				F43C8879273167AF00A98C95 /* LaunchScreen.storyboard in Resources */,
 				F4F021BC27341A6C00776CF5 /* SFProText-Medium.otf in Resources */,
+				F4FC788E2742780D000DF270 /* TextFieldCell.xib in Resources */,
 				F43C8876273167AF00A98C95 /* Assets.xcassets in Resources */,
 				F4F021BB27341A6C00776CF5 /* SFCompactDisplay-Medium.otf in Resources */,
 				F44706BE27415F4600E972A4 /* Checkbox.xib in Resources */,
@@ -278,7 +288,9 @@
 				F4D7C66E27341834002A6F07 /* ZoomAndSnapFlowLayout.swift in Sources */,
 				F4D7C66A2734182D002A6F07 /* PhotoCell.swift in Sources */,
 				F443E7DF273D620C00065FC2 /* FilledPurpleButton.swift in Sources */,
+				F4FC789027429AC2000DF270 /* SignUpData.swift in Sources */,
 				F43C8871273167AE00A98C95 /* OnboardingViewController.swift in Sources */,
+				F4FC788B27426D19000DF270 /* TextFieldCell.swift in Sources */,
 				F4F021B72734199B00776CF5 /* OnboardingData.swift in Sources */,
 				F43C886D273167AE00A98C95 /* AppDelegate.swift in Sources */,
 				F4D7C67227341841002A6F07 /* Constants.swift in Sources */,
