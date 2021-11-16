@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA09681D8ACDE024287667D2 /* Pods_Petish_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72932D0E06B7B16FCF215FED /* Pods_Petish_iOS.framework */; };
 		F42BAA412743B57C00800552 /* TextFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42BAA402743B57C00800552 /* TextFieldValidator.swift */; };
+		F42BAA432743E49100800552 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F42BAA422743E49100800552 /* GoogleService-Info.plist */; };
 		F43C886D273167AE00A98C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C886C273167AE00A98C95 /* AppDelegate.swift */; };
 		F43C886F273167AE00A98C95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C886E273167AE00A98C95 /* SceneDelegate.swift */; };
 		F43C8871273167AE00A98C95 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C8870273167AE00A98C95 /* OnboardingViewController.swift */; };
@@ -39,6 +40,7 @@
 		72932D0E06B7B16FCF215FED /* Pods_Petish_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Petish_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DFA8F399731CC62A955D223 /* Pods-Petish-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petish-iOS.release.xcconfig"; path = "Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		F42BAA402743B57C00800552 /* TextFieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidator.swift; sourceTree = "<group>"; };
+		F42BAA422743E49100800552 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F43C8869273167AE00A98C95 /* Petish-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Petish-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43C886C273167AE00A98C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F43C886E273167AE00A98C95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				F4D7C67027341841002A6F07 /* Constants.swift */,
 				F43C8875273167AF00A98C95 /* Assets.xcassets */,
 				F43C887A273167AF00A98C95 /* Info.plist */,
+				F42BAA422743E49100800552 /* GoogleService-Info.plist */,
 			);
 			path = "Petish-iOS";
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				F43C8865273167AE00A98C95 /* Sources */,
 				F43C8866273167AE00A98C95 /* Frameworks */,
 				F43C8867273167AE00A98C95 /* Resources */,
+				6BB32B307A37047A3B4829D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,6 +250,7 @@
 			files = (
 				F4D7C66B2734182D002A6F07 /* PhotoCell.xib in Resources */,
 				F43C8879273167AF00A98C95 /* LaunchScreen.storyboard in Resources */,
+				F42BAA432743E49100800552 /* GoogleService-Info.plist in Resources */,
 				F4F021BC27341A6C00776CF5 /* SFProText-Medium.otf in Resources */,
 				F4FC788E2742780D000DF270 /* TextFieldCell.xib in Resources */,
 				F43C8876273167AF00A98C95 /* Assets.xcassets in Resources */,
@@ -278,6 +283,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BB32B307A37047A3B4829D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -7,5 +7,6 @@ target 'Petish-iOS' do
 
   # Pods for Petish-iOS
 
+pod 'Firebase/Auth'
 
 end

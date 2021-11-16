@@ -41,8 +41,8 @@ extension SignUpViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.textFieldCellReuseId, for: indexPath) as! TextFieldCell
-        
         cell.initCell(with: viewModel, cellIndex: indexPath.section)
+        //add cell to viewModel data for text validity checks
         viewModel.arrayOfCells += [cell]
         
         return cell

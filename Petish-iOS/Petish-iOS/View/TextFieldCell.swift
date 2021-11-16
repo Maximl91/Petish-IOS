@@ -4,7 +4,6 @@ class TextFieldCell: UITableViewCell {
 
     private var validator = TextFieldValidator()
     private var textFieldType: FieldType?
-    private var validFlag: Bool = false
     
     @IBOutlet weak var textField: BottomBorderTextField!
     @IBOutlet weak var errorLabel: UILabel!
@@ -25,7 +24,11 @@ class TextFieldCell: UITableViewCell {
     }
     
     func isValid() -> Bool{
-        return validFlag
+        return errorLabel.isHidden
+    }
+    
+    func checkValidation(){
+        validator.validateField(textFieldCell: self)
     }
     
     func getFieldType()-> FieldType?{
@@ -51,11 +54,9 @@ extension TextFieldCell: TextFieldValidatorDelegate {
     func showErrorMsg(errString: String) {
         errorLabel.text = errString
         errorLabel.isHidden = false
-        validFlag = false
     }
     
     func hideErrorMsg() {
         errorLabel.isHidden = true
-        validFlag = true
     }
 }
