@@ -17,7 +17,6 @@ class TextFieldValidator{
             switch type {
             case FieldType.name:
                 flag = validateName(textField)
-                print(flag)
             case FieldType.email:
                 flag = validateEmail(textField)
             case FieldType.password:

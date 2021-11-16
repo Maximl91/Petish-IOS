@@ -5,10 +5,7 @@ class SignUpViewController: UIViewController {
     private let viewModel = SignUpViewModel()
     
     @IBOutlet weak var checkboxView: Checkbox!
-    
-    @IBOutlet weak var test: BottomBorderTextField!
     @IBOutlet weak var tableView: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,16 +16,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signupPressed(_ sender: UIButton) {
-        // loop on all itemCells
-        let itemCell = tableView.cellForRow(at: [1,0]) as! TextFieldCell
-        let temp = itemCell.isValid()
-        
-        if !checkboxView.getState() {
-            // error or alert
-        }
-        else{
-            // sign-up
-        }
+        viewModel.signUpClicked(isCheckboxMarked: checkboxView.getState())
     }
     
     @IBAction func withFacebookPressed(_ sender: UIButton) {
@@ -55,6 +43,8 @@ extension SignUpViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.textFieldCellReuseId, for: indexPath) as! TextFieldCell
         
         cell.initCell(with: viewModel, cellIndex: indexPath.section)
+        viewModel.arrayOfCells += [cell]
+        
         return cell
     }
 }
