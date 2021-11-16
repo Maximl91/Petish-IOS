@@ -25,9 +25,18 @@
                             <action selector="textFieldEditEnded:" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="pMn-tQ-erV"/>
                         </connections>
                     </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xF-Eq-N61">
+                        <rect key="frame" x="309" y="13" width="34" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="9xF-Eq-N61" secondAttribute="bottom" constant="12" id="7P3-S3-F1m"/>
                     <constraint firstItem="kWg-L9-iNM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="JZL-Ep-EH4"/>
+                    <constraint firstItem="9xF-Eq-N61" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="McV-J5-vnF"/>
+                    <constraint firstAttribute="trailing" secondItem="9xF-Eq-N61" secondAttribute="trailing" constant="11" id="Wcq-QD-fql"/>
                     <constraint firstItem="kWg-L9-iNM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="c5p-1D-Haz"/>
                     <constraint firstAttribute="bottom" secondItem="kWg-L9-iNM" secondAttribute="bottom" id="rDU-HD-Gbc"/>
                     <constraint firstAttribute="trailing" secondItem="kWg-L9-iNM" secondAttribute="trailing" id="ys1-ar-fbF"/>
@@ -35,6 +44,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="errorLabel" destination="9xF-Eq-N61" id="tJ8-lU-UpC"/>
                 <outlet property="textField" destination="kWg-L9-iNM" id="6oF-XB-8cx"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>

@@ -19,6 +19,10 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signupPressed(_ sender: UIButton) {
+        // loop on all itemCells
+        let itemCell = tableView.cellForRow(at: [1,0]) as! TextFieldCell
+        let temp = itemCell.isValid()
+        
         if !checkboxView.getState() {
             // error or alert
         }
