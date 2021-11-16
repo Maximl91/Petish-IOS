@@ -1,9 +1,9 @@
 import Foundation
 
-enum FieldType: String{
-    case name = "username"
-    case email = "email"
-    case password = "password"
+enum FieldType: Int{
+    case name = 0
+    case email
+    case password
 }
 
 struct TextFieldData{

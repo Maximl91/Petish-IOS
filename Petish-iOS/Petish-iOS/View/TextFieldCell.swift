@@ -21,13 +21,17 @@ class TextFieldCell: UITableViewCell {
     }
     
     @IBAction func textFieldEditEnded(_ sender: Any) {
-            validator.validateField(textFieldCell: self)
+        checkValidation()
     }
     
     func isValid() -> Bool{
-        return validFlag
+        return errorLabel.isHidden
     }
     
+    func checkValidation(){
+        validator.validateField(textFieldCell: self)
+    }
+
     func getFieldType()-> FieldType?{
         return textFieldType
     }
