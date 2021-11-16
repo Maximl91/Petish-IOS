@@ -9,7 +9,7 @@ class SignUpViewModel: NSObject{
         fieldPlaceholderArray = [
             TextFieldData(placeholder: "Name", isSecure: false, validateByType: FieldType.name),
             TextFieldData(placeholder: "Email", isSecure: false,validateByType: FieldType.email),
-            TextFieldData(placeholder: "Password", isSecure: true)
+            TextFieldData(placeholder: "Password", isSecure: true,validateByType: FieldType.password)
         ]
     }
 

@@ -3,6 +3,7 @@ import Foundation
 enum FieldType: String{
     case name = "username"
     case email = "email"
+    case password = "password"
 }
 
 struct TextFieldData{
