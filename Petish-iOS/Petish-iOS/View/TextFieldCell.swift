@@ -20,7 +20,7 @@ class TextFieldCell: UITableViewCell {
     }
     
     @IBAction func textFieldEditEnded(_ sender: Any) {
-            validator.validateField(textFieldCell: self)
+        checkValidation()
     }
     
     func isValid() -> Bool{
