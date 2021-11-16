@@ -8,8 +8,8 @@ target 'Petish-iOS' do
   # Pods for Petish-iOS
 
 pod 'Firebase/Auth'
-pod 'Firebase/Core'
-pod 'Firebase/Firestore'
+#pod 'Firebase/Core'
+#pod 'Firebase/Firestore'
 
 end
 

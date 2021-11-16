@@ -38,4 +38,5 @@ class SignUpViewModel: NSObject{
         }
     }
     
+    }
 }
