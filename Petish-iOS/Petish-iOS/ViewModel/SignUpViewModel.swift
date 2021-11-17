@@ -1,9 +1,12 @@
 import Foundation
+import Firebase
 
 class SignUpViewModel: NSObject{
     
-    private let fieldPlaceholderArray: [TextFieldData]
-    var arrayOfCells: [TextFieldCell] = [TextFieldCell]()
+    let db = Firestore.firestore()
+    let fieldPlaceholderArray: [TextFieldData]
+    var userData = UserData()
+    
     
     override init(){
         fieldPlaceholderArray = [
@@ -12,31 +15,49 @@ class SignUpViewModel: NSObject{
             TextFieldData(placeholder: "Password", isSecure: true,validateByType: FieldType.password)
         ]
     }
-
-    func getPlaceholderArray() -> [TextFieldData] {
-        return fieldPlaceholderArray
+    
+    func isUserDataReady()->Bool{ // change this
+        var flag = true
+        if(userData.name == "" || userData.password == "" || userData.name == ""){
+            flag = false
+        }
+        return flag
     }
     
-    func signUpClicked(isCheckboxMarked: Bool){
-        // check for validity of all cell's textfields
-        var flag = true
-        for itemCell in arrayOfCells {
-            flag = flag && itemCell.isValid()
-            itemCell.checkValidation() // for each cell display if error is present
+    func addUserData(_ data: String,_ type: FieldType ,_ completion: @escaping ( () -> Void ) ){
+        
+        switch type {
+        case FieldType.name:
+            userData.name = data
+        case FieldType.email:
+            userData.email = data
+        case FieldType.password:
+            userData.password = data
         }
         
-        if flag && isCheckboxMarked { // run if passed all validity tests
-            if let name = arrayOfCells[FieldType.name.rawValue].textField.text,
-               let email = arrayOfCells[FieldType.email.rawValue].textField.text,
-               let password = arrayOfCells[FieldType.password.rawValue].textField.text {
-                
-                print("name:\(name), email:\(email), password:\(password)")
-            }
-
-        else{
-            print("error")
+        if isUserDataReady() {
+            completion()
         }
     }
     
+    func signUpClicked(isCheckboxMarked: Bool,_ completion: @escaping ( () -> Void ) ){
+        Auth.auth().createUser(withEmail: userData.email, password: userData.password, completion: { (authResult, error) in
+          if let err = error{
+              print(err)
+          }else {
+              if let userUid = authResult?.user.uid {
+                  self.db.collection(Constants.FirestoreUserCollection).addDocument(data: [
+                    "user_uid": userUid,
+                    "name": self.userData.name ]){ err in
+                        
+                        if let err = err {
+                            print("Error adding user data: \(err)")
+                        } else {
+                            completion()
+                        }
+                    }
+                }
+            }
+        })
     }
 }

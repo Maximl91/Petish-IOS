@@ -11,6 +11,8 @@ struct Constants{
     // TableViewCell
     static let textFieldCellNibName = "TextFieldCell"
     static let textFieldCellReuseId = "TextfieldCellReuseId"
+    // Firestore
+    static let FirestoreUserCollection = "users"
 }
 
 
@@ -27,3 +29,6 @@ struct Fonts{
     static let SFCompactDisplayMedium = "SFCompactDisplay-Medium"
 }
 
+struct SegueIdentifiers{
+    static let SignUpSuccess = "SignUpSuccess"
+}

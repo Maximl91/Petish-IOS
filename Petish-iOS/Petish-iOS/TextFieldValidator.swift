@@ -9,10 +9,9 @@ class TextFieldValidator{
     
     var delegate: TextFieldValidatorDelegate?
     
-    func validateField(textFieldCell: TextFieldCell){
-    
-        if let type = textFieldCell.getFieldType(), let textField = textFieldCell.textField{
-            var flag = false
+    func validateField(textField: BottomBorderTextField)-> Bool{
+        var flag = false
+        if let type = textField.getFieldType(){
             
             switch type {
             case FieldType.name:
@@ -27,6 +26,7 @@ class TextFieldValidator{
                 delegate?.hideErrorMsg()
             }
         }
+        return flag
     }
     
     func validateName(_ field: BottomBorderTextField)-> Bool{
@@ -44,7 +44,7 @@ class TextFieldValidator{
             NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").evaluate(with: field.text)}
         
         if(!isValidEmail){
-            delegate?.showErrorMsg(errString: "Insert a valid email")
+            delegate?.showErrorMsg(errString: "Insert a valid email!")
             return false
         }
         

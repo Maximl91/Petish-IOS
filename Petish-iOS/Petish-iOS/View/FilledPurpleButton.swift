@@ -14,6 +14,16 @@ class FilledPurpleButton: UIButton {
         layer.cornerRadius = 8
     }
     
+    func disable(){
+        self.isEnabled = false
+        backgroundColor = UIColor.lightGray
+    }
+    
+    func enable(){
+        self.isEnabled = true
+        backgroundColor = UIColor(named: Colors.violetBlue)
+    }
+    
     func setAttributedLabel(){
         if let title = titleLabel?.text {
             let myString = title
