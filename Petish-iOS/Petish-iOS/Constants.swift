@@ -27,3 +27,6 @@ struct Fonts{
     static let SFCompactDisplayMedium = "SFCompactDisplay-Medium"
 }
 
+struct SegueIdentifiers{
+    static let SignUpSuccess = "SignUpSuccess"
+}

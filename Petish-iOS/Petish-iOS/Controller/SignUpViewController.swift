@@ -6,17 +6,24 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var checkboxView: Checkbox!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var checkboxErrLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        checkboxErrLabel.isHidden = true
         registerCells(forTableView: tableView)
         hideKeyboardWhenTappedAround()
     }
     
     @IBAction func signupPressed(_ sender: UIButton) {
-        viewModel.signUpClicked(isCheckboxMarked: checkboxView.getState())
+        let checkboxState = checkboxView.getState()
+        // displays error label if checkbox left unchecked
+        checkboxErrLabel.isHidden = checkboxState
+        viewModel.signUpClicked(isCheckboxMarked: checkboxState){() -> Void in
+            self.performSegue(withIdentifier: SegueIdentifiers.SignUpSuccess , sender: self)
+        }
     }
     
     @IBAction func withFacebookPressed(_ sender: UIButton) {
