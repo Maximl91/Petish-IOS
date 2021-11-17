@@ -16,7 +16,7 @@ class SignUpViewModel: NSObject{
         ]
     }
     
-    func isUserDataReady()->Bool{
+    func isUserDataReady()->Bool{ // change this
         var flag = true
         if(userData.name == "" || userData.password == "" || userData.name == ""){
             flag = false
@@ -46,7 +46,7 @@ class SignUpViewModel: NSObject{
               print(err)
           }else {
               if let userUid = authResult?.user.uid {
-                  self.db.collection("users").addDocument(data: [
+                  self.db.collection(Constants.FirestoreUserCollection).addDocument(data: [
                     "user_uid": userUid,
                     "name": self.userData.name ]){ err in
                         

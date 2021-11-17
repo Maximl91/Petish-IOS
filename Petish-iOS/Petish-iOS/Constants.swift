@@ -11,6 +11,8 @@ struct Constants{
     // TableViewCell
     static let textFieldCellNibName = "TextFieldCell"
     static let textFieldCellReuseId = "TextfieldCellReuseId"
+    // Firestore
+    static let FirestoreUserCollection = "users"
 }
 
 

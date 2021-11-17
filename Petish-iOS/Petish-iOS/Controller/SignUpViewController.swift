@@ -51,6 +51,17 @@ class SignUpViewController: UIViewController {
     }
 }
 
+extension SignUpViewController: SignUpViewControllerDelegate{
+    
+    func addValidatedTextData(data: String, type: FieldType){
+        viewModel.addUserData(data, type){() -> Void in
+            if self.checkboxView.getState(){
+                self.signUpButton.enable()
+            }
+        }
+    }
+}
+
 extension SignUpViewController: UITableViewDataSource, UITableViewDelegate{
     
     func numberOfSections(in tableView: UITableView) -> Int { return 1 }
@@ -64,16 +75,5 @@ extension SignUpViewController: UITableViewDataSource, UITableViewDelegate{
         cell.delegate = self
         
         return cell
-    }
-}
-
-extension SignUpViewController: SignUpViewControllerDelegate{
-    
-    func addValidatedTextData(data: String, type: FieldType){
-        viewModel.addUserData(data, type){() -> Void in
-            if self.checkboxView.getState(){
-                self.signUpButton.enable()
-            }
-        }
     }
 }
