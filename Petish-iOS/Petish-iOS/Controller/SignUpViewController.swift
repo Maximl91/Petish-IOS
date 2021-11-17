@@ -1,26 +1,23 @@
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: ExtendedViewController {
 
     private let viewModel = SignUpViewModel()
 
     @IBOutlet weak var checkboxView: Checkbox!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var checkboxErrLabel: UILabel!
     @IBOutlet weak var signUpButton: FilledPurpleButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkboxErrLabel.isHidden = true
+        checkboxView.delegate = self
         signUpButton.disable()
+        
         configureTableView()
-        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func signupPressed(_ sender: UIButton) {
         let checkboxState = checkboxView.getState()
-        // displays error label if checkbox left unchecked
-        checkboxErrLabel.isHidden = checkboxState
         viewModel.signUpClicked(isCheckboxMarked: checkboxState){() -> Void in
             self.performSegue(withIdentifier: SegueIdentifiers.SignUpSuccess , sender: self)
         }
@@ -39,28 +36,40 @@ class SignUpViewController: UIViewController {
     func registerCells(forTableView tableView: UITableView) {
         tableView.register(UINib(nibName: Constants.textFieldCellNibName, bundle: nil), forCellReuseIdentifier: Constants.textFieldCellReuseId)
     }
-    
-    func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
 }
 
-extension SignUpViewController: SignUpViewControllerDelegate{
+// MARK: - Delegate for TextField
+
+extension SignUpViewController: UIViewControllerDelegate{
     
-    func addValidatedTextData(data: String, type: FieldType){
-        viewModel.addUserData(data, type){() -> Void in
-            if self.checkboxView.getState(){
-                self.signUpButton.enable()
+    func textFieldStateChanged(data: String, type: FieldType, isValid: Bool){
+        if isValid{
+            viewModel.addUserData(data, type){ [self]() -> Void in
+        
+                if (checkboxView.getState() && viewModel.isUserDataReady()){
+                   signUpButton.enable()
+                }
             }
+        }else{
+            signUpButton.disable()
         }
     }
 }
+
+
+// MARK: - Delegate for Checkbox
+
+extension SignUpViewController: CheckboxDelegate{
+    func checkboxClicked(checkboxState: Bool) {
+        if (checkboxState && viewModel.isUserDataReady()){
+            signUpButton.enable()
+        }else{
+            signUpButton.disable()
+        }
+    }
+}
+
+// MARK: - UITableViewDataSource/Delegate
 
 extension SignUpViewController: UITableViewDataSource, UITableViewDelegate{
     

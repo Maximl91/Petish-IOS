@@ -450,12 +450,6 @@ service and privacy policy</string>
                                     <constraint firstItem="G5H-kn-9JW" firstAttribute="leading" secondItem="ifT-sL-cRN" secondAttribute="leading" id="LDe-qe-TWR"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkbox is not checked!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52Y-Rk-viv">
-                                <rect key="frame" x="30" y="470" width="354" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Y6-LZ-avh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -464,8 +458,6 @@ service and privacy policy</string>
                             <constraint firstItem="ifT-sL-cRN" firstAttribute="leading" secondItem="lnW-lr-DGe" secondAttribute="leading" id="94f-3Y-BDk"/>
                             <constraint firstItem="4Y6-LZ-avh" firstAttribute="trailing" secondItem="D7t-DS-9PG" secondAttribute="trailing" constant="16" id="Dat-3M-Keg"/>
                             <constraint firstItem="lnW-lr-DGe" firstAttribute="leading" secondItem="rtR-Me-qth" secondAttribute="leading" id="EhW-jv-0cY"/>
-                            <constraint firstItem="52Y-Rk-viv" firstAttribute="leading" secondItem="lnW-lr-DGe" secondAttribute="leading" id="KIi-8a-UKF"/>
-                            <constraint firstItem="ifT-sL-cRN" firstAttribute="top" secondItem="52Y-Rk-viv" secondAttribute="bottom" constant="22" id="KvS-6b-n9G"/>
                             <constraint firstItem="bbp-D5-4JD" firstAttribute="top" secondItem="rtR-Me-qth" secondAttribute="bottom" constant="16" id="MDS-KM-LQU"/>
                             <constraint firstItem="ocb-Uz-j44" firstAttribute="top" secondItem="D7t-DS-9PG" secondAttribute="bottom" constant="16" id="Mec-RS-x8m"/>
                             <constraint firstItem="ifT-sL-cRN" firstAttribute="top" secondItem="lnW-lr-DGe" secondAttribute="bottom" constant="44" id="RW2-P8-wHH"/>
@@ -474,16 +466,13 @@ service and privacy policy</string>
                             <constraint firstItem="RJ1-9e-fPf" firstAttribute="centerX" secondItem="RS1-QZ-wP4" secondAttribute="centerX" id="aoz-vf-O8o"/>
                             <constraint firstItem="lnW-lr-DGe" firstAttribute="trailing" secondItem="rtR-Me-qth" secondAttribute="trailing" id="e3M-0D-FDm"/>
                             <constraint firstItem="ocb-Uz-j44" firstAttribute="leading" secondItem="4Y6-LZ-avh" secondAttribute="leading" constant="31" id="edL-cn-5NA"/>
-                            <constraint firstItem="52Y-Rk-viv" firstAttribute="trailing" secondItem="lnW-lr-DGe" secondAttribute="trailing" id="fES-0p-XJa"/>
                             <constraint firstItem="ifT-sL-cRN" firstAttribute="trailing" secondItem="lnW-lr-DGe" secondAttribute="trailing" id="gPY-aV-yy2"/>
                             <constraint firstItem="rtR-Me-qth" firstAttribute="top" secondItem="ocb-Uz-j44" secondAttribute="bottom" constant="62" id="ldT-Qk-Gca"/>
                             <constraint firstItem="RJ1-9e-fPf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ifT-sL-cRN" secondAttribute="bottom" constant="20" id="moM-i6-Owe"/>
                             <constraint firstItem="D7t-DS-9PG" firstAttribute="top" secondItem="4Y6-LZ-avh" secondAttribute="top" constant="16" id="ot5-6k-M61"/>
-                            <constraint firstItem="52Y-Rk-viv" firstAttribute="top" secondItem="lnW-lr-DGe" secondAttribute="bottom" constant="5" id="rjf-oY-aVZ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="checkboxErrLabel" destination="52Y-Rk-viv" id="Ziz-zc-EMK"/>
                         <outlet property="checkboxView" destination="Qin-PK-tE9" id="FEi-Wd-SJx"/>
                         <outlet property="signUpButton" destination="G5H-kn-9JW" id="G71-Jx-skV"/>
                         <outlet property="tableView" destination="rtR-Me-qth" id="umS-Uh-C6l"/>

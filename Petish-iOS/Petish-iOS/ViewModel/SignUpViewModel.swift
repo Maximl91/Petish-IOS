@@ -34,10 +34,7 @@ class SignUpViewModel: NSObject{
         case FieldType.password:
             userData.password = data
         }
-        
-        if isUserDataReady() {
             completion()
-        }
     }
     
     func signUpClicked(isCheckboxMarked: Bool,_ completion: @escaping ( () -> Void ) ){

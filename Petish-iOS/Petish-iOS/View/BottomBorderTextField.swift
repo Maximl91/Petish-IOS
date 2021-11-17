@@ -7,7 +7,6 @@ class BottomBorderTextField: UITextField {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         configureStyle()
         setAttributedPlaceholder()
         addBottomBorder()
