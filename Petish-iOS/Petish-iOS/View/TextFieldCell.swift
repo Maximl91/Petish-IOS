@@ -24,11 +24,8 @@ class TextFieldCell: UITableViewCell {
     @IBAction func textFieldEditEnded(_ sender: Any) {
         if let textData = textField.text, let textType = textField.getFieldType(){
             let result = textField.validateField()
-//            if textField.validateField(){
             delegate?.textFieldStateChanged(data: textData, type: textType, isValid: result)
-//            }
         }
-        
     }
     
     func isValid() -> Bool{
@@ -44,7 +41,7 @@ class TextFieldCell: UITableViewCell {
             textField.textContentType = .oneTimeCode
         }
 
-        textField.textFieldType = data.validateByType
+        textField.setFieldType(type: data.validateByType)
     }
 }
 

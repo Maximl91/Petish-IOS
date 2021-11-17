@@ -3,24 +3,30 @@ import Firebase
 
 class SignUpViewModel: NSObject{
     
-    let db = Firestore.firestore()
+    private let db = Firestore.firestore()
+    private var userData = UserData()
     let fieldPlaceholderArray: [TextFieldData]
-    var userData = UserData()
     
     
     override init(){
         fieldPlaceholderArray = [
             TextFieldData(placeholder: "Name", isSecure: false, validateByType: FieldType.name),
-            TextFieldData(placeholder: "Email", isSecure: false,validateByType: FieldType.email),
-            TextFieldData(placeholder: "Password", isSecure: true,validateByType: FieldType.password)
+            TextFieldData(placeholder: "Email", isSecure: false, validateByType: FieldType.email),
+            TextFieldData(placeholder: "Password", isSecure: true, validateByType: FieldType.password)
         ]
     }
     
-    func isUserDataReady()->Bool{ // change this
+    func isUserDataReady()->Bool{
         var flag = true
-        if(userData.name == "" || userData.password == "" || userData.name == ""){
-            flag = false
+        let mirror = Mirror(reflecting: userData)
+        
+        for child in mirror.children  {
+            if (child.value as? String == ""){
+                flag = false
+            }
         }
+        
+        print(flag)
         return flag
     }
     

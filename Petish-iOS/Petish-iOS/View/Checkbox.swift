@@ -7,8 +7,8 @@ protocol CheckboxDelegate{
 class Checkbox: UIView {
     
     // state indicates if the checkbox is marked or not
+    private let image: UIImage = #imageLiteral(resourceName: "Checked")
     private var state: Bool = false
-    private var image: UIImage = #imageLiteral(resourceName: "Checked")
     var delegate: CheckboxDelegate?
 
     @IBOutlet weak var imageView: UIImageView!
