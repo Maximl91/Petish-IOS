@@ -207,7 +207,7 @@
         <!--Login-->
         <scene sceneID="XwN-IK-4Q2">
             <objects>
-                <viewController id="NS1-xm-8Tk" userLabel="Login" sceneMemberID="viewController">
+                <viewController id="NS1-xm-8Tk" userLabel="Login" customClass="SignInViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NsK-VP-m0k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -293,7 +293,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ed6-r0-PF9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2725" y="108"/>
+            <point key="canvasLocation" x="2724.6376811594205" y="107.8125"/>
         </scene>
         <!--Home-->
         <scene sceneID="4uR-AW-NNq">
@@ -495,7 +495,7 @@ service and privacy policy</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dpF-mo-e9h"/>
+        <segue reference="myQ-yW-aI3"/>
         <segue reference="k98-uF-HMo"/>
         <segue reference="zNo-ox-YVL"/>
     </inferredMetricsTieBreakers>

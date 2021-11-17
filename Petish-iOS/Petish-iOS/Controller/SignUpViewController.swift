@@ -27,7 +27,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func withFacebookPressed(_ sender: UIButton) {
-        // with firebase?
+        // with firebase
     }
     
     func registerCells(forTableView tableView: UITableView) {
