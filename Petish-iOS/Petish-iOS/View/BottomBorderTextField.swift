@@ -2,6 +2,8 @@ import UIKit
 
 class BottomBorderTextField: UITextField {
     
+    var textFieldType: FieldType?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         

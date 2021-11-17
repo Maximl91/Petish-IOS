@@ -20,6 +20,7 @@
 		F44706BC27415F3900E972A4 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44706BB27415F3900E972A4 /* Checkbox.swift */; };
 		F44706BE27415F4600E972A4 /* Checkbox.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44706BD27415F4600E972A4 /* Checkbox.xib */; };
 		F4646102274510ED009E240C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4646101274510ED009E240C /* SignInViewController.swift */; };
+		F46461062745256C009E240C /* ReuseableTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46461052745256C009E240C /* ReuseableTableDataSource.swift */; };
 		F4A73BE72741062C00AF85FD /* TransparentPurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */; };
 		F4A73BEA2741178500AF85FD /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */; };
 		F4A73BEC274150D400AF85FD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A73BEB274150D400AF85FD /* SignUpViewModel.swift */; };
@@ -54,6 +55,7 @@
 		F44706BB27415F3900E972A4 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		F44706BD27415F4600E972A4 /* Checkbox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Checkbox.xib; sourceTree = "<group>"; };
 		F4646101274510ED009E240C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		F46461052745256C009E240C /* ReuseableTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseableTableDataSource.swift; sourceTree = "<group>"; };
 		F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentPurpleButton.swift; sourceTree = "<group>"; };
 		F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
 		F4A73BEB274150D400AF85FD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewModel.swift; path = "Petish-iOS/ViewModel/SignUpViewModel.swift"; sourceTree = SOURCE_ROOT; };
@@ -161,6 +163,7 @@
 				F44706BD27415F4600E972A4 /* Checkbox.xib */,
 				F4FC788D2742780D000DF270 /* TextFieldCell.xib */,
 				F4FC788927426D19000DF270 /* TextFieldCell.swift */,
+				F46461052745256C009E240C /* ReuseableTableDataSource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			files = (
 				F4A73BEA2741178500AF85FD /* BottomBorderTextField.swift in Sources */,
 				F4D7C66E27341834002A6F07 /* ZoomAndSnapFlowLayout.swift in Sources */,
+				F46461062745256C009E240C /* ReuseableTableDataSource.swift in Sources */,
 				F42BAA412743B57C00800552 /* TextFieldValidator.swift in Sources */,
 				F4D7C66A2734182D002A6F07 /* PhotoCell.swift in Sources */,
 				F443E7DF273D620C00065FC2 /* FilledPurpleButton.swift in Sources */,

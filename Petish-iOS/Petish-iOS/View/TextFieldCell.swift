@@ -3,8 +3,6 @@ import UIKit
 class TextFieldCell: UITableViewCell {
 
     private var validator = TextFieldValidator()
-    private var textFieldType: FieldType?
-    private var validFlag: Bool = false
     
     @IBOutlet weak var textField: BottomBorderTextField!
     @IBOutlet weak var errorLabel: UILabel!
@@ -33,21 +31,21 @@ class TextFieldCell: UITableViewCell {
     }
 
     func getFieldType()-> FieldType?{
-        return textFieldType
+        return textField.textFieldType
     }
     
-    func initCell(with viewModel: SignUpViewModel, cellIndex: Int){
+    func initCell(data: TextFieldData){
         // array is read-only
-        let placeholderArray = viewModel.getPlaceholderArray()
-        textField.placeholder = placeholderArray[cellIndex].placeholder
+        //let placeholderArray = viewModel.getPlaceholderArray()
+        textField.placeholder = data.placeholder
         
-        if placeholderArray[cellIndex].isSecure {
+        if data.isSecure {
             textField.isSecureTextEntry = true
             // disable autofill from icloud keychain (error on debug)
             textField.textContentType = .oneTimeCode
         }
-        
-      textFieldType = placeholderArray[cellIndex].validateByType
+
+        textField.textFieldType = data.validateByType
     }
 }
 
@@ -55,11 +53,9 @@ extension TextFieldCell: TextFieldValidatorDelegate {
     func showErrorMsg(errString: String) {
         errorLabel.text = errString
         errorLabel.isHidden = false
-        validFlag = false
     }
     
     func hideErrorMsg() {
         errorLabel.isHidden = true
-        validFlag = true
     }
 }

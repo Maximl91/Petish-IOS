@@ -3,9 +3,10 @@ import Firebase
 
 class SignUpViewModel: NSObject{
     
-    private let fieldPlaceholderArray: [TextFieldData]
+    let fieldPlaceholderArray: [TextFieldData]
     var arrayOfCells: [TextFieldCell] = [TextFieldCell]()
     let db = Firestore.firestore()
+    //let myData = UserData()
     
     
     override init(){
@@ -14,10 +15,6 @@ class SignUpViewModel: NSObject{
             TextFieldData(placeholder: "Email", isSecure: false,validateByType: FieldType.email),
             TextFieldData(placeholder: "Password", isSecure: true,validateByType: FieldType.password)
         ]
-    }
-
-    func getPlaceholderArray() -> [TextFieldData] {
-        return fieldPlaceholderArray
     }
     
     func isTextFieldInCellsArrayValid() -> Bool{
