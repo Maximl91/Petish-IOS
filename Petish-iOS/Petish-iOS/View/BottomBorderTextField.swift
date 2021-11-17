@@ -2,6 +2,7 @@ import UIKit
 
 class BottomBorderTextField: UITextField {
     
+    let validator = TextFieldValidator()
     var textFieldType: FieldType?
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,6 +36,14 @@ class BottomBorderTextField: UITextField {
         bottomLine.backgroundColor = UIColor.gray.cgColor
         borderStyle = .none
         layer.addSublayer(bottomLine)
+    }
+    
+    func getFieldType()-> FieldType?{
+        return textFieldType
+    }
+    
+    func validateField()-> Bool{
+        return validator.validateField(textField: self)
     }
 }
 

@@ -3,18 +3,18 @@ import UIKit
 class SignUpViewController: UIViewController {
 
     private let viewModel = SignUpViewModel()
-//    private var tableDataSource: ReuseableTableDataSource?
-    
+
     @IBOutlet weak var checkboxView: Checkbox!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var checkboxErrLabel: UILabel!
+    @IBOutlet weak var signUpButton: FilledPurpleButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkboxErrLabel.isHidden = true
+        signUpButton.disable()
         configureTableView()
         hideKeyboardWhenTappedAround()
-        
     }
     
     @IBAction func signupPressed(_ sender: UIButton) {
@@ -31,7 +31,6 @@ class SignUpViewController: UIViewController {
     }
     
     func configureTableView(){
-//        tableDataSource = ReuseableTableDataSource(with: viewModel)
         tableView.delegate = self
         tableView.dataSource = self
         registerCells(forTableView: tableView)
@@ -50,7 +49,6 @@ class SignUpViewController: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-
 }
 
 extension SignUpViewController: UITableViewDataSource, UITableViewDelegate{
@@ -63,9 +61,19 @@ extension SignUpViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.textFieldCellReuseId, for: indexPath) as! TextFieldCell
         cell.initCell(data: viewModel.fieldPlaceholderArray[indexPath.row])
-        viewModel.arrayOfCells += [cell]
+        cell.delegate = self
         
         return cell
     }
 }
 
+extension SignUpViewController: SignUpViewControllerDelegate{
+    
+    func addValidatedTextData(data: String, type: FieldType){
+        viewModel.addUserData(data, type){() -> Void in
+            if self.checkboxView.getState(){
+                self.signUpButton.enable()
+            }
+        }
+    }
+}

@@ -9,10 +9,9 @@ class TextFieldValidator{
     
     var delegate: TextFieldValidatorDelegate?
     
-    func validateField(textFieldCell: TextFieldCell){
-    
-        if let type = textFieldCell.getFieldType(), let textField = textFieldCell.textField{
-            var flag = false
+    func validateField(textField: BottomBorderTextField)-> Bool{
+        var flag = false
+        if let type = textField.getFieldType(){
             
             switch type {
             case FieldType.name:
@@ -27,6 +26,7 @@ class TextFieldValidator{
                 delegate?.hideErrorMsg()
             }
         }
+        return flag
     }
     
     func validateName(_ field: BottomBorderTextField)-> Bool{

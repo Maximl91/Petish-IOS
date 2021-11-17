@@ -485,6 +485,7 @@ service and privacy policy</string>
                     <connections>
                         <outlet property="checkboxErrLabel" destination="52Y-Rk-viv" id="Ziz-zc-EMK"/>
                         <outlet property="checkboxView" destination="Qin-PK-tE9" id="FEi-Wd-SJx"/>
+                        <outlet property="signUpButton" destination="G5H-kn-9JW" id="G71-Jx-skV"/>
                         <outlet property="tableView" destination="rtR-Me-qth" id="umS-Uh-C6l"/>
                         <segue destination="pmp-Q7-8X1" kind="presentation" identifier="SignUpSuccess" animates="NO" modalPresentationStyle="fullScreen" id="dpF-mo-e9h"/>
                     </connections>

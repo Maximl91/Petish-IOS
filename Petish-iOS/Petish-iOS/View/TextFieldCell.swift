@@ -1,16 +1,19 @@
 import UIKit
 
-class TextFieldCell: UITableViewCell {
+protocol SignUpViewControllerDelegate{
+    func addValidatedTextData(data: String, type: FieldType)
+}
 
-    private var validator = TextFieldValidator()
+class TextFieldCell: UITableViewCell {
     
+    var delegate: SignUpViewControllerDelegate?
+
     @IBOutlet weak var textField: BottomBorderTextField!
     @IBOutlet weak var errorLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        validator.delegate = self
-        
+        textField.validator.delegate = self
         textField.returnKeyType = .done
         errorLabel.isHidden = true
     }
@@ -19,24 +22,19 @@ class TextFieldCell: UITableViewCell {
     }
     
     @IBAction func textFieldEditEnded(_ sender: Any) {
-        checkValidation()
+        if let textData = textField.text, let textType = textField.getFieldType(){
+            if textField.validateField(){
+                delegate?.addValidatedTextData(data: textData, type: textType)
+            }
+        }
+        
     }
     
     func isValid() -> Bool{
         return errorLabel.isHidden
     }
     
-    func checkValidation(){
-        validator.validateField(textFieldCell: self)
-    }
-
-    func getFieldType()-> FieldType?{
-        return textField.textFieldType
-    }
-    
     func initCell(data: TextFieldData){
-        // array is read-only
-        //let placeholderArray = viewModel.getPlaceholderArray()
         textField.placeholder = data.placeholder
         
         if data.isSecure {

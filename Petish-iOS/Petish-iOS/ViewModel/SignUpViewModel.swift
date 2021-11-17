@@ -3,10 +3,9 @@ import Firebase
 
 class SignUpViewModel: NSObject{
     
-    let fieldPlaceholderArray: [TextFieldData]
-    var arrayOfCells: [TextFieldCell] = [TextFieldCell]()
     let db = Firestore.firestore()
-    //let myData = UserData()
+    let fieldPlaceholderArray: [TextFieldData]
+    var userData = UserData()
     
     
     override init(){
@@ -17,43 +16,48 @@ class SignUpViewModel: NSObject{
         ]
     }
     
-    func isTextFieldInCellsArrayValid() -> Bool{
+    func isUserDataReady()->Bool{
         var flag = true
-        for itemCell in arrayOfCells {
-            flag = flag && itemCell.isValid()
-            itemCell.checkValidation() // for each cell display if error is present
+        if(userData.name == "" || userData.password == "" || userData.name == ""){
+            flag = false
         }
         return flag
     }
     
-    func signUpClicked(isCheckboxMarked: Bool,_ completion: @escaping ( () -> Void ) ){
+    func addUserData(_ data: String,_ type: FieldType ,_ completion: @escaping ( () -> Void ) ){
         
-        if isTextFieldInCellsArrayValid() && isCheckboxMarked{ // run if passed all validity tests
-            if let name = arrayOfCells[FieldType.name.rawValue].textField.text,
-               let email = arrayOfCells[FieldType.email.rawValue].textField.text,
-               let password = arrayOfCells[FieldType.password.rawValue].textField.text {
-                
-                Auth.auth().createUser(withEmail: email, password: password, completion: { (authResult, error) in
-                  if let err = error{
-                      print(err)
-                  }else {
-                      if let userUid = authResult?.user.uid {
-                          self.db.collection("users").addDocument(data: [
-                            "user_uid": userUid,
-                            "name": name]){ err in
-                                
-                                if let err = err {
-                                    print("Error adding user data: \(err)")
-                                } else {
-                                    completion()
-                                }
-                            }
+        switch type {
+        case FieldType.name:
+            userData.name = data
+        case FieldType.email:
+            userData.email = data
+        case FieldType.password:
+            userData.password = data
+        }
+        
+        if isUserDataReady() {
+            completion()
+        }
+    }
+    
+    func signUpClicked(isCheckboxMarked: Bool,_ completion: @escaping ( () -> Void ) ){
+        Auth.auth().createUser(withEmail: userData.email, password: userData.password, completion: { (authResult, error) in
+          if let err = error{
+              print(err)
+          }else {
+              if let userUid = authResult?.user.uid {
+                  self.db.collection("users").addDocument(data: [
+                    "user_uid": userUid,
+                    "name": self.userData.name ]){ err in
+                        
+                        if let err = err {
+                            print("Error adding user data: \(err)")
+                        } else {
+                            completion()
                         }
                     }
-                })
+                }
             }
-        }else{
-            print("error validation failed!")
-        }
+        })
     }
 }
