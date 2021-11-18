@@ -10,6 +10,12 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // for future use
+//        if Auth.auth().currentUser?.uid != nil {
+//                    self.performSegue(withIdentifier: "" , sender: self)
+//                }
+        
         configureCollectionView()
         currentPagingView(index: 0)
     }

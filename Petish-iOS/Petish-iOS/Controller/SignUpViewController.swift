@@ -3,16 +3,19 @@ import UIKit
 class SignUpViewController: ExtendedViewController {
 
     private let viewModel = SignUpViewModel()
-
+    private var tableDataSource: TextFieldCellsReuseableDataSourceDelegate?
+    
+    
     @IBOutlet weak var checkboxView: Checkbox!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var signUpButton: FilledPurpleButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkboxView.delegate = self
         signUpButton.disable()
-        
+        tableDataSource = TextFieldCellsReuseableDataSourceDelegate(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, cellDelegate: self)
         configureTableView()
     }
     
@@ -28,34 +31,35 @@ class SignUpViewController: ExtendedViewController {
     }
     
     func configureTableView(){
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView.delegate = tableDataSource
+        tableView.dataSource = tableDataSource
         registerCells(forTableView: tableView)
     }
     
     func registerCells(forTableView tableView: UITableView) {
         tableView.register(UINib(nibName: Constants.textFieldCellNibName, bundle: nil), forCellReuseIdentifier: Constants.textFieldCellReuseId)
     }
+    
 }
 
-// MARK: - Delegate for TextField
+// MARK: - UIViewControllerDelegate
 
 extension SignUpViewController: UIViewControllerDelegate{
     
     func textFieldStateChanged(data: String, type: FieldType, isValid: Bool){
-        if isValid{
-            viewModel.addUserData(data, type){ [self]() -> Void in
+        let dataToAdd = isValid ? data : Constants.invalidUserDataString
         
-                if (checkboxView.getState() && viewModel.isUserDataReady()){
-                   signUpButton.enable()
-                }
+        viewModel.addUserData(dataToAdd, type){ [self]() -> Void in
+    
+            if (checkboxView.getState() && viewModel.isUserDataReady()){
+               signUpButton.enable()
             }
-        }else{
-            signUpButton.disable()
+            if !isValid{
+              signUpButton.disable()
+            }
         }
     }
 }
-
 
 // MARK: - Delegate for Checkbox
 
@@ -66,23 +70,5 @@ extension SignUpViewController: CheckboxDelegate{
         }else{
             signUpButton.disable()
         }
-    }
-}
-
-// MARK: - UITableViewDataSource/Delegate
-
-extension SignUpViewController: UITableViewDataSource, UITableViewDelegate{
-    
-    func numberOfSections(in tableView: UITableView) -> Int { return 1 }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return 3 }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        tableView.frame.height / 3
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.textFieldCellReuseId, for: indexPath) as! TextFieldCell
-        cell.initCell(data: viewModel.fieldPlaceholderArray[indexPath.row])
-        cell.delegate = self
-        
-        return cell
     }
 }

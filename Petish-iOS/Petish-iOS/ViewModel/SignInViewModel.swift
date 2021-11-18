@@ -1,15 +1,13 @@
 import Foundation
 import Firebase
 
-class SignUpViewModel: NSObject{
+class SignInViewModel: NSObject{
     
-    private let db = Firestore.firestore()
-    private var userData = UserData()
     let fieldPlaceholderArray: [TextFieldData]
+    private var userData = UserData()
     
     override init(){
         fieldPlaceholderArray = [
-            TextFieldData(placeholder: "Name", isSecure: false, validateByType: FieldType.name),
             TextFieldData(placeholder: "Email", isSecure: false, validateByType: FieldType.email),
             TextFieldData(placeholder: "Password", isSecure: true, validateByType: FieldType.password)
         ]
@@ -20,7 +18,6 @@ class SignUpViewModel: NSObject{
         let mirror = Mirror(reflecting: userData)
         
         for child in mirror.children  {
-       
             if (child.value as? String == Constants.invalidUserDataString){
                 flag = false
             }
@@ -41,23 +38,12 @@ class SignUpViewModel: NSObject{
             completion()
     }
     
-    func signUpClicked(isCheckboxMarked: Bool,_ completion: @escaping ( () -> Void ) ){
-        Auth.auth().createUser(withEmail: userData.email, password: userData.password, completion: { (authResult, error) in
-          if let err = error{
-              print(err)
-          }else {
-              if let userUid = authResult?.user.uid, let name = self.userData.name {
-                  self.db.collection(Constants.FirestoreUserCollection).addDocument(data: [
-                    "user_uid": userUid,
-                    "name": name ]){ err in
-                        
-                        if let err = err {
-                            print("Error adding user data: \(err)")
-                        } else {
-                            completion()
-                        }
-                    }
-                }
+    func signInClicked(_ completion: @escaping ( ()->Void )){
+        Auth.auth().signIn(withEmail: userData.email, password: userData.password, completion:{ (authResult, error) in
+            if let e = error {
+                print(e)
+            }else{
+                completion()
             }
         })
     }
