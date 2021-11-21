@@ -1,6 +1,6 @@
 import UIKit
 
-class SignUpViewController: ExtendedViewController {
+class SignUpViewController: BaseViewController {
 
     private let viewModel = SignUpViewModel()
     private var tableDataSource: TextFieldCellsReuseableDataSource?
@@ -15,7 +15,7 @@ class SignUpViewController: ExtendedViewController {
         super.viewDidLoad()
         checkboxView.delegate = self
         signUpButton.disable()
-        tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, cellDelegate: self)
+        tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, listener: self)
         configureTableView()
     }
     
@@ -47,9 +47,9 @@ class SignUpViewController: ExtendedViewController {
     
 }
 
-// MARK: - UIViewControllerDelegate
+// MARK: - TextFieldCellDelegate
 
-extension SignUpViewController: UIViewControllerDelegate{
+extension SignUpViewController: TextFieldCellDelegate{
     
     func textFieldStateChanged(data: String, type: FieldType, isValid: Bool){
         let dataToAdd = isValid ? data : Constants.invalidUserDataString
@@ -66,7 +66,7 @@ extension SignUpViewController: UIViewControllerDelegate{
     }
 }
 
-// MARK: - Delegate for Checkbox
+// MARK: - CheckboxDelegate
 
 extension SignUpViewController: CheckboxDelegate{
     func checkboxClicked(checkboxState: Bool) {

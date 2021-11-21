@@ -1,6 +1,6 @@
 import UIKit
 
-class SignInViewController: ExtendedViewController {
+class SignInViewController: BaseViewController {
 
     let viewModel = SignInViewModel()
     var tableDataSource: TextFieldCellsReuseableDataSource?
@@ -11,7 +11,7 @@ class SignInViewController: ExtendedViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 2, data: viewModel.fieldPlaceholderArray, cellDelegate: self)
+        tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 2, data: viewModel.fieldPlaceholderArray, listener: self)
         viewInitialSettings()
         configureTableView()
     }
@@ -46,7 +46,7 @@ class SignInViewController: ExtendedViewController {
     }
 }
 
-extension SignInViewController: UIViewControllerDelegate{
+extension SignInViewController: TextFieldCellDelegate{
     
     func textFieldStateChanged(data: String, type: FieldType, isValid: Bool){
         let dataToAdd = isValid ? data : Constants.invalidUserDataString

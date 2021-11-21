@@ -1,6 +1,6 @@
 import UIKit
 
-class ExtendedViewController: UIViewController {
+class BaseViewController: UIViewController {
 
     internal let spinner = SpinnerViewController()
     

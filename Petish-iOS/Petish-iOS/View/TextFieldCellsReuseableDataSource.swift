@@ -2,12 +2,12 @@ import UIKit
 
 class TextFieldCellsReuseableDataSource: NSObject {
     
-    private let parentUIViewController: UIViewControllerDelegate
+    private let textFieldStateListener: TextFieldCellDelegate
     private let fieldPlaceholderArray: [TextFieldData]
     private let displayedCells: CGFloat
     
-    init(cellsToDisplay: CGFloat, data: [TextFieldData], cellDelegate: UIViewControllerDelegate){
-        parentUIViewController = cellDelegate
+    init(cellsToDisplay: CGFloat, data: [TextFieldData], listener: TextFieldCellDelegate){
+        textFieldStateListener = listener
         fieldPlaceholderArray = data
         displayedCells = cellsToDisplay
     }
@@ -23,7 +23,7 @@ extension TextFieldCellsReuseableDataSource: UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.textFieldCellReuseId, for: indexPath) as! TextFieldCell
         cell.initCell(data: fieldPlaceholderArray[indexPath.row])
-        cell.delegate = parentUIViewController
+        cell.delegate = textFieldStateListener
         
         return cell
     }

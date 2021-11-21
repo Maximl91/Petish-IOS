@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA09681D8ACDE024287667D2 /* Pods_Petish_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72932D0E06B7B16FCF215FED /* Pods_Petish_iOS.framework */; };
-		F418959F27459D39000E3497 /* ExtendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418959E27459D39000E3497 /* ExtendedViewController.swift */; };
+		F418959F27459D39000E3497 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418959E27459D39000E3497 /* BaseViewController.swift */; };
 		F421141A274A31B800A29935 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4211418274A31B800A29935 /* SpinnerViewController.swift */; };
 		F421141B274A31B800A29935 /* SpinnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4211419274A31B800A29935 /* SpinnerViewController.xib */; };
 		F42B173827463B4A009FEFC6 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B173727463B4A009FEFC6 /* SignInViewModel.swift */; };
@@ -45,7 +45,7 @@
 		1DABFD290F39C821A0E34088 /* Pods-Petish-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petish-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		72932D0E06B7B16FCF215FED /* Pods_Petish_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Petish_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DFA8F399731CC62A955D223 /* Pods-Petish-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petish-iOS.release.xcconfig"; path = "Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		F418959E27459D39000E3497 /* ExtendedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedViewController.swift; sourceTree = "<group>"; };
+		F418959E27459D39000E3497 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F4211418274A31B800A29935 /* SpinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		F4211419274A31B800A29935 /* SpinnerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpinnerViewController.xib; sourceTree = "<group>"; };
 		F42B173727463B4A009FEFC6 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
@@ -130,12 +130,12 @@
 		F43C886B273167AE00A98C95 /* Petish-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F45BAEAF274A872A0018C2B9 /* Services */,
 				F4F021B8273419FD00776CF5 /* Fonts */,
 				F4F021B22734196800776CF5 /* Model */,
 				F4FC788827424F2D000DF270 /* ViewModel */,
 				F43C8880273175A500A98C95 /* Controller */,
 				F43C8881273175B100A98C95 /* View */,
-				F42BAA402743B57C00800552 /* TextFieldValidator.swift */,
 				F43C886C273167AE00A98C95 /* AppDelegate.swift */,
 				F43C886E273167AE00A98C95 /* SceneDelegate.swift */,
 				F4D7C67027341841002A6F07 /* Constants.swift */,
@@ -149,7 +149,7 @@
 		F43C8880273175A500A98C95 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F418959E27459D39000E3497 /* ExtendedViewController.swift */,
+				F418959E27459D39000E3497 /* BaseViewController.swift */,
 				F43C8870273167AE00A98C95 /* OnboardingViewController.swift */,
 				F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */,
 				F4D7C66D27341834002A6F07 /* SignUpViewController.swift */,
@@ -161,22 +161,70 @@
 		F43C8881273175B100A98C95 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F4211418274A31B800A29935 /* SpinnerViewController.swift */,
-				F4211419274A31B800A29935 /* SpinnerViewController.xib */,
 				F43C8872273167AE00A98C95 /* Main.storyboard */,
 				F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */,
-				F4D7C6692734182D002A6F07 /* PhotoCell.xib */,
-				F4D7C6682734182D002A6F07 /* PhotoCell.swift */,
-				F443E7DE273D620C00065FC2 /* FilledPurpleButton.swift */,
-				F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */,
+				F45BAEAD274A84DD0018C2B9 /* TextFieldCell */,
+				F45BAEAC274A84CD0018C2B9 /* Checkbox */,
+				F45BAEAB274A84B60018C2B9 /* PhotoCell */,
+				F45BAEAA274A84A10018C2B9 /* Spinner */,
+				F45BAEAE274A86EA0018C2B9 /* Custom Buttons */,
 				F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */,
-				F44706BB27415F3900E972A4 /* Checkbox.swift */,
-				F44706BD27415F4600E972A4 /* Checkbox.xib */,
-				F4FC788D2742780D000DF270 /* TextFieldCell.xib */,
-				F4FC788927426D19000DF270 /* TextFieldCell.swift */,
 				F42B173B27464C0A009FEFC6 /* TextFieldCellsReuseableDataSource.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F45BAEAA274A84A10018C2B9 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				F4211418274A31B800A29935 /* SpinnerViewController.swift */,
+				F4211419274A31B800A29935 /* SpinnerViewController.xib */,
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
+		F45BAEAB274A84B60018C2B9 /* PhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+				F4D7C6692734182D002A6F07 /* PhotoCell.xib */,
+				F4D7C6682734182D002A6F07 /* PhotoCell.swift */,
+			);
+			path = PhotoCell;
+			sourceTree = "<group>";
+		};
+		F45BAEAC274A84CD0018C2B9 /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				F44706BB27415F3900E972A4 /* Checkbox.swift */,
+				F44706BD27415F4600E972A4 /* Checkbox.xib */,
+			);
+			path = Checkbox;
+			sourceTree = "<group>";
+		};
+		F45BAEAD274A84DD0018C2B9 /* TextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				F4FC788D2742780D000DF270 /* TextFieldCell.xib */,
+				F4FC788927426D19000DF270 /* TextFieldCell.swift */,
+			);
+			path = TextFieldCell;
+			sourceTree = "<group>";
+		};
+		F45BAEAE274A86EA0018C2B9 /* Custom Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				F443E7DE273D620C00065FC2 /* FilledPurpleButton.swift */,
+				F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */,
+			);
+			path = "Custom Buttons";
+			sourceTree = "<group>";
+		};
+		F45BAEAF274A872A0018C2B9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F42BAA402743B57C00800552 /* TextFieldValidator.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		F4F021B22734196800776CF5 /* Model */ = {
@@ -335,7 +383,7 @@
 				F4D7C66A2734182D002A6F07 /* PhotoCell.swift in Sources */,
 				F443E7DF273D620C00065FC2 /* FilledPurpleButton.swift in Sources */,
 				F4FC789027429AC2000DF270 /* SignUp-SignIn.swift in Sources */,
-				F418959F27459D39000E3497 /* ExtendedViewController.swift in Sources */,
+				F418959F27459D39000E3497 /* BaseViewController.swift in Sources */,
 				F43C8871273167AE00A98C95 /* OnboardingViewController.swift in Sources */,
 				F4FC788B27426D19000DF270 /* TextFieldCell.swift in Sources */,
 				F4F021B72734199B00776CF5 /* OnboardingData.swift in Sources */,

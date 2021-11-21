@@ -1,12 +1,12 @@
 import UIKit
 
-protocol UIViewControllerDelegate{
+protocol TextFieldCellDelegate{
     func textFieldStateChanged(data: String, type: FieldType, isValid: Bool)
 }
 
 class TextFieldCell: UITableViewCell {
     
-    var delegate: UIViewControllerDelegate?
+    var delegate: TextFieldCellDelegate?
 
     @IBOutlet weak var textField: BottomBorderTextField!
     @IBOutlet weak var errorLabel: UILabel!
