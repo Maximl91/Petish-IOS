@@ -1,16 +1,20 @@
 import Foundation
-import Firebase
 
 class SignInViewModel: NSObject{
     
     let fieldPlaceholderArray: [TextFieldData]
     private var userData = UserData()
+    private let firebaseManager = FirebaseManager()
     
     override init(){
         fieldPlaceholderArray = [
             TextFieldData(placeholder: "Email", isSecure: false, validateByType: FieldType.email),
             TextFieldData(placeholder: "Password", isSecure: true, validateByType: FieldType.password)
         ]
+    }
+    
+    func getUserData()-> UserData{
+        return userData
     }
     
     func isUserDataReady()->Bool{
@@ -38,23 +42,7 @@ class SignInViewModel: NSObject{
             completion()
     }
     
-    func firebaseErrorToString(error: Error)-> String{
-        let castedError = error as NSError
-        let firebaseError = castedError.userInfo
-        let errorString = firebaseError["NSLocalizedDescription"] as! String
-        return errorString
-    }
-    
     func signInClicked(_ completion: @escaping ( (String?)->Void )){
-        Auth.auth().signIn(withEmail: userData.email, password: userData.password, completion:{ (authResult, error) in
-            if let e = error {
-                let errorString = self.firebaseErrorToString(error: e)
-                print(errorString)
-                completion(errorString)
-            
-                }else{
-                    completion(nil)
-                }
-        })
+        firebaseManager.signInWithEmailAndPassword(email: userData.email, password: userData.password, completionHandler: completion)
     }
 }

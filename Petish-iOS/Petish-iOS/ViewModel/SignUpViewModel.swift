@@ -6,6 +6,7 @@ class SignUpViewModel: NSObject{
     private let db = Firestore.firestore()
     private var userData = UserData()
     let fieldPlaceholderArray: [TextFieldData]
+    private let firebaseManager = FirebaseManager()
     
     override init(){
         fieldPlaceholderArray = [
@@ -41,35 +42,7 @@ class SignUpViewModel: NSObject{
             completion()
     }
     
-    func firebaseErrorToString(error: Error)-> String{
-        let castedError = error as NSError
-        let firebaseError = castedError.userInfo
-        let errorString = firebaseError["NSLocalizedDescription"] as! String 
-        return errorString
-    }
-    
     func signUpClicked(isCheckboxMarked: Bool,_ completion: @escaping ( (String?) -> Void ) ){
-        Auth.auth().createUser(withEmail: userData.email, password: userData.password, completion: { (authResult, error) in
-            if let err = error{
-                let errorString = self.firebaseErrorToString(error: err)
-                print(errorString)
-                completion(errorString)
-            }else {
-                if let userUid = authResult?.user.uid, let name = self.userData.name {
-                    self.db.collection(Constants.FirestoreUserCollection).addDocument(data: [
-                        "user_uid": userUid,
-                        "name": name ]){ err in
-                        
-                            if let err = err {
-                                let errorString = self.firebaseErrorToString(error: err)
-                                print("Error adding user data: \(errorString)")
-                                completion(errorString)
-                            }else {
-                                completion(nil)
-                            }
-                        }
-                }
-           }
-        })
+        firebaseManager.createUserWithEmailAndPassword(email: userData.email, password: userData.password, name: userData.name, completionHandler: completion)
     }
 }
