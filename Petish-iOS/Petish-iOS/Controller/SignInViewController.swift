@@ -12,8 +12,7 @@ class SignInViewController: ExtendedViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 2, data: viewModel.fieldPlaceholderArray, cellDelegate: self)
-        loginErrLabel.isHidden = true
-        signInButton.disable()
+        viewInitialSettings()
         configureTableView()
     }
     
@@ -29,6 +28,11 @@ class SignInViewController: ExtendedViewController {
                 self.performSegue(withIdentifier: SegueIdentifiers.LoginSuccess , sender: self)
             }
         }
+    }
+    
+    func viewInitialSettings(){
+        loginErrLabel.isHidden = true
+        signInButton.disable()
     }
     
     func configureTableView(){

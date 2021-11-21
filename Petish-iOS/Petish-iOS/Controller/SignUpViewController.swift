@@ -21,8 +21,13 @@ class SignUpViewController: ExtendedViewController {
     
     @IBAction func signupPressed(_ sender: UIButton) {
         let checkboxState = checkboxView.getState()
-        viewModel.signUpClicked(isCheckboxMarked: checkboxState){() -> Void in
-            self.performSegue(withIdentifier: SegueIdentifiers.SignUpSuccess , sender: self)
+        showLoader()
+        viewModel.signUpClicked(isCheckboxMarked: checkboxState){(errString: String?) -> Void in
+            self.hideLoader()
+            
+            if errString == nil {
+                self.performSegue(withIdentifier: SegueIdentifiers.SignUpSuccess , sender: self)
+            }
         }
     }
     

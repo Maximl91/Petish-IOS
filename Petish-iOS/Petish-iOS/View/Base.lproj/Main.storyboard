@@ -114,6 +114,7 @@
                         <outlet property="collectionView" destination="Hz2-0F-RJ7" id="fiA-8O-fhL"/>
                         <outlet property="descriptionLabel" destination="7Tm-Iz-GYB" id="Sdr-vH-q7E"/>
                         <outlet property="subtitleLabel" destination="c8b-kR-TkP" id="98q-bA-0Fk"/>
+                        <segue destination="pmp-Q7-8X1" kind="presentation" identifier="AlreadyLoggedIn" animates="NO" modalPresentationStyle="fullScreen" id="XAW-en-rbu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -487,7 +488,7 @@ service and privacy policy</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eww-aN-l82"/>
+        <segue reference="XAW-en-rbu"/>
         <segue reference="k98-uF-HMo"/>
         <segue reference="zNo-ox-YVL"/>
     </inferredMetricsTieBreakers>

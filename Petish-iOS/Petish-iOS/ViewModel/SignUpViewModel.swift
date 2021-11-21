@@ -41,24 +41,35 @@ class SignUpViewModel: NSObject{
             completion()
     }
     
-    func signUpClicked(isCheckboxMarked: Bool,_ completion: @escaping ( () -> Void ) ){
+    func firebaseErrorToString(error: Error)-> String{
+        let castedError = error as NSError
+        let firebaseError = castedError.userInfo
+        let errorString = firebaseError["NSLocalizedDescription"] as! String 
+        return errorString
+    }
+    
+    func signUpClicked(isCheckboxMarked: Bool,_ completion: @escaping ( (String?) -> Void ) ){
         Auth.auth().createUser(withEmail: userData.email, password: userData.password, completion: { (authResult, error) in
-          if let err = error{
-              print(err)
-          }else {
-              if let userUid = authResult?.user.uid, let name = self.userData.name {
-                  self.db.collection(Constants.FirestoreUserCollection).addDocument(data: [
-                    "user_uid": userUid,
-                    "name": name ]){ err in
+            if let err = error{
+                let errorString = self.firebaseErrorToString(error: err)
+                print(errorString)
+                completion(errorString)
+            }else {
+                if let userUid = authResult?.user.uid, let name = self.userData.name {
+                    self.db.collection(Constants.FirestoreUserCollection).addDocument(data: [
+                        "user_uid": userUid,
+                        "name": name ]){ err in
                         
-                        if let err = err {
-                            print("Error adding user data: \(err)")
-                        } else {
-                            completion()
+                            if let err = err {
+                                let errorString = self.firebaseErrorToString(error: err)
+                                print("Error adding user data: \(errorString)")
+                                completion(errorString)
+                            }else {
+                                completion(nil)
+                            }
                         }
-                    }
                 }
-            }
+           }
         })
     }
 }

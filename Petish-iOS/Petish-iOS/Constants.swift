@@ -34,4 +34,5 @@ struct Fonts{
 struct SegueIdentifiers{
     static let SignUpSuccess = "SignUpSuccess"
     static let LoginSuccess = "LoginSuccess"
+    static let AlreadyLoggedIn = "AlreadyLoggedIn"
 }
