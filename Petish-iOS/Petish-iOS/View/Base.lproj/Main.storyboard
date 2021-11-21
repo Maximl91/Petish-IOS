@@ -296,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ed6-r0-PF9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2724.6376811594205" y="107.8125"/>
+            <point key="canvasLocation" x="2816" y="108"/>
         </scene>
         <!--Home-->
         <scene sceneID="4uR-AW-NNq">
@@ -479,16 +479,48 @@ service and privacy policy</string>
                         <outlet property="checkboxView" destination="Qin-PK-tE9" id="FEi-Wd-SJx"/>
                         <outlet property="signUpButton" destination="G5H-kn-9JW" id="G71-Jx-skV"/>
                         <outlet property="tableView" destination="rtR-Me-qth" id="umS-Uh-C6l"/>
-                        <segue destination="pmp-Q7-8X1" kind="presentation" identifier="SignUpSuccess" animates="NO" modalPresentationStyle="fullScreen" id="dpF-mo-e9h"/>
+                        <segue destination="zdx-R5-qnm" kind="presentation" identifier="SignUpSuccess" animates="NO" modalPresentationStyle="fullScreen" id="PnM-iy-NEB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cO-ku-uwK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1834.7826086956522" y="-273.21428571428572"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hNB-Ww-OUp">
+            <objects>
+                <viewController id="zdx-R5-qnm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bx1-UY-2Yd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5w-xc-mvo" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
+                                <rect key="frame" x="343.5" y="60" width="54.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LNZ-lO-wNr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SKIP"/>
+                                <connections>
+                                    <segue destination="pmp-Q7-8X1" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="WJr-A0-5gx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CfI-G2-ifw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y5w-xc-mvo" firstAttribute="top" secondItem="CfI-G2-ifw" secondAttribute="top" constant="16" id="ZGq-jd-Hsp"/>
+                            <constraint firstItem="CfI-G2-ifw" firstAttribute="trailing" secondItem="Y5w-xc-mvo" secondAttribute="trailing" constant="16" id="kY4-59-2sg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j97-Of-OYM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3693" y="-273"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XAW-en-rbu"/>
+        <segue reference="WJr-A0-5gx"/>
         <segue reference="k98-uF-HMo"/>
         <segue reference="zNo-ox-YVL"/>
     </inferredMetricsTieBreakers>
