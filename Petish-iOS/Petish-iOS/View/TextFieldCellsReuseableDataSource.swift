@@ -1,6 +1,6 @@
 import UIKit
 
-class TextFieldCellsReuseableDataSourceDelegate: NSObject {
+class TextFieldCellsReuseableDataSource: NSObject {
     
     private let parentUIViewController: UIViewControllerDelegate
     private let fieldPlaceholderArray: [TextFieldData]
@@ -13,7 +13,7 @@ class TextFieldCellsReuseableDataSourceDelegate: NSObject {
     }
 }
 
-extension TextFieldCellsReuseableDataSourceDelegate: UITableViewDataSource, UITableViewDelegate{
+extension TextFieldCellsReuseableDataSource: UITableViewDataSource, UITableViewDelegate{
     
     func numberOfSections(in tableView: UITableView) -> Int { return 1 }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return fieldPlaceholderArray.count }

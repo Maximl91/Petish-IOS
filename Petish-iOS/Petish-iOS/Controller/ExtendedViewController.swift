@@ -2,6 +2,8 @@ import UIKit
 
 class ExtendedViewController: UIViewController {
 
+    internal let spinner = SpinnerViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
@@ -16,4 +18,14 @@ class ExtendedViewController: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    func showLoader(){
+           addChild(spinner)
+           view.addSubview(spinner.view)
+       }
+       
+       func hideLoader(){
+           spinner.view.removeFromSuperview()
+           spinner.removeFromParent()
+       }
 }

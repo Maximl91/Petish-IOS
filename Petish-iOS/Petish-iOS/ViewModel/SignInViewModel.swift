@@ -38,13 +38,24 @@ class SignInViewModel: NSObject{
             completion()
     }
     
-    func signInClicked(_ completion: @escaping ( ()->Void )){
+    func signInClicked(_ completion: @escaping ( (String?)->Void )){
         Auth.auth().signIn(withEmail: userData.email, password: userData.password, completion:{ (authResult, error) in
+//            if let e = error {
+//                print(e)
+//            }else{
+//                completion()
+//            }
+            
             if let e = error {
-                print(e)
-            }else{
-                completion()
-            }
+                        let castedError = e as NSError
+                        let firebaseError = castedError.userInfo
+                        if let errorString = firebaseError["NSLocalizedDescription"] as! String? {
+                            print(errorString)
+                            completion(errorString)
+                            }
+                        }else{
+                            completion(nil)
+                        }
         })
     }
 }

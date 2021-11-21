@@ -258,6 +258,12 @@
                                 </constraints>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid username or password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edS-iE-3uc">
+                                <rect key="frame" x="30" y="365" width="354" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xv1-q0-NPj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -265,19 +271,23 @@
                             <constraint firstItem="xv1-q0-NPj" firstAttribute="trailing" secondItem="gNV-km-Rpv" secondAttribute="trailing" constant="16" id="58R-9W-zst"/>
                             <constraint firstItem="gNV-km-Rpv" firstAttribute="top" secondItem="xv1-q0-NPj" secondAttribute="top" constant="16" id="5WX-Q0-au5"/>
                             <constraint firstItem="C8e-so-Nwh" firstAttribute="top" secondItem="JSP-fX-L0W" secondAttribute="bottom" constant="16" id="6Xu-6E-Jlj"/>
+                            <constraint firstItem="edS-iE-3uc" firstAttribute="leading" secondItem="ZLH-jW-hCv" secondAttribute="leading" id="APu-HP-XdY"/>
                             <constraint firstItem="xv1-q0-NPj" firstAttribute="trailing" secondItem="C8e-so-Nwh" secondAttribute="trailing" constant="115" id="AUZ-ab-oMC"/>
                             <constraint firstItem="Vth-IB-Pmu" firstAttribute="top" secondItem="gNV-km-Rpv" secondAttribute="bottom" constant="16" id="AoM-ox-QOD"/>
                             <constraint firstItem="Vth-IB-Pmu" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="56" id="Cng-Nb-qFA"/>
+                            <constraint firstItem="edS-iE-3uc" firstAttribute="top" secondItem="ZLH-jW-hCv" secondAttribute="bottom" constant="10" id="SX8-HK-oif"/>
                             <constraint firstItem="JSP-fX-L0W" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="30" id="UBW-kL-X2O"/>
                             <constraint firstItem="C8e-so-Nwh" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="115" id="Xdv-kZ-Kul"/>
                             <constraint firstItem="xv1-q0-NPj" firstAttribute="trailing" secondItem="JSP-fX-L0W" secondAttribute="trailing" constant="30" id="d5a-K6-f3t"/>
                             <constraint firstItem="ZLH-jW-hCv" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="30" id="jRl-es-zA0"/>
+                            <constraint firstItem="edS-iE-3uc" firstAttribute="trailing" secondItem="ZLH-jW-hCv" secondAttribute="trailing" id="tAw-Dc-QAF"/>
                             <constraint firstItem="ZLH-jW-hCv" firstAttribute="top" secondItem="Vth-IB-Pmu" secondAttribute="bottom" constant="62" id="tvg-xI-Ydk"/>
                             <constraint firstItem="xv1-q0-NPj" firstAttribute="trailing" secondItem="ZLH-jW-hCv" secondAttribute="trailing" constant="30" id="unT-ly-tmk"/>
                             <constraint firstItem="JSP-fX-L0W" firstAttribute="top" secondItem="ZLH-jW-hCv" secondAttribute="bottom" constant="40" id="yJq-9d-th0"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginErrLabel" destination="edS-iE-3uc" id="ulQ-ht-uJK"/>
                         <outlet property="signInButton" destination="JSP-fX-L0W" id="uQT-pk-7Kz"/>
                         <outlet property="tableView" destination="ZLH-jW-hCv" id="M94-MR-pkP"/>
                         <segue destination="pmp-Q7-8X1" kind="presentation" identifier="LoginSuccess" animates="NO" modalPresentationStyle="fullScreen" id="eww-aN-l82"/>

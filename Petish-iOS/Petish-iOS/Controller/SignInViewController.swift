@@ -3,22 +3,31 @@ import UIKit
 class SignInViewController: ExtendedViewController {
 
     let viewModel = SignInViewModel()
-    var tableDataSource: TextFieldCellsReuseableDataSourceDelegate?
+    var tableDataSource: TextFieldCellsReuseableDataSource?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var signInButton: FilledPurpleButton!
+    @IBOutlet weak var loginErrLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableDataSource = TextFieldCellsReuseableDataSourceDelegate(cellsToDisplay: 2, data: viewModel.fieldPlaceholderArray, cellDelegate: self)
+        tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 2, data: viewModel.fieldPlaceholderArray, cellDelegate: self)
+        loginErrLabel.isHidden = true
         signInButton.disable()
         configureTableView()
     }
     
     
     @IBAction func loginPressed(_ sender: FilledPurpleButton) {
-        viewModel.signInClicked(){ ()-> Void in
-            self.performSegue(withIdentifier: SegueIdentifiers.LoginSuccess , sender: self)
+        showLoader()
+        viewModel.signInClicked(){ (errString: String?)-> Void in
+            self.hideLoader()
+            
+            if errString != nil {
+                self.loginErrLabel.isHidden = false
+            }else{
+                self.performSegue(withIdentifier: SegueIdentifiers.LoginSuccess , sender: self)
+            }
         }
     }
     

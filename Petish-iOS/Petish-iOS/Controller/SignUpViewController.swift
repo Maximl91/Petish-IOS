@@ -3,7 +3,7 @@ import UIKit
 class SignUpViewController: ExtendedViewController {
 
     private let viewModel = SignUpViewModel()
-    private var tableDataSource: TextFieldCellsReuseableDataSourceDelegate?
+    private var tableDataSource: TextFieldCellsReuseableDataSource?
     
     
     @IBOutlet weak var checkboxView: Checkbox!
@@ -15,7 +15,7 @@ class SignUpViewController: ExtendedViewController {
         super.viewDidLoad()
         checkboxView.delegate = self
         signUpButton.disable()
-        tableDataSource = TextFieldCellsReuseableDataSourceDelegate(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, cellDelegate: self)
+        tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, cellDelegate: self)
         configureTableView()
     }
     
