@@ -161,62 +161,22 @@
 		F43C8881273175B100A98C95 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F4211418274A31B800A29935 /* SpinnerViewController.swift */,
+				F4211419274A31B800A29935 /* SpinnerViewController.xib */,
 				F43C8872273167AE00A98C95 /* Main.storyboard */,
 				F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */,
-				F45BAEA8274A814D0018C2B9 /* Checkbox */,
-				F45BAEA7274A81470018C2B9 /* TextFieldCell */,
-				F45BAEA6274A81320018C2B9 /* PhotoCell */,
-				F45BAEA5274A81240018C2B9 /* SpinnerView */,
-				F45BAEA9274A816E0018C2B9 /* Buttons */,
+				F4D7C6692734182D002A6F07 /* PhotoCell.xib */,
+				F4D7C6682734182D002A6F07 /* PhotoCell.swift */,
+				F443E7DE273D620C00065FC2 /* FilledPurpleButton.swift */,
+				F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */,
+				F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */,
+				F44706BB27415F3900E972A4 /* Checkbox.swift */,
+				F44706BD27415F4600E972A4 /* Checkbox.xib */,
+				F4FC788D2742780D000DF270 /* TextFieldCell.xib */,
+				F4FC788927426D19000DF270 /* TextFieldCell.swift */,
 				F42B173B27464C0A009FEFC6 /* TextFieldCellsReuseableDataSource.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		F45BAEA5274A81240018C2B9 /* SpinnerView */ = {
-			isa = PBXGroup;
-			children = (
-				F4211418274A31B800A29935 /* SpinnerViewController.swift */,
-				F4211419274A31B800A29935 /* SpinnerViewController.xib */,
-			);
-			path = SpinnerView;
-			sourceTree = "<group>";
-		};
-		F45BAEA6274A81320018C2B9 /* PhotoCell */ = {
-			isa = PBXGroup;
-			children = (
-				F4D7C6692734182D002A6F07 /* PhotoCell.xib */,
-				F4D7C6682734182D002A6F07 /* PhotoCell.swift */,
-			);
-			path = PhotoCell;
-			sourceTree = "<group>";
-		};
-		F45BAEA7274A81470018C2B9 /* TextFieldCell */ = {
-			isa = PBXGroup;
-			children = (
-				F4FC788D2742780D000DF270 /* TextFieldCell.xib */,
-				F4FC788927426D19000DF270 /* TextFieldCell.swift */,
-			);
-			path = TextFieldCell;
-			sourceTree = "<group>";
-		};
-		F45BAEA8274A814D0018C2B9 /* Checkbox */ = {
-			isa = PBXGroup;
-			children = (
-				F44706BB27415F3900E972A4 /* Checkbox.swift */,
-				F44706BD27415F4600E972A4 /* Checkbox.xib */,
-			);
-			path = Checkbox;
-			sourceTree = "<group>";
-		};
-		F45BAEA9274A816E0018C2B9 /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */,
-				F443E7DE273D620C00065FC2 /* FilledPurpleButton.swift */,
-				F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */,
-			);
-			path = Buttons;
 			sourceTree = "<group>";
 		};
 		F4F021B22734196800776CF5 /* Model */ = {
