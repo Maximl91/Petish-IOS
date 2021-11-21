@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 class OnboardingViewController: UIViewController {
     private let images = OnboardingData.images
@@ -10,10 +11,19 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureCollectionView()
         currentPagingView(index: 0)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            
+        if Auth.auth().currentUser?.uid != nil {
+           // self.performSegue(withIdentifier: SegueIdentifiers.AlreadyLoggedIn , sender: self)
+        }
+    }
+
     func currentPagingView(index: Int){
         descriptionLabel?.text = OnboardingData.descriptionTexts[index]
         subtitleLabel?.text = OnboardingData.subtitleTexts[index]

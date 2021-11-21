@@ -20,11 +20,13 @@ struct TextFieldData{
 }
 
 struct UserData{
-    var name: String
-    var email: String
-    var password: String
+    var name: String? = nil
+    var email: String = Constants.invalidUserDataString
+    var password: String = Constants.invalidUserDataString
     
-    init(name: String = "", email:String = "", password: String = "")
+    init(){}
+    
+    init(name: String, email:String, password: String)
     {
         self.name = name
         self.email = email

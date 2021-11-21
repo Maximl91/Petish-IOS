@@ -1,10 +1,15 @@
 import UIKit
 
+protocol CheckboxDelegate{
+    func checkboxClicked(checkboxState: Bool)
+}
+
 class Checkbox: UIView {
-    
+
     // state indicates if the checkbox is marked or not
+    private let image: UIImage = #imageLiteral(resourceName: "Checked")
     private var state: Bool = false
-    private var image: UIImage = #imageLiteral(resourceName: "Checked")
+    var delegate: CheckboxDelegate?
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -20,6 +25,7 @@ class Checkbox: UIView {
     @IBAction func checkPressed(_ sender: UIButton) {
         state = !state 
         imageView.image = state ? image : nil
+        delegate?.checkboxClicked(checkboxState: state)
     }
     
     func getState() -> Bool {

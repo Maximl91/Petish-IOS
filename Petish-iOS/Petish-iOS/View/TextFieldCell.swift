@@ -1,12 +1,12 @@
 import UIKit
 
-protocol SignUpViewControllerDelegate{
-    func addValidatedTextData(data: String, type: FieldType)
+protocol UIViewControllerDelegate{
+    func textFieldStateChanged(data: String, type: FieldType, isValid: Bool)
 }
 
 class TextFieldCell: UITableViewCell {
     
-    var delegate: SignUpViewControllerDelegate?
+    var delegate: UIViewControllerDelegate?
 
     @IBOutlet weak var textField: BottomBorderTextField!
     @IBOutlet weak var errorLabel: UILabel!
@@ -23,11 +23,9 @@ class TextFieldCell: UITableViewCell {
     
     @IBAction func textFieldEditEnded(_ sender: Any) {
         if let textData = textField.text, let textType = textField.getFieldType(){
-            if textField.validateField(){
-                delegate?.addValidatedTextData(data: textData, type: textType)
-            }
+            let result = textField.validateField()
+            delegate?.textFieldStateChanged(data: textData, type: textType, isValid: result)
         }
-        
     }
     
     func isValid() -> Bool{
@@ -43,7 +41,7 @@ class TextFieldCell: UITableViewCell {
             textField.textContentType = .oneTimeCode
         }
 
-        textField.textFieldType = data.validateByType
+        textField.setFieldType(type: data.validateByType)
     }
 }
 

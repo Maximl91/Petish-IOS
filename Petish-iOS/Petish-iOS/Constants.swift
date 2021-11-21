@@ -13,6 +13,8 @@ struct Constants{
     static let textFieldCellReuseId = "TextfieldCellReuseId"
     // Firestore
     static let FirestoreUserCollection = "users"
+    //
+    static let invalidUserDataString = ""
 }
 
 
@@ -31,4 +33,6 @@ struct Fonts{
 
 struct SegueIdentifiers{
     static let SignUpSuccess = "SignUpSuccess"
+    static let LoginSuccess = "LoginSuccess"
+    static let AlreadyLoggedIn = "AlreadyLoggedIn"
 }
