@@ -9,12 +9,14 @@ class SignUpViewController: BaseViewController {
     @IBOutlet weak var checkboxView: Checkbox!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var signUpButton: FilledPurpleButton!
-    
+    @IBOutlet weak var signUpFacebook: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkboxView.delegate = self
         signUpButton.disable()
+        signUpFacebook.isEnabled = false
+        
         tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, listener: self)
         configureTableView()
     }
@@ -66,7 +68,7 @@ extension SignUpViewController: TextFieldCellDelegate{
                signUpButton.enable()
             }
             if !isValid{
-              signUpButton.disable()
+                signUpButton.disable()
             }
         }
     }
@@ -76,6 +78,12 @@ extension SignUpViewController: TextFieldCellDelegate{
 
 extension SignUpViewController: CheckboxDelegate{
     func checkboxClicked(checkboxState: Bool) {
+        if checkboxState{
+            signUpFacebook.isEnabled = true
+        }else{
+            signUpFacebook.isEnabled = false
+        }
+        
         if (checkboxState && viewModel.isUserDataReady()){
             signUpButton.enable()
         }else{

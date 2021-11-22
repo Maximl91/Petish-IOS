@@ -462,6 +462,7 @@ service and privacy policy</string>
                     <connections>
                         <outlet property="checkboxView" destination="Qin-PK-tE9" id="FEi-Wd-SJx"/>
                         <outlet property="signUpButton" destination="G5H-kn-9JW" id="G71-Jx-skV"/>
+                        <outlet property="signUpFacebook" destination="cwb-9z-67I" id="O5V-t8-W1A"/>
                         <outlet property="tableView" destination="rtR-Me-qth" id="umS-Uh-C6l"/>
                         <segue destination="zdx-R5-qnm" kind="presentation" identifier="SignUpSuccess" animates="NO" modalPresentationStyle="fullScreen" id="PnM-iy-NEB"/>
                     </connections>
@@ -504,7 +505,7 @@ service and privacy policy</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fSf-Ho-hHt"/>
+        <segue reference="MtH-xJ-1kC"/>
         <segue reference="k98-uF-HMo"/>
         <segue reference="zNo-ox-YVL"/>
     </inferredMetricsTieBreakers>

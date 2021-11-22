@@ -74,12 +74,14 @@ class SignUpViewModel: NSObject{
             guard error == nil else {
                 // Error occurred
                 print(error!.localizedDescription)
+                completion(nil,error!.localizedDescription)
                 return
             }
         
             // Check for cancel
             guard let result = result, !result.isCancelled else {
                 print("User cancelled login")
+                completion(nil,"User cancelled login")
                 return
             }
           
