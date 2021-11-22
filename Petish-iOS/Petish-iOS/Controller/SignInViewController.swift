@@ -37,38 +37,36 @@ class SignInViewController: BaseViewController {
         viewModel.signInFacebookClicked(listener: self){ (errString: String?)-> Void in
             self.hideLoader()
             
-            if errString != nil {
-                self.loginErrLabel.isHidden = false
-            }else{
+            if errString == nil {
                 self.performSegue(withIdentifier: SegueIdentifiers.LoginSuccess , sender: self)
             }
         }
     }
-    
-    func viewInitialSettings(){
-        loginErrLabel.isHidden = true
-        signInButton.disable()
-    }
-    
-    func configureTableView(){
-        tableView.delegate = tableDataSource
-        tableView.dataSource = tableDataSource
-        registerCells(forTableView: tableView)
-    }
-    
-    func registerCells(forTableView tableView: UITableView) {
-        tableView.register(UINib(nibName: Constants.textFieldCellNibName, bundle: nil), forCellReuseIdentifier: Constants.textFieldCellReuseId)
-    }
-}
-
-extension SignInViewController: TextFieldCellDelegate{
-    
-    func textFieldStateChanged(data: String, type: FieldType, isValid: Bool){
-        let dataToAdd = isValid ? data : Constants.invalidUserDataString
         
-        viewModel.addUserData(dataToAdd, type){ [self]() -> Void in
-            (isValid && viewModel.isUserDataReady()) ? signInButton.enable() : signInButton.disable()
+        func viewInitialSettings(){
+            loginErrLabel.isHidden = true
+            signInButton.disable()
+        }
+        
+        func configureTableView(){
+            tableView.delegate = tableDataSource
+            tableView.dataSource = tableDataSource
+            registerCells(forTableView: tableView)
+        }
+        
+        func registerCells(forTableView tableView: UITableView) {
+            tableView.register(UINib(nibName: Constants.textFieldCellNibName, bundle: nil), forCellReuseIdentifier: Constants.textFieldCellReuseId)
         }
     }
-}
-
+    
+    extension SignInViewController: TextFieldCellDelegate{
+        
+        func textFieldStateChanged(data: String, type: FieldType, isValid: Bool){
+            let dataToAdd = isValid ? data : Constants.invalidUserDataString
+            
+            viewModel.addUserData(dataToAdd, type){ [self]() -> Void in
+                (isValid && viewModel.isUserDataReady()) ? signInButton.enable() : signInButton.disable()
+            }
+        }
+    }
+    
