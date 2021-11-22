@@ -7,24 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA09681D8ACDE024287667D2 /* Pods_Petish_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72932D0E06B7B16FCF215FED /* Pods_Petish_iOS.framework */; };
+		F4176336274B89AF00047D87 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4176335274B89AF00047D87 /* Home.storyboard */; };
+		F4176338274BC8D800047D87 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4176337274BC8D800047D87 /* HomeViewController.swift */; };
+		F418959F27459D39000E3497 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418959E27459D39000E3497 /* BaseViewController.swift */; };
+		F421141A274A31B800A29935 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4211418274A31B800A29935 /* SpinnerViewController.swift */; };
+		F421141B274A31B800A29935 /* SpinnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4211419274A31B800A29935 /* SpinnerViewController.xib */; };
+		F42B173827463B4A009FEFC6 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B173727463B4A009FEFC6 /* SignInViewModel.swift */; };
+		F42B173C27464C0A009FEFC6 /* TextFieldCellsReuseableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B173B27464C0A009FEFC6 /* TextFieldCellsReuseableDataSource.swift */; };
+		F42BAA412743B57C00800552 /* TextFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42BAA402743B57C00800552 /* TextFieldValidator.swift */; };
+		F42BAA452743FABC00800552 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F42BAA442743FABC00800552 /* GoogleService-Info.plist */; };
 		F43C886D273167AE00A98C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C886C273167AE00A98C95 /* AppDelegate.swift */; };
 		F43C886F273167AE00A98C95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C886E273167AE00A98C95 /* SceneDelegate.swift */; };
 		F43C8871273167AE00A98C95 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C8870273167AE00A98C95 /* OnboardingViewController.swift */; };
 		F43C8874273167AE00A98C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43C8872273167AE00A98C95 /* Main.storyboard */; };
 		F43C8876273167AF00A98C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43C8875273167AF00A98C95 /* Assets.xcassets */; };
 		F43C8879273167AF00A98C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */; };
-		F443E7DF273D620C00065FC2 /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443E7DE273D620C00065FC2 /* PurpleButton.swift */; };
+		F443E7DF273D620C00065FC2 /* FilledPurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443E7DE273D620C00065FC2 /* FilledPurpleButton.swift */; };
+		F44706BC27415F3900E972A4 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44706BB27415F3900E972A4 /* Checkbox.swift */; };
+		F44706BE27415F4600E972A4 /* Checkbox.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44706BD27415F4600E972A4 /* Checkbox.xib */; };
+		F45BAEB1274A894B0018C2B9 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45BAEB0274A894B0018C2B9 /* FirebaseManager.swift */; };
+		F4646102274510ED009E240C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4646101274510ED009E240C /* SignInViewController.swift */; };
+		F4A73BE72741062C00AF85FD /* TransparentPurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */; };
+		F4A73BEA2741178500AF85FD /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */; };
+		F4A73BEC274150D400AF85FD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A73BEB274150D400AF85FD /* SignUpViewModel.swift */; };
 		F4D7C66A2734182D002A6F07 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C6682734182D002A6F07 /* PhotoCell.swift */; };
 		F4D7C66B2734182D002A6F07 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D7C6692734182D002A6F07 /* PhotoCell.xib */; };
 		F4D7C66E27341834002A6F07 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */; };
-		F4D7C66F27341834002A6F07 /* SignUpInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C66D27341834002A6F07 /* SignUpInViewController.swift */; };
+		F4D7C66F27341834002A6F07 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C66D27341834002A6F07 /* SignUpViewController.swift */; };
 		F4D7C67227341841002A6F07 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C67027341841002A6F07 /* Constants.swift */; };
 		F4F021B72734199B00776CF5 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F021B62734199B00776CF5 /* OnboardingData.swift */; };
 		F4F021BB27341A6C00776CF5 /* SFCompactDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4F021B927341A6C00776CF5 /* SFCompactDisplay-Medium.otf */; };
 		F4F021BC27341A6C00776CF5 /* SFProText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4F021BA27341A6C00776CF5 /* SFProText-Medium.otf */; };
+		F4FC788B27426D19000DF270 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC788927426D19000DF270 /* TextFieldCell.swift */; };
+		F4FC788E2742780D000DF270 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4FC788D2742780D000DF270 /* TextFieldCell.xib */; };
+		F4FC789027429AC2000DF270 /* SignUp-SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC788F27429AC2000DF270 /* SignUp-SignIn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DABFD290F39C821A0E34088 /* Pods-Petish-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petish-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		72932D0E06B7B16FCF215FED /* Pods_Petish_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Petish_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DFA8F399731CC62A955D223 /* Pods-Petish-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petish-iOS.release.xcconfig"; path = "Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		F4176335274B89AF00047D87 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		F4176337274BC8D800047D87 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F418959E27459D39000E3497 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F4211418274A31B800A29935 /* SpinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+		F4211419274A31B800A29935 /* SpinnerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpinnerViewController.xib; sourceTree = "<group>"; };
+		F42B173727463B4A009FEFC6 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		F42B173B27464C0A009FEFC6 /* TextFieldCellsReuseableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCellsReuseableDataSource.swift; sourceTree = "<group>"; };
+		F42BAA402743B57C00800552 /* TextFieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidator.swift; sourceTree = "<group>"; };
+		F42BAA442743FABC00800552 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F43C8869273167AE00A98C95 /* Petish-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Petish-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43C886C273167AE00A98C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F43C886E273167AE00A98C95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,15 +65,25 @@
 		F43C8875273167AF00A98C95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F43C8878273167AF00A98C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F43C887A273167AF00A98C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F443E7DE273D620C00065FC2 /* PurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
+		F443E7DE273D620C00065FC2 /* FilledPurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledPurpleButton.swift; sourceTree = "<group>"; };
+		F44706BB27415F3900E972A4 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		F44706BD27415F4600E972A4 /* Checkbox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Checkbox.xib; sourceTree = "<group>"; };
+		F45BAEB0274A894B0018C2B9 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		F4646101274510ED009E240C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentPurpleButton.swift; sourceTree = "<group>"; };
+		F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
+		F4A73BEB274150D400AF85FD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewModel.swift; path = "Petish-iOS/ViewModel/SignUpViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		F4D7C6682734182D002A6F07 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F4D7C6692734182D002A6F07 /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
-		F4D7C66D27341834002A6F07 /* SignUpInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInViewController.swift; sourceTree = "<group>"; };
+		F4D7C66D27341834002A6F07 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F4D7C67027341841002A6F07 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F4F021B62734199B00776CF5 /* OnboardingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		F4F021B927341A6C00776CF5 /* SFCompactDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Medium.otf"; sourceTree = "<group>"; };
 		F4F021BA27341A6C00776CF5 /* SFProText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.otf"; sourceTree = "<group>"; };
+		F4FC788927426D19000DF270 /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		F4FC788D2742780D000DF270 /* TextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
+		F4FC788F27429AC2000DF270 /* SignUp-SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp-SignIn.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +91,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA09681D8ACDE024287667D2 /* Pods_Petish_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		798B9BFCE39EE5622323798B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72932D0E06B7B16FCF215FED /* Pods_Petish_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFBBEF449ABF92A2A78FC25D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DABFD290F39C821A0E34088 /* Pods-Petish-iOS.debug.xcconfig */,
+				8DFA8F399731CC62A955D223 /* Pods-Petish-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F4176334274B896B00047D87 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F43C8872273167AE00A98C95 /* Main.storyboard */,
+				F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */,
+				F4176335274B89AF00047D87 /* Home.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		F43C8860273167AE00A98C95 = {
 			isa = PBXGroup;
 			children = (
 				F43C886B273167AE00A98C95 /* Petish-iOS */,
 				F43C886A273167AE00A98C95 /* Products */,
+				798B9BFCE39EE5622323798B /* Frameworks */,
+				BFBBEF449ABF92A2A78FC25D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +146,10 @@
 		F43C886B273167AE00A98C95 /* Petish-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F45BAEAF274A872A0018C2B9 /* Services */,
 				F4F021B8273419FD00776CF5 /* Fonts */,
 				F4F021B22734196800776CF5 /* Model */,
-				F4F021B32734196D00776CF5 /* ViewModel */,
+				F4FC788827424F2D000DF270 /* ViewModel */,
 				F43C8880273175A500A98C95 /* Controller */,
 				F43C8881273175B100A98C95 /* View */,
 				F43C886C273167AE00A98C95 /* AppDelegate.swift */,
@@ -84,6 +157,7 @@
 				F4D7C67027341841002A6F07 /* Constants.swift */,
 				F43C8875273167AF00A98C95 /* Assets.xcassets */,
 				F43C887A273167AF00A98C95 /* Info.plist */,
+				F42BAA442743FABC00800552 /* GoogleService-Info.plist */,
 			);
 			path = "Petish-iOS";
 			sourceTree = "<group>";
@@ -91,9 +165,12 @@
 		F43C8880273175A500A98C95 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F418959E27459D39000E3497 /* BaseViewController.swift */,
 				F43C8870273167AE00A98C95 /* OnboardingViewController.swift */,
-				F4D7C66D27341834002A6F07 /* SignUpInViewController.swift */,
 				F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */,
+				F4D7C66D27341834002A6F07 /* SignUpViewController.swift */,
+				F4646101274510ED009E240C /* SignInViewController.swift */,
+				F4176337274BC8D800047D87 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -101,28 +178,79 @@
 		F43C8881273175B100A98C95 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F43C8872273167AE00A98C95 /* Main.storyboard */,
-				F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */,
-				F4D7C6692734182D002A6F07 /* PhotoCell.xib */,
-				F4D7C6682734182D002A6F07 /* PhotoCell.swift */,
-				F443E7DE273D620C00065FC2 /* PurpleButton.swift */,
+				F4176334274B896B00047D87 /* Storyboards */,
+				F45BAEAD274A84DD0018C2B9 /* TextFieldCell */,
+				F45BAEAC274A84CD0018C2B9 /* Checkbox */,
+				F45BAEAB274A84B60018C2B9 /* PhotoCell */,
+				F45BAEAA274A84A10018C2B9 /* Spinner */,
+				F45BAEAE274A86EA0018C2B9 /* Custom Buttons */,
+				F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */,
+				F42B173B27464C0A009FEFC6 /* TextFieldCellsReuseableDataSource.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F45BAEAA274A84A10018C2B9 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				F4211418274A31B800A29935 /* SpinnerViewController.swift */,
+				F4211419274A31B800A29935 /* SpinnerViewController.xib */,
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
+		F45BAEAB274A84B60018C2B9 /* PhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+				F4D7C6692734182D002A6F07 /* PhotoCell.xib */,
+				F4D7C6682734182D002A6F07 /* PhotoCell.swift */,
+			);
+			path = PhotoCell;
+			sourceTree = "<group>";
+		};
+		F45BAEAC274A84CD0018C2B9 /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				F44706BB27415F3900E972A4 /* Checkbox.swift */,
+				F44706BD27415F4600E972A4 /* Checkbox.xib */,
+			);
+			path = Checkbox;
+			sourceTree = "<group>";
+		};
+		F45BAEAD274A84DD0018C2B9 /* TextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				F4FC788D2742780D000DF270 /* TextFieldCell.xib */,
+				F4FC788927426D19000DF270 /* TextFieldCell.swift */,
+			);
+			path = TextFieldCell;
+			sourceTree = "<group>";
+		};
+		F45BAEAE274A86EA0018C2B9 /* Custom Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				F443E7DE273D620C00065FC2 /* FilledPurpleButton.swift */,
+				F4A73BE62741062C00AF85FD /* TransparentPurpleButton.swift */,
+			);
+			path = "Custom Buttons";
+			sourceTree = "<group>";
+		};
+		F45BAEAF274A872A0018C2B9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F42BAA402743B57C00800552 /* TextFieldValidator.swift */,
+				F45BAEB0274A894B0018C2B9 /* FirebaseManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		F4F021B22734196800776CF5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F4F021B62734199B00776CF5 /* OnboardingData.swift */,
+				F4FC788F27429AC2000DF270 /* SignUp-SignIn.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		F4F021B32734196D00776CF5 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F4F021B8273419FD00776CF5 /* Fonts */ = {
@@ -134,6 +262,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		F4FC788827424F2D000DF270 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F4A73BEB274150D400AF85FD /* SignUpViewModel.swift */,
+				F42B173727463B4A009FEFC6 /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +278,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F43C887D273167AF00A98C95 /* Build configuration list for PBXNativeTarget "Petish-iOS" */;
 			buildPhases = (
+				45AD401CDBCCB44300E8AC5C /* [CP] Check Pods Manifest.lock */,
 				F43C8865273167AE00A98C95 /* Sources */,
 				F43C8866273167AE00A98C95 /* Frameworks */,
 				F43C8867273167AE00A98C95 /* Resources */,
+				A0ED99A222F26105A939CE2B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,30 +332,91 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D7C66B2734182D002A6F07 /* PhotoCell.xib in Resources */,
+				F4176336274B89AF00047D87 /* Home.storyboard in Resources */,
 				F43C8879273167AF00A98C95 /* LaunchScreen.storyboard in Resources */,
+				F42BAA452743FABC00800552 /* GoogleService-Info.plist in Resources */,
 				F4F021BC27341A6C00776CF5 /* SFProText-Medium.otf in Resources */,
+				F4FC788E2742780D000DF270 /* TextFieldCell.xib in Resources */,
 				F43C8876273167AF00A98C95 /* Assets.xcassets in Resources */,
 				F4F021BB27341A6C00776CF5 /* SFCompactDisplay-Medium.otf in Resources */,
+				F44706BE27415F4600E972A4 /* Checkbox.xib in Resources */,
+				F421141B274A31B800A29935 /* SpinnerViewController.xib in Resources */,
 				F43C8874273167AE00A98C95 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45AD401CDBCCB44300E8AC5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Petish-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0ED99A222F26105A939CE2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F43C8865273167AE00A98C95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A73BEA2741178500AF85FD /* BottomBorderTextField.swift in Sources */,
 				F4D7C66E27341834002A6F07 /* ZoomAndSnapFlowLayout.swift in Sources */,
+				F42BAA412743B57C00800552 /* TextFieldValidator.swift in Sources */,
+				F42B173827463B4A009FEFC6 /* SignInViewModel.swift in Sources */,
+				F45BAEB1274A894B0018C2B9 /* FirebaseManager.swift in Sources */,
 				F4D7C66A2734182D002A6F07 /* PhotoCell.swift in Sources */,
-				F443E7DF273D620C00065FC2 /* PurpleButton.swift in Sources */,
+				F4176338274BC8D800047D87 /* HomeViewController.swift in Sources */,
+				F443E7DF273D620C00065FC2 /* FilledPurpleButton.swift in Sources */,
+				F4FC789027429AC2000DF270 /* SignUp-SignIn.swift in Sources */,
+				F418959F27459D39000E3497 /* BaseViewController.swift in Sources */,
 				F43C8871273167AE00A98C95 /* OnboardingViewController.swift in Sources */,
+				F4FC788B27426D19000DF270 /* TextFieldCell.swift in Sources */,
 				F4F021B72734199B00776CF5 /* OnboardingData.swift in Sources */,
 				F43C886D273167AE00A98C95 /* AppDelegate.swift in Sources */,
+				F42B173C27464C0A009FEFC6 /* TextFieldCellsReuseableDataSource.swift in Sources */,
 				F4D7C67227341841002A6F07 /* Constants.swift in Sources */,
+				F4646102274510ED009E240C /* SignInViewController.swift in Sources */,
 				F43C886F273167AE00A98C95 /* SceneDelegate.swift in Sources */,
-				F4D7C66F27341834002A6F07 /* SignUpInViewController.swift in Sources */,
+				F4A73BE72741062C00AF85FD /* TransparentPurpleButton.swift in Sources */,
+				F4A73BEC274150D400AF85FD /* SignUpViewModel.swift in Sources */,
+				F44706BC27415F3900E972A4 /* Checkbox.swift in Sources */,
+				F421141A274A31B800A29935 /* SpinnerViewController.swift in Sources */,
+				F4D7C66F27341834002A6F07 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +560,7 @@
 		};
 		F43C887E273167AF00A98C95 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DABFD290F39C821A0E34088 /* Pods-Petish-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -387,6 +588,7 @@
 		};
 		F43C887F273167AF00A98C95 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DFA8F399731CC62A955D223 /* Pods-Petish-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
