@@ -7,7 +7,7 @@ protocol TextFieldCellDelegate{
 class TextFieldCell: UITableViewCell {
     
     var delegate: TextFieldCellDelegate?
-
+    
     @IBOutlet weak var textField: BottomBorderTextField!
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -17,9 +17,9 @@ class TextFieldCell: UITableViewCell {
         textField.returnKeyType = .done
         errorLabel.isHidden = true
         textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),
-                                  for: .editingChanged)
+                            for: .editingChanged)
     }
-
+    
     @IBAction func textFieldDidEnd(_ sender: BottomBorderTextField){
     }
     
@@ -42,7 +42,7 @@ class TextFieldCell: UITableViewCell {
             // disable autofill from icloud keychain (error on debug)
             textField.textContentType = .oneTimeCode
         }
-
+        
         textField.setFieldType(type: data.validateByType)
     }
 }

@@ -3,7 +3,7 @@ import Firebase
 import UIKit
 
 class FirebaseManager: NSObject {
- 
+    
     private let db = Firestore.firestore()
     
     func createUserWith(email: String, password: String, completionHandler: @escaping (String?,String?)->Void ){
@@ -17,23 +17,24 @@ class FirebaseManager: NSObject {
             else {
                 if let userId = authResult?.user.uid {
                     completionHandler(userId, nil)
+                }else{
+                    completionHandler(nil,"error parsing userUid from response")
                 }
-                completionHandler(nil,"error parsing userUid from response")
-           }
+            }
         })
     }
     
     
     func addDocumentToCollection(collectionName: String,userId: String, data: [String:Any], completionHandler: @escaping (String?,String?)->Void ){
-    
+        
         db.collection(collectionName).document(userId).setData(data){ err in
-                if let err = err {
-                    let errorString = self.firebaseErrorToString(error: err)
-                    print("Error adding user data: \(errorString)")
-                    completionHandler(userId, errorString)
-                }else {
-                    completionHandler(userId ,nil)
-                }
+            if let err = err {
+                let errorString = self.firebaseErrorToString(error: err)
+                print("Error adding user data: \(errorString)")
+                completionHandler(userId, errorString)
+            }else {
+                completionHandler(userId ,nil)
+            }
         }
     }
     
@@ -43,9 +44,9 @@ class FirebaseManager: NSObject {
                 let errorString = self.firebaseErrorToString(error: e)
                 print(errorString)
                 completionHandler(errorString)
-                }else{
-                    completionHandler(nil)
-                }
+            }else{
+                completionHandler(nil)
+            }
         })
     }
     

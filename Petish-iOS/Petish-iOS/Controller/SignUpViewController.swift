@@ -1,7 +1,7 @@
 import UIKit
 
 class SignUpViewController: BaseViewController {
-
+    
     private let viewModel = SignUpViewModel()
     private var tableDataSource: TextFieldCellsReuseableDataSource?
     
@@ -63,9 +63,9 @@ extension SignUpViewController: TextFieldCellDelegate{
         let dataToAdd = isValid ? data : Constants.invalidUserDataString
         
         viewModel.addUserData(dataToAdd, type){ [self]() -> Void in
-    
+            
             if (checkboxView.getState() && viewModel.isUserDataReady()){
-               signUpButton.enable()
+                signUpButton.enable()
             }
             if !isValid{
                 signUpButton.disable()

@@ -53,7 +53,7 @@ class TextFieldValidator{
     
     func validatePassword(_ field: BottomBorderTextField)-> Bool{
         let passLength = field.text?.count
-
+        
         if(passLength! < 6){
             delegate?.showErrorMsg(errString: "password too short!")
             return false

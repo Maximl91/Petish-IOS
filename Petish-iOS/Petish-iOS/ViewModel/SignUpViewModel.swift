@@ -20,7 +20,7 @@ class SignUpViewModel: NSObject{
         let mirror = Mirror(reflecting: userData)
         
         for child in mirror.children  {
-       
+            
             if (child.value as? String == Constants.invalidUserDataString){
                 flag = false
             }
@@ -38,30 +38,23 @@ class SignUpViewModel: NSObject{
         case FieldType.password:
             userData.password = data
         }
-            completion()
+        completion()
     }
     
     func signUpClicked(_ completion: @escaping ( (String?,String?) -> Void ) ){
-        
         firebaseManager.createUserWith(email: userData.email, password: userData.password){ (userId: String?, error: String?)-> Void in
             
-//            guard error != nil, let userId = userId, let name = self.userData.name else {
-//                // login failed
-//                print("failed")
-//                completion(nil, error)
-//                return
-//            }
+            guard error == nil, let userId = userId, let name = self.userData.name else {
+                // login failed
+                print(error!)
+                completion(nil, error)
+                return
+            }
             
             // login successful
-            if error == nil{
-                    if let userId = userId, let name = self.userData.name {
-                        self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, userId: userId, data: [
-                            "user_uid": userId,
-                            "name": name], completionHandler: completion)
-                    }
-            }
-            print("failed login")
-            completion(nil, error)
+            self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, userId: userId, data: [
+                "user_uid": userId,
+                "name": name], completionHandler: completion)
         }
     }
     
@@ -77,21 +70,20 @@ class SignUpViewModel: NSObject{
                 completion(nil,error!.localizedDescription)
                 return
             }
-        
+            
             // Check for cancel
             guard let result = result, !result.isCancelled else {
                 print("User cancelled login")
                 completion(nil,"User cancelled login")
                 return
             }
-          
+            
             // Successfully logged in, add user to database
             Profile.loadCurrentProfile { (profile, error) in
-                print(Profile.current?.email)
                 if let name = Profile.current?.name, let userId = AccessToken.current?.userID {
                     self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, userId: userId, data: [
-                                    "user_uid": userId,
-                                    "name": name], completionHandler: completion)
+                        "user_uid": userId,
+                        "name": name], completionHandler: completion)
                 }
             }
         }

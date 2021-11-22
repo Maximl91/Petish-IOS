@@ -2,12 +2,13 @@ import UIKit
 import FBSDKLoginKit
 
 class SignInViewController: BaseViewController {
-
+    
     let viewModel = SignInViewModel()
     var tableDataSource: TextFieldCellsReuseableDataSource?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var signInButton: FilledPurpleButton!
+    @IBOutlet weak var loginWithFacebook: UIButton!
     @IBOutlet weak var loginErrLabel: UILabel!
     
     override func viewDidLoad() {
@@ -22,7 +23,7 @@ class SignInViewController: BaseViewController {
         showLoader()
         viewModel.signInClicked(){ (errString: String?)-> Void in
             self.hideLoader()
-
+            
             if errString != nil {
                 self.loginErrLabel.isHidden = false
             }else{
@@ -31,9 +32,18 @@ class SignInViewController: BaseViewController {
         }
     }
     
-    //
-    //
-    // login with facebook
+    
+    @IBAction func loginFacebookPressed(_ sender: Any) {
+        viewModel.signInFacebookClicked(listener: self){ (errString: String?)-> Void in
+            self.hideLoader()
+            
+            if errString != nil {
+                self.loginErrLabel.isHidden = false
+            }else{
+                self.performSegue(withIdentifier: SegueIdentifiers.LoginSuccess , sender: self)
+            }
+        }
+    }
     
     func viewInitialSettings(){
         loginErrLabel.isHidden = true
@@ -55,7 +65,7 @@ extension SignInViewController: TextFieldCellDelegate{
     
     func textFieldStateChanged(data: String, type: FieldType, isValid: Bool){
         let dataToAdd = isValid ? data : Constants.invalidUserDataString
-
+        
         viewModel.addUserData(dataToAdd, type){ [self]() -> Void in
             (isValid && viewModel.isUserDataReady()) ? signInButton.enable() : signInButton.disable()
         }

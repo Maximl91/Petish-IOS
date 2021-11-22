@@ -19,16 +19,16 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-  
+        
         if Auth.auth().currentUser?.uid != nil {
             self.performSegue(withIdentifier: SegueIdentifiers.AlreadyLoggedIn , sender: self)
         }
         
-        if let token = AccessToken.current, !token.isExpired { // doesnt work!
+        if let token = AccessToken.current, !token.isExpired {
             self.performSegue(withIdentifier: SegueIdentifiers.AlreadyLoggedIn , sender: self)
         }
     }
-
+    
     func currentPagingView(index: Int){
         descriptionLabel?.text = OnboardingData.descriptionTexts[index]
         subtitleLabel?.text = OnboardingData.subtitleTexts[index]
