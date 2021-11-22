@@ -10,7 +10,8 @@ target 'Petish-iOS' do
 pod 'gRPC-Core', '1.21.0'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
-
+pod 'FBSDKLoginKit'
+    
 
 end
 
