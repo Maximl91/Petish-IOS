@@ -22,7 +22,7 @@ class SignUpViewController: BaseViewController {
     @IBAction func signupPressed(_ sender: UIButton) {
         let checkboxState = checkboxView.getState()
         showLoader()
-        viewModel.signUpClicked(isCheckboxMarked: checkboxState){(errString: String?) -> Void in
+        viewModel.signUpClicked(isCheckboxMarked: checkboxState){(userId: String?, errString: String?) -> Void in
             self.hideLoader()
             
             if errString == nil {

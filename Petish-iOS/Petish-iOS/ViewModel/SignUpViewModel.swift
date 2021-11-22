@@ -1,12 +1,10 @@
 import Foundation
-import Firebase
 
 class SignUpViewModel: NSObject{
     
-    private let db = Firestore.firestore()
+    private let firebaseManager = FirebaseManager()
     private var userData = UserData()
     let fieldPlaceholderArray: [TextFieldData]
-    private let firebaseManager = FirebaseManager()
     
     override init(){
         fieldPlaceholderArray = [
@@ -42,7 +40,19 @@ class SignUpViewModel: NSObject{
             completion()
     }
     
-    func signUpClicked(isCheckboxMarked: Bool,_ completion: @escaping ( (String?) -> Void ) ){
-        firebaseManager.createUserWithEmailAndPassword(email: userData.email, password: userData.password, name: userData.name, completionHandler: completion)
+    func signUpClicked(isCheckboxMarked: Bool,_ completion: @escaping ( (String?,String?) -> Void ) ){
+        
+        firebaseManager.createUserWithEmailAndPassword(email: userData.email, password: userData.password){ (userId: String?, error: String?)-> Void in
+            if error == nil{
+                if let userId = userId, let name = self.userData.name{
+                    // login successful
+                    self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, data: [
+                                                    "user_uid": userId,
+                                                    "name": name], completionHandler: completion)
+                }
+            }
+            // login failed
+            completion(nil,error)
+        }
     }
 }
