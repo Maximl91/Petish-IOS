@@ -1,5 +1,6 @@
 import UIKit
 import Firebase
+import FBSDKLoginKit
 
 class OnboardingViewController: UIViewController {
     private let images = OnboardingData.images
@@ -17,10 +18,14 @@ class OnboardingViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-            super.viewDidAppear(animated)
-            
+        super.viewDidAppear(animated)
+  
         if Auth.auth().currentUser?.uid != nil {
-           // self.performSegue(withIdentifier: SegueIdentifiers.AlreadyLoggedIn , sender: self)
+            self.performSegue(withIdentifier: SegueIdentifiers.AlreadyLoggedIn , sender: self)
+        }
+        
+        if let token = AccessToken.current, !token.isExpired { // doesnt work!
+            self.performSegue(withIdentifier: SegueIdentifiers.AlreadyLoggedIn , sender: self)
         }
     }
 

@@ -1,4 +1,5 @@
 import UIKit
+import FBSDKLoginKit
 
 class SignInViewController: BaseViewController {
 
@@ -21,7 +22,7 @@ class SignInViewController: BaseViewController {
         showLoader()
         viewModel.signInClicked(){ (errString: String?)-> Void in
             self.hideLoader()
-            
+
             if errString != nil {
                 self.loginErrLabel.isHidden = false
             }else{
@@ -29,6 +30,10 @@ class SignInViewController: BaseViewController {
             }
         }
     }
+    
+    //
+    //
+    // login with facebook
     
     func viewInitialSettings(){
         loginErrLabel.isHidden = true

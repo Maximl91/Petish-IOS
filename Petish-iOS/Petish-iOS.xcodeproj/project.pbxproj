@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA09681D8ACDE024287667D2 /* Pods_Petish_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72932D0E06B7B16FCF215FED /* Pods_Petish_iOS.framework */; };
 		F4176336274B89AF00047D87 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4176335274B89AF00047D87 /* Home.storyboard */; };
+		F4176338274BC8D800047D87 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4176337274BC8D800047D87 /* HomeViewController.swift */; };
 		F418959F27459D39000E3497 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418959E27459D39000E3497 /* BaseViewController.swift */; };
 		F421141A274A31B800A29935 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4211418274A31B800A29935 /* SpinnerViewController.swift */; };
 		F421141B274A31B800A29935 /* SpinnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4211419274A31B800A29935 /* SpinnerViewController.xib */; };
@@ -48,6 +49,7 @@
 		72932D0E06B7B16FCF215FED /* Pods_Petish_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Petish_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DFA8F399731CC62A955D223 /* Pods-Petish-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petish-iOS.release.xcconfig"; path = "Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		F4176335274B89AF00047D87 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		F4176337274BC8D800047D87 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F418959E27459D39000E3497 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F4211418274A31B800A29935 /* SpinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		F4211419274A31B800A29935 /* SpinnerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpinnerViewController.xib; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */,
 				F4D7C66D27341834002A6F07 /* SignUpViewController.swift */,
 				F4646101274510ED009E240C /* SignInViewController.swift */,
+				F4176337274BC8D800047D87 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				F42B173827463B4A009FEFC6 /* SignInViewModel.swift in Sources */,
 				F45BAEB1274A894B0018C2B9 /* FirebaseManager.swift in Sources */,
 				F4D7C66A2734182D002A6F07 /* PhotoCell.swift in Sources */,
+				F4176338274BC8D800047D87 /* HomeViewController.swift in Sources */,
 				F443E7DF273D620C00065FC2 /* FilledPurpleButton.swift in Sources */,
 				F4FC789027429AC2000DF270 /* SignUp-SignIn.swift in Sources */,
 				F418959F27459D39000E3497 /* BaseViewController.swift in Sources */,

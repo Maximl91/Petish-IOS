@@ -23,11 +23,10 @@ class FirebaseManager: NSObject {
         })
     }
     
-    func addDocumentToCollection(collectionName: String, data: [String:Any], completionHandler: @escaping (String?,String?)->Void ){
-        let userId = data["user_uid"] as? String
-        
-        self.db.collection(collectionName).addDocument(data: data){ err in
-            
+    
+    func addDocumentToCollection(collectionName: String,userId: String, data: [String:Any], completionHandler: @escaping (String?,String?)->Void ){
+    
+        db.collection(collectionName).document(userId).setData(data){ err in
                 if let err = err {
                     let errorString = self.firebaseErrorToString(error: err)
                     print("Error adding user data: \(errorString)")

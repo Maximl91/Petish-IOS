@@ -265,6 +265,11 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmb-uj-6VG" customClass="FBLoginButton">
+                                <rect key="frame" x="147" y="570" width="120.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="With Facebook"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xv1-q0-NPj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -272,12 +277,14 @@
                             <constraint firstItem="xv1-q0-NPj" firstAttribute="trailing" secondItem="gNV-km-Rpv" secondAttribute="trailing" constant="16" id="58R-9W-zst"/>
                             <constraint firstItem="gNV-km-Rpv" firstAttribute="top" secondItem="xv1-q0-NPj" secondAttribute="top" constant="16" id="5WX-Q0-au5"/>
                             <constraint firstItem="C8e-so-Nwh" firstAttribute="top" secondItem="JSP-fX-L0W" secondAttribute="bottom" constant="16" id="6Xu-6E-Jlj"/>
+                            <constraint firstItem="qmb-uj-6VG" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="147" id="9du-7b-iIK"/>
                             <constraint firstItem="edS-iE-3uc" firstAttribute="leading" secondItem="ZLH-jW-hCv" secondAttribute="leading" id="APu-HP-XdY"/>
                             <constraint firstItem="xv1-q0-NPj" firstAttribute="trailing" secondItem="C8e-so-Nwh" secondAttribute="trailing" constant="115" id="AUZ-ab-oMC"/>
                             <constraint firstItem="Vth-IB-Pmu" firstAttribute="top" secondItem="gNV-km-Rpv" secondAttribute="bottom" constant="16" id="AoM-ox-QOD"/>
                             <constraint firstItem="Vth-IB-Pmu" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="56" id="Cng-Nb-qFA"/>
                             <constraint firstItem="edS-iE-3uc" firstAttribute="top" secondItem="ZLH-jW-hCv" secondAttribute="bottom" constant="10" id="SX8-HK-oif"/>
                             <constraint firstItem="JSP-fX-L0W" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="30" id="UBW-kL-X2O"/>
+                            <constraint firstItem="xv1-q0-NPj" firstAttribute="bottom" secondItem="qmb-uj-6VG" secondAttribute="bottom" constant="261" id="UyV-ZB-kvV"/>
                             <constraint firstItem="C8e-so-Nwh" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="115" id="Xdv-kZ-Kul"/>
                             <constraint firstItem="xv1-q0-NPj" firstAttribute="trailing" secondItem="JSP-fX-L0W" secondAttribute="trailing" constant="30" id="d5a-K6-f3t"/>
                             <constraint firstItem="ZLH-jW-hCv" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="30" id="jRl-es-zA0"/>

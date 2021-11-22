@@ -13,10 +13,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,12 +34,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4R-wC-s9x" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
+                                <rect key="frame" x="163" y="293" width="90" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="afo-aK-I5P"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jui-Gu-ji1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="O4R-wC-s9x" firstAttribute="top" secondItem="c4h-oT-ijn" secondAttribute="bottom" constant="59" id="4ck-PY-iWe"/>
                             <constraint firstItem="c4h-oT-ijn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="87" id="dYr-9K-0yR"/>
                             <constraint firstItem="c4h-oT-ijn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="123" id="fJy-qm-aXt"/>
+                            <constraint firstItem="O4R-wC-s9x" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="163" id="tZe-bu-Nd6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="O4R-wC-s9x" secondAttribute="trailing" constant="161" id="v1p-VD-tm6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="c4h-oT-ijn" secondAttribute="trailing" constant="87" id="wYK-31-I1S"/>
                         </constraints>
                     </view>

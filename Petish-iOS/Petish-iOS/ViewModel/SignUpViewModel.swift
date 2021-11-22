@@ -1,4 +1,5 @@
 import Foundation
+import FBSDKLoginKit
 
 class SignUpViewModel: NSObject{
     
@@ -40,18 +41,57 @@ class SignUpViewModel: NSObject{
             completion()
     }
     
-    func signUpClicked(isCheckboxMarked: Bool,_ completion: @escaping ( (String?,String?) -> Void ) ){
+    func signUpClicked(_ completion: @escaping ( (String?,String?) -> Void ) ){
         
         firebaseManager.createUserWith(email: userData.email, password: userData.password){ (userId: String?, error: String?)-> Void in
-            guard error != nil, let userId = userId, let name = self.userData.name else {
-                // login failed
-                completion(nil, error)
+            
+//            guard error != nil, let userId = userId, let name = self.userData.name else {
+//                // login failed
+//                print("failed")
+//                completion(nil, error)
+//                return
+//            }
+            
+            // login successful
+            if error == nil{
+                    if let userId = userId, let name = self.userData.name {
+                        self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, userId: userId, data: [
+                            "user_uid": userId,
+                            "name": name], completionHandler: completion)
+                    }
+            }
+            print("failed login")
+            completion(nil, error)
+        }
+    }
+    
+    func signUpWithFacebookClicked(listener: UIViewController, _ completion: @escaping ( (String?,String?) -> Void ) ){
+        
+        let loginManager = LoginManager()
+        
+        loginManager.logIn(permissions: ["public_profile", "email"], from: listener) { (result, error) in
+            // Check for error
+            guard error == nil else {
+                // Error occurred
+                print(error!.localizedDescription)
                 return
             }
-            // login successful
-            self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, data: [
-                "user_uid": userId,
-                "name": name], completionHandler: completion)
+        
+            // Check for cancel
+            guard let result = result, !result.isCancelled else {
+                print("User cancelled login")
+                return
+            }
+          
+            // Successfully logged in, add user to database
+            Profile.loadCurrentProfile { (profile, error) in
+                print(Profile.current?.email)
+                if let name = Profile.current?.name, let userId = AccessToken.current?.userID {
+                    self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, userId: userId, data: [
+                                    "user_uid": userId,
+                                    "name": name], completionHandler: completion)
+                }
+            }
         }
     }
 }

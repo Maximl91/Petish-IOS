@@ -257,6 +257,7 @@ PODS:
   - PromisesObjC (1.2.12)
 
 DEPENDENCIES:
+  - FBSDKCoreKit
   - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Firestore
@@ -311,6 +312,6 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 2b175e2b7bee9761ebd18ed26dd9b8b307c486c1
+PODFILE CHECKSUM: fe630e08c1da84abca15f33dc891bd9d7e3e1041
 
 COCOAPODS: 1.11.2

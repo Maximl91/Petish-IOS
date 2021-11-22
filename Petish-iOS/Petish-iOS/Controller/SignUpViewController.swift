@@ -20,9 +20,8 @@ class SignUpViewController: BaseViewController {
     }
     
     @IBAction func signupPressed(_ sender: UIButton) {
-        let checkboxState = checkboxView.getState()
         showLoader()
-        viewModel.signUpClicked(isCheckboxMarked: checkboxState){(userId: String?, errString: String?) -> Void in
+        viewModel.signUpClicked(){(userId: String?, errString: String?) -> Void in
             self.hideLoader()
             
             if errString == nil {
@@ -32,7 +31,14 @@ class SignUpViewController: BaseViewController {
     }
     
     @IBAction func withFacebookPressed(_ sender: UIButton) {
-        // with firebase
+        showLoader()
+        viewModel.signUpWithFacebookClicked(listener: self){(userId: String?, errString: String?) -> Void in
+            self.hideLoader()
+            
+            if errString == nil {
+                self.performSegue(withIdentifier: SegueIdentifiers.SignUpSuccess , sender: self)
+            }
+        }
     }
     
     func configureTableView(){
