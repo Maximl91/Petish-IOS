@@ -32,7 +32,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="WJM-Zw-MhU" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="p8c-gq-Ltv"/>
+                                    <segue destination="WJM-Zw-MhU" kind="presentation" animates="NO" id="p8c-gq-Ltv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2Q-7A-uSF" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
@@ -44,7 +44,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="NEXT"/>
                                 <connections>
-                                    <segue destination="WJM-Zw-MhU" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="zNo-ox-YVL"/>
+                                    <segue destination="WJM-Zw-MhU" kind="presentation" animates="NO" id="zNo-ox-YVL"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQK-vA-SNW">
@@ -114,7 +114,7 @@
                         <outlet property="collectionView" destination="Hz2-0F-RJ7" id="fiA-8O-fhL"/>
                         <outlet property="descriptionLabel" destination="7Tm-Iz-GYB" id="Sdr-vH-q7E"/>
                         <outlet property="subtitleLabel" destination="c8b-kR-TkP" id="98q-bA-0Fk"/>
-                        <segue destination="pmp-Q7-8X1" kind="presentation" identifier="AlreadyLoggedIn" animates="NO" modalPresentationStyle="fullScreen" id="XAW-en-rbu"/>
+                        <segue destination="3fN-uB-bHj" kind="show" identifier="AlreadyLoggedIn" animates="NO" id="Hj1-er-w1U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -124,7 +124,7 @@
         <!--SignUpIn-->
         <scene sceneID="faE-K6-Ule">
             <objects>
-                <viewController id="WJM-Zw-MhU" userLabel="SignUpIn" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="WJM-Zw-MhU" userLabel="SignUpIn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bV3-pi-ng4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +139,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="pmp-Q7-8X1" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="GqU-yh-E41"/>
+                                    <segue destination="3fN-uB-bHj" kind="show" animates="NO" id="mnp-0H-5wQ"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dxU-tU-uE1">
@@ -179,7 +179,7 @@
                                             <color key="baseForegroundColor" name="violetBlue"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="GK3-uX-X9m" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="C4h-VD-kpI"/>
+                                            <segue destination="GK3-uX-X9m" kind="presentation" animates="NO" id="C4h-VD-kpI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -232,7 +232,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="SKIP"/>
                                 <connections>
-                                    <segue destination="pmp-Q7-8X1" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="myQ-yW-aI3"/>
+                                    <segue destination="3fN-uB-bHj" kind="show" animates="NO" id="F03-Gx-G9V"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSP-fX-L0W" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
@@ -291,50 +291,27 @@
                         <outlet property="loginErrLabel" destination="edS-iE-3uc" id="ulQ-ht-uJK"/>
                         <outlet property="signInButton" destination="JSP-fX-L0W" id="uQT-pk-7Kz"/>
                         <outlet property="tableView" destination="ZLH-jW-hCv" id="M94-MR-pkP"/>
-                        <segue destination="pmp-Q7-8X1" kind="presentation" identifier="LoginSuccess" animates="NO" modalPresentationStyle="fullScreen" id="eww-aN-l82"/>
+                        <segue destination="3fN-uB-bHj" kind="show" identifier="LoginSuccess" animates="NO" id="fSf-Ho-hHt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ed6-r0-PF9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2816" y="108"/>
+            <point key="canvasLocation" x="2729" y="77"/>
         </scene>
         <!--Home-->
-        <scene sceneID="4uR-AW-NNq">
+        <scene sceneID="i3c-jx-Eyq">
             <objects>
-                <viewController id="pmp-Q7-8X1" userLabel="Home" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="45Z-4J-2vf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKw-uB-qru">
-                                <rect key="frame" x="87" y="108" width="240" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="6Vi-nt-qrU"/>
-                                </constraints>
-                                <string key="text">Home Page
-</string>
-                                <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Hg9-xn-y50"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="FKw-uB-qru" firstAttribute="top" secondItem="Hg9-xn-y50" secondAttribute="top" constant="64" id="BON-XD-Lvv"/>
-                            <constraint firstItem="FKw-uB-qru" firstAttribute="leading" secondItem="Hg9-xn-y50" secondAttribute="leading" constant="87" id="Mgl-Yq-d6g"/>
-                            <constraint firstItem="Hg9-xn-y50" firstAttribute="trailing" secondItem="FKw-uB-qru" secondAttribute="trailing" constant="87" id="qVW-Bn-dhF"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lin-YF-ddj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Home" id="3fN-uB-bHj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="g6S-VA-OA7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QOF-2F-Yxm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1890" y="923"/>
+            <point key="canvasLocation" x="1949" y="889"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="9Qu-Cw-7oY">
             <objects>
-                <viewController id="GK3-uX-X9m" userLabel="SignUp" customClass="SignUpViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="GK3-uX-X9m" userLabel="SignUp" customClass="SignUpViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RS1-QZ-wP4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,7 +324,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="SKIP"/>
                                 <connections>
-                                    <segue destination="pmp-Q7-8X1" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Mer-Ik-enP"/>
+                                    <segue destination="3fN-uB-bHj" kind="show" animates="NO" id="MtH-xJ-1kC"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJ1-9e-fPf">
@@ -502,7 +479,7 @@ service and privacy policy</string>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="SKIP"/>
                                 <connections>
-                                    <segue destination="pmp-Q7-8X1" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="WJr-A0-5gx"/>
+                                    <segue destination="3fN-uB-bHj" kind="show" animates="NO" id="od2-b5-KXc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -516,11 +493,11 @@ service and privacy policy</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j97-Of-OYM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3693" y="-273"/>
+            <point key="canvasLocation" x="3692.753623188406" y="-273.21428571428572"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WJr-A0-5gx"/>
+        <segue reference="fSf-Ho-hHt"/>
         <segue reference="k98-uF-HMo"/>
         <segue reference="zNo-ox-YVL"/>
     </inferredMetricsTieBreakers>

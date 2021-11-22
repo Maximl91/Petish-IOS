@@ -32,5 +32,31 @@ struct UserData{
         self.email = email
         self.password = password
     }
+    
+//    mutating func addUserData(_ data: String,_ type: FieldType ,_ completion: @escaping ( () -> Void ) ){
+//        switch type {
+//        case FieldType.name:
+//            name = data
+//        case FieldType.email:
+//            email = data
+//        case FieldType.password:
+//            password = data
+//        }
+//            completion()
+//    }
+//
+//    func isUserDataReady()->Bool{
+//        var flag = true
+//        let mirror = Mirror(reflecting: userData)
+//
+//        for child in mirror.children  {
+//
+//            if (child.value as? String == Constants.invalidUserDataString){
+//                flag = false
+//            }
+//        }
+//
+//        return flag
+//    }
 }
 

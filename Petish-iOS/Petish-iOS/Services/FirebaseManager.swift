@@ -6,7 +6,7 @@ class FirebaseManager: NSObject {
  
     private let db = Firestore.firestore()
     
-    func createUserWithEmailAndPassword(email: String, password: String, completionHandler: @escaping (String?,String?)->Void ){
+    func createUserWith(email: String, password: String, completionHandler: @escaping (String?,String?)->Void ){
         // returns userId on successful completion
         Auth.auth().createUser(withEmail: email, password: password, completion: { (authResult, error) in
             if let err = error{

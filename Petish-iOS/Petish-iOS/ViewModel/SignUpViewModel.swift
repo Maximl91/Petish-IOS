@@ -42,17 +42,16 @@ class SignUpViewModel: NSObject{
     
     func signUpClicked(isCheckboxMarked: Bool,_ completion: @escaping ( (String?,String?) -> Void ) ){
         
-        firebaseManager.createUserWithEmailAndPassword(email: userData.email, password: userData.password){ (userId: String?, error: String?)-> Void in
-            if error == nil{
-                if let userId = userId, let name = self.userData.name{
-                    // login successful
-                    self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, data: [
-                                                    "user_uid": userId,
-                                                    "name": name], completionHandler: completion)
-                }
+        firebaseManager.createUserWith(email: userData.email, password: userData.password){ (userId: String?, error: String?)-> Void in
+            guard error != nil, let userId = userId, let name = self.userData.name else {
+                // login failed
+                completion(nil, error)
+                return
             }
-            // login failed
-            completion(nil,error)
+            // login successful
+            self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, data: [
+                "user_uid": userId,
+                "name": name], completionHandler: completion)
         }
     }
 }

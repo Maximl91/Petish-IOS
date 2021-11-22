@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA09681D8ACDE024287667D2 /* Pods_Petish_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72932D0E06B7B16FCF215FED /* Pods_Petish_iOS.framework */; };
+		F4176336274B89AF00047D87 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4176335274B89AF00047D87 /* Home.storyboard */; };
 		F418959F27459D39000E3497 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418959E27459D39000E3497 /* BaseViewController.swift */; };
 		F421141A274A31B800A29935 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4211418274A31B800A29935 /* SpinnerViewController.swift */; };
 		F421141B274A31B800A29935 /* SpinnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4211419274A31B800A29935 /* SpinnerViewController.xib */; };
@@ -46,6 +47,7 @@
 		1DABFD290F39C821A0E34088 /* Pods-Petish-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petish-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		72932D0E06B7B16FCF215FED /* Pods_Petish_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Petish_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DFA8F399731CC62A955D223 /* Pods-Petish-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petish-iOS.release.xcconfig"; path = "Target Support Files/Pods-Petish-iOS/Pods-Petish-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		F4176335274B89AF00047D87 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		F418959E27459D39000E3497 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F4211418274A31B800A29935 /* SpinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		F4211419274A31B800A29935 /* SpinnerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpinnerViewController.xib; sourceTree = "<group>"; };
@@ -111,6 +113,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F4176334274B896B00047D87 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F43C8872273167AE00A98C95 /* Main.storyboard */,
+				F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */,
+				F4176335274B89AF00047D87 /* Home.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		F43C8860273167AE00A98C95 = {
 			isa = PBXGroup;
 			children = (
@@ -163,8 +175,7 @@
 		F43C8881273175B100A98C95 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F43C8872273167AE00A98C95 /* Main.storyboard */,
-				F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */,
+				F4176334274B896B00047D87 /* Storyboards */,
 				F45BAEAD274A84DD0018C2B9 /* TextFieldCell */,
 				F45BAEAC274A84CD0018C2B9 /* Checkbox */,
 				F45BAEAB274A84B60018C2B9 /* PhotoCell */,
@@ -318,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D7C66B2734182D002A6F07 /* PhotoCell.xib in Resources */,
+				F4176336274B89AF00047D87 /* Home.storyboard in Resources */,
 				F43C8879273167AF00A98C95 /* LaunchScreen.storyboard in Resources */,
 				F42BAA452743FABC00800552 /* GoogleService-Info.plist in Resources */,
 				F4F021BC27341A6C00776CF5 /* SFProText-Medium.otf in Resources */,
