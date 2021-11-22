@@ -1,7 +1,7 @@
 import UIKit
 
-class ExtendedViewController: UIViewController {
-
+class BaseViewController: UIViewController {
+    
     internal let spinner = SpinnerViewController()
     
     override func viewDidLoad() {
@@ -14,18 +14,18 @@ class ExtendedViewController: UIViewController {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
-
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     
     func showLoader(){
-           addChild(spinner)
-           view.addSubview(spinner.view)
-       }
-       
-       func hideLoader(){
-           spinner.view.removeFromSuperview()
-           spinner.removeFromParent()
-       }
+        addChild(spinner)
+        view.addSubview(spinner.view)
+    }
+    
+    func hideLoader(){
+        spinner.view.removeFromSuperview()
+        spinner.removeFromParent()
+    }
 }

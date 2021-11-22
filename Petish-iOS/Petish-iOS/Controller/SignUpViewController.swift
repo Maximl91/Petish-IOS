@@ -1,7 +1,7 @@
 import UIKit
 
-class SignUpViewController: ExtendedViewController {
-
+class SignUpViewController: BaseViewController {
+    
     private let viewModel = SignUpViewModel()
     private var tableDataSource: TextFieldCellsReuseableDataSource?
     
@@ -9,20 +9,21 @@ class SignUpViewController: ExtendedViewController {
     @IBOutlet weak var checkboxView: Checkbox!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var signUpButton: FilledPurpleButton!
-    
+    @IBOutlet weak var signUpFacebook: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkboxView.delegate = self
         signUpButton.disable()
-        tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, cellDelegate: self)
+        signUpFacebook.isEnabled = false
+        
+        tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, listener: self)
         configureTableView()
     }
     
     @IBAction func signupPressed(_ sender: UIButton) {
-        let checkboxState = checkboxView.getState()
         showLoader()
-        viewModel.signUpClicked(isCheckboxMarked: checkboxState){(errString: String?) -> Void in
+        viewModel.signUpClicked(){(userId: String?, errString: String?) -> Void in
             self.hideLoader()
             
             if errString == nil {
@@ -32,7 +33,14 @@ class SignUpViewController: ExtendedViewController {
     }
     
     @IBAction func withFacebookPressed(_ sender: UIButton) {
-        // with firebase
+        showLoader()
+        viewModel.signUpWithFacebookClicked(listener: self){(userId: String?, errString: String?) -> Void in
+            self.hideLoader()
+            
+            if errString == nil {
+                self.performSegue(withIdentifier: SegueIdentifiers.SignUpSuccess , sender: self)
+            }
+        }
     }
     
     func configureTableView(){
@@ -47,29 +55,35 @@ class SignUpViewController: ExtendedViewController {
     
 }
 
-// MARK: - UIViewControllerDelegate
+// MARK: - TextFieldCellDelegate
 
-extension SignUpViewController: UIViewControllerDelegate{
+extension SignUpViewController: TextFieldCellDelegate{
     
     func textFieldStateChanged(data: String, type: FieldType, isValid: Bool){
         let dataToAdd = isValid ? data : Constants.invalidUserDataString
         
         viewModel.addUserData(dataToAdd, type){ [self]() -> Void in
-    
+            
             if (checkboxView.getState() && viewModel.isUserDataReady()){
-               signUpButton.enable()
+                signUpButton.enable()
             }
             if !isValid{
-              signUpButton.disable()
+                signUpButton.disable()
             }
         }
     }
 }
 
-// MARK: - Delegate for Checkbox
+// MARK: - CheckboxDelegate
 
 extension SignUpViewController: CheckboxDelegate{
     func checkboxClicked(checkboxState: Bool) {
+        if checkboxState{
+            signUpFacebook.isEnabled = true
+        }else{
+            signUpFacebook.isEnabled = false
+        }
+        
         if (checkboxState && viewModel.isUserDataReady()){
             signUpButton.enable()
         }else{

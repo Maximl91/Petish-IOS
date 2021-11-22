@@ -1,9 +1,9 @@
 import Foundation
-import Firebase
+import FBSDKLoginKit
 
 class SignUpViewModel: NSObject{
     
-    private let db = Firestore.firestore()
+    private let firebaseManager = FirebaseManager()
     private var userData = UserData()
     let fieldPlaceholderArray: [TextFieldData]
     
@@ -20,7 +20,7 @@ class SignUpViewModel: NSObject{
         let mirror = Mirror(reflecting: userData)
         
         for child in mirror.children  {
-       
+            
             if (child.value as? String == Constants.invalidUserDataString){
                 flag = false
             }
@@ -38,38 +38,54 @@ class SignUpViewModel: NSObject{
         case FieldType.password:
             userData.password = data
         }
-            completion()
+        completion()
     }
     
-    func firebaseErrorToString(error: Error)-> String{
-        let castedError = error as NSError
-        let firebaseError = castedError.userInfo
-        let errorString = firebaseError["NSLocalizedDescription"] as! String 
-        return errorString
+    func signUpClicked(_ completion: @escaping ( (String?,String?) -> Void ) ){
+        firebaseManager.createUserWith(email: userData.email, password: userData.password){ (userId: String?, error: String?)-> Void in
+            
+            guard error == nil, let userId = userId, let name = self.userData.name else {
+                // login failed
+                print(error!)
+                completion(nil, error)
+                return
+            }
+            
+            // login successful
+            self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, userId: userId, data: [
+                "user_uid": userId,
+                "name": name], completionHandler: completion)
+        }
     }
     
-    func signUpClicked(isCheckboxMarked: Bool,_ completion: @escaping ( (String?) -> Void ) ){
-        Auth.auth().createUser(withEmail: userData.email, password: userData.password, completion: { (authResult, error) in
-            if let err = error{
-                let errorString = self.firebaseErrorToString(error: err)
-                print(errorString)
-                completion(errorString)
-            }else {
-                if let userUid = authResult?.user.uid, let name = self.userData.name {
-                    self.db.collection(Constants.FirestoreUserCollection).addDocument(data: [
-                        "user_uid": userUid,
-                        "name": name ]){ err in
-                        
-                            if let err = err {
-                                let errorString = self.firebaseErrorToString(error: err)
-                                print("Error adding user data: \(errorString)")
-                                completion(errorString)
-                            }else {
-                                completion(nil)
-                            }
-                        }
+    func signUpWithFacebookClicked(listener: UIViewController, _ completion: @escaping ( (String?,String?) -> Void ) ){
+        
+        let loginManager = LoginManager()
+        
+        loginManager.logIn(permissions: ["public_profile", "email"], from: listener) { (result, error) in
+            // Check for error
+            guard error == nil else {
+                // Error occurred
+                print(error!.localizedDescription)
+                completion(nil,error!.localizedDescription)
+                return
+            }
+            
+            // Check for cancel
+            guard let result = result, !result.isCancelled else {
+                print("User cancelled login")
+                completion(nil,"User cancelled login")
+                return
+            }
+            
+            // Successfully logged in, add user to database
+            Profile.loadCurrentProfile { (profile, error) in
+                if let name = Profile.current?.name, let userId = AccessToken.current?.userID {
+                    self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, userId: userId, data: [
+                        "user_uid": userId,
+                        "name": name], completionHandler: completion)
                 }
-           }
-        })
+            }
+        }
     }
 }

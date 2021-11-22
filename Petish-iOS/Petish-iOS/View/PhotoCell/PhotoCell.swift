@@ -1,7 +1,7 @@
 import UIKit
 
 class PhotoCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -11,7 +11,7 @@ class PhotoCell: UICollectionViewCell {
     func initCell(image: UIImage){
         imageView.image = image
         imageView.contentMode = .scaleToFill
-    
+        
     }
     
     func anchorImageToView(){

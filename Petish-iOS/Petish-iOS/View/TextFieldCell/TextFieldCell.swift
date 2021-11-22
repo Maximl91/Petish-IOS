@@ -1,13 +1,13 @@
 import UIKit
 
-protocol UIViewControllerDelegate{
+protocol TextFieldCellDelegate{
     func textFieldStateChanged(data: String, type: FieldType, isValid: Bool)
 }
 
 class TextFieldCell: UITableViewCell {
     
-    var delegate: UIViewControllerDelegate?
-
+    var delegate: TextFieldCellDelegate?
+    
     @IBOutlet weak var textField: BottomBorderTextField!
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -16,12 +16,14 @@ class TextFieldCell: UITableViewCell {
         textField.validator.delegate = self
         textField.returnKeyType = .done
         errorLabel.isHidden = true
+        textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),
+                            for: .editingChanged)
     }
-
+    
     @IBAction func textFieldDidEnd(_ sender: BottomBorderTextField){
     }
     
-    @IBAction func textFieldEditEnded(_ sender: Any) {
+    @objc func textFieldDidChange(_ textField2: UITextField) {
         if let textData = textField.text, let textType = textField.getFieldType(){
             let result = textField.validateField()
             delegate?.textFieldStateChanged(data: textData, type: textType, isValid: result)
@@ -40,7 +42,7 @@ class TextFieldCell: UITableViewCell {
             // disable autofill from icloud keychain (error on debug)
             textField.textContentType = .oneTimeCode
         }
-
+        
         textField.setFieldType(type: data.validateByType)
     }
 }
