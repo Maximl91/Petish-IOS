@@ -3,7 +3,7 @@ import UIKit
 class BaseViewController: UIViewController {
     
     internal let spinner = SpinnerViewController()
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
