@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -21,17 +21,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="center" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="8rs-cj-QxP">
-                    <rect key="frame" x="1" y="198.5" width="373" height="270"/>
+                    <rect key="frame" x="1" y="313" width="412" height="270"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ufi-gi-RcR">
-                            <rect key="frame" x="1" y="1" width="371" height="268"/>
+                            <rect key="frame" x="1" y="1" width="410" height="268"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQN-rT-ypI" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                    <rect key="frame" x="32" y="180" width="307" height="48"/>
+                                    <rect key="frame" x="32" y="180" width="346" height="48"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="48" id="Szd-WA-MHs"/>
                                     </constraints>
@@ -42,7 +42,7 @@
                                     </connections>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Gck-mX-znd">
-                                    <rect key="frame" x="30" y="32" width="311" height="130"/>
+                                    <rect key="frame" x="49.5" y="32" width="311" height="130"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opZ-Z6-Rvm">
                                             <rect key="frame" x="0.0" y="0.0" width="148" height="130"/>
@@ -119,7 +119,7 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPO-IN-Jo5" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                    <rect key="frame" x="335.5" y="2" width="33.5" height="31"/>
+                                    <rect key="frame" x="374.5" y="2" width="33.5" height="31"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="X"/>
                                     <connections>
@@ -127,7 +127,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iu4-kQ-bT1" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                    <rect key="frame" x="140" y="236" width="91" height="25.5"/>
+                                    <rect key="frame" x="140" y="236" width="130" height="25.5"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain">
                                         <attributedString key="attributedTitle">
@@ -167,6 +167,7 @@
                         <constraint firstItem="Ufi-gi-RcR" firstAttribute="top" secondItem="8rs-cj-QxP" secondAttribute="top" constant="1" id="Iah-GX-2DU"/>
                         <constraint firstAttribute="height" constant="270" id="bxj-Da-nbC"/>
                         <constraint firstItem="Ufi-gi-RcR" firstAttribute="leading" secondItem="8rs-cj-QxP" secondAttribute="leading" constant="1" id="vFY-rh-n4h"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="412" id="zAV-bm-Mmj"/>
                     </constraints>
                 </view>
             </subviews>

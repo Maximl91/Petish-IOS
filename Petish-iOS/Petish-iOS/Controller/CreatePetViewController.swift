@@ -6,23 +6,23 @@ class CreatePetViewController: BaseViewController {
     @IBOutlet weak var petImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewInitialSettings()
     }
     
-    func viewInitialSettings(){ // to be changed
-        petUIView.layer.cornerRadius = 60
-        petImageView.layer.cornerRadius = 60
+    func viewInitialSettings(){ 
+        petUIView.layer.cornerRadius = 75
+        petImageView.layer.cornerRadius = 75
+        descriptionLabel.text = "Add a photo of your pet"
         petImageView.contentMode = .center
         petImageView.image = #imageLiteral(resourceName: "AddCross")
     }
     
     @IBAction func addPhotoPressed(_ sender: UIButton) {
-        let popUpView = AddPictureOverlayViewController()
-        popUpView.delegate = self
-        displayView(displayView: popUpView)
+        let overlayView = AddPictureOverlayViewController()
+        overlayView.delegate = self
+        displayView(displayView: overlayView)
     }
 }
 

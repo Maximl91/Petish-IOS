@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zdx-R5-qnm">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -22,21 +22,21 @@
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="Onboarding" customClass="OnboardingViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30j-IR-q9s" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="301.5" y="22" width="54.5" height="31"/>
+                                <rect key="frame" x="340.5" y="66" width="54.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="SKIP">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="WJM-Zw-MhU" kind="presentation" animates="NO" id="p8c-gq-Ltv"/>
+                                    <segue destination="WJM-Zw-MhU" kind="show" animates="NO" id="p8c-gq-Ltv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2Q-7A-uSF" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="18.5" y="584.5" width="338" height="65"/>
+                                <rect key="frame" x="18.5" y="779.5" width="377" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="f5G-T5-UfE"/>
                                 </constraints>
@@ -44,14 +44,14 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="NEXT"/>
                                 <connections>
-                                    <segue destination="WJM-Zw-MhU" kind="presentation" animates="NO" id="zNo-ox-YVL"/>
+                                    <segue destination="WJM-Zw-MhU" kind="show" animates="NO" id="zNo-ox-YVL"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQK-vA-SNW">
-                                <rect key="frame" x="0.0" y="196.5" width="375" height="335.5"/>
+                                <rect key="frame" x="0.0" y="240.5" width="414" height="486.5"/>
                                 <subviews>
                                     <collectionView multipleTouchEnabled="YES" contentMode="center" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hz2-0F-RJ7">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="335.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="486.5"/>
                                         <collectionViewLayout key="collectionViewLayout" id="1yX-19-tYn"/>
                                         <cells/>
                                     </collectionView>
@@ -65,13 +65,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tm-Iz-GYB">
-                                <rect key="frame" x="72" y="93" width="231" height="33"/>
+                                <rect key="frame" x="72" y="137" width="270" height="33"/>
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="28"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8b-kR-TkP">
-                                <rect key="frame" x="42" y="136" width="291" height="45"/>
+                                <rect key="frame" x="42" y="180" width="330" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="eqA-2J-pDr"/>
                                 </constraints>
@@ -80,7 +80,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" defersCurrentPageDisplay="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="H6H-7t-lEc">
-                                <rect key="frame" x="110" y="540" width="155" height="26"/>
+                                <rect key="frame" x="129.5" y="735" width="155" height="26"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="pageIndicatorTintColor" name="pinkishGray"/>
                                 <color key="currentPageIndicatorTintColor" name="violetBlue"/>
@@ -126,14 +126,14 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="WJM-Zw-MhU" userLabel="SignUpIn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bV3-pi-ng4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="WXB-hi-omT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiP-sw-X7N" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="256" y="24" width="105" height="31"/>
+                                <rect key="frame" x="295" y="68" width="105" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="NO THANKS">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
@@ -143,10 +143,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dxU-tU-uE1">
-                                <rect key="frame" x="48" y="479" width="279" height="112"/>
+                                <rect key="frame" x="48" y="674" width="318" height="112"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ux5-EM-ouu">
-                                        <rect key="frame" x="0.0" y="0.0" width="279" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="318" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="nua-Lt-yeV"/>
                                         </constraints>
@@ -160,11 +160,11 @@
                                             <color key="baseForegroundColor" name="violetBlue"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="NS1-xm-8Tk" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="L6c-bp-eNK"/>
+                                            <segue destination="NS1-xm-8Tk" kind="show" animates="NO" id="L6c-bp-eNK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY3-1l-njI">
-                                        <rect key="frame" x="0.0" y="64" width="279" height="48"/>
+                                        <rect key="frame" x="0.0" y="64" width="318" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="vaC-WH-XpL"/>
                                         </constraints>
@@ -179,7 +179,7 @@
                                             <color key="baseForegroundColor" name="violetBlue"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="GK3-uX-X9m" kind="presentation" animates="NO" id="C4h-VD-kpI"/>
+                                            <segue destination="GK3-uX-X9m" kind="show" animates="NO" id="C4h-VD-kpI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -208,13 +208,13 @@
         <!--Login-->
         <scene sceneID="XwN-IK-4Q2">
             <objects>
-                <viewController id="NS1-xm-8Tk" userLabel="Login" customClass="SignInViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="NS1-xm-8Tk" userLabel="Login" customClass="SignInViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NsK-VP-m0k">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vth-IB-Pmu">
-                                <rect key="frame" x="56" y="72" width="68.5" height="67"/>
+                                <rect key="frame" x="56" y="116" width="68.5" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="yf4-FX-tW6"/>
                                 </constraints>
@@ -225,7 +225,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNV-km-Rpv" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="304.5" y="16" width="54.5" height="40"/>
+                                <rect key="frame" x="343.5" y="60" width="54.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="moP-JA-ujh"/>
                                 </constraints>
@@ -236,7 +236,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSP-fX-L0W" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="30" y="351" width="315" height="48"/>
+                                <rect key="frame" x="30" y="395" width="354" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="y5I-9r-rNy"/>
                                 </constraints>
@@ -247,20 +247,20 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZLH-jW-hCv">
-                                <rect key="frame" x="30" y="201" width="315" height="110"/>
+                                <rect key="frame" x="30" y="245" width="354" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="Jwd-aU-iPa"/>
                                 </constraints>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid username or password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edS-iE-3uc">
-                                <rect key="frame" x="30" y="321" width="315" height="20.5"/>
+                                <rect key="frame" x="30" y="365" width="354" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09D-Hk-WGH">
-                                <rect key="frame" x="30" y="415" width="315" height="48"/>
+                                <rect key="frame" x="30" y="459" width="354" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="UNW-h2-AxN"/>
                                 </constraints>
@@ -271,7 +271,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8e-so-Nwh" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="115" y="479" width="145" height="31"/>
+                                <rect key="frame" x="115" y="523" width="184" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
                             </button>
@@ -300,6 +300,7 @@
                             <constraint firstItem="JSP-fX-L0W" firstAttribute="top" secondItem="ZLH-jW-hCv" secondAttribute="bottom" constant="40" id="yJq-9d-th0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="D3A-cG-ZZZ"/>
                     <connections>
                         <outlet property="loginErrLabel" destination="edS-iE-3uc" id="ulQ-ht-uJK"/>
                         <outlet property="loginWithFacebook" destination="09D-Hk-WGH" id="K0g-z8-aRR"/>
@@ -327,11 +328,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="GK3-uX-X9m" userLabel="SignUp" customClass="SignUpViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RS1-QZ-wP4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7t-DS-9PG" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="304.5" y="16" width="54.5" height="40"/>
+                                <rect key="frame" x="343.5" y="60" width="54.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="jqX-hd-2WY"/>
                                 </constraints>
@@ -342,7 +343,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJ1-9e-fPf">
-                                <rect key="frame" x="67" y="624" width="241" height="19"/>
+                                <rect key="frame" x="86.5" y="819" width="241" height="19"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I already have an account." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8Z-NL-MHO">
                                         <rect key="frame" x="0.0" y="0.0" width="181.5" height="19"/>
@@ -355,7 +356,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                         <connections>
-                                            <segue destination="NS1-xm-8Tk" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="k98-uF-HMo"/>
+                                            <segue destination="NS1-xm-8Tk" kind="show" animates="NO" id="k98-uF-HMo"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -364,7 +365,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocb-Uz-j44">
-                                <rect key="frame" x="31" y="72" width="160.5" height="67"/>
+                                <rect key="frame" x="31" y="116" width="160.5" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="ijB-g5-nkw"/>
                                 </constraints>
@@ -375,7 +376,7 @@ Your account</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="lnW-lr-DGe">
-                                <rect key="frame" x="30" y="387" width="315" height="34"/>
+                                <rect key="frame" x="30" y="431" width="354" height="34"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qin-PK-tE9" customClass="Checkbox" customModule="Petish_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
@@ -384,7 +385,7 @@ Your account</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbp-D5-4JD">
-                                        <rect key="frame" x="42" y="0.0" width="273" height="34"/>
+                                        <rect key="frame" x="42" y="0.0" width="312" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="GmM-lF-xNg"/>
                                         </constraints>
@@ -397,17 +398,17 @@ service and privacy policy</string>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rtR-Me-qth">
-                                <rect key="frame" x="30" y="201" width="315" height="170"/>
+                                <rect key="frame" x="30" y="245" width="354" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="Q5p-Xv-rFa"/>
                                 </constraints>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ifT-sL-cRN">
-                                <rect key="frame" x="30" y="465" width="315" height="112"/>
+                                <rect key="frame" x="30" y="509" width="354" height="112"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5H-kn-9JW" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="4pS-iw-g5w"/>
                                         </constraints>
@@ -418,7 +419,7 @@ service and privacy policy</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwb-9z-67I">
-                                        <rect key="frame" x="0.0" y="64" width="315" height="48"/>
+                                        <rect key="frame" x="0.0" y="64" width="354" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="xi6-fr-lvO"/>
                                         </constraints>
@@ -466,12 +467,13 @@ service and privacy policy</string>
                             <constraint firstItem="D7t-DS-9PG" firstAttribute="top" secondItem="4Y6-LZ-avh" secondAttribute="top" constant="16" id="ot5-6k-M61"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ga1-VA-1nP"/>
                     <connections>
                         <outlet property="checkboxView" destination="Qin-PK-tE9" id="FEi-Wd-SJx"/>
                         <outlet property="signUpButton" destination="G5H-kn-9JW" id="G71-Jx-skV"/>
                         <outlet property="signUpFacebook" destination="cwb-9z-67I" id="O5V-t8-W1A"/>
                         <outlet property="tableView" destination="rtR-Me-qth" id="umS-Uh-C6l"/>
-                        <segue destination="zdx-R5-qnm" kind="presentation" identifier="SignUpSuccess" animates="NO" modalPresentationStyle="fullScreen" id="PnM-iy-NEB"/>
+                        <segue destination="zdx-R5-qnm" kind="show" identifier="SignUpSuccess" animates="NO" id="PnM-iy-NEB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cO-ku-uwK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -481,13 +483,13 @@ service and privacy policy</string>
         <!--Create Pet View Controller-->
         <scene sceneID="hNB-Ww-OUp">
             <objects>
-                <viewController id="zdx-R5-qnm" customClass="CreatePetViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="zdx-R5-qnm" customClass="CreatePetViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bx1-UY-2Yd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5w-xc-mvo" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="304.5" y="16" width="54.5" height="40"/>
+                                <rect key="frame" x="343.5" y="60" width="54.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LNZ-lO-wNr"/>
                                 </constraints>
@@ -498,7 +500,7 @@ service and privacy policy</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKZ-iq-wLm">
-                                <rect key="frame" x="32" y="99" width="156" height="67"/>
+                                <rect key="frame" x="32" y="143" width="195" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="BS2-wn-lFw"/>
                                 </constraints>
@@ -509,10 +511,10 @@ a pet profile</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZe-Yd-knZ">
-                                <rect key="frame" x="127.5" y="281" width="120" height="120"/>
+                                <rect key="frame" x="132" y="325" width="150" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4x-Xd-clh">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
@@ -520,7 +522,7 @@ a pet profile</string>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddCross" translatesAutoresizingMaskIntoConstraints="NO" id="lkG-CH-Unr">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" name="gray233"/>
@@ -533,20 +535,23 @@ a pet profile</string>
                                     <constraint firstItem="lkG-CH-Unr" firstAttribute="top" secondItem="zZe-Yd-knZ" secondAttribute="top" id="fZd-Fz-Y8o"/>
                                     <constraint firstItem="V4x-Xd-clh" firstAttribute="leading" secondItem="zZe-Yd-knZ" secondAttribute="leading" id="k9a-aC-Y5m"/>
                                     <constraint firstAttribute="bottom" secondItem="V4x-Xd-clh" secondAttribute="bottom" id="oir-9m-6Gc"/>
-                                    <constraint firstAttribute="height" constant="120" id="u2e-aZ-t5l"/>
-                                    <constraint firstAttribute="width" constant="120" id="ywG-YZ-pWu"/>
+                                    <constraint firstAttribute="height" constant="150" id="u2e-aZ-t5l"/>
+                                    <constraint firstAttribute="width" constant="150" id="ywG-YZ-pWu"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z02-gl-zVv" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="32" y="595" width="311" height="48"/>
+                                <rect key="frame" x="32" y="790" width="350" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="uUZ-n9-KaN"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="NEXT"/>
+                                <connections>
+                                    <segue destination="X66-Ug-5CI" kind="show" animates="NO" id="ozR-D0-86g"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a photo of your pet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuG-YX-osI">
-                                <rect key="frame" x="102" y="421" width="171" height="34"/>
+                                <rect key="frame" x="102" y="495" width="210" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Nsf-tk-taT"/>
                                 </constraints>
@@ -574,6 +579,7 @@ a pet profile</string>
                             <constraint firstItem="CfI-G2-ifw" firstAttribute="trailing" secondItem="z02-gl-zVv" secondAttribute="trailing" constant="32" id="omB-lF-ELt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lVt-6S-MCe"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="MuG-YX-osI" id="qli-K8-fjj"/>
                         <outlet property="petImageView" destination="lkG-CH-Unr" id="KnY-Ll-nXh"/>
@@ -582,13 +588,76 @@ a pet profile</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j97-Of-OYM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3840.8000000000002" y="-274.81259370314842"/>
+            <point key="canvasLocation" x="4215" y="-275"/>
+        </scene>
+        <!--Create Pet Details View Controller-->
+        <scene sceneID="i0Q-FS-RBW">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="X66-Ug-5CI" customClass="CreatePetDetailsViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rUu-Ds-BzQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apf-8h-ucr" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
+                                <rect key="frame" x="343.5" y="60" width="54.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HpO-vp-ac3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SKIP"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HES-xi-cfV">
+                                <rect key="frame" x="32" y="143" width="195" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="OZh-3n-fni"/>
+                                </constraints>
+                                <string key="text">Create
+a pet profile</string>
+                                <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXJ-Z6-ctI" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
+                                <rect key="frame" x="32" y="790" width="350" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="uOH-4O-bF9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="NEXT"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jc8-Cz-acB">
+                                <rect key="frame" x="30" y="250" width="354" height="460"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rLW-gX-AQA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jc8-Cz-acB" firstAttribute="leading" secondItem="rLW-gX-AQA" secondAttribute="leading" constant="30" id="0xP-zP-pii"/>
+                            <constraint firstItem="GXJ-Z6-ctI" firstAttribute="top" secondItem="Jc8-Cz-acB" secondAttribute="bottom" constant="80" id="5yv-L7-0n0"/>
+                            <constraint firstItem="rLW-gX-AQA" firstAttribute="trailing" secondItem="GXJ-Z6-ctI" secondAttribute="trailing" constant="32" id="BDn-iE-YeY"/>
+                            <constraint firstItem="rLW-gX-AQA" firstAttribute="bottom" secondItem="GXJ-Z6-ctI" secondAttribute="bottom" constant="24" id="K54-7o-6l0"/>
+                            <constraint firstItem="rLW-gX-AQA" firstAttribute="trailing" secondItem="HES-xi-cfV" secondAttribute="trailing" constant="187" id="NmS-fJ-ayc"/>
+                            <constraint firstItem="GXJ-Z6-ctI" firstAttribute="leading" secondItem="rLW-gX-AQA" secondAttribute="leading" constant="32" id="Q0P-Mi-Qlv"/>
+                            <constraint firstItem="HES-xi-cfV" firstAttribute="leading" secondItem="rLW-gX-AQA" secondAttribute="leading" constant="32" id="Y0g-Wh-La5"/>
+                            <constraint firstItem="rLW-gX-AQA" firstAttribute="trailing" secondItem="Jc8-Cz-acB" secondAttribute="trailing" constant="30" id="ZgX-5H-ghp"/>
+                            <constraint firstItem="Jc8-Cz-acB" firstAttribute="top" secondItem="HES-xi-cfV" secondAttribute="bottom" constant="40" id="gr6-ZM-6fA"/>
+                            <constraint firstItem="Apf-8h-ucr" firstAttribute="top" secondItem="rLW-gX-AQA" secondAttribute="top" constant="16" id="igM-Ki-OcI"/>
+                            <constraint firstItem="rLW-gX-AQA" firstAttribute="trailing" secondItem="Apf-8h-ucr" secondAttribute="trailing" constant="16" id="twM-Cz-yZn"/>
+                            <constraint firstItem="HES-xi-cfV" firstAttribute="top" secondItem="Apf-8h-ucr" secondAttribute="bottom" constant="43" id="xeT-ao-ZdM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Afc-AR-A9X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HZF-fP-uSD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5006" y="-274"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="od2-b5-KXc"/>
-        <segue reference="L6c-bp-eNK"/>
-        <segue reference="zNo-ox-YVL"/>
+        <segue reference="k98-uF-HMo"/>
+        <segue reference="p8c-gq-Ltv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AddCross" width="47" height="47"/>
