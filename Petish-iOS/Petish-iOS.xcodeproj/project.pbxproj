@@ -184,8 +184,8 @@
 		F43C8881273175B100A98C95 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F4E3F4C1274CEAA700A59F94 /* addPictureOverlay */,
 				F4176334274B896B00047D87 /* Storyboards */,
+				F4E3F4C1274CEAA700A59F94 /* addPictureOverlay */,
 				F45BAEAD274A84DD0018C2B9 /* TextFieldCell */,
 				F45BAEAC274A84CD0018C2B9 /* Checkbox */,
 				F45BAEAB274A84B60018C2B9 /* PhotoCell */,

@@ -575,6 +575,7 @@ a pet profile</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descriptionLabel" destination="MuG-YX-osI" id="qli-K8-fjj"/>
                         <outlet property="petImageView" destination="lkG-CH-Unr" id="KnY-Ll-nXh"/>
                         <outlet property="petUIView" destination="zZe-Yd-knZ" id="JYb-yX-eZo"/>
                     </connections>
