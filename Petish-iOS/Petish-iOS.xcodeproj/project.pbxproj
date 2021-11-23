@@ -37,6 +37,8 @@
 		F4D7C66F27341834002A6F07 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C66D27341834002A6F07 /* SignUpViewController.swift */; };
 		F4D7C67227341841002A6F07 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C67027341841002A6F07 /* Constants.swift */; };
 		F4E3F4BF274CD0C800A59F94 /* CreatePetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E3F4BE274CD0C800A59F94 /* CreatePetViewController.swift */; };
+		F4E3F4C8274CF18A00A59F94 /* AddPictureOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E3F4C6274CF18A00A59F94 /* AddPictureOverlayViewController.swift */; };
+		F4E3F4C9274CF18A00A59F94 /* AddPictureOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4E3F4C7274CF18A00A59F94 /* AddPictureOverlayViewController.xib */; };
 		F4F021B72734199B00776CF5 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F021B62734199B00776CF5 /* OnboardingData.swift */; };
 		F4F021BB27341A6C00776CF5 /* SFCompactDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4F021B927341A6C00776CF5 /* SFCompactDisplay-Medium.otf */; };
 		F4F021BC27341A6C00776CF5 /* SFProText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4F021BA27341A6C00776CF5 /* SFProText-Medium.otf */; };
@@ -80,6 +82,8 @@
 		F4D7C66D27341834002A6F07 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F4D7C67027341841002A6F07 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F4E3F4BE274CD0C800A59F94 /* CreatePetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePetViewController.swift; sourceTree = "<group>"; };
+		F4E3F4C6274CF18A00A59F94 /* AddPictureOverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPictureOverlayViewController.swift; sourceTree = "<group>"; };
+		F4E3F4C7274CF18A00A59F94 /* AddPictureOverlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPictureOverlayViewController.xib; sourceTree = "<group>"; };
 		F4F021B62734199B00776CF5 /* OnboardingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		F4F021B927341A6C00776CF5 /* SFCompactDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Medium.otf"; sourceTree = "<group>"; };
 		F4F021BA27341A6C00776CF5 /* SFProText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.otf"; sourceTree = "<group>"; };
@@ -167,9 +171,8 @@
 		F43C8880273175A500A98C95 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F4E3F4C0274CDBF600A59F94 /* OnboardingViewController */,
 				F418959E27459D39000E3497 /* BaseViewController.swift */,
-				F43C8870273167AE00A98C95 /* OnboardingViewController.swift */,
-				F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */,
 				F4D7C66D27341834002A6F07 /* SignUpViewController.swift */,
 				F4646101274510ED009E240C /* SignInViewController.swift */,
 				F4E3F4BE274CD0C800A59F94 /* CreatePetViewController.swift */,
@@ -181,6 +184,7 @@
 		F43C8881273175B100A98C95 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F4E3F4C1274CEAA700A59F94 /* addPictureOverlay */,
 				F4176334274B896B00047D87 /* Storyboards */,
 				F45BAEAD274A84DD0018C2B9 /* TextFieldCell */,
 				F45BAEAC274A84CD0018C2B9 /* Checkbox */,
@@ -245,6 +249,24 @@
 				F45BAEB0274A894B0018C2B9 /* FirebaseManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		F4E3F4C0274CDBF600A59F94 /* OnboardingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F43C8870273167AE00A98C95 /* OnboardingViewController.swift */,
+				F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */,
+			);
+			path = OnboardingViewController;
+			sourceTree = "<group>";
+		};
+		F4E3F4C1274CEAA700A59F94 /* addPictureOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				F4E3F4C6274CF18A00A59F94 /* AddPictureOverlayViewController.swift */,
+				F4E3F4C7274CF18A00A59F94 /* AddPictureOverlayViewController.xib */,
+			);
+			path = addPictureOverlay;
 			sourceTree = "<group>";
 		};
 		F4F021B22734196800776CF5 /* Model */ = {
@@ -336,6 +358,7 @@
 			files = (
 				F4D7C66B2734182D002A6F07 /* PhotoCell.xib in Resources */,
 				F4176336274B89AF00047D87 /* Home.storyboard in Resources */,
+				F4E3F4C9274CF18A00A59F94 /* AddPictureOverlayViewController.xib in Resources */,
 				F43C8879273167AF00A98C95 /* LaunchScreen.storyboard in Resources */,
 				F42BAA452743FABC00800552 /* GoogleService-Info.plist in Resources */,
 				F4F021BC27341A6C00776CF5 /* SFProText-Medium.otf in Resources */,
@@ -403,6 +426,7 @@
 				F42B173827463B4A009FEFC6 /* SignInViewModel.swift in Sources */,
 				F45BAEB1274A894B0018C2B9 /* FirebaseManager.swift in Sources */,
 				F4D7C66A2734182D002A6F07 /* PhotoCell.swift in Sources */,
+				F4E3F4C8274CF18A00A59F94 /* AddPictureOverlayViewController.swift in Sources */,
 				F4176338274BC8D800047D87 /* HomeViewController.swift in Sources */,
 				F443E7DF273D620C00065FC2 /* FilledPurpleButton.swift in Sources */,
 				F4FC789027429AC2000DF270 /* SignUp-SignIn.swift in Sources */,

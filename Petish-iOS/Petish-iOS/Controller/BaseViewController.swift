@@ -28,4 +28,15 @@ class BaseViewController: UIViewController {
         spinner.view.removeFromSuperview()
         spinner.removeFromParent()
     }
+    
+    func displayView(displayView: UIViewController){
+           addChild(displayView)
+           view.addSubview(displayView.view)
+       }
+       
+       func dismissView()
+       {
+           self.view.removeFromSuperview()
+           self.removeFromParent()
+       }
 }

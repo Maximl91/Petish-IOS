@@ -2,17 +2,22 @@ import UIKit
 
 class CreatePetViewController: BaseViewController {
 
+    let popUpView = AddPictureOverlayViewController()
+    
     @IBOutlet weak var petUIView: UIView!
     @IBOutlet weak var petImageView: UIImageView!
     
     
     override func viewDidLoad() {
-        super.viewDidLoad() // temp
+        super.viewDidLoad()
         configurePetUIView()
     }
     
-    func configurePetUIView(){
+    func configurePetUIView(){ // to be changed
         petUIView.layer.cornerRadius = 60
-        petImageView.image = #imageLiteral(resourceName: "AddCross")
+    }
+    
+    @IBAction func addPhotoPressed(_ sender: UIButton) {
+        displayView(displayView: popUpView)
     }
 }
