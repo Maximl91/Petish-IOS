@@ -36,6 +36,7 @@
 		F4D7C66E27341834002A6F07 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */; };
 		F4D7C66F27341834002A6F07 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C66D27341834002A6F07 /* SignUpViewController.swift */; };
 		F4D7C67227341841002A6F07 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7C67027341841002A6F07 /* Constants.swift */; };
+		F4E3F4BF274CD0C800A59F94 /* CreatePetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E3F4BE274CD0C800A59F94 /* CreatePetViewController.swift */; };
 		F4F021B72734199B00776CF5 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F021B62734199B00776CF5 /* OnboardingData.swift */; };
 		F4F021BB27341A6C00776CF5 /* SFCompactDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4F021B927341A6C00776CF5 /* SFCompactDisplay-Medium.otf */; };
 		F4F021BC27341A6C00776CF5 /* SFProText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4F021BA27341A6C00776CF5 /* SFProText-Medium.otf */; };
@@ -78,6 +79,7 @@
 		F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
 		F4D7C66D27341834002A6F07 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F4D7C67027341841002A6F07 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F4E3F4BE274CD0C800A59F94 /* CreatePetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePetViewController.swift; sourceTree = "<group>"; };
 		F4F021B62734199B00776CF5 /* OnboardingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		F4F021B927341A6C00776CF5 /* SFCompactDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Medium.otf"; sourceTree = "<group>"; };
 		F4F021BA27341A6C00776CF5 /* SFProText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.otf"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				F4D7C66C27341834002A6F07 /* ZoomAndSnapFlowLayout.swift */,
 				F4D7C66D27341834002A6F07 /* SignUpViewController.swift */,
 				F4646101274510ED009E240C /* SignInViewController.swift */,
+				F4E3F4BE274CD0C800A59F94 /* CreatePetViewController.swift */,
 				F4176337274BC8D800047D87 /* HomeViewController.swift */,
 			);
 			path = Controller;
@@ -406,6 +409,7 @@
 				F418959F27459D39000E3497 /* BaseViewController.swift in Sources */,
 				F43C8871273167AE00A98C95 /* OnboardingViewController.swift in Sources */,
 				F4FC788B27426D19000DF270 /* TextFieldCell.swift in Sources */,
+				F4E3F4BF274CD0C800A59F94 /* CreatePetViewController.swift in Sources */,
 				F4F021B72734199B00776CF5 /* OnboardingData.swift in Sources */,
 				F43C886D273167AE00A98C95 /* AppDelegate.swift in Sources */,
 				F42B173C27464C0A009FEFC6 /* TextFieldCellsReuseableDataSource.swift in Sources */,

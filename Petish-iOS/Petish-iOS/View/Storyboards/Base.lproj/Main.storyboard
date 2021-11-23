@@ -260,7 +260,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09D-Hk-WGH">
-                                <rect key="frame" x="30" y="463" width="354" height="48"/>
+                                <rect key="frame" x="30" y="459" width="354" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="UNW-h2-AxN"/>
                                 </constraints>
@@ -271,7 +271,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8e-so-Nwh" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="115" y="527" width="184" height="31"/>
+                                <rect key="frame" x="115" y="523" width="184" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
                             </button>
@@ -287,7 +287,7 @@
                             <constraint firstItem="Vth-IB-Pmu" firstAttribute="top" secondItem="gNV-km-Rpv" secondAttribute="bottom" constant="16" id="AoM-ox-QOD"/>
                             <constraint firstItem="Vth-IB-Pmu" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="56" id="Cng-Nb-qFA"/>
                             <constraint firstItem="edS-iE-3uc" firstAttribute="top" secondItem="ZLH-jW-hCv" secondAttribute="bottom" constant="10" id="SX8-HK-oif"/>
-                            <constraint firstItem="09D-Hk-WGH" firstAttribute="top" secondItem="JSP-fX-L0W" secondAttribute="bottom" constant="20" id="SsA-95-lUb"/>
+                            <constraint firstItem="09D-Hk-WGH" firstAttribute="top" secondItem="JSP-fX-L0W" secondAttribute="bottom" constant="16" id="SsA-95-lUb"/>
                             <constraint firstItem="09D-Hk-WGH" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="30" id="Tn5-Rm-rRa"/>
                             <constraint firstItem="JSP-fX-L0W" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="30" id="UBW-kL-X2O"/>
                             <constraint firstItem="C8e-so-Nwh" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="115" id="Xdv-kZ-Kul"/>
@@ -478,10 +478,10 @@ service and privacy policy</string>
             </objects>
             <point key="canvasLocation" x="1834.7826086956522" y="-273.21428571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Pet View Controller-->
         <scene sceneID="hNB-Ww-OUp">
             <objects>
-                <viewController id="zdx-R5-qnm" sceneMemberID="viewController">
+                <viewController id="zdx-R5-qnm" customClass="CreatePetViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bx1-UY-2Yd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -497,23 +497,84 @@ service and privacy policy</string>
                                     <segue destination="3fN-uB-bHj" kind="show" animates="NO" id="od2-b5-KXc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKZ-iq-wLm">
+                                <rect key="frame" x="32" y="143" width="195" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="BS2-wn-lFw"/>
+                                </constraints>
+                                <string key="text">Create
+a pet profile</string>
+                                <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZe-Yd-knZ">
+                                <rect key="frame" x="147" y="325" width="120" height="120"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lkG-CH-Unr">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="gray233"/>
+                                <constraints>
+                                    <constraint firstItem="lkG-CH-Unr" firstAttribute="leading" secondItem="zZe-Yd-knZ" secondAttribute="leading" id="21i-rc-VO5"/>
+                                    <constraint firstAttribute="trailing" secondItem="lkG-CH-Unr" secondAttribute="trailing" id="EgP-Dp-TfB"/>
+                                    <constraint firstAttribute="bottom" secondItem="lkG-CH-Unr" secondAttribute="bottom" id="fZQ-A0-269"/>
+                                    <constraint firstItem="lkG-CH-Unr" firstAttribute="top" secondItem="zZe-Yd-knZ" secondAttribute="top" id="fZd-Fz-Y8o"/>
+                                    <constraint firstAttribute="height" constant="120" id="u2e-aZ-t5l"/>
+                                    <constraint firstAttribute="width" constant="120" id="ywG-YZ-pWu"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z02-gl-zVv" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
+                                <rect key="frame" x="32" y="790" width="350" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="uUZ-n9-KaN"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="NEXT"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a photo of your pet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuG-YX-osI">
+                                <rect key="frame" x="102" y="465" width="210" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Nsf-tk-taT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
+                                <color key="textColor" name="battleshipGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CfI-G2-ifw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="z02-gl-zVv" firstAttribute="leading" secondItem="CfI-G2-ifw" secondAttribute="leading" constant="32" id="1Nd-PG-Ccg"/>
+                            <constraint firstItem="MuG-YX-osI" firstAttribute="top" secondItem="zZe-Yd-knZ" secondAttribute="bottom" constant="20" id="BSp-Jo-ca1"/>
+                            <constraint firstItem="zZe-Yd-knZ" firstAttribute="top" secondItem="ZKZ-iq-wLm" secondAttribute="bottom" constant="115" id="ClH-EN-hx3"/>
+                            <constraint firstItem="CfI-G2-ifw" firstAttribute="bottom" secondItem="z02-gl-zVv" secondAttribute="bottom" constant="24" id="Mom-CY-bQ4"/>
+                            <constraint firstItem="MuG-YX-osI" firstAttribute="leading" secondItem="CfI-G2-ifw" secondAttribute="leading" constant="102" id="Qb7-Nq-hFx"/>
+                            <constraint firstItem="MuG-YX-osI" firstAttribute="centerX" secondItem="bx1-UY-2Yd" secondAttribute="centerX" id="XBg-iX-rc6"/>
+                            <constraint firstItem="zZe-Yd-knZ" firstAttribute="centerX" secondItem="bx1-UY-2Yd" secondAttribute="centerX" id="Xbx-tJ-ZBl"/>
                             <constraint firstItem="Y5w-xc-mvo" firstAttribute="top" secondItem="CfI-G2-ifw" secondAttribute="top" constant="16" id="ZGq-jd-Hsp"/>
+                            <constraint firstItem="ZKZ-iq-wLm" firstAttribute="leading" secondItem="CfI-G2-ifw" secondAttribute="leading" constant="32" id="duC-JL-SGO"/>
+                            <constraint firstItem="CfI-G2-ifw" firstAttribute="trailing" secondItem="MuG-YX-osI" secondAttribute="trailing" constant="102" id="eSQ-sl-dC6"/>
                             <constraint firstItem="CfI-G2-ifw" firstAttribute="trailing" secondItem="Y5w-xc-mvo" secondAttribute="trailing" constant="16" id="kY4-59-2sg"/>
+                            <constraint firstItem="ZKZ-iq-wLm" firstAttribute="top" secondItem="Y5w-xc-mvo" secondAttribute="bottom" constant="43" id="lDY-h4-l2h"/>
+                            <constraint firstItem="CfI-G2-ifw" firstAttribute="trailing" secondItem="ZKZ-iq-wLm" secondAttribute="trailing" constant="187" id="lPA-vf-Srv"/>
+                            <constraint firstItem="CfI-G2-ifw" firstAttribute="trailing" secondItem="z02-gl-zVv" secondAttribute="trailing" constant="32" id="omB-lF-ELt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="petImageView" destination="lkG-CH-Unr" id="KnY-Ll-nXh"/>
+                        <outlet property="petUIView" destination="zZe-Yd-knZ" id="JYb-yX-eZo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j97-Of-OYM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3692.753623188406" y="-273.21428571428572"/>
+            <point key="canvasLocation" x="3840.8000000000002" y="-274.81259370314842"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fSf-Ho-hHt"/>
-        <segue reference="k98-uF-HMo"/>
+        <segue reference="mnp-0H-5wQ"/>
+        <segue reference="L6c-bp-eNK"/>
         <segue reference="zNo-ox-YVL"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -523,6 +584,9 @@ service and privacy policy</string>
         </namedColor>
         <namedColor name="gray151">
             <color red="0.59200000762939453" green="0.59200000762939453" blue="0.59200000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray233">
+            <color red="0.91399997472763062" green="0.9179999828338623" blue="0.92199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="pinkishGray">
             <color red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -14,10 +14,8 @@ class SignUpViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkboxView.delegate = self
-        signUpButton.disable()
-        signUpFacebook.isEnabled = false
-        
         tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, listener: self)
+        viewInitialSettings()
         configureTableView()
     }
     
@@ -41,6 +39,11 @@ class SignUpViewController: BaseViewController {
                 self.performSegue(withIdentifier: SegueIdentifiers.SignUpSuccess , sender: self)
             }
         }
+    }
+    
+    func viewInitialSettings(){
+        signUpButton.disable()
+        signUpFacebook.isEnabled = false
     }
     
     func configureTableView(){

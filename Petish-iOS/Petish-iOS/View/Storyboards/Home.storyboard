@@ -26,7 +26,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="ePA-HT-kxZ"/>
                                     <constraint firstAttribute="height" constant="67" id="f1u-uH-eEX"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="67" id="vWW-60-LoV"/>
+                                    <constraint firstAttribute="height" constant="67" id="vWW-60-LoV"/>
                                 </constraints>
                                 <string key="text">Home Page
 </string>
@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4R-wC-s9x" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="163" y="293" width="90" height="31"/>
+                                <rect key="frame" x="162" y="293" width="90" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="afo-aK-I5P"/>
                                 </constraints>
@@ -50,11 +50,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="O4R-wC-s9x" firstAttribute="top" secondItem="c4h-oT-ijn" secondAttribute="bottom" constant="59" id="4ck-PY-iWe"/>
-                            <constraint firstItem="c4h-oT-ijn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="87" id="dYr-9K-0yR"/>
+                            <constraint firstItem="c4h-oT-ijn" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="7ql-hQ-qmR"/>
+                            <constraint firstItem="O4R-wC-s9x" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="eGV-V3-fwf"/>
                             <constraint firstItem="c4h-oT-ijn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="123" id="fJy-qm-aXt"/>
-                            <constraint firstItem="O4R-wC-s9x" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="163" id="tZe-bu-Nd6"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="O4R-wC-s9x" secondAttribute="trailing" constant="161" id="v1p-VD-tm6"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="c4h-oT-ijn" secondAttribute="trailing" constant="87" id="wYK-31-I1S"/>
                         </constraints>
                     </view>
                 </viewController>
