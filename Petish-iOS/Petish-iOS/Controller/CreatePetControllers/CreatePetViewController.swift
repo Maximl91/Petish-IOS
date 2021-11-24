@@ -19,6 +19,7 @@ class CreatePetViewController: BaseViewController {
         displayView(displayView: overlayView)
     }
     
+    
     func viewInitialSettings(){
         petUIView.layer.cornerRadius = 75
         petImageView.layer.cornerRadius = 75

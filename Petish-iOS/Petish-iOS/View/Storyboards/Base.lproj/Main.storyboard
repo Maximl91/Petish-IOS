@@ -321,7 +321,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOF-2F-Yxm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1949" y="889"/>
+            <point key="canvasLocation" x="1835" y="670"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="9Qu-Cw-7oY">
@@ -472,7 +472,7 @@ service and privacy policy</string>
                         <outlet property="signUpFacebook" destination="cwb-9z-67I" id="O5V-t8-W1A"/>
                         <outlet property="tableView" destination="rtR-Me-qth" id="umS-Uh-C6l"/>
                         <segue destination="3fN-uB-bHj" kind="show" identifier="SkipToHome" animates="NO" id="H0r-e2-YT8"/>
-                        <segue destination="Fb5-q3-FLW" kind="show" identifier="SignUpSuccess" id="iat-9o-QVD"/>
+                        <segue destination="Fb5-q3-FLW" kind="show" identifier="SignUpSuccess" animates="NO" id="iat-9o-QVD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cO-ku-uwK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -487,7 +487,7 @@ service and privacy policy</string>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBW-6Q-XRP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3217" y="-426"/>
+            <point key="canvasLocation" x="2730" y="-520"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

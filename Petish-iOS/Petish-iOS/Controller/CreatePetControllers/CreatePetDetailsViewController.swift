@@ -8,8 +8,9 @@ class CreatePetDetailsViewController: BaseViewController {
         headerView?.configureRightButton(title: "SKIP", hidden: false)
     }
     
+    
     override func goBack() {
-        self.dismiss(animated: false, completion: nil)
+        navigationController?.popViewController(animated: false)
     }
     
     override func rightAction() {
