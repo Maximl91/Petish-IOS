@@ -14,9 +14,13 @@ class SignUpViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkboxView.delegate = self
+        headerView?.configureRightButton(title: "SKIP", hidden: false)
+        headerView?.configureBackButton(title: "BACK", hidden: true)
+        
         tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, listener: self)
         viewInitialSettings()
         configureTableView()
+        
     }
     
     @IBAction func signupPressed(_ sender: UIButton) {
@@ -39,6 +43,10 @@ class SignUpViewController: BaseViewController {
                 self.performSegue(withIdentifier: SegueIdentifiers.SignUpSuccess , sender: self)
             }
         }
+    }
+    
+    override func rightAction() {
+        self.performSegue(withIdentifier: SegueIdentifiers.SkipToHome , sender: self)
     }
     
     func viewInitialSettings(){

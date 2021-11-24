@@ -1,11 +1,22 @@
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, HeaderViewDelegate {
+    func goBack() {
+        print("base")
+        self.dismiss(animated: false, completion: nil)
+    }
+    
+    func rightAction() {}
+    
     
     internal let spinner = SpinnerViewController()
-   
+    @IBOutlet weak var headerView: HeaderUIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+        headerView?.delegate = self
         hideKeyboardWhenTappedAround()
     }
     
@@ -30,13 +41,12 @@ class BaseViewController: UIViewController {
     }
     
     func displayView(displayView: UIViewController){
-           addChild(displayView)
-           view.addSubview(displayView.view)
-       }
-       
-       func dismissView()
-       {
-           self.view.removeFromSuperview()
-           self.removeFromParent()
-       }
+        addChild(displayView)
+        view.addSubview(displayView.view)
+    }
+    
+    func dismissView(){
+        self.view.removeFromSuperview()
+        self.removeFromParent()
+    }
 }

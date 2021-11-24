@@ -1,6 +1,8 @@
 import Foundation
 
 struct Constants{
+    // HeaderView
+    static let headerViewNibName = "HeaderUIView"
     // CollectionViewCell
     static let photoCellNibName = "PhotoCell"
     static let photoCellReuseId = "PhotoCellReuseId"
@@ -35,4 +37,6 @@ struct SegueIdentifiers{
     static let SignUpSuccess = "SignUpSuccess"
     static let LoginSuccess = "LoginSuccess"
     static let AlreadyLoggedIn = "AlreadyLoggedIn"
+    static let SkipToHome = "SkipToHome"
+    static let SkipToLogin = "SkipToLogin"
 }

@@ -14,6 +14,8 @@ class SignInViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 2, data: viewModel.fieldPlaceholderArray, listener: self)
+        headerView?.configureRightButton(title: "SKIP", hidden: false)
+        headerView?.configureBackButton(title: "BACK", hidden: true)
         viewInitialSettings()
         configureTableView()
     }
@@ -42,31 +44,39 @@ class SignInViewController: BaseViewController {
             }
         }
     }
-        
-        func viewInitialSettings(){
-            loginErrLabel.isHidden = true
-            signInButton.disable()
-        }
-        
-        func configureTableView(){
-            tableView.delegate = tableDataSource
-            tableView.dataSource = tableDataSource
-            registerCells(forTableView: tableView)
-        }
-        
-        func registerCells(forTableView tableView: UITableView) {
-            tableView.register(UINib(nibName: Constants.textFieldCellNibName, bundle: nil), forCellReuseIdentifier: Constants.textFieldCellReuseId)
-        }
+    
+    override func rightAction() {
+        self.performSegue(withIdentifier: SegueIdentifiers.SkipToHome , sender: self)
     }
     
-    extension SignInViewController: TextFieldCellDelegate{
-        
-        func textFieldStateChanged(data: String, type: FieldType, isValid: Bool){
-            let dataToAdd = isValid ? data : Constants.invalidUserDataString
-            
-            viewModel.addUserData(dataToAdd, type){ [self]() -> Void in
-                (isValid && viewModel.isUserDataReady()) ? signInButton.enable() : signInButton.disable()
-            }
-        }
+    func viewInitialSettings(){
+        loginErrLabel.isHidden = true
+        signInButton.disable()
     }
     
+    func configureTableView(){
+        tableView.delegate = tableDataSource
+        tableView.dataSource = tableDataSource
+        registerCells(forTableView: tableView)
+    }
+    
+    func registerCells(forTableView tableView: UITableView) {
+        tableView.register(UINib(nibName: Constants.textFieldCellNibName, bundle: nil), forCellReuseIdentifier: Constants.textFieldCellReuseId)
+    }
+    
+}
+
+
+// MARK: - TextFieldCellDelegate
+
+extension SignInViewController: TextFieldCellDelegate{
+    
+    func textFieldStateChanged(data: String, type: FieldType, isValid: Bool){
+        let dataToAdd = isValid ? data : Constants.invalidUserDataString
+        
+        viewModel.addUserData(dataToAdd, type){ [self]() -> Void in
+            (isValid && viewModel.isUserDataReady()) ? signInButton.enable() : signInButton.disable()
+        }
+    }
+}
+

@@ -127,7 +127,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iu4-kQ-bT1" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                    <rect key="frame" x="140" y="236" width="130" height="25.5"/>
+                                    <rect key="frame" x="176.5" y="236" width="57.5" height="25.5"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain">
                                         <attributedString key="attributedTitle">
@@ -148,14 +148,13 @@
                                 <constraint firstItem="iu4-kQ-bT1" firstAttribute="top" secondItem="qQN-rT-ypI" secondAttribute="bottom" constant="8" id="2SP-Vc-dSr"/>
                                 <constraint firstAttribute="bottom" secondItem="iu4-kQ-bT1" secondAttribute="bottom" constant="6.5" id="5UC-cN-v4S"/>
                                 <constraint firstItem="qQN-rT-ypI" firstAttribute="top" secondItem="Gck-mX-znd" secondAttribute="bottom" constant="18" id="ERc-rI-aVS"/>
-                                <constraint firstItem="iu4-kQ-bT1" firstAttribute="leading" secondItem="Ufi-gi-RcR" secondAttribute="leading" constant="140" id="G6A-lj-2Mv"/>
                                 <constraint firstAttribute="bottom" secondItem="qQN-rT-ypI" secondAttribute="bottom" constant="40" id="Ga1-4z-2zQ"/>
                                 <constraint firstAttribute="trailing" secondItem="qQN-rT-ypI" secondAttribute="trailing" constant="32" id="HeU-5e-Sdy"/>
                                 <constraint firstItem="Gck-mX-znd" firstAttribute="top" secondItem="Ufi-gi-RcR" secondAttribute="top" constant="32" id="Ji2-7e-tQr"/>
                                 <constraint firstItem="BPO-IN-Jo5" firstAttribute="top" secondItem="Ufi-gi-RcR" secondAttribute="top" constant="2" id="cjd-Mh-0kb"/>
                                 <constraint firstItem="Gck-mX-znd" firstAttribute="centerX" secondItem="Ufi-gi-RcR" secondAttribute="centerX" id="eJ1-4T-tHj"/>
                                 <constraint firstAttribute="trailing" secondItem="BPO-IN-Jo5" secondAttribute="trailing" constant="2" id="hNd-pR-mlY"/>
-                                <constraint firstAttribute="trailing" secondItem="iu4-kQ-bT1" secondAttribute="trailing" constant="140" id="oKO-nw-dKS"/>
+                                <constraint firstItem="iu4-kQ-bT1" firstAttribute="centerX" secondItem="Ufi-gi-RcR" secondAttribute="centerX" id="ley-Yw-DCS"/>
                                 <constraint firstItem="qQN-rT-ypI" firstAttribute="leading" secondItem="Ufi-gi-RcR" secondAttribute="leading" constant="32" id="pFY-Tb-Xm6"/>
                             </constraints>
                         </view>
@@ -167,7 +166,6 @@
                         <constraint firstItem="Ufi-gi-RcR" firstAttribute="top" secondItem="8rs-cj-QxP" secondAttribute="top" constant="1" id="Iah-GX-2DU"/>
                         <constraint firstAttribute="height" constant="270" id="bxj-Da-nbC"/>
                         <constraint firstItem="Ufi-gi-RcR" firstAttribute="leading" secondItem="8rs-cj-QxP" secondAttribute="leading" constant="1" id="vFY-rh-n4h"/>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="412" id="zAV-bm-Mmj"/>
                     </constraints>
                 </view>
             </subviews>

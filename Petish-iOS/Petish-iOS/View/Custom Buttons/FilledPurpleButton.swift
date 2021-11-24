@@ -33,5 +33,4 @@ class FilledPurpleButton: UIButton {
             setAttributedTitle(myAttrString , for: .normal)
         }
     }
-    
 }
