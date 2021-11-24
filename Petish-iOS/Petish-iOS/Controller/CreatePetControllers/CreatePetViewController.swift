@@ -10,7 +10,6 @@ class CreatePetViewController: BaseViewController {
         super.viewDidLoad()
         headerView?.configureBackButton(title: "BACK", hidden: true)
         headerView?.configureRightButton(title: "SKIP", hidden: false)
-        
         viewInitialSettings()
     }
     
@@ -44,16 +43,3 @@ extension CreatePetViewController: AddPictureOverlayDelegate{
         petImageView.contentMode = .scaleAspectFill
     }
 }
-
-// MARK: - HeaderViewDelegate
-
-//extension CreatePetViewController: HeaderViewDelegate {
-//    func goBack() {
-//        print("hello")
-//        //self.dismiss(animated: false, completion: nil)
-//    }
-//
-//    func rightAction() {
-//        print("hi")
-//    }
-//}

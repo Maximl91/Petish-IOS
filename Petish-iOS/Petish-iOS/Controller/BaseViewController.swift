@@ -1,13 +1,6 @@
 import UIKit
 
 class BaseViewController: UIViewController, HeaderViewDelegate {
-    func goBack() {
-        print("base")
-        self.dismiss(animated: false, completion: nil)
-    }
-    
-    func rightAction() {}
-    
     
     internal let spinner = SpinnerViewController()
     @IBOutlet weak var headerView: HeaderUIView!
@@ -29,6 +22,14 @@ class BaseViewController: UIViewController, HeaderViewDelegate {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    func goBack() {
+        print("base")
+        self.dismiss(animated: false, completion: nil)
+    }
+    
+    func rightAction() {}
+    
     
     func showLoader(){
         addChild(spinner)

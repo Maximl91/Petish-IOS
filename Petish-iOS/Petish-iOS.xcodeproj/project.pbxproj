@@ -28,6 +28,7 @@
 		F44706BE27415F4600E972A4 /* Checkbox.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44706BD27415F4600E972A4 /* Checkbox.xib */; };
 		F45BAEB1274A894B0018C2B9 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45BAEB0274A894B0018C2B9 /* FirebaseManager.swift */; };
 		F4646102274510ED009E240C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4646101274510ED009E240C /* SignInViewController.swift */; };
+		F48183E2274E7ADE00390A45 /* CreatePet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48183E1274E7ADE00390A45 /* CreatePet.storyboard */; };
 		F48AF799274D5F6400AD9600 /* CreatePetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48AF798274D5F6400AD9600 /* CreatePetDetailsViewController.swift */; };
 		F48AF79D274E324B00AD9600 /* HeaderUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48AF79B274E324B00AD9600 /* HeaderUIView.xib */; };
 		F48AF79E274E324B00AD9600 /* HeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48AF79C274E324B00AD9600 /* HeaderUIView.swift */; };
@@ -76,6 +77,7 @@
 		F44706BD27415F4600E972A4 /* Checkbox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Checkbox.xib; sourceTree = "<group>"; };
 		F45BAEB0274A894B0018C2B9 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		F4646101274510ED009E240C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		F48183E1274E7ADE00390A45 /* CreatePet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreatePet.storyboard; sourceTree = "<group>"; };
 		F48AF798274D5F6400AD9600 /* CreatePetDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePetDetailsViewController.swift; sourceTree = "<group>"; };
 		F48AF79B274E324B00AD9600 /* HeaderUIView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderUIView.xib; sourceTree = "<group>"; };
 		F48AF79C274E324B00AD9600 /* HeaderUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderUIView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				F43C8872273167AE00A98C95 /* Main.storyboard */,
+				F48183E1274E7ADE00390A45 /* CreatePet.storyboard */,
 				F4176335274B89AF00047D87 /* Home.storyboard */,
 				F43C8877273167AF00A98C95 /* LaunchScreen.storyboard */,
 			);
@@ -389,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48183E2274E7ADE00390A45 /* CreatePet.storyboard in Resources */,
 				F4D7C66B2734182D002A6F07 /* PhotoCell.xib in Resources */,
 				F4176336274B89AF00047D87 /* Home.storyboard in Resources */,
 				F4E3F4C9274CF18A00A59F94 /* AddPictureOverlayViewController.xib in Resources */,

@@ -471,207 +471,37 @@ service and privacy policy</string>
                         <outlet property="signUpButton" destination="G5H-kn-9JW" id="G71-Jx-skV"/>
                         <outlet property="signUpFacebook" destination="cwb-9z-67I" id="O5V-t8-W1A"/>
                         <outlet property="tableView" destination="rtR-Me-qth" id="umS-Uh-C6l"/>
-                        <segue destination="zdx-R5-qnm" kind="show" identifier="SignUpSuccess" animates="NO" id="PnM-iy-NEB"/>
                         <segue destination="3fN-uB-bHj" kind="show" identifier="SkipToHome" animates="NO" id="H0r-e2-YT8"/>
+                        <segue destination="Fb5-q3-FLW" kind="show" identifier="SignUpSuccess" id="iat-9o-QVD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cO-ku-uwK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1834.7826086956522" y="-273.21428571428572"/>
         </scene>
-        <!--Create Pet View Controller-->
-        <scene sceneID="hNB-Ww-OUp">
+        <!--CreatePet-->
+        <scene sceneID="2fg-3t-yB7">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="zdx-R5-qnm" customClass="CreatePetViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bx1-UY-2Yd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZZ-FT-A1j" customClass="HeaderUIView" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="c4J-3y-X36"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKZ-iq-wLm">
-                                <rect key="frame" x="32" y="147" width="195" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="BS2-wn-lFw"/>
-                                </constraints>
-                                <string key="text">Create
-a pet profile</string>
-                                <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZe-Yd-knZ">
-                                <rect key="frame" x="132" y="329" width="150" height="150"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4x-Xd-clh">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain"/>
-                                        <connections>
-                                            <action selector="addPhotoPressed:" destination="zdx-R5-qnm" eventType="touchUpInside" id="YN4-0g-Q68"/>
-                                        </connections>
-                                    </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddCross" translatesAutoresizingMaskIntoConstraints="NO" id="lkG-CH-Unr">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" name="gray233"/>
-                                <constraints>
-                                    <constraint firstItem="lkG-CH-Unr" firstAttribute="leading" secondItem="zZe-Yd-knZ" secondAttribute="leading" id="21i-rc-VO5"/>
-                                    <constraint firstAttribute="trailing" secondItem="lkG-CH-Unr" secondAttribute="trailing" id="EgP-Dp-TfB"/>
-                                    <constraint firstAttribute="trailing" secondItem="V4x-Xd-clh" secondAttribute="trailing" id="Wst-X8-fQa"/>
-                                    <constraint firstItem="V4x-Xd-clh" firstAttribute="top" secondItem="zZe-Yd-knZ" secondAttribute="top" id="drN-2e-laI"/>
-                                    <constraint firstAttribute="bottom" secondItem="lkG-CH-Unr" secondAttribute="bottom" id="fZQ-A0-269"/>
-                                    <constraint firstItem="lkG-CH-Unr" firstAttribute="top" secondItem="zZe-Yd-knZ" secondAttribute="top" id="fZd-Fz-Y8o"/>
-                                    <constraint firstItem="V4x-Xd-clh" firstAttribute="leading" secondItem="zZe-Yd-knZ" secondAttribute="leading" id="k9a-aC-Y5m"/>
-                                    <constraint firstAttribute="bottom" secondItem="V4x-Xd-clh" secondAttribute="bottom" id="oir-9m-6Gc"/>
-                                    <constraint firstAttribute="height" constant="150" id="u2e-aZ-t5l"/>
-                                    <constraint firstAttribute="width" constant="150" id="ywG-YZ-pWu"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z02-gl-zVv" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="32" y="790" width="350" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="uUZ-n9-KaN"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="NEXT"/>
-                                <connections>
-                                    <segue destination="X66-Ug-5CI" kind="show" animates="NO" id="ozR-D0-86g"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a photo of your pet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuG-YX-osI">
-                                <rect key="frame" x="102" y="499" width="210" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="Nsf-tk-taT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="16"/>
-                                <color key="textColor" name="battleshipGray"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="CfI-G2-ifw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="z02-gl-zVv" firstAttribute="leading" secondItem="CfI-G2-ifw" secondAttribute="leading" constant="32" id="1Nd-PG-Ccg"/>
-                            <constraint firstItem="FZZ-FT-A1j" firstAttribute="trailing" secondItem="CfI-G2-ifw" secondAttribute="trailing" id="4WW-7z-COW"/>
-                            <constraint firstItem="ZKZ-iq-wLm" firstAttribute="top" secondItem="FZZ-FT-A1j" secondAttribute="bottom" constant="47" id="7uO-fR-vI4"/>
-                            <constraint firstItem="MuG-YX-osI" firstAttribute="top" secondItem="zZe-Yd-knZ" secondAttribute="bottom" constant="20" id="BSp-Jo-ca1"/>
-                            <constraint firstItem="zZe-Yd-knZ" firstAttribute="top" secondItem="ZKZ-iq-wLm" secondAttribute="bottom" constant="115" id="ClH-EN-hx3"/>
-                            <constraint firstItem="CfI-G2-ifw" firstAttribute="bottom" secondItem="z02-gl-zVv" secondAttribute="bottom" constant="24" id="Mom-CY-bQ4"/>
-                            <constraint firstItem="MuG-YX-osI" firstAttribute="leading" secondItem="CfI-G2-ifw" secondAttribute="leading" constant="102" id="Qb7-Nq-hFx"/>
-                            <constraint firstItem="MuG-YX-osI" firstAttribute="centerX" secondItem="bx1-UY-2Yd" secondAttribute="centerX" id="XBg-iX-rc6"/>
-                            <constraint firstItem="zZe-Yd-knZ" firstAttribute="centerX" secondItem="bx1-UY-2Yd" secondAttribute="centerX" id="Xbx-tJ-ZBl"/>
-                            <constraint firstItem="FZZ-FT-A1j" firstAttribute="top" secondItem="bx1-UY-2Yd" secondAttribute="top" id="aUY-cw-VoG"/>
-                            <constraint firstItem="ZKZ-iq-wLm" firstAttribute="leading" secondItem="CfI-G2-ifw" secondAttribute="leading" constant="32" id="duC-JL-SGO"/>
-                            <constraint firstItem="CfI-G2-ifw" firstAttribute="trailing" secondItem="MuG-YX-osI" secondAttribute="trailing" constant="102" id="eSQ-sl-dC6"/>
-                            <constraint firstItem="CfI-G2-ifw" firstAttribute="trailing" secondItem="ZKZ-iq-wLm" secondAttribute="trailing" constant="187" id="lPA-vf-Srv"/>
-                            <constraint firstItem="CfI-G2-ifw" firstAttribute="trailing" secondItem="z02-gl-zVv" secondAttribute="trailing" constant="32" id="omB-lF-ELt"/>
-                            <constraint firstItem="FZZ-FT-A1j" firstAttribute="leading" secondItem="CfI-G2-ifw" secondAttribute="leading" id="pFc-oP-ohQ"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="lVt-6S-MCe"/>
-                    <connections>
-                        <outlet property="descriptionLabel" destination="MuG-YX-osI" id="qli-K8-fjj"/>
-                        <outlet property="headerView" destination="FZZ-FT-A1j" id="xI1-cP-4r8"/>
-                        <outlet property="petImageView" destination="lkG-CH-Unr" id="KnY-Ll-nXh"/>
-                        <outlet property="petUIView" destination="zZe-Yd-knZ" id="JYb-yX-eZo"/>
-                        <segue destination="3fN-uB-bHj" kind="show" identifier="SkipToHome" animates="NO" id="27S-jK-3Bz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j97-Of-OYM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="CreatePet" id="Fb5-q3-FLW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="H8g-5A-qIq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBW-6Q-XRP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3873.913043478261" y="-249.10714285714283"/>
-        </scene>
-        <!--Create Pet Details View Controller-->
-        <scene sceneID="i0Q-FS-RBW">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="X66-Ug-5CI" customClass="CreatePetDetailsViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rUu-Ds-BzQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HES-xi-cfV">
-                                <rect key="frame" x="32" y="147" width="195" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="OZh-3n-fni"/>
-                                </constraints>
-                                <string key="text">Create
-a pet profile</string>
-                                <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXJ-Z6-ctI" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="32" y="790" width="350" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="uOH-4O-bF9"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="NEXT"/>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jc8-Cz-acB">
-                                <rect key="frame" x="30" y="254" width="354" height="456"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Da-iN-U7f" customClass="HeaderUIView" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="VOK-T5-2ZW"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="rLW-gX-AQA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Jc8-Cz-acB" firstAttribute="leading" secondItem="rLW-gX-AQA" secondAttribute="leading" constant="30" id="0xP-zP-pii"/>
-                            <constraint firstItem="GXJ-Z6-ctI" firstAttribute="top" secondItem="Jc8-Cz-acB" secondAttribute="bottom" constant="80" id="5yv-L7-0n0"/>
-                            <constraint firstItem="rLW-gX-AQA" firstAttribute="trailing" secondItem="GXJ-Z6-ctI" secondAttribute="trailing" constant="32" id="BDn-iE-YeY"/>
-                            <constraint firstItem="3Da-iN-U7f" firstAttribute="leading" secondItem="rLW-gX-AQA" secondAttribute="leading" id="GBD-g3-Lnc"/>
-                            <constraint firstItem="rLW-gX-AQA" firstAttribute="bottom" secondItem="GXJ-Z6-ctI" secondAttribute="bottom" constant="24" id="K54-7o-6l0"/>
-                            <constraint firstItem="rLW-gX-AQA" firstAttribute="trailing" secondItem="HES-xi-cfV" secondAttribute="trailing" constant="187" id="NmS-fJ-ayc"/>
-                            <constraint firstItem="GXJ-Z6-ctI" firstAttribute="leading" secondItem="rLW-gX-AQA" secondAttribute="leading" constant="32" id="Q0P-Mi-Qlv"/>
-                            <constraint firstItem="HES-xi-cfV" firstAttribute="leading" secondItem="rLW-gX-AQA" secondAttribute="leading" constant="32" id="Y0g-Wh-La5"/>
-                            <constraint firstItem="3Da-iN-U7f" firstAttribute="top" secondItem="rUu-Ds-BzQ" secondAttribute="top" id="Ya2-OU-2hH"/>
-                            <constraint firstItem="rLW-gX-AQA" firstAttribute="trailing" secondItem="Jc8-Cz-acB" secondAttribute="trailing" constant="30" id="ZgX-5H-ghp"/>
-                            <constraint firstItem="HES-xi-cfV" firstAttribute="top" secondItem="3Da-iN-U7f" secondAttribute="bottom" constant="47" id="c4x-4d-wBE"/>
-                            <constraint firstItem="Jc8-Cz-acB" firstAttribute="top" secondItem="HES-xi-cfV" secondAttribute="bottom" constant="40" id="gr6-ZM-6fA"/>
-                            <constraint firstItem="3Da-iN-U7f" firstAttribute="trailing" secondItem="rLW-gX-AQA" secondAttribute="trailing" id="pzw-1C-rcH"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="Afc-AR-A9X"/>
-                    <connections>
-                        <outlet property="headerView" destination="3Da-iN-U7f" id="Jme-Bv-pqI"/>
-                        <segue destination="3fN-uB-bHj" kind="show" identifier="SkipToHome" animates="NO" id="3pS-lz-MF6"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HZF-fP-uSD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4686.9565217391309" y="-249.10714285714283"/>
+            <point key="canvasLocation" x="3217" y="-426"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9f4-FC-1y7"/>
-        <segue reference="L6c-bp-eNK"/>
+        <segue reference="H0r-e2-YT8"/>
+        <segue reference="k98-uF-HMo"/>
         <segue reference="mrP-JY-LSK"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="AddCross" width="47" height="47"/>
         <image name="Rectangle 2" width="373" height="667"/>
         <namedColor name="battleshipGray">
             <color red="0.45899999141693115" green="0.4779999852180481" blue="0.49799999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gray151">
             <color red="0.59200000762939453" green="0.59200000762939453" blue="0.59200000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="gray233">
-            <color red="0.91399997472763062" green="0.9179999828338623" blue="0.92199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="pinkishGray">
             <color red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
