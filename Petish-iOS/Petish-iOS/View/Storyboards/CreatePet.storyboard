@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D2r-cA-oMI">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -35,11 +35,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="6Wf-hD-bhN" customClass="CreatePetViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uc7-TP-1Sa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABF-pM-kkI" customClass="HeaderUIView" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="7Nf-rh-GFg"/>
@@ -57,7 +57,7 @@ a pet profile</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2k-iP-M3Y">
-                                <rect key="frame" x="112.5" y="258.5" width="150" height="150"/>
+                                <rect key="frame" x="132" y="373" width="150" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POu-MT-At0">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -86,7 +86,7 @@ a pet profile</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRH-G9-FPN" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="32" y="595" width="311" height="48"/>
+                                <rect key="frame" x="32" y="790" width="350" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="GfW-SW-hph"/>
                                 </constraints>
@@ -97,7 +97,7 @@ a pet profile</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a photo of your pet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7C-eS-mBj">
-                                <rect key="frame" x="102" y="428.5" width="171" height="34"/>
+                                <rect key="frame" x="102" y="543" width="210" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="XYd-GQ-HH5"/>
                                 </constraints>
@@ -144,11 +144,11 @@ a pet profile</string>
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="a7Z-qv-afl" customClass="CreatePetDetailsViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="euQ-2W-qgb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eD-eG-CyU">
-                                <rect key="frame" x="32" y="117" width="156" height="67"/>
+                                <rect key="frame" x="32" y="117" width="195" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="qKV-Hn-sC4"/>
                                 </constraints>
@@ -159,7 +159,7 @@ a pet profile</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccN-Td-ZQH" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="32" y="595" width="311" height="48"/>
+                                <rect key="frame" x="32" y="790" width="350" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="CWi-2F-2do"/>
                                 </constraints>
@@ -170,14 +170,14 @@ a pet profile</string>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K5B-hK-Vwh">
-                                <rect key="frame" x="30" y="224" width="315" height="310"/>
+                                <rect key="frame" x="30" y="224" width="354" height="310"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="310" id="Qn0-5e-keA"/>
                                 </constraints>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTS-FD-jSa" customClass="HeaderUIView" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="dsL-9N-mfJ"/>
@@ -229,7 +229,7 @@ a pet profile</string>
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="72F-Z3-eyE" customClass="CreatePetDimensionsViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uSi-VZ-PX5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$'s Dimensions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpT-2H-EyK">
@@ -242,7 +242,7 @@ a pet profile</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69r-TL-WOx" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="32" y="595" width="311" height="48"/>
+                                <rect key="frame" x="32" y="790" width="350" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="0us-DS-1Km"/>
                                 </constraints>
@@ -250,17 +250,17 @@ a pet profile</string>
                                 <buttonConfiguration key="configuration" style="plain" title="DONE"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMY-Mp-2K1" customClass="HeaderUIView" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="UEN-Io-C0v"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7u-lR-3jx">
-                                <rect key="frame" x="32" y="200" width="311" height="174"/>
+                                <rect key="frame" x="32" y="200" width="350" height="174"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="petDimensions" translatesAutoresizingMaskIntoConstraints="NO" id="s4p-m2-wkH">
-                                        <rect key="frame" x="78" y="16" width="155" height="142"/>
+                                        <rect key="frame" x="78" y="16" width="194" height="142"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" name="iceBlue"/>
@@ -273,7 +273,7 @@ a pet profile</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BiB-N4-NIA">
-                                <rect key="frame" x="32" y="399" width="311" height="170"/>
+                                <rect key="frame" x="32" y="399" width="350" height="170"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="sZq-JU-gg5"/>

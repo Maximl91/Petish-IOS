@@ -2,14 +2,16 @@ import UIKit
 
 class CreatePetDimensionsViewController: BaseViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var doneButton: FilledPurpleButton!
     var tableDataSource: TextFieldCellsReuseableDataSource?
     
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var doneButton: FilledPurpleButton!
+    
     let fieldPlaceholderArray = [
-        TextFieldData(placeholder: "Neck (INCH)", isSecure: false, validateByType: FieldType.petDimensions),
-        TextFieldData(placeholder: "Chest (INCH)", isSecure: false, validateByType: FieldType.petDimensions),
-        TextFieldData(placeholder: "Back (INCH)", isSecure: false, validateByType: FieldType.petDimensions)]
+        CellData(placeholder: "Neck (INCH)", isSecure: false, cellType: CellType.textField, validateByType: textFieldType.petDimensions),
+        CellData(placeholder: "Chest (INCH)", isSecure: false, cellType: CellType.textField, validateByType: textFieldType.petDimensions),
+        CellData(placeholder: "Back (INCH)", isSecure: false, cellType: CellType.textField, validateByType: textFieldType.petDimensions)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +44,7 @@ class CreatePetDimensionsViewController: BaseViewController {
 }
 
 extension CreatePetDimensionsViewController: TextFieldCellDelegate{
-    func textFieldStateChanged(data: String, type: FieldType, isValid: Bool) {
+    func textFieldStateChanged(data: String, type: textFieldType, isValid: Bool) {
         
     }
 }

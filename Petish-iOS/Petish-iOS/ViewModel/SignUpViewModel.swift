@@ -5,13 +5,13 @@ class SignUpViewModel: NSObject{
     
     private let firebaseManager = FirebaseManager()
     private var userData = UserData()
-    let fieldPlaceholderArray: [TextFieldData]
+    let fieldPlaceholderArray: [CellData]
     
     override init(){
         fieldPlaceholderArray = [
-            TextFieldData(placeholder: "Name", isSecure: false, validateByType: FieldType.name),
-            TextFieldData(placeholder: "Email", isSecure: false, validateByType: FieldType.email),
-            TextFieldData(placeholder: "Password", isSecure: true, validateByType: FieldType.password)
+            CellData(placeholder: "Name", isSecure: false, cellType: CellType.textField, validateByType: textFieldType.name),
+            CellData(placeholder: "Email", isSecure: false, cellType: CellType.textField, validateByType: textFieldType.email),
+            CellData(placeholder: "Password", isSecure: true, cellType: CellType.textField, validateByType: textFieldType.password)
         ]
     }
     
@@ -29,15 +29,15 @@ class SignUpViewModel: NSObject{
         return flag
     }
     
-    func addUserData(_ data: String,_ type: FieldType ,_ completion: @escaping ( () -> Void ) ){
+    func addUserData(_ data: String,_ type: textFieldType ,_ completion: @escaping ( () -> Void ) ){
 
-        if type == FieldType.name{
+        if type == textFieldType.name{
             userData.name = data
         }
-        else if type == FieldType.email{
+        else if type == textFieldType.email{
             userData.email = data
         }
-        else if type == FieldType.password{
+        else if type == textFieldType.password{
             userData.password = data
         }
         completion()

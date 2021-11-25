@@ -3,10 +3,10 @@ import UIKit
 class TextFieldCellsReuseableDataSource: NSObject {
     
     private let textFieldStateListener: TextFieldCellDelegate
-    private let fieldPlaceholderArray: [TextFieldData]
+    private let fieldPlaceholderArray: [CellData]
     private let displayedCells: CGFloat
     
-    init(cellsToDisplay: CGFloat, data: [TextFieldData], listener: TextFieldCellDelegate){
+    init(cellsToDisplay: CGFloat, data: [CellData], listener: TextFieldCellDelegate){
         textFieldStateListener = listener
         fieldPlaceholderArray = data
         displayedCells = cellsToDisplay
@@ -22,10 +22,20 @@ extension TextFieldCellsReuseableDataSource: UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.textFieldCellReuseId, for: indexPath) as! TextFieldCell
-        cell.initCell(data: fieldPlaceholderArray[indexPath.row])
-        cell.delegate = textFieldStateListener
+    
+        if fieldPlaceholderArray[indexPath.row].cellType == CellType.slider{
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.sliderCellReuseId, for: indexPath) as! SliderCell
+            //cell.initCell(data: fieldPlaceholderArray[indexPath.row])
+            //cell.delegate = textFieldStateListener
+            return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.textFieldCellReuseId, for: indexPath) as! TextFieldCell
+            cell.initCell(data: fieldPlaceholderArray[indexPath.row])
+            cell.delegate = textFieldStateListener
+            return cell
+        }
         
-        return cell
+       
     }
 }

@@ -3,14 +3,14 @@ import FBSDKLoginKit
 
 class SignInViewModel: NSObject{
     
-    let fieldPlaceholderArray: [TextFieldData]
+    let fieldPlaceholderArray: [CellData]
     private var userData = UserData()
     private let firebaseManager = FirebaseManager()
     
     override init(){
         fieldPlaceholderArray = [
-            TextFieldData(placeholder: "Email", isSecure: false, validateByType: FieldType.email),
-            TextFieldData(placeholder: "Password", isSecure: true, validateByType: FieldType.password)
+            CellData(placeholder: "Email", isSecure: false, cellType: CellType.textField, validateByType: textFieldType.email),
+            CellData(placeholder: "Password", isSecure: true, cellType: CellType.textField, validateByType: textFieldType.password)
         ]
     }
     
@@ -31,14 +31,14 @@ class SignInViewModel: NSObject{
         return flag
     }
     
-    func addUserData(_ data: String,_ type: FieldType ,_ completion: @escaping ( () -> Void ) ){
-        if type == FieldType.name{
+    func addUserData(_ data: String,_ type: textFieldType ,_ completion: @escaping ( () -> Void ) ){
+        if type == textFieldType.name{
             userData.name = data
         }
-        else if type == FieldType.email{
+        else if type == textFieldType.email{
             userData.email = data
         }
-        else if type == FieldType.password{
+        else if type == textFieldType.password{
             userData.password = data
         }
         completion()

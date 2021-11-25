@@ -2,6 +2,8 @@ import UIKit
 
 class CreatePetViewController: BaseViewController {
  
+    private var petImageDetails: PetImageDetails?
+    
     @IBOutlet weak var petUIView: UIView!
     @IBOutlet weak var petImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -25,8 +27,8 @@ class CreatePetViewController: BaseViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == SegueIdentifiers.CreatePetToDetails) {
-            if let detailVC = segue.destination as? CreatePetDetailsViewController {
-                //detailVC.passedVal = viewModel.getPassedVal()
+            if let vc = segue.destination as? CreatePetDetailsViewController{
+                vc.seguePassedPetImage = petImageDetails
             }
         }
     }
@@ -49,8 +51,9 @@ extension CreatePetViewController: AddPictureOverlayDelegate{
         viewInitialSettings()
     }
     
-    func setImage(image: UIImage) {
-        petImageView.image = image
+    func setImage(data: PetImageDetails) {
+        petImageDetails = data
+        petImageView.image = data.image
         descriptionLabel.text = "EDIT PHOTO"
         petImageView.contentMode = .scaleAspectFill
     }

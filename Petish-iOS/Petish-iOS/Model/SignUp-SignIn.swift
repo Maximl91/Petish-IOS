@@ -1,6 +1,6 @@
 import Foundation
 
-enum FieldType: Int{
+enum textFieldType: Int{
     case name = 0
     case email
     case password
@@ -8,15 +8,23 @@ enum FieldType: Int{
     case petDimensions
 }
 
-struct TextFieldData{
+enum CellType: Int{
+    case textField = 0
+    case slider
+    
+}
+
+struct CellData{
     let placeholder: String
     let isSecure: Bool
-    let validateByType: FieldType?
+    let cellType: CellType
+    let validateByType: textFieldType?
     
-    init(placeholder: String, isSecure:Bool, validateByType: FieldType? = nil)
+    init(placeholder: String, isSecure:Bool, cellType: CellType, validateByType: textFieldType? = nil)
     {
         self.placeholder = placeholder
         self.isSecure = isSecure
+        self.cellType = cellType
         self.validateByType = validateByType
     }
 }

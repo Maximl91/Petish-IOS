@@ -2,14 +2,10 @@ import UIKit
 
 class CreatePetDetailsViewController: BaseViewController {
     
+    var seguePassedPetImage: PetImageDetails?
+    
+    private let viewModel = CreatePetDetailsViewModel()
     var tableDataSource: TextFieldCellsReuseableDataSource?
-    let fieldPlaceholderArray = [
-        TextFieldData(placeholder: "Email", isSecure: false, validateByType: FieldType.email),
-        TextFieldData(placeholder: "Email", isSecure: false, validateByType: FieldType.email),
-        TextFieldData(placeholder: "Email", isSecure: false, validateByType: FieldType.email),
-        TextFieldData(placeholder: "Email", isSecure: false, validateByType: FieldType.email),
-        TextFieldData(placeholder: "Email", isSecure: false, validateByType: FieldType.email)
-    ]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,8 +13,8 @@ class CreatePetDetailsViewController: BaseViewController {
         super.viewDidLoad()
         headerView?.configureBackButton(title: "BACK", hidden: false)
         headerView?.configureRightButton(title: "SKIP", hidden: false)
-        
-        tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 5, data: fieldPlaceholderArray, listener: self)
+      
+        tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 5, data: viewModel.fieldPlaceholderArray, listener: self)
         configureTableView()
 
     }
@@ -44,6 +40,8 @@ class CreatePetDetailsViewController: BaseViewController {
     
     func registerCells(forTableView tableView: UITableView) {
         tableView.register(UINib(nibName: Constants.textFieldCellNibName, bundle: nil), forCellReuseIdentifier: Constants.textFieldCellReuseId)
+        
+        tableView.register(UINib(nibName: Constants.sliderCellNibName, bundle: nil), forCellReuseIdentifier: Constants.sliderCellReuseId)
     }
     
     override func goBack() {
@@ -56,7 +54,7 @@ class CreatePetDetailsViewController: BaseViewController {
 }
 
 extension CreatePetDetailsViewController: TextFieldCellDelegate{
-    func textFieldStateChanged(data: String, type: FieldType, isValid: Bool) {
+    func textFieldStateChanged(data: String, type: textFieldType, isValid: Bool) {
         
     }
 }

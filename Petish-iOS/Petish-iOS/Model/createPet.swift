@@ -16,3 +16,13 @@ struct PetData{
     let weight: Int
     let dimensions: PetDimensions
 }
+
+struct PetImageDetails{
+    let image: UIImage
+    let url: NSURL
+    
+    init(image: UIImage, url: NSURL){
+        self.image = image
+        self.url = url
+    }
+}

@@ -1,7 +1,7 @@
 import UIKit
 
 protocol TextFieldCellDelegate{
-    func textFieldStateChanged(data: String, type: FieldType, isValid: Bool)
+    func textFieldStateChanged(data: String, type: textFieldType, isValid: Bool)
 }
 
 class TextFieldCell: UITableViewCell {
@@ -34,7 +34,7 @@ class TextFieldCell: UITableViewCell {
         return errorLabel.isHidden
     }
     
-    func initCell(data: TextFieldData){
+    func initCell(data: CellData){
         textField.placeholder = data.placeholder
         
         if data.isSecure {
