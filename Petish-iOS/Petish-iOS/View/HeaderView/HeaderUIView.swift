@@ -13,10 +13,11 @@ class HeaderUIView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-  
+    
         let view = Bundle.main.loadNibNamed(Constants.headerViewNibName, owner: self, options: nil)?.first as? UIView
         view?.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         view?.frame = bounds
+
         addSubview(view!)
     }
 
@@ -31,14 +32,14 @@ class HeaderUIView: UIView {
     }
     
     func configureRightButton(title: String, hidden: Bool){
-        rightButton.isHidden = hidden
-        rightButton.setAttributedTitle( makeAttributedStringWith(title: title) , for: .normal)
+        rightButton?.isHidden = hidden
+        rightButton?.setAttributedTitle( makeAttributedStringWith(title: title) , for: .normal)
         
     }
     
     func configureBackButton(title: String, hidden: Bool){
-        backButton.isHidden = hidden
-        backButton.setAttributedTitle( makeAttributedStringWith(title: title) , for: .normal)
+        backButton?.isHidden = hidden
+        backButton?.setAttributedTitle( makeAttributedStringWith(title: title) , for: .normal)
     }
     
     

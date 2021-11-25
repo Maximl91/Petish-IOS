@@ -8,7 +8,6 @@ class BaseViewController: UIViewController, HeaderViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
         headerView?.delegate = self
         hideKeyboardWhenTappedAround()
     }
@@ -51,3 +50,4 @@ class BaseViewController: UIViewController, HeaderViewDelegate {
         self.removeFromParent()
     }
 }
+
