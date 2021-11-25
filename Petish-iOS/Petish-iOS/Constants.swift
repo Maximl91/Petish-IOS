@@ -13,8 +13,11 @@ struct Constants{
     // TableViewCell
     static let textFieldCellNibName = "TextFieldCell"
     static let textFieldCellReuseId = "TextfieldCellReuseId"
+    static let sliderCellNibName = "SliderCell"
+    static let sliderCellReuseId = "SliderCellReuseId"
     // Firestore
     static let FirestoreUserCollection = "users"
+    static let FirestoreDogsCollection = "dogs"
     //
     static let invalidUserDataString = ""
 }
@@ -39,4 +42,6 @@ struct SegueIdentifiers{
     static let AlreadyLoggedIn = "AlreadyLoggedIn"
     static let SkipToHome = "SkipToHome"
     static let SkipToLogin = "SkipToLogin"
+    static let CreatePetToDetails = "CreatePetToDetails"
+    static let PetDetailsToDimensions = "PetDetailsToDimensions"
 }

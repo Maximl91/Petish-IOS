@@ -76,10 +76,10 @@
                                 <color key="currentPageIndicatorTintColor" name="violetBlue"/>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0U-x0-opa" customClass="HeaderUIView" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="KF9-fZ-E69"/>
+                                    <constraint firstAttribute="height" constant="100" id="KF9-fZ-E69"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -89,7 +89,7 @@
                             <constraint firstItem="d0U-x0-opa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="16T-K4-z3z"/>
                             <constraint firstItem="c8b-kR-TkP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8tc-Mm-g3A"/>
                             <constraint firstItem="J2Q-7A-uSF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18.5" id="Jhv-9d-bDd"/>
-                            <constraint firstItem="7Tm-Iz-GYB" firstAttribute="top" secondItem="d0U-x0-opa" secondAttribute="bottom" constant="37" id="KlI-xj-ZnX"/>
+                            <constraint firstItem="7Tm-Iz-GYB" firstAttribute="top" secondItem="d0U-x0-opa" secondAttribute="bottom" constant="17" id="KlI-xj-ZnX"/>
                             <constraint firstItem="c8b-kR-TkP" firstAttribute="top" secondItem="7Tm-Iz-GYB" secondAttribute="bottom" constant="10" id="LvH-fp-VGr"/>
                             <constraint firstItem="c8b-kR-TkP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="N2a-WB-n9S"/>
                             <constraint firstItem="zQK-vA-SNW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OaX-16-fCh"/>
@@ -434,17 +434,17 @@ service and privacy policy</string>
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKV-3M-pKu" customClass="HeaderUIView" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="T4o-os-iag"/>
+                                    <constraint firstAttribute="height" constant="100" id="T4o-os-iag"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Y6-LZ-avh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ocb-Uz-j44" firstAttribute="top" secondItem="sKV-3M-pKu" secondAttribute="bottom" constant="37" id="6GL-eF-xgO"/>
+                            <constraint firstItem="ocb-Uz-j44" firstAttribute="top" secondItem="sKV-3M-pKu" secondAttribute="bottom" constant="17" id="6GL-eF-xgO"/>
                             <constraint firstItem="4Y6-LZ-avh" firstAttribute="trailing" secondItem="rtR-Me-qth" secondAttribute="trailing" constant="30" id="6hB-H3-D6a"/>
                             <constraint firstItem="ifT-sL-cRN" firstAttribute="leading" secondItem="lnW-lr-DGe" secondAttribute="leading" id="94f-3Y-BDk"/>
                             <constraint firstItem="lnW-lr-DGe" firstAttribute="leading" secondItem="rtR-Me-qth" secondAttribute="leading" id="EhW-jv-0cY"/>
@@ -490,7 +490,7 @@ service and privacy policy</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="H0r-e2-YT8"/>
+        <segue reference="fSf-Ho-hHt"/>
         <segue reference="k98-uF-HMo"/>
         <segue reference="mrP-JY-LSK"/>
     </inferredMetricsTieBreakers>

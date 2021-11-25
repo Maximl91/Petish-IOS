@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SliderCell" customModule="Petish_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="57"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="354" height="57"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="iA2-cq-VCx">
+                        <rect key="frame" x="-2" y="14" width="358" height="30"/>
+                        <color key="minimumTrackTintColor" name="violetBlue"/>
+                        <color key="thumbTintColor" name="violetBlue"/>
+                    </slider>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="iA2-cq-VCx" secondAttribute="bottom" constant="14" id="8HI-na-073"/>
+                    <constraint firstItem="iA2-cq-VCx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Hee-ND-owZ"/>
+                    <constraint firstItem="iA2-cq-VCx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="l2N-Sg-LDD"/>
+                    <constraint firstAttribute="trailing" secondItem="iA2-cq-VCx" secondAttribute="trailing" id="ukk-tf-dAE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.88839285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="violetBlue">
+            <color red="0.33700001239776611" green="0.050999999046325684" blue="0.64300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -23,6 +23,19 @@ class CreatePetDetailsViewController: BaseViewController {
 
     }
     
+    @IBAction func nextButton(_ sender: FilledPurpleButton) {
+        self.performSegue(withIdentifier: SegueIdentifiers.PetDetailsToDimensions , sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == SegueIdentifiers.PetDetailsToDimensions) {
+            if let detailVC = segue.destination as? CreatePetDimensionsViewController {
+                //detailVC.passedVal = viewModel.getPassedVal()
+            }
+        }
+    }
+    
     func configureTableView(){
         tableView.delegate = tableDataSource
         tableView.dataSource = tableDataSource

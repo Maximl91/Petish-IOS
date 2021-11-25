@@ -32,12 +32,13 @@ class SignInViewModel: NSObject{
     }
     
     func addUserData(_ data: String,_ type: FieldType ,_ completion: @escaping ( () -> Void ) ){
-        switch type {
-        case FieldType.name:
+        if type == FieldType.name{
             userData.name = data
-        case FieldType.email:
+        }
+        else if type == FieldType.email{
             userData.email = data
-        case FieldType.password:
+        }
+        else if type == FieldType.password{
             userData.password = data
         }
         completion()

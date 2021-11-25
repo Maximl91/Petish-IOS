@@ -4,6 +4,8 @@ enum FieldType: Int{
     case name = 0
     case email
     case password
+    // pet create types
+    case petDimensions
 }
 
 struct TextFieldData{

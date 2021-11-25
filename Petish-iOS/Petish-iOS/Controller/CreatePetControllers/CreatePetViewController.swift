@@ -19,6 +19,17 @@ class CreatePetViewController: BaseViewController {
         displayView(displayView: overlayView)
     }
     
+    @IBAction func nextButton(_ sender: FilledPurpleButton) {
+        self.performSegue(withIdentifier: SegueIdentifiers.CreatePetToDetails , sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == SegueIdentifiers.CreatePetToDetails) {
+            if let detailVC = segue.destination as? CreatePetDetailsViewController {
+                //detailVC.passedVal = viewModel.getPassedVal()
+            }
+        }
+    }
     
     func viewInitialSettings(){
         petUIView.layer.cornerRadius = 75

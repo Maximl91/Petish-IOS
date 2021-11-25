@@ -22,7 +22,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klP-ZQ-JUE">
-                            <rect key="frame" x="13" y="28" width="65" height="51"/>
+                            <rect key="frame" x="13" y="18" width="65" height="51"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="65" id="JfY-1Y-gys"/>
                             </constraints>
@@ -46,12 +46,12 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgw-Zo-QNJ">
-                            <rect key="frame" x="297" y="28" width="65" height="51"/>
+                            <rect key="frame" x="297" y="18" width="65" height="51"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="65" id="dpe-5j-MTf"/>
                             </constraints>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain">
+                            <buttonConfiguration key="configuration" style="filled">
                                 <backgroundConfiguration key="background">
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </backgroundConfiguration>
@@ -72,11 +72,11 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="dgw-Zo-QNJ" firstAttribute="top" secondItem="eUk-7O-98c" secondAttribute="top" constant="28" id="K0y-PU-eii"/>
+                        <constraint firstItem="dgw-Zo-QNJ" firstAttribute="top" secondItem="eUk-7O-98c" secondAttribute="top" constant="18" id="K0y-PU-eii"/>
+                        <constraint firstAttribute="bottom" secondItem="klP-ZQ-JUE" secondAttribute="bottom" constant="11" id="RTl-1j-LlW"/>
                         <constraint firstAttribute="trailing" secondItem="dgw-Zo-QNJ" secondAttribute="trailing" constant="13" id="Uau-3r-JWb"/>
-                        <constraint firstAttribute="bottom" secondItem="klP-ZQ-JUE" secondAttribute="bottom" constant="1" id="UeV-p5-632"/>
-                        <constraint firstAttribute="bottom" secondItem="dgw-Zo-QNJ" secondAttribute="bottom" constant="1" id="dqK-Wh-Q3K"/>
-                        <constraint firstItem="klP-ZQ-JUE" firstAttribute="top" secondItem="eUk-7O-98c" secondAttribute="top" constant="28" id="hVF-QG-z9A"/>
+                        <constraint firstAttribute="bottom" secondItem="dgw-Zo-QNJ" secondAttribute="bottom" constant="11" id="dqK-Wh-Q3K"/>
+                        <constraint firstItem="klP-ZQ-JUE" firstAttribute="top" secondItem="eUk-7O-98c" secondAttribute="top" constant="18" id="hVF-QG-z9A"/>
                         <constraint firstItem="klP-ZQ-JUE" firstAttribute="leading" secondItem="eUk-7O-98c" secondAttribute="leading" constant="13" id="wmA-xw-wlI"/>
                     </constraints>
                 </view>

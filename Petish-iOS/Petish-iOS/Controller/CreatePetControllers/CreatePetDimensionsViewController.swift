@@ -3,17 +3,19 @@ import UIKit
 class CreatePetDimensionsViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var doneButton: FilledPurpleButton!
     var tableDataSource: TextFieldCellsReuseableDataSource?
     
     let fieldPlaceholderArray = [
-        TextFieldData(placeholder: "Neck (INCH)", isSecure: false, validateByType: FieldType.email),
-        TextFieldData(placeholder: "Chest (INCH)", isSecure: false, validateByType: FieldType.email),
-        TextFieldData(placeholder: "Back (INCH)", isSecure: false, validateByType: FieldType.email)]
+        TextFieldData(placeholder: "Neck (INCH)", isSecure: false, validateByType: FieldType.petDimensions),
+        TextFieldData(placeholder: "Chest (INCH)", isSecure: false, validateByType: FieldType.petDimensions),
+        TextFieldData(placeholder: "Back (INCH)", isSecure: false, validateByType: FieldType.petDimensions)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         headerView?.configureBackButton(title: "BACK", hidden: false)
         headerView?.configureRightButton(title: "SKIP", hidden: false)
+        doneButton.disable()
         
         tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 3, data: fieldPlaceholderArray, listener: self)
         configureTableView()
