@@ -10,6 +10,4 @@ class CreatePetDimensionsViewModel: NSObject{
             CellData(placeholder: "Chest (INCH)", isSecure: false, cellType: CellType.textField, validateByType: textFieldType.petDimensions),
             CellData(placeholder: "Back (INCH)", isSecure: false, cellType: CellType.textField, validateByType: textFieldType.petDimensions)]
     }
-    
-    
 }

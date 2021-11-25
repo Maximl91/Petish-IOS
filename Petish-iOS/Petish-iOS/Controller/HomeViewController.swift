@@ -12,7 +12,6 @@ class HomeViewController: UIViewController { // temp just for testing
         if Auth.auth().currentUser?.uid != nil {
             do {
                 try Auth.auth().signOut()
-                print("logged out firebase")
                 dismiss(animated: false) {}
             } catch let signOutError as NSError {
                 print ("Error signing out: %@", signOutError)
@@ -22,7 +21,6 @@ class HomeViewController: UIViewController { // temp just for testing
             let loginManager = LoginManager()
             
             if let _ = AccessToken.current { // Access token available -- user already logged in
-                print("logged out facebook")
                 loginManager.logOut()
                 dismiss(animated: false) {}
             }
