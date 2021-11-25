@@ -15,6 +15,8 @@ struct Constants{
     static let textFieldCellReuseId = "TextfieldCellReuseId"
     static let sliderCellNibName = "SliderCell"
     static let sliderCellReuseId = "SliderCellReuseId"
+    static let dropMenuCellNibName = "DropMenuCell"
+    static let dropMenuCellReuseId = "DropMenuCellReuseId"
     // Firestore
     static let FirestoreUserCollection = "users"
     static let FirestoreDogsCollection = "dogs"

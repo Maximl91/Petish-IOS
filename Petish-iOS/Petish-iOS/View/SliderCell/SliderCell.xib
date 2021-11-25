@@ -17,10 +17,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="354" height="57"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="iA2-cq-VCx">
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="iA2-cq-VCx">
                         <rect key="frame" x="-2" y="14" width="358" height="30"/>
                         <color key="minimumTrackTintColor" name="violetBlue"/>
                         <color key="thumbTintColor" name="violetBlue"/>
+                        <connections>
+                            <action selector="sliderValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="hHT-ay-IJv"/>
+                        </connections>
                     </slider>
                 </subviews>
                 <constraints>
@@ -31,6 +34,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="slider" destination="iA2-cq-VCx" id="uhN-nu-aek"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="124.88839285714285"/>
         </tableViewCell>
     </objects>

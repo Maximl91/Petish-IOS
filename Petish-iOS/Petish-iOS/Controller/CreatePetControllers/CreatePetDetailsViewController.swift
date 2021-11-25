@@ -2,10 +2,9 @@ import UIKit
 
 class CreatePetDetailsViewController: BaseViewController {
     
-    var seguePassedPetImage: PetImageDetails?
-    
     private let viewModel = CreatePetDetailsViewModel()
-    var tableDataSource: TextFieldCellsReuseableDataSource?
+    var seguePassedPetImageDetails: PetImageDetails? // nil if no image
+    var tableDataSource: MultiCellReuseableDataSource?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -13,10 +12,10 @@ class CreatePetDetailsViewController: BaseViewController {
         super.viewDidLoad()
         headerView?.configureBackButton(title: "BACK", hidden: false)
         headerView?.configureRightButton(title: "SKIP", hidden: false)
-      
-        tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 5, data: viewModel.fieldPlaceholderArray, listener: self)
+        
+        tableDataSource = MultiCellReuseableDataSource(cellsToDisplay: 5, data: viewModel.fieldPlaceholderArray, listener: self)
         configureTableView()
-
+        
     }
     
     @IBAction func nextButton(_ sender: FilledPurpleButton) {
@@ -26,8 +25,8 @@ class CreatePetDetailsViewController: BaseViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == SegueIdentifiers.PetDetailsToDimensions) {
-            if let detailVC = segue.destination as? CreatePetDimensionsViewController {
-                //detailVC.passedVal = viewModel.getPassedVal()
+            if let vc = segue.destination as? CreatePetDimensionsViewController {
+                vc.petData = viewModel.getPetData()
             }
         }
     }
@@ -42,6 +41,8 @@ class CreatePetDetailsViewController: BaseViewController {
         tableView.register(UINib(nibName: Constants.textFieldCellNibName, bundle: nil), forCellReuseIdentifier: Constants.textFieldCellReuseId)
         
         tableView.register(UINib(nibName: Constants.sliderCellNibName, bundle: nil), forCellReuseIdentifier: Constants.sliderCellReuseId)
+        
+        tableView.register(UINib(nibName: Constants.dropMenuCellNibName, bundle: nil), forCellReuseIdentifier: Constants.dropMenuCellReuseId)
     }
     
     override func goBack() {
@@ -53,8 +54,14 @@ class CreatePetDetailsViewController: BaseViewController {
     }
 }
 
-extension CreatePetDetailsViewController: TextFieldCellDelegate{
+extension CreatePetDetailsViewController: MultiCellDelegate{
     func textFieldStateChanged(data: String, type: textFieldType, isValid: Bool) {
-        
+        viewModel.addPetData(data, type){ () -> Void in
+           // check for completed
+        }
+    }
+    
+    func sliderChanged(data: Int) {
+        viewModel.addWeight(data)
     }
 }

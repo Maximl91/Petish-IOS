@@ -11,6 +11,7 @@ enum textFieldType: Int{
 enum CellType: Int{
     case textField = 0
     case slider
+    case dropMenu
     
 }
 

@@ -169,7 +169,7 @@ a pet profile</string>
                                     <action selector="nextButton:" destination="a7Z-qv-afl" eventType="touchUpInside" id="dbY-jF-QBY"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K5B-hK-Vwh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K5B-hK-Vwh">
                                 <rect key="frame" x="30" y="224" width="354" height="310"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -232,8 +232,8 @@ a pet profile</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$'s Dimensions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpT-2H-EyK">
-                                <rect key="frame" x="32" y="117" width="186.5" height="67"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="'s Dimensions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="cpT-2H-EyK">
+                                <rect key="frame" x="32" y="117" width="350" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="HMQ-BJ-vHG"/>
                                 </constraints>
@@ -272,7 +272,7 @@ a pet profile</string>
                                     <constraint firstAttribute="trailing" secondItem="s4p-m2-wkH" secondAttribute="trailing" constant="78" id="wN7-pk-PHU"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BiB-N4-NIA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BiB-N4-NIA">
                                 <rect key="frame" x="32" y="399" width="350" height="170"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -291,6 +291,7 @@ a pet profile</string>
                             <constraint firstItem="BiB-N4-NIA" firstAttribute="top" secondItem="a7u-lR-3jx" secondAttribute="bottom" constant="25" id="C5h-ky-qZT"/>
                             <constraint firstItem="BiB-N4-NIA" firstAttribute="centerX" secondItem="uSi-VZ-PX5" secondAttribute="centerX" id="GCz-HQ-JlW"/>
                             <constraint firstItem="a7u-lR-3jx" firstAttribute="top" secondItem="cpT-2H-EyK" secondAttribute="bottom" constant="16" id="Hsr-MQ-6JK"/>
+                            <constraint firstItem="Wu5-Jk-qVy" firstAttribute="trailing" secondItem="cpT-2H-EyK" secondAttribute="trailing" constant="32" id="HxM-PH-WBA"/>
                             <constraint firstItem="NMY-Mp-2K1" firstAttribute="top" secondItem="uSi-VZ-PX5" secondAttribute="top" id="Kgf-a7-z6x"/>
                             <constraint firstItem="BiB-N4-NIA" firstAttribute="leading" secondItem="a7u-lR-3jx" secondAttribute="leading" id="Yae-Bs-7C2"/>
                             <constraint firstItem="Wu5-Jk-qVy" firstAttribute="bottom" secondItem="69r-TL-WOx" secondAttribute="bottom" constant="24" id="Z2i-F3-Ok7"/>
@@ -304,6 +305,7 @@ a pet profile</string>
                         <outlet property="doneButton" destination="69r-TL-WOx" id="bFu-mA-eGF"/>
                         <outlet property="headerView" destination="NMY-Mp-2K1" id="ADq-ug-DDn"/>
                         <outlet property="tableView" destination="BiB-N4-NIA" id="0yU-Tu-W2k"/>
+                        <outlet property="titleLabel" destination="cpT-2H-EyK" id="LrY-iT-KO5"/>
                         <segue destination="Vq1-JX-J4J" kind="show" identifier="SkipToHome" animates="NO" id="Xt5-xN-9El"/>
                     </connections>
                 </viewController>
@@ -313,7 +315,7 @@ a pet profile</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wjM-lI-8cm"/>
+        <segue reference="Xt5-xN-9El"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AddCross" width="47" height="47"/>

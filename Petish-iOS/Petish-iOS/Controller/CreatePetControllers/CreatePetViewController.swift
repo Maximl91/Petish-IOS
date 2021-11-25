@@ -1,14 +1,14 @@
 import UIKit
 
 class CreatePetViewController: BaseViewController {
- 
+    
     private var petImageDetails: PetImageDetails?
     
     @IBOutlet weak var petUIView: UIView!
     @IBOutlet weak var petImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-        override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         headerView?.configureBackButton(title: "BACK", hidden: true)
         headerView?.configureRightButton(title: "SKIP", hidden: false)
@@ -28,7 +28,7 @@ class CreatePetViewController: BaseViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == SegueIdentifiers.CreatePetToDetails) {
             if let vc = segue.destination as? CreatePetDetailsViewController{
-                vc.seguePassedPetImage = petImageDetails
+                vc.seguePassedPetImageDetails = petImageDetails
             }
         }
     }

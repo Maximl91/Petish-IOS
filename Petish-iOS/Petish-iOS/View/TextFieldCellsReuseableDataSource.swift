@@ -22,20 +22,10 @@ extension TextFieldCellsReuseableDataSource: UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-        if fieldPlaceholderArray[indexPath.row].cellType == CellType.slider{
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.sliderCellReuseId, for: indexPath) as! SliderCell
-            //cell.initCell(data: fieldPlaceholderArray[indexPath.row])
-            //cell.delegate = textFieldStateListener
-            return cell
-        }
-        else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.textFieldCellReuseId, for: indexPath) as! TextFieldCell
-            cell.initCell(data: fieldPlaceholderArray[indexPath.row])
-            cell.delegate = textFieldStateListener
-            return cell
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.textFieldCellReuseId, for: indexPath) as! TextFieldCell
+        cell.initCell(data: fieldPlaceholderArray[indexPath.row])
+        cell.delegate = textFieldStateListener
         
-       
+        return cell
     }
 }
