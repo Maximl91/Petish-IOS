@@ -165,7 +165,7 @@ a pet profile</string>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="NEXT"/>
                                 <connections>
-                                    <segue destination="72F-Z3-eyE" kind="show" animates="NO" id="bX2-Qa-BwO"/>
+                                    <segue destination="72F-Z3-eyE" kind="show" animates="NO" id="wKo-oZ-e5M"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K5B-hK-Vwh">
@@ -222,10 +222,10 @@ a pet profile</string>
             </objects>
             <point key="canvasLocation" x="3481" y="568"/>
         </scene>
-        <!--Create Pet Details View Controller-->
+        <!--Create Pet Dimensions View Controller-->
         <scene sceneID="qCB-DN-dWW">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="72F-Z3-eyE" customClass="CreatePetDetailsViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="72F-Z3-eyE" customClass="CreatePetDimensionsViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uSi-VZ-PX5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -299,8 +299,9 @@ a pet profile</string>
                     </view>
                     <navigationItem key="navigationItem" id="Njk-Rc-ziM"/>
                     <connections>
-                        <outlet property="headerView" destination="NMY-Mp-2K1" id="SPI-gD-P8e"/>
-                        <outlet property="tableView" destination="BiB-N4-NIA" id="auI-Uv-Z9m"/>
+                        <outlet property="headerView" destination="NMY-Mp-2K1" id="ADq-ug-DDn"/>
+                        <outlet property="tableView" destination="BiB-N4-NIA" id="0yU-Tu-W2k"/>
+                        <segue destination="Vq1-JX-J4J" kind="show" identifier="SkipToHome" animates="NO" id="Xt5-xN-9El"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Awy-an-Gro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -309,7 +310,7 @@ a pet profile</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wjM-lI-8cm"/>
+        <segue reference="Xt5-xN-9El"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AddCross" width="47" height="47"/>

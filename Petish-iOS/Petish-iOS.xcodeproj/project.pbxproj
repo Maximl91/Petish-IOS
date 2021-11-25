@@ -49,6 +49,7 @@
 		F4FC788B27426D19000DF270 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC788927426D19000DF270 /* TextFieldCell.swift */; };
 		F4FC788E2742780D000DF270 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4FC788D2742780D000DF270 /* TextFieldCell.xib */; };
 		F4FC789027429AC2000DF270 /* SignUp-SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC788F27429AC2000DF270 /* SignUp-SignIn.swift */; };
+		F4FF309C274F7241003F4E4E /* CreatePetDimensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF309B274F7241003F4E4E /* CreatePetDimensionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		F4FC788927426D19000DF270 /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		F4FC788D2742780D000DF270 /* TextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
 		F4FC788F27429AC2000DF270 /* SignUp-SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp-SignIn.swift"; sourceTree = "<group>"; };
+		F4FF309B274F7241003F4E4E /* CreatePetDimensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePetDimensionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 			children = (
 				F4E3F4BE274CD0C800A59F94 /* CreatePetViewController.swift */,
 				F48AF798274D5F6400AD9600 /* CreatePetDetailsViewController.swift */,
+				F4FF309B274F7241003F4E4E /* CreatePetDimensionsViewController.swift */,
 			);
 			path = CreatePetControllers;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				F42B173827463B4A009FEFC6 /* SignInViewModel.swift in Sources */,
 				F45BAEB1274A894B0018C2B9 /* FirebaseManager.swift in Sources */,
 				F4D7C66A2734182D002A6F07 /* PhotoCell.swift in Sources */,
+				F4FF309C274F7241003F4E4E /* CreatePetDimensionsViewController.swift in Sources */,
 				F4E3F4C8274CF18A00A59F94 /* AddPictureOverlayViewController.swift in Sources */,
 				F4176338274BC8D800047D87 /* HomeViewController.swift in Sources */,
 				F443E7DF273D620C00065FC2 /* FilledPurpleButton.swift in Sources */,
