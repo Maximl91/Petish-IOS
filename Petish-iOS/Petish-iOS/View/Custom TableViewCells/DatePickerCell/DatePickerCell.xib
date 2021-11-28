@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -17,27 +17,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="354" height="57"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6HI-4Y-Hmx" customClass="BottomBorderTextField" customModule="Petish_iOS" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="3" width="354" height="40"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6HI-4Y-Hmx" customClass="BottomBorderTextField" customModule="Petish_iOS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="354" height="43"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                         <connections>
                             <action selector="textFieldEditBegin:" destination="KGk-i7-Jjw" eventType="editingDidBegin" id="f7T-52-mBN"/>
                         </connections>
                     </textField>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6NS-U0-iOR">
-                        <rect key="frame" x="315" y="10" width="27" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6NS-U0-iOR">
+                        <rect key="frame" x="321" y="11" width="21" height="17.5"/>
                         <color key="tintColor" name="battleshipGray"/>
                     </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="6NS-U0-iOR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="9QT-aM-3sb"/>
+                    <constraint firstAttribute="bottom" secondItem="6NS-U0-iOR" secondAttribute="bottom" constant="27" id="HT3-PD-D5b"/>
+                    <constraint firstItem="6HI-4Y-Hmx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KJz-rD-ags"/>
+                    <constraint firstAttribute="trailing" secondItem="6NS-U0-iOR" secondAttribute="trailing" constant="12" id="gYh-0U-dhU"/>
+                    <constraint firstItem="6HI-4Y-Hmx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kbb-w5-2j9"/>
+                    <constraint firstAttribute="bottom" secondItem="6HI-4Y-Hmx" secondAttribute="bottom" constant="14" id="qFJ-Zy-cFY"/>
+                    <constraint firstAttribute="trailing" secondItem="6HI-4Y-Hmx" secondAttribute="trailing" id="uq6-Rp-nbq"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="textField" destination="6HI-4Y-Hmx" id="Hq0-Gg-kr2"/>
             </connections>
-            <point key="canvasLocation" x="140.57971014492756" y="124.88839285714285"/>
+            <point key="canvasLocation" x="139.19999999999999" y="124.58770614692655"/>
         </tableViewCell>
     </objects>
     <resources>

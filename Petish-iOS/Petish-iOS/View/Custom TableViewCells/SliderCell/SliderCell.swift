@@ -5,20 +5,21 @@ protocol SliderCellDelegate{
 }
 
 class SliderCell: UITableViewCell {
-
     
     var delegate: SliderCellDelegate?
     
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        let image:UIImage? = // ...
-//        slider.setThumbImage(image, for: .normal)
     }
-    
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         delegate?.sliderChanged(data: Int(slider.value))
+    }
+    
+    func initCell(data: CellData){
+        descriptionLabel.text = data.placeholder
     }
 }
