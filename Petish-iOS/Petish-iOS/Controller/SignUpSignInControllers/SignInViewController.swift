@@ -14,7 +14,6 @@ class SignInViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 2, data: viewModel.fieldPlaceholderArray, listener: self)
-        headerView?.configureRightButton(title: "SKIP", hidden: false)
         headerView?.configureBackButton(title: "BACK", hidden: true)
         viewInitialSettings()
         configureTableView()

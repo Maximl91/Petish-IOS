@@ -10,6 +10,8 @@ class BaseViewController: UIViewController, HeaderViewDelegate {
         super.viewDidLoad()
         headerView?.delegate = self
         hideKeyboardWhenTappedAround()
+        headerView?.configureBackButton(title: "BACK", hidden: false)
+        headerView?.configureRightButton(title: "SKIP", hidden: false)
     }
     
     func hideKeyboardWhenTappedAround() {

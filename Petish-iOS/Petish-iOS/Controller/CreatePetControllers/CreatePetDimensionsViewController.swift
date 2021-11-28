@@ -12,8 +12,6 @@ class CreatePetDimensionsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        headerView?.configureBackButton(title: "BACK", hidden: false)
-        headerView?.configureRightButton(title: "SKIP", hidden: false)
         
         tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, listener: self)
         viewInitialSettings()

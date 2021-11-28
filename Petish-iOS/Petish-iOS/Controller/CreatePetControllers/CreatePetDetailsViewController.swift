@@ -10,8 +10,6 @@ class CreatePetDetailsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        headerView?.configureBackButton(title: "BACK", hidden: false)
-        headerView?.configureRightButton(title: "SKIP", hidden: false)
         
         tableDataSource = MultiCellReuseableDataSource(cellsToDisplay: 5, data: viewModel.fieldPlaceholderArray, listener: self)
         configureTableView()
@@ -43,6 +41,8 @@ class CreatePetDetailsViewController: BaseViewController {
         tableView.register(UINib(nibName: Constants.sliderCellNibName, bundle: nil), forCellReuseIdentifier: Constants.sliderCellReuseId)
         
         tableView.register(UINib(nibName: Constants.dropMenuCellNibName, bundle: nil), forCellReuseIdentifier: Constants.dropMenuCellReuseId)
+        
+        tableView.register(UINib(nibName: Constants.datePickerCellNibName, bundle: nil), forCellReuseIdentifier: Constants.datePickerCellReuseId)
     }
     
     override func goBack() {

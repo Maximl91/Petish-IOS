@@ -9,7 +9,7 @@ class SignInViewModel: NSObject{
     
     override init(){
         fieldPlaceholderArray = [
-            CellData(placeholder: "Email", isSecure: false, cellType: CellType.textField, validateByType: textFieldType.email),
+            CellData(placeholder: "Email", cellType: CellType.textField, validateByType: textFieldType.email),
             CellData(placeholder: "Password", isSecure: true, cellType: CellType.textField, validateByType: textFieldType.password)
         ]
     }

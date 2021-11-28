@@ -9,8 +9,8 @@ class SignUpViewModel: NSObject{
     
     override init(){
         fieldPlaceholderArray = [
-            CellData(placeholder: "Name", isSecure: false, cellType: CellType.textField, validateByType: textFieldType.name),
-            CellData(placeholder: "Email", isSecure: false, cellType: CellType.textField, validateByType: textFieldType.email),
+            CellData(placeholder: "Name", cellType: CellType.textField, validateByType: textFieldType.name),
+            CellData(placeholder: "Email", cellType: CellType.textField, validateByType: textFieldType.email),
             CellData(placeholder: "Password", isSecure: true, cellType: CellType.textField, validateByType: textFieldType.password)
         ]
     }

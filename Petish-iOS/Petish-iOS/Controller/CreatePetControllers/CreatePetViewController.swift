@@ -11,7 +11,6 @@ class CreatePetViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         headerView?.configureBackButton(title: "BACK", hidden: true)
-        headerView?.configureRightButton(title: "SKIP", hidden: false)
         viewInitialSettings()
     }
     

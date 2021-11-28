@@ -7,13 +7,15 @@ class CreatePetDetailsViewModel: NSObject{
     
     override init(){
         fieldPlaceholderArray = [
-            CellData(placeholder: "Pet's Name", isSecure: false, cellType: CellType.textField, validateByType: textFieldType.name),
-            CellData(placeholder: "Species", isSecure: false, cellType: CellType.textField),
-            CellData(placeholder: "Birthday", isSecure: false, cellType: CellType.textField),
-            CellData(placeholder: "Primary Breed", isSecure: false, cellType: CellType.textField),
-            CellData(placeholder: "Weight (kg)", isSecure: false, cellType: CellType.slider)
+            CellData(placeholder: "Pet's Name", cellType: CellType.textField, validateByType: textFieldType.name),
+            CellData(placeholder: "Species", cellType: CellType.textField),
+            CellData(placeholder: "Birthday", cellType: CellType.datePicker),
+            CellData(placeholder: "Primary Breed", cellType: CellType.textField),
+            CellData(placeholder: "Weight (kg)", cellType: CellType.slider)
         ]
     }
+    
+    
     
     func getPetData() -> PetData{
         return petData
@@ -24,7 +26,10 @@ class CreatePetDetailsViewModel: NSObject{
         if type == textFieldType.name{
             petData.name = data
         }
-        
+        if type == textFieldType.birthday{
+            petData.birthday = data
+        }
+
         completion()
     }
     

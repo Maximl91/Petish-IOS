@@ -30,14 +30,19 @@ extension MultiCellReuseableDataSource: UITableViewDataSource, UITableViewDelega
         
         if fieldPlaceholderArray[indexPath.row].cellType == CellType.slider{
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.sliderCellReuseId, for: indexPath) as! SliderCell
-            //cell.initCell(data: fieldPlaceholderArray[indexPath.row]) // for placeholder later
+        
             cell.delegate = multiCellStateListener
             return cell
         }
         else if fieldPlaceholderArray[indexPath.row].cellType == CellType.dropMenu {
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.dropMenuCellReuseId, for: indexPath) as! DropMenuCell
-//            cell.initCell(data: fieldPlaceholderArray[indexPath.row])
-//            cell.delegate = textFieldStateListener
+
+            return cell
+        }
+        else if fieldPlaceholderArray[indexPath.row].cellType == CellType.datePicker {
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.datePickerCellReuseId, for: indexPath) as! DatePickerCell
+            cell.initCell(data: fieldPlaceholderArray[indexPath.row])
+            cell.delegate = multiCellStateListener
             return cell
         }
         else{

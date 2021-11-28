@@ -11,7 +11,6 @@ class OnboardingViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        headerView?.configureRightButton(title: "SKIP", hidden: false)
         headerView?.configureBackButton(title: "BACK", hidden: true)
         
         configureCollectionView()
