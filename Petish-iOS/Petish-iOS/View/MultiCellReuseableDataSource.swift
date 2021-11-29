@@ -30,7 +30,7 @@ extension MultiCellReuseableDataSource: UITableViewDataSource, UITableViewDelega
         
         if fieldPlaceholderArray[indexPath.row].cellType == CellType.slider{
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.sliderCellReuseId, for: indexPath) as! SliderCell
-        
+            
             cell.delegate = multiCellStateListener
             cell.initCell(data: fieldPlaceholderArray[indexPath.row])
             return cell
@@ -54,6 +54,6 @@ extension MultiCellReuseableDataSource: UITableViewDataSource, UITableViewDelega
             return cell
         }
         
-       
+        
     }
 }

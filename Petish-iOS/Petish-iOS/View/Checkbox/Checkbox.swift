@@ -23,7 +23,7 @@ class Checkbox: UIView {
     }
     
     @IBAction func checkPressed(_ sender: UIButton) {
-        state = !state 
+        state = !state
         imageView.image = state ? image : nil
         delegate?.checkboxClicked(checkboxState: state)
     }

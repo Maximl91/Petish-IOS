@@ -3,7 +3,7 @@ import UIKit
 class BottomBorderTextField: UITextField {
     
     let validator = TextFieldValidator()
-    private var textFieldType: TextFieldType?
+    private var textFieldType: TextFieldValidationType?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -37,11 +37,11 @@ class BottomBorderTextField: UITextField {
         layer.addSublayer(bottomLine)
     }
     
-    func setFieldType(type: TextFieldType?){
+    func setFieldType(type: TextFieldValidationType?){
         textFieldType = type
     }
     
-    func getFieldType()-> TextFieldType?{
+    func getFieldType()-> TextFieldValidationType?{
         return textFieldType
     }
     

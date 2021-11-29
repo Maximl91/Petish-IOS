@@ -3,11 +3,12 @@ import UIKit
 class DatePickerCell: UITableViewCell {
     
     var delegate: TextFieldCellDelegate?
+    private var cellDataType: CellDataType?
     private let datePicker = UIDatePicker()
     private let datePickerToolBar = UIToolbar()
     
     @IBOutlet weak var textField: BottomBorderTextField!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         configureDatePicker(datePicker)
@@ -28,7 +29,7 @@ class DatePickerCell: UITableViewCell {
         toolBar.barStyle = .default
         toolBar.isTranslucent = true
         toolBar.sizeToFit()
-
+        
         // Adds the buttons
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -39,27 +40,27 @@ class DatePickerCell: UITableViewCell {
     
     @objc func doneClick() {
         let dateFormatter = DateFormatter()
-                dateFormatter.dateStyle = .medium
-                dateFormatter.timeStyle = .none
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
         
         let formattedDateString = dateFormatter.string(from: datePicker.date)
         textField?.text = formattedDateString
         self.endEditing(true)
-        if let typeToSet = textField?.getFieldType(){
+        if let typeToSet = cellDataType{
             delegate?.textFieldStateChanged(data: formattedDateString, type: typeToSet, isValid: true)
         }
     }
-
+    
     @objc func clearClick() {
         textField?.text = Constants.emptyString
         self.endEditing(true)
-        if let typeToSet = textField?.getFieldType(){
+        if let typeToSet = cellDataType{
             delegate?.textFieldStateChanged(data: Constants.emptyString, type: typeToSet, isValid: true)
         }
     }
     
     func initCell(data: CellData){
         textField?.placeholder = data.placeholder
-        textField.setFieldType(type: data.cellDataType)
+        cellDataType = data.cellDataType
     }
 }

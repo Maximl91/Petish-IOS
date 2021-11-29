@@ -7,7 +7,7 @@ struct PetData{
     var species: String
     var birthday: String
     var primaryBreed: String
-    var weight: Int
+    var weight: String
     var dimensions: PetDimensions?
     
     init(){
@@ -16,7 +16,7 @@ struct PetData{
         self.species = ""
         self.birthday = ""
         self.primaryBreed = ""
-        self.weight = 0
+        self.weight = ""
         self.dimensions = nil
     }
 }

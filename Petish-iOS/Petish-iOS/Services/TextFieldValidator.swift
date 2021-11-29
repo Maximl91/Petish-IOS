@@ -5,6 +5,14 @@ protocol TextFieldValidatorDelegate {
     func hideErrorMsg()
 }
 
+enum TextFieldValidationType: Int{
+    case name = 0
+    case email
+    case password
+    // pet create types
+    case petDimensions
+}
+
 class TextFieldValidator{
     
     var delegate: TextFieldValidatorDelegate?
@@ -13,16 +21,16 @@ class TextFieldValidator{
         var flag = false
         if let type = textField.getFieldType(){
             
-            if type == TextFieldType.name{
+            if type == TextFieldValidationType.name{
                 flag = validateName(textField)
             }
-            else if type == TextFieldType.email{
+            else if type == TextFieldValidationType.email{
                 flag = validateEmail(textField)
             }
-            else if type == TextFieldType.password{
+            else if type == TextFieldValidationType.password{
                 flag = validatePassword(textField)
             }
-            else if type == TextFieldType.petDimensions{
+            else if type == TextFieldValidationType.petDimensions{
                 flag = validateDimension(textField)
             }
             
@@ -70,7 +78,7 @@ class TextFieldValidator{
         
         var isValid: Bool {
             NSPredicate(format: "SELF MATCHES %@", "^[1-9][0-9]?$|^100$").evaluate(with: field.text)}
- 
+        
         if(!isValid){
             delegate?.showErrorMsg(errString: "invalid value, 1-100 only")
             return false

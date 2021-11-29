@@ -1,40 +1,5 @@
 import Foundation
 
-enum TextFieldType: Int{
-    case none = 0
-    case name
-    case email
-    case password
-    // pet create types
-    case petDimensions
-    case birthday
-    case species
-    case breed
-}
-
-enum CellType: Int{
-    case textField = 0
-    case slider
-    case dropMenu
-    case datePicker
-}
-
-struct CellData{
-    let placeholder: String
-    let isSecure: Bool
-    let cellType: CellType
-    let cellDataType: TextFieldType?
-    let dataSource: [String?]
-    
-    init(placeholder: String, isSecure:Bool = false, cellType: CellType, cellDataType: TextFieldType? = nil, dropMenuDataSource: [String?] = [])
-    {
-        self.placeholder = placeholder
-        self.isSecure = isSecure
-        self.cellType = cellType
-        self.cellDataType = cellDataType
-        self.dataSource = dropMenuDataSource
-    }
-}
 
 struct UserData{
     var name: String? = nil

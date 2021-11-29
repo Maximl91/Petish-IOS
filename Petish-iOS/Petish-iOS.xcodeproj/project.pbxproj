@@ -14,7 +14,7 @@
 		F421141A274A31B800A29935 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4211418274A31B800A29935 /* SpinnerViewController.swift */; };
 		F421141B274A31B800A29935 /* SpinnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4211419274A31B800A29935 /* SpinnerViewController.xib */; };
 		F42B173827463B4A009FEFC6 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B173727463B4A009FEFC6 /* SignInViewModel.swift */; };
-		F42B173C27464C0A009FEFC6 /* TextFieldCellsReuseableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42B173B27464C0A009FEFC6 /* TextFieldCellsReuseableDataSource.swift */; };
+		F42BA3182754D037002DA1E2 /* CustomTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42BA3172754D037002DA1E2 /* CustomTableViewCells.swift */; };
 		F42BAA412743B57C00800552 /* TextFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42BAA402743B57C00800552 /* TextFieldValidator.swift */; };
 		F42BAA452743FABC00800552 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F42BAA442743FABC00800552 /* GoogleService-Info.plist */; };
 		F43C886D273167AE00A98C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C886C273167AE00A98C95 /* AppDelegate.swift */; };
@@ -73,7 +73,7 @@
 		F4211418274A31B800A29935 /* SpinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		F4211419274A31B800A29935 /* SpinnerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpinnerViewController.xib; sourceTree = "<group>"; };
 		F42B173727463B4A009FEFC6 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-		F42B173B27464C0A009FEFC6 /* TextFieldCellsReuseableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCellsReuseableDataSource.swift; sourceTree = "<group>"; };
+		F42BA3172754D037002DA1E2 /* CustomTableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCells.swift; sourceTree = "<group>"; };
 		F42BAA402743B57C00800552 /* TextFieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidator.swift; sourceTree = "<group>"; };
 		F42BAA442743FABC00800552 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F43C8869273167AE00A98C95 /* Petish-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Petish-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,7 +226,6 @@
 				F451B645275365430052406D /* Custom TableViewCells */,
 				F451B64B2753AA610052406D /* ThumbTextSlider.swift */,
 				F4A73BE92741178500AF85FD /* BottomBorderTextField.swift */,
-				F42B173B27464C0A009FEFC6 /* TextFieldCellsReuseableDataSource.swift */,
 				F4FF30AE274FB166003F4E4E /* MultiCellReuseableDataSource.swift */,
 			);
 			path = View;
@@ -358,6 +357,7 @@
 				F4F021B62734199B00776CF5 /* OnboardingData.swift */,
 				F4FC788F27429AC2000DF270 /* SignUp-SignIn.swift */,
 				F4FF30A3274F836B003F4E4E /* createPet.swift */,
+				F42BA3172754D037002DA1E2 /* CustomTableViewCells.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -552,7 +552,6 @@
 				F4FF30A6274F83DE003F4E4E /* CreatePetDetailsViewModel.swift in Sources */,
 				F43C886D273167AE00A98C95 /* AppDelegate.swift in Sources */,
 				F4FF30A4274F836B003F4E4E /* createPet.swift in Sources */,
-				F42B173C27464C0A009FEFC6 /* TextFieldCellsReuseableDataSource.swift in Sources */,
 				F4FF30AF274FB166003F4E4E /* MultiCellReuseableDataSource.swift in Sources */,
 				F4D7C67227341841002A6F07 /* Constants.swift in Sources */,
 				F4646102274510ED009E240C /* SignInViewController.swift in Sources */,
@@ -562,6 +561,7 @@
 				F4FF30A8274F89CD003F4E4E /* CreatePetDimensionsViewModel.swift in Sources */,
 				F4A73BEC274150D400AF85FD /* SignUpViewModel.swift in Sources */,
 				F44706BC27415F3900E972A4 /* Checkbox.swift in Sources */,
+				F42BA3182754D037002DA1E2 /* CustomTableViewCells.swift in Sources */,
 				F421141A274A31B800A29935 /* SpinnerViewController.swift in Sources */,
 				F4D7C66F27341834002A6F07 /* SignUpViewController.swift in Sources */,
 				F451B649275365840052406D /* DatePickerCell.swift in Sources */,

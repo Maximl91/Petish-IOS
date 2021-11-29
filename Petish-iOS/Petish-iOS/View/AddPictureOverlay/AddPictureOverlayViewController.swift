@@ -6,11 +6,11 @@ protocol AddPictureOverlayDelegate{
 }
 
 class AddPictureOverlayViewController: BaseViewController {
-
+    
     private var petImageDetails: PetImageDetails?
     var delegate: AddPictureOverlayDelegate?
     let imagePickerController = UIImagePickerController()
-
+    
     @IBOutlet weak var uploadButton: FilledPurpleButton!
     
     override func viewDidLoad() {
@@ -46,9 +46,9 @@ extension AddPictureOverlayViewController: UIImagePickerControllerDelegate, UINa
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-   
+        
         if let petImage = info[.originalImage] as? UIImage, let imageUrl = info[.imageURL] as? NSURL {
             petImageDetails = PetImageDetails(image: petImage, url: imageUrl)
         }

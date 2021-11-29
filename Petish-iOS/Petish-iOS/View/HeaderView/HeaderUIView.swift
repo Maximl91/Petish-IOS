@@ -13,15 +13,15 @@ class HeaderUIView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    
+        
         let view = Bundle.main.loadNibNamed(Constants.headerViewNibName, owner: self, options: nil)?.first as? UIView
         view?.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         view?.frame = bounds
-
+        
         addSubview(view!)
     }
-
-     
+    
+    
     @IBAction func backPressed(_ sender: UIButton) {
         delegate?.goBack()
     }
@@ -44,10 +44,10 @@ class HeaderUIView: UIView {
     
     
     func makeAttributedStringWith(title: String) -> NSAttributedString{
-            let myString = title
-            let myAttribute = [ NSAttributedString.Key.foregroundColor: UIColor(named: Colors.violetBlue), NSAttributedString.Key.font: UIFont(name: Fonts.SFProTextMedium, size: 14) ]
-            let myAttrString = NSAttributedString(string: myString, attributes: myAttribute as [NSAttributedString.Key : Any])
-            
-            return myAttrString
+        let myString = title
+        let myAttribute = [ NSAttributedString.Key.foregroundColor: UIColor(named: Colors.violetBlue), NSAttributedString.Key.font: UIFont(name: Fonts.SFProTextMedium, size: 14) ]
+        let myAttrString = NSAttributedString(string: myString, attributes: myAttribute as [NSAttributedString.Key : Any])
+        
+        return myAttrString
     }
 }

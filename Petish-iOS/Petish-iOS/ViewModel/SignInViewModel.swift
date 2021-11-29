@@ -9,8 +9,8 @@ class SignInViewModel: NSObject{
     
     override init(){
         fieldPlaceholderArray = [
-            CellData(placeholder: "Email", cellType: .textField, cellDataType: .email),
-            CellData(placeholder: "Password", isSecure: true, cellType: .textField, cellDataType: .password)
+            CellData(placeholder: "Email", cellType: .textField, cellDataType: .email, validateByType: .email),
+            CellData(placeholder: "Password", isSecure: true, cellType: .textField, cellDataType: .password, validateByType: .password)
         ]
     }
     
@@ -31,14 +31,14 @@ class SignInViewModel: NSObject{
         return flag
     }
     
-    func addUserData(_ data: String,_ type: TextFieldType ,_ completion: @escaping ( () -> Void ) ){
-        if type == TextFieldType.name{
+    func addUserData(_ data: String,_ type: CellDataType ,_ completion: @escaping ( () -> Void ) ){
+        if type == CellDataType.name{
             userData.name = data
         }
-        else if type == TextFieldType.email{
+        else if type == CellDataType.email{
             userData.email = data
         }
-        else if type == TextFieldType.password{
+        else if type == CellDataType.password{
             userData.password = data
         }
         completion()

@@ -14,10 +14,42 @@
             filePath = "Petish-iOS/Model/SignUp-SignIn.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "init(name:email:password:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C75C9A8E-4228-4002-B9B3-92FF52DDD30E - 4299d0cc553febbc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Petish_iOS.CellType.init(rawValue: Swift.Int) -&gt; Swift.Optional&lt;Petish_iOS.CellType&gt;"
+                  moduleName = "Petish-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maximlobovich/Petish-IOS/Petish-iOS/Petish-iOS/Model/SignUp-SignIn.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "C75C9A8E-4228-4002-B9B3-92FF52DDD30E - da79ad34de13265a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Petish_iOS.CellType.rawValue.getter : Swift.Int"
+                  moduleName = "Petish-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maximlobovich/Petish-IOS/Petish-iOS/Petish-iOS/Model/SignUp-SignIn.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

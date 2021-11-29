@@ -3,7 +3,7 @@ import UIKit
 class CreatePetDimensionsViewController: BaseViewController {
     
     private let viewModel = CreatePetDimensionsViewModel()
-    var tableDataSource: TextFieldCellsReuseableDataSource?
+    var tableDataSource: MultiCellReuseableDataSource?
     var petData: PetData?
     
     @IBOutlet weak var tableView: UITableView!
@@ -13,14 +13,17 @@ class CreatePetDimensionsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, listener: self)
+        tableDataSource = MultiCellReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, listener: self)
         viewInitialSettings()
         configureTableView()
     }
     
-    func viewInitialSettings(){
-        doneButton.disable()
+    
+    @IBAction func donePressed(_ sender: FilledPurpleButton) {
         
+    }
+    
+    func viewInitialSettings(){
         if let temp = petData{
             titleLabel.text = "\(temp.name)'s Dimensions"
         }
@@ -46,8 +49,7 @@ class CreatePetDimensionsViewController: BaseViewController {
     
 }
 
-extension CreatePetDimensionsViewController: TextFieldCellDelegate{
-    func textFieldStateChanged(data: String, type: TextFieldType, isValid: Bool) {
-        
-    }
+extension CreatePetDimensionsViewController: MultiCellDelegate{
+    func textFieldStateChanged(data: String, type: CellDataType, isValid: Bool) {}
+    func sliderChanged(data: Int, type: CellDataType) {}
 }

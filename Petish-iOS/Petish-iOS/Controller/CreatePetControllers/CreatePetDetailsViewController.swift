@@ -5,6 +5,8 @@ class CreatePetDetailsViewController: BaseViewController {
     private let viewModel = CreatePetDetailsViewModel()
     var seguePassedPetImageDetails: PetImageDetails? // nil if no image
     var tableDataSource: MultiCellReuseableDataSource?
+    @IBOutlet weak var nextButton: FilledPurpleButton!
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -12,6 +14,7 @@ class CreatePetDetailsViewController: BaseViewController {
         super.viewDidLoad()
         
         tableDataSource = MultiCellReuseableDataSource(cellsToDisplay: 5, data: viewModel.fieldPlaceholderArray, listener: self)
+        nextButton.disable()
         configureTableView()
         
     }
@@ -54,14 +57,13 @@ class CreatePetDetailsViewController: BaseViewController {
 }
 
 extension CreatePetDetailsViewController: MultiCellDelegate{
-    func textFieldStateChanged(data: String, type: TextFieldType, isValid: Bool) {
-        print(type)
+    func textFieldStateChanged(data: String, type: CellDataType, isValid: Bool) {
         viewModel.addPetData(data, type){ () -> Void in
-           // check for completed (at least name)
+            self.viewModel.isReady() ? self.nextButton.enable() : self.nextButton.disable()
         }
     }
     
-    func sliderChanged(data: Int) {
-        viewModel.addWeight(data)
+    func sliderChanged(data: Int, type: CellDataType) {
+        viewModel.addPetData(String(data), type){ () -> Void in }
     }
 }

@@ -4,7 +4,7 @@ import FBSDKLoginKit
 class SignInViewController: BaseViewController {
     
     let viewModel = SignInViewModel()
-    var tableDataSource: TextFieldCellsReuseableDataSource?
+    var tableDataSource: MultiCellReuseableDataSource?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var signInButton: FilledPurpleButton!
@@ -13,7 +13,7 @@ class SignInViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 2, data: viewModel.fieldPlaceholderArray, listener: self)
+        tableDataSource = MultiCellReuseableDataSource(cellsToDisplay: 2, data: viewModel.fieldPlaceholderArray, listener: self)
         headerView?.configureBackButton(title: "BACK", hidden: true)
         viewInitialSettings()
         configureTableView()
@@ -68,14 +68,14 @@ class SignInViewController: BaseViewController {
 
 // MARK: - TextFieldCellDelegate
 
-extension SignInViewController: TextFieldCellDelegate{
-    
-    func textFieldStateChanged(data: String, type: TextFieldType, isValid: Bool){
+extension SignInViewController: MultiCellDelegate{
+    func textFieldStateChanged(data: String, type: CellDataType, isValid: Bool){
         let dataToAdd = isValid ? data : Constants.invalidUserDataString
         
         viewModel.addUserData(dataToAdd, type){ [self]() -> Void in
             (isValid && viewModel.isUserDataReady()) ? signInButton.enable() : signInButton.disable()
         }
     }
+    func sliderChanged(data: Int, type: CellDataType) {}
 }
 
