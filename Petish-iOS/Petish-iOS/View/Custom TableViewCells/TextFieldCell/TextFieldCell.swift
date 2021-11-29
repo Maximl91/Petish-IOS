@@ -43,7 +43,7 @@ class TextFieldCell: UITableViewCell {
             textField.textContentType = .oneTimeCode
         }
         
-        textField.setFieldType(type: data.textFieldType)
+        textField.setFieldType(type: data.cellDataType)
     }
 }
 

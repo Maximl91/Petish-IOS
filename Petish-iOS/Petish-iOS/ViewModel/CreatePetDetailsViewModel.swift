@@ -7,11 +7,11 @@ class CreatePetDetailsViewModel: NSObject{
     
     override init(){
         fieldPlaceholderArray = [
-            CellData(placeholder: "Pet's Name", cellType: CellType.textField, textFieldType: TextFieldType.name),
-            CellData(placeholder: "Species", cellType: CellType.dropMenu, dropMenuDataSource: ["Dog"]),
-            CellData(placeholder: "Birthday", cellType: CellType.datePicker),
-            CellData(placeholder: "Primary Breed", cellType: CellType.dropMenu, dropMenuDataSource: ["Terrier Dog", "German Shepard"]),
-            CellData(placeholder: "Weight (kg)", cellType: CellType.slider)
+            CellData(placeholder: "Pet's Name", cellType: .textField, cellDataType: .name),
+            CellData(placeholder: "Species", cellType: .dropMenu, cellDataType: .species, dropMenuDataSource: ["Dog"]),
+            CellData(placeholder: "Birthday", cellType: .datePicker, cellDataType: .birthday),
+            CellData(placeholder: "Primary Breed", cellType: .dropMenu, cellDataType: .breed ,dropMenuDataSource: ["Terrier Dog", "German Shepard"]),
+            CellData(placeholder: "Weight (kg)", cellType: .slider)
         ]
     }
     

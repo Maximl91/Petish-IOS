@@ -23,15 +23,15 @@ struct CellData{
     let placeholder: String
     let isSecure: Bool
     let cellType: CellType
-    let textFieldType: TextFieldType?
+    let cellDataType: TextFieldType?
     let dataSource: [String?]
     
-    init(placeholder: String, isSecure:Bool = false, cellType: CellType, textFieldType: TextFieldType? = nil, dropMenuDataSource: [String?] = [])
+    init(placeholder: String, isSecure:Bool = false, cellType: CellType, cellDataType: TextFieldType? = nil, dropMenuDataSource: [String?] = [])
     {
         self.placeholder = placeholder
         self.isSecure = isSecure
         self.cellType = cellType
-        self.textFieldType = textFieldType
+        self.cellDataType = cellDataType
         self.dataSource = dropMenuDataSource
     }
 }

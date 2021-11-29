@@ -45,17 +45,21 @@ class DatePickerCell: UITableViewCell {
         let formattedDateString = dateFormatter.string(from: datePicker.date)
         textField?.text = formattedDateString
         self.endEditing(true)
-        
-        delegate?.textFieldStateChanged(data: formattedDateString, type: .birthday, isValid: true)
+        if let typeToSet = textField?.getFieldType(){
+            delegate?.textFieldStateChanged(data: formattedDateString, type: typeToSet, isValid: true)
+        }
     }
 
     @objc func clearClick() {
         textField?.text = Constants.emptyString
         self.endEditing(true)
-        delegate?.textFieldStateChanged(data: Constants.emptyString, type: .birthday, isValid: true)
+        if let typeToSet = textField?.getFieldType(){
+            delegate?.textFieldStateChanged(data: Constants.emptyString, type: typeToSet, isValid: true)
+        }
     }
     
     func initCell(data: CellData){
         textField?.placeholder = data.placeholder
+        textField.setFieldType(type: data.cellDataType)
     }
 }

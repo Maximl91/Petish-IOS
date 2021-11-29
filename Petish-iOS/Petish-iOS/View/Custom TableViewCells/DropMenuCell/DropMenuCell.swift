@@ -28,15 +28,12 @@ class DropMenuCell: UITableViewCell {
     
     func configureDropDownEvents(){
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            descriptionField?.text = item
             arrowView.image = #imageLiteral(resourceName: "downArrow")
-            // consider changing the type to a placeholder string?
-            if item == Constants.clearSelection {
-                descriptionField?.text = Constants.emptyString
-                delegate?.textFieldStateChanged(data: Constants.emptyString, type: .none, isValid: true)
-            }
-            else{
-            delegate?.textFieldStateChanged(data: item, type: .none, isValid: true)
+            if let typeToSet = descriptionField?.getFieldType(){
+
+                let textToSet = (item == Constants.clearSelection) ? Constants.emptyString : item
+                descriptionField?.text = textToSet
+                delegate?.textFieldStateChanged(data: textToSet, type: typeToSet, isValid: true)
             }
         }
         dropDown.cancelAction = { [unowned self] in
@@ -52,6 +49,7 @@ class DropMenuCell: UITableViewCell {
         var arrayWithNoOptionals: [String] = data.dataSource.compactMap({$0})
         arrayWithNoOptionals.insert(contentsOf: [Constants.clearSelection], at: 0)
         dropDown.dataSource = arrayWithNoOptionals
+        descriptionField?.setFieldType(type: data.cellDataType)
     }
     
 }
