@@ -25,7 +25,7 @@ class FirebaseManager: NSObject {
     }
     
     
-    func addDocumentToCollection(collectionName: String,userId: String, data: [String:Any], completionHandler: @escaping (String?,String?)->Void ){
+    func addDocumentToCollection(collectionName: String, userId: String, data: [String:Any], completionHandler: @escaping (String?,String?)->Void ){
         
         db.collection(collectionName).document(userId).setData(data){ err in
             if let err = err {

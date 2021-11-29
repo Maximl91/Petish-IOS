@@ -20,8 +20,12 @@ class CreatePetDimensionsViewController: BaseViewController {
     
     
     @IBAction func donePressed(_ sender: FilledPurpleButton) {
-        viewModel.createPetProfile(){ (userId: String?, error: String?)->Void in
-            print("in callback")
+        if let userId = self.getLoggedUserDetails(){
+            viewModel.createPetProfile(userId: userId){ (userId: String?, error: String?)->Void in
+                print("in callback")
+            }
+        }else{
+            // error
         }
     }
     
@@ -52,6 +56,9 @@ class CreatePetDimensionsViewController: BaseViewController {
 }
 
 extension CreatePetDimensionsViewController: MultiCellDelegate{
-    func textFieldStateChanged(data: String, type: CellDataType, isValid: Bool) {}
+    func textFieldStateChanged(data: String, type: CellDataType, isValid: Bool) {
+        viewModel.addPetData(data, type){ () -> Void in
+        }
+    }
     func sliderChanged(data: Int, type: CellDataType) {}
 }

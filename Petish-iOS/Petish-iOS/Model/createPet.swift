@@ -8,7 +8,7 @@ struct PetData{
     var birthday: String
     var primaryBreed: String
     var weight: String
-    var dimensions: PetDimensions?
+    var dimensions: PetDimensions
     
     init(){
         self.image = nil
@@ -17,14 +17,20 @@ struct PetData{
         self.birthday = ""
         self.primaryBreed = ""
         self.weight = ""
-        self.dimensions = nil
+        self.dimensions = PetDimensions()
     }
 }
 
 struct PetDimensions{
-    let neck: Int
-    let chest: Int
-    let back: Int
+    var neck: String
+    var chest: String
+    var back: String
+    
+    init(){
+        self.neck = ""
+        self.chest = ""
+        self.back = ""
+    }
 }
 
 struct PetImageDetails{

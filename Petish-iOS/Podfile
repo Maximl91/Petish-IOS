@@ -10,9 +10,9 @@ target 'Petish-iOS' do
 pod 'gRPC-Core', '1.21.0'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'FirebaseStorage'
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
-#pod 'iOSDropDown'
 pod 'DropDown'
     
 

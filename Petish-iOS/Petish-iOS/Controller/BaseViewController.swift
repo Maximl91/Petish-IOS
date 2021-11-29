@@ -1,4 +1,6 @@
 import UIKit
+import Firebase
+import FBSDKLoginKit
 
 class BaseViewController: UIViewController, HeaderViewDelegate {
     
@@ -18,6 +20,19 @@ class BaseViewController: UIViewController, HeaderViewDelegate {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+    }
+    
+    func getLoggedUserDetails()-> String?{
+        // returns firebase uid
+        if let userUid = Auth.auth().currentUser?.uid{
+            return userUid
+        }
+        // returns facebook uid
+        if let token = AccessToken.current, !token.isExpired {
+            return token.userID
+        }
+        // not logged in
+        return nil
     }
     
     @objc func dismissKeyboard() {
