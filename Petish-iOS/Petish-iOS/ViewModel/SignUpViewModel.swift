@@ -54,7 +54,7 @@ class SignUpViewModel: NSObject{
             }
             
             // login successful
-            self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, userId: userId, data: [
+            self.firebaseManager.addDocumentToCollection(collectionName: Constants.Firestore.Collections.users, userId: userId, data: [
                 "user_uid": userId,
                 "name": name], completionHandler: completion)
         }
@@ -83,7 +83,7 @@ class SignUpViewModel: NSObject{
             // Successfully logged in, add user to database
             Profile.loadCurrentProfile { (profile, error) in
                 if let name = Profile.current?.name, let userId = AccessToken.current?.userID {
-                    self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, userId: userId, data: [
+                    self.firebaseManager.addDocumentToCollection(collectionName: Constants.Firestore.Collections.users, userId: userId, data: [
                         "user_uid": userId,
                         "name": name], completionHandler: completion)
                 }

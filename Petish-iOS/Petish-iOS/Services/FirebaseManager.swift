@@ -30,7 +30,7 @@ class FirebaseManager: NSObject {
         db.collection(collectionName).document(userId).setData(data){ err in
             if let err = err {
                 let errorString = self.firebaseErrorToString(error: err)
-                print("Error adding user data: \(errorString)")
+                print("Error adding data: \(errorString)")
                 completionHandler(userId, errorString)
             }else {
                 completionHandler(userId ,nil)

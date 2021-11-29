@@ -2,9 +2,9 @@ import UIKit
 
 class CreatePetDimensionsViewController: BaseViewController {
     
+    var petData: PetData?
     private let viewModel = CreatePetDimensionsViewModel()
     var tableDataSource: MultiCellReuseableDataSource?
-    var petData: PetData?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var doneButton: FilledPurpleButton!
@@ -12,20 +12,22 @@ class CreatePetDimensionsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableDataSource = MultiCellReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, listener: self)
+        viewModel.petData = petData
         viewInitialSettings()
         configureTableView()
     }
     
     
     @IBAction func donePressed(_ sender: FilledPurpleButton) {
-        
+        viewModel.createPetProfile(){ (userId: String?, error: String?)->Void in
+            print("in callback")
+        }
     }
     
     func viewInitialSettings(){
-        if let temp = petData{
-            titleLabel.text = "\(temp.name)'s Dimensions"
+        if let pet = petData{
+            titleLabel.text = "\(pet.name)'s Dimensions"
         }
     }
     

@@ -5,9 +5,8 @@ class CreatePetDetailsViewController: BaseViewController {
     private let viewModel = CreatePetDetailsViewModel()
     var seguePassedPetImageDetails: PetImageDetails? // nil if no image
     var tableDataSource: MultiCellReuseableDataSource?
+    
     @IBOutlet weak var nextButton: FilledPurpleButton!
-    
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -16,7 +15,6 @@ class CreatePetDetailsViewController: BaseViewController {
         tableDataSource = MultiCellReuseableDataSource(cellsToDisplay: 5, data: viewModel.fieldPlaceholderArray, listener: self)
         nextButton.disable()
         configureTableView()
-        
     }
     
     @IBAction func nextButton(_ sender: FilledPurpleButton) {

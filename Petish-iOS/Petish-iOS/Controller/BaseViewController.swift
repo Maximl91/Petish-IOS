@@ -25,12 +25,10 @@ class BaseViewController: UIViewController, HeaderViewDelegate {
     }
     
     func goBack() {
-        print("base")
         self.dismiss(animated: false, completion: nil)
     }
     
     func rightAction() {}
-    
     
     func showLoader(){
         addChild(spinner)

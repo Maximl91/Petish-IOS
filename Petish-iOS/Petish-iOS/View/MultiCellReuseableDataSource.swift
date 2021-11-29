@@ -1,9 +1,6 @@
 import UIKit
 
-protocol MultiCellDelegate: TextFieldCellDelegate, SliderCellDelegate{
-    
-    
-}
+protocol MultiCellDelegate: TextFieldCellDelegate, SliderCellDelegate{}
 
 class MultiCellReuseableDataSource: NSObject {
     
