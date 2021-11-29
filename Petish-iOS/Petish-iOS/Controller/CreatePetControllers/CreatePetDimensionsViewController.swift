@@ -47,7 +47,7 @@ class CreatePetDimensionsViewController: BaseViewController {
 }
 
 extension CreatePetDimensionsViewController: TextFieldCellDelegate{
-    func textFieldStateChanged(data: String, type: textFieldType, isValid: Bool) {
+    func textFieldStateChanged(data: String, type: TextFieldType, isValid: Bool) {
         
     }
 }

@@ -70,7 +70,7 @@ class SignInViewController: BaseViewController {
 
 extension SignInViewController: TextFieldCellDelegate{
     
-    func textFieldStateChanged(data: String, type: textFieldType, isValid: Bool){
+    func textFieldStateChanged(data: String, type: TextFieldType, isValid: Bool){
         let dataToAdd = isValid ? data : Constants.invalidUserDataString
         
         viewModel.addUserData(dataToAdd, type){ [self]() -> Void in

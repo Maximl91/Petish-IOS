@@ -32,8 +32,8 @@ class DatePickerCell: UITableViewCell {
         // Adds the buttons
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelClick))
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        let clearButton = UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector(self.clearClick))
+        toolBar.setItems([clearButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
     }
     
@@ -49,12 +49,13 @@ class DatePickerCell: UITableViewCell {
         delegate?.textFieldStateChanged(data: formattedDateString, type: .birthday, isValid: true)
     }
 
-    @objc func cancelClick() {
+    @objc func clearClick() {
+        textField?.text = Constants.emptyString
         self.endEditing(true)
+        delegate?.textFieldStateChanged(data: Constants.emptyString, type: .birthday, isValid: true)
     }
     
     func initCell(data: CellData){
         textField?.placeholder = data.placeholder
-        
     }
 }

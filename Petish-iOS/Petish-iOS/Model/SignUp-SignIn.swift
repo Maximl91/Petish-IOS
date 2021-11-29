@@ -1,6 +1,6 @@
 import Foundation
 
-enum textFieldType: Int{
+enum TextFieldType: Int{
     case none = 0
     case name
     case email
@@ -8,6 +8,8 @@ enum textFieldType: Int{
     // pet create types
     case petDimensions
     case birthday
+    case species
+    case breed
 }
 
 enum CellType: Int{
@@ -21,14 +23,16 @@ struct CellData{
     let placeholder: String
     let isSecure: Bool
     let cellType: CellType
-    let validateByType: textFieldType?
+    let textFieldType: TextFieldType?
+    let dataSource: [String?]
     
-    init(placeholder: String, isSecure:Bool = false, cellType: CellType, validateByType: textFieldType? = nil)
+    init(placeholder: String, isSecure:Bool = false, cellType: CellType, textFieldType: TextFieldType? = nil, dropMenuDataSource: [String?] = [])
     {
         self.placeholder = placeholder
         self.isSecure = isSecure
         self.cellType = cellType
-        self.validateByType = validateByType
+        self.textFieldType = textFieldType
+        self.dataSource = dropMenuDataSource
     }
 }
 

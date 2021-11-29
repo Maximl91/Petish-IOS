@@ -37,7 +37,8 @@ extension MultiCellReuseableDataSource: UITableViewDataSource, UITableViewDelega
         }
         else if fieldPlaceholderArray[indexPath.row].cellType == CellType.dropMenu {
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.dropMenuCellReuseId, for: indexPath) as! DropMenuCell
-
+            cell.delegate = multiCellStateListener
+            cell.initCell(data: fieldPlaceholderArray[indexPath.row], dataSource: []) // to change
             return cell
         }
         else if fieldPlaceholderArray[indexPath.row].cellType == CellType.datePicker {

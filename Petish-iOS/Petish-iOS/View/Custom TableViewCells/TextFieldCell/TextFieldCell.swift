@@ -1,7 +1,7 @@
 import UIKit
 
 protocol TextFieldCellDelegate{
-    func textFieldStateChanged(data: String, type: textFieldType, isValid: Bool)
+    func textFieldStateChanged(data: String, type: TextFieldType, isValid: Bool)
 }
 
 class TextFieldCell: UITableViewCell {
@@ -43,7 +43,7 @@ class TextFieldCell: UITableViewCell {
             textField.textContentType = .oneTimeCode
         }
         
-        textField.setFieldType(type: data.validateByType)
+        textField.setFieldType(type: data.textFieldType)
     }
 }
 

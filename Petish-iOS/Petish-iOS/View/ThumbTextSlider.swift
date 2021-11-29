@@ -11,9 +11,10 @@ class ThumbTextSlider: UISlider {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        thumbTextLabel.frame = thumbFrame
-        thumbTextLabel.text = Int(value).description
+        var newWidth = thumbFrame
+        newWidth.size.width = newWidth.width+5
+        thumbTextLabel.frame = newWidth
+        thumbTextLabel.text = "\(Int(value).description) kg"
     }
     
     override func awakeFromNib() {

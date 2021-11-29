@@ -235,10 +235,10 @@
 		F451B645275365430052406D /* Custom TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				F4FF309D274F7FF2003F4E4E /* SliderCell */,
 				F451B646275365660052406D /* DatePickerCell */,
 				F45BAEAD274A84DD0018C2B9 /* TextFieldCell */,
 				F4FF30A9274FAB47003F4E4E /* DropMenuCell */,
-				F4FF309D274F7FF2003F4E4E /* SliderCell */,
 			);
 			path = "Custom TableViewCells";
 			sourceTree = "<group>";

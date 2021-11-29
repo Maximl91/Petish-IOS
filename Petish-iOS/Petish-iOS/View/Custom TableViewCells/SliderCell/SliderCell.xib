@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="354" height="65"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="iA2-cq-VCx" customClass="ThumbTextSlider" customModule="Petish_iOS" customModuleProvider="target">
+                    <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="iA2-cq-VCx" customClass="ThumbTextSlider" customModule="Petish_iOS" customModuleProvider="target">
                         <rect key="frame" x="2" y="35" width="354" height="31"/>
                         <color key="minimumTrackTintColor" name="violetBlue"/>
                         <color key="thumbTintColor" name="violetBlue"/>

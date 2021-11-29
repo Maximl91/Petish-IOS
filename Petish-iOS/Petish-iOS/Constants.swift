@@ -10,6 +10,8 @@ struct Constants{
     static let checkboxNibName = "Checkbox"
     static let checkboxOn = true
     static let checkboxOff = false
+    // DropMenu
+    static let clearSelection = "-"
     // TableViewCell
     static let textFieldCellNibName = "TextFieldCell"
     static let textFieldCellReuseId = "TextfieldCellReuseId"
@@ -22,8 +24,9 @@ struct Constants{
     // Firestore
     static let FirestoreUserCollection = "users"
     static let FirestoreDogsCollection = "dogs"
-    //
+    // global
     static let invalidUserDataString = ""
+    static let emptyString = ""
 }
 
 

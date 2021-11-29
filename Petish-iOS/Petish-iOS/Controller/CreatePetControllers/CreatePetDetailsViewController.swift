@@ -20,7 +20,6 @@ class CreatePetDetailsViewController: BaseViewController {
         self.performSegue(withIdentifier: SegueIdentifiers.PetDetailsToDimensions , sender: self)
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == SegueIdentifiers.PetDetailsToDimensions) {
             if let vc = segue.destination as? CreatePetDimensionsViewController {
@@ -55,9 +54,10 @@ class CreatePetDetailsViewController: BaseViewController {
 }
 
 extension CreatePetDetailsViewController: MultiCellDelegate{
-    func textFieldStateChanged(data: String, type: textFieldType, isValid: Bool) {
+    func textFieldStateChanged(data: String, type: TextFieldType, isValid: Bool) {
+        print(type)
         viewModel.addPetData(data, type){ () -> Void in
-           // check for completed
+           // check for completed (at least name)
         }
     }
     

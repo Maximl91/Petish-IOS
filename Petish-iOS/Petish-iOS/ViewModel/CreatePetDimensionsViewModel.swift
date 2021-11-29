@@ -6,8 +6,8 @@ class CreatePetDimensionsViewModel: NSObject{
 
     override init(){
         fieldPlaceholderArray = [
-            CellData(placeholder: "Neck (INCH)", cellType: CellType.textField, validateByType: textFieldType.petDimensions),
-            CellData(placeholder: "Chest (INCH)", cellType: CellType.textField, validateByType: textFieldType.petDimensions),
-            CellData(placeholder: "Back (INCH)", cellType: CellType.textField, validateByType: textFieldType.petDimensions)]
+            CellData(placeholder: "Neck (INCH)", cellType: CellType.textField, textFieldType: TextFieldType.petDimensions),
+            CellData(placeholder: "Chest (INCH)", cellType: CellType.textField, textFieldType: TextFieldType.petDimensions),
+            CellData(placeholder: "Back (INCH)", cellType: CellType.textField, textFieldType: TextFieldType.petDimensions)]
     }
 }

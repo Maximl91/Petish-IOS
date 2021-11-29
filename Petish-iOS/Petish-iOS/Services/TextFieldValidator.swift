@@ -13,16 +13,16 @@ class TextFieldValidator{
         var flag = false
         if let type = textField.getFieldType(){
             
-            if type == textFieldType.name{
+            if type == TextFieldType.name{
                 flag = validateName(textField)
             }
-            else if type == textFieldType.email{
+            else if type == TextFieldType.email{
                 flag = validateEmail(textField)
             }
-            else if type == textFieldType.password{
+            else if type == TextFieldType.password{
                 flag = validatePassword(textField)
             }
-            else if type == textFieldType.petDimensions{
+            else if type == TextFieldType.petDimensions{
                 flag = validateDimension(textField)
             }
             
