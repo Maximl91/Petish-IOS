@@ -29,6 +29,7 @@ class CreatePetDimensionsViewModel: NSObject{
         
         completion()
     }
+ 
     
     func createFirstPetProfile(imageData: UIImage?, userId: String, _ completion: @escaping (String?, String?)->Void){
         
@@ -38,14 +39,9 @@ class CreatePetDimensionsViewModel: NSObject{
             return
         }
         
-        // prepare data
-        let firstDogId = "1"
-        let firstPet = ["id": firstDogId,"name": pet.name, "species": pet.species, "birthday": pet.birthday, "primaryBreed": pet.primaryBreed
-                        , "weight": pet.weight, "dimensions": ["neck": petDataDimensions.neck, "chest": petDataDimensions.chest, "back": petDataDimensions.back] ] as [String : Any]
-        
+        let petToCreate = preparePetData(userId, pet)
         // add to database
-        firebaseManager.addDocumentToCollection(collectionName: Constants.Firestore.Collections.dogs, userId: userId, data: ["dogs": [firstPet]]){ (result: String?, error: String?)-> Void in
-            
+        firebaseManager.addDocumentToCollection(collectionName: Constants.Firestore.Collections.dogs, data: petToCreate){ (documentId: String, error: String?)-> Void in
             // check if no error occured for document
             guard error == nil else {
                 completion(nil, error)
@@ -60,7 +56,7 @@ class CreatePetDimensionsViewModel: NSObject{
             }
             
             print("uploading file...")
-            self.firebaseManager.uploadImageToStorage(image: image, path: "images/"+userId+"/"+firstDogId+".png"){(error: String?)->Void in
+            self.firebaseManager.uploadImageToStorage(image: image, path: "images/\(userId)/\(documentId).png"){(error: String?)->Void in
                 
                 // check if error occured for existing image upload
                 guard error == nil else {
@@ -73,5 +69,10 @@ class CreatePetDimensionsViewModel: NSObject{
                 completion(nil,nil)
             }
         }
+    }
+    
+    func preparePetData(_ userId: String,_ pet: PetData)-> [String: Any]{
+        return ["userId": userId,"name": pet.name, "species": pet.species, "birthday": pet.birthday, "primaryBreed": pet.primaryBreed
+                , "weight": pet.weight, "dimensions": ["neck": petDataDimensions.neck, "chest": petDataDimensions.chest, "back": petDataDimensions.back] ] as [String : Any]
     }
 }

@@ -27,7 +27,7 @@ class FirebaseManager: NSObject {
     }
     
     
-    func addDocumentToCollection(collectionName: String, userId: String, data: [String:Any], completionHandler: @escaping (String?,String?)->Void ){
+    func addDocumentToCollectionWith(collectionName: String, userId: String, data: [String:Any], completionHandler: @escaping (String?,String?)->Void ){
         
         db.collection(collectionName).document(userId).setData(data){ err in
             if let err = err {
@@ -36,6 +36,20 @@ class FirebaseManager: NSObject {
                 completionHandler(userId, errorString)
             }else {
                 completionHandler(userId ,nil)
+            }
+        }
+    }
+    
+    func addDocumentToCollection(collectionName: String, data: [String:Any], completionHandler: @escaping (String,String?)->Void ){
+        let documentId = db.collection(Constants.Firestore.Collections.dogs).document().documentID
+        
+        db.collection(collectionName).document(documentId).setData(data){ err in
+            if let err = err {
+                let errorString = self.firebaseErrorToString(error: err)
+                print("Error adding data: \(errorString)")
+                completionHandler(documentId, errorString)
+            }else {
+                completionHandler(documentId, nil)
             }
         }
     }

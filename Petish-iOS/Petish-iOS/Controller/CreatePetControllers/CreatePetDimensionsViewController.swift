@@ -23,7 +23,6 @@ class CreatePetDimensionsViewController: BaseViewController {
             print("error user is not logged-in!")
             return
         }
-        print(userId) // to display who
         
         showLoader()
         viewModel.createFirstPetProfile(imageData: viewModel.petData?.image ,userId: userId){ (userId: String?, error: String?)->Void in
