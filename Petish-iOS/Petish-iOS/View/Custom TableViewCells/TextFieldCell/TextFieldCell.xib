@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="354" height="57"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Test" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="kWg-L9-iNM" customClass="BottomBorderTextField" customModule="Petish_iOS" customModuleProvider="target">
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="kWg-L9-iNM" customClass="BottomBorderTextField" customModule="Petish_iOS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>

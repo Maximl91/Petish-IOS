@@ -1,6 +1,8 @@
 import Foundation
 
 struct Constants{
+    // HeaderView
+    static let headerViewNibName = "HeaderUIView"
     // CollectionViewCell
     static let photoCellNibName = "PhotoCell"
     static let photoCellReuseId = "PhotoCellReuseId"
@@ -8,13 +10,36 @@ struct Constants{
     static let checkboxNibName = "Checkbox"
     static let checkboxOn = true
     static let checkboxOff = false
+    // DropMenu
+    static let clearSelection = "-"
     // TableViewCell
     static let textFieldCellNibName = "TextFieldCell"
     static let textFieldCellReuseId = "TextfieldCellReuseId"
-    // Firestore
-    static let FirestoreUserCollection = "users"
-    //
+    static let sliderCellNibName = "SliderCell"
+    static let sliderCellReuseId = "SliderCellReuseId"
+    static let dropMenuCellNibName = "DropMenuCell"
+    static let dropMenuCellReuseId = "DropMenuCellReuseId"
+    static let datePickerCellNibName = "DatePickerCell"
+    static let datePickerCellReuseId = "DatePickerCellReuseId"
+    // global
     static let invalidUserDataString = ""
+    static let emptyString = ""
+    // Firestore
+    struct Firestore{
+        struct Collections{
+            static let users = "users"
+            static let dogs = "dogs"
+        }
+    }
+}
+
+struct Storyboards{
+    static let CreatePetStoryboard = "CreatePet"
+    struct CreatePet{
+        static let CreatePetDetailsViewController = "CreatePetDetailsViewController"
+        static let CreatePetDimensionsViewController = "CreatePetDimensionsViewController"
+    }
+    
 }
 
 
@@ -35,4 +60,8 @@ struct SegueIdentifiers{
     static let SignUpSuccess = "SignUpSuccess"
     static let LoginSuccess = "LoginSuccess"
     static let AlreadyLoggedIn = "AlreadyLoggedIn"
+    static let SkipToHome = "SkipToHome"
+    static let SkipToLogin = "SkipToLogin"
+    static let CreatePetToDetails = "CreatePetToDetails"
+    static let PetDetailsToDimensions = "PetDetailsToDimensions"
 }

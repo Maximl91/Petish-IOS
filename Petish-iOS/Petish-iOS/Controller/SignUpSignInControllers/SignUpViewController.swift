@@ -3,7 +3,7 @@ import UIKit
 class SignUpViewController: BaseViewController {
     
     private let viewModel = SignUpViewModel()
-    private var tableDataSource: TextFieldCellsReuseableDataSource?
+    private var tableDataSource: MultiCellReuseableDataSource?
     
     
     @IBOutlet weak var checkboxView: Checkbox!
@@ -14,11 +14,12 @@ class SignUpViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkboxView.delegate = self
-        signUpButton.disable()
-        signUpFacebook.isEnabled = false
+        headerView?.configureBackButton(title: "BACK", hidden: true)
         
-        tableDataSource = TextFieldCellsReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, listener: self)
+        tableDataSource = MultiCellReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, listener: self)
+        viewInitialSettings()
         configureTableView()
+        
     }
     
     @IBAction func signupPressed(_ sender: UIButton) {
@@ -43,6 +44,15 @@ class SignUpViewController: BaseViewController {
         }
     }
     
+    override func rightAction() {
+        self.performSegue(withIdentifier: SegueIdentifiers.SkipToHome , sender: self)
+    }
+    
+    func viewInitialSettings(){
+        signUpButton.disable()
+        signUpFacebook.isEnabled = false
+    }
+    
     func configureTableView(){
         tableView.delegate = tableDataSource
         tableView.dataSource = tableDataSource
@@ -55,11 +65,10 @@ class SignUpViewController: BaseViewController {
     
 }
 
-// MARK: - TextFieldCellDelegate
+// MARK: - MultiCellDelegate
 
-extension SignUpViewController: TextFieldCellDelegate{
-    
-    func textFieldStateChanged(data: String, type: FieldType, isValid: Bool){
+extension SignUpViewController: MultiCellDelegate{
+    func textFieldStateChanged(data: String, type: CellDataType, isValid: Bool){
         let dataToAdd = isValid ? data : Constants.invalidUserDataString
         
         viewModel.addUserData(dataToAdd, type){ [self]() -> Void in
@@ -72,6 +81,8 @@ extension SignUpViewController: TextFieldCellDelegate{
             }
         }
     }
+    
+    func sliderChanged(data: Int, type: CellDataType) {}
 }
 
 // MARK: - CheckboxDelegate

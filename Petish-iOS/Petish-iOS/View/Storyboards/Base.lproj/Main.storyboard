@@ -25,16 +25,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30j-IR-q9s" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="340.5" y="66" width="54.5" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="SKIP">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="WJM-Zw-MhU" kind="presentation" animates="NO" id="p8c-gq-Ltv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2Q-7A-uSF" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
                                 <rect key="frame" x="18.5" y="779.5" width="377" height="65"/>
                                 <constraints>
@@ -44,14 +34,14 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="NEXT"/>
                                 <connections>
-                                    <segue destination="WJM-Zw-MhU" kind="presentation" animates="NO" id="zNo-ox-YVL"/>
+                                    <segue destination="WJM-Zw-MhU" kind="show" id="zNo-ox-YVL"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQK-vA-SNW">
-                                <rect key="frame" x="0.0" y="240.5" width="414" height="486.5"/>
+                                <rect key="frame" x="0.0" y="220.5" width="414" height="506.5"/>
                                 <subviews>
                                     <collectionView multipleTouchEnabled="YES" contentMode="center" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hz2-0F-RJ7">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="486.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="506.5"/>
                                         <collectionViewLayout key="collectionViewLayout" id="1yX-19-tYn"/>
                                         <cells/>
                                     </collectionView>
@@ -65,13 +55,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tm-Iz-GYB">
-                                <rect key="frame" x="72" y="137" width="270" height="33"/>
+                                <rect key="frame" x="72" y="117" width="270" height="33"/>
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Medium" family="SF Compact Display" pointSize="28"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8b-kR-TkP">
-                                <rect key="frame" x="42" y="180" width="330" height="45"/>
+                                <rect key="frame" x="42" y="160" width="330" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="eqA-2J-pDr"/>
                                 </constraints>
@@ -80,32 +70,39 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" defersCurrentPageDisplay="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="H6H-7t-lEc">
-                                <rect key="frame" x="129.5" y="735" width="155" height="26"/>
+                                <rect key="frame" x="129.5" y="735" width="155.5" height="26"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="pageIndicatorTintColor" name="pinkishGray"/>
                                 <color key="currentPageIndicatorTintColor" name="violetBlue"/>
                             </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0U-x0-opa" customClass="HeaderUIView" customModule="Petish_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="KF9-fZ-E69"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c8b-kR-TkP" secondAttribute="trailing" constant="42" id="8fH-TV-fhN"/>
+                            <constraint firstItem="d0U-x0-opa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="16T-K4-z3z"/>
                             <constraint firstItem="c8b-kR-TkP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8tc-Mm-g3A"/>
                             <constraint firstItem="J2Q-7A-uSF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18.5" id="Jhv-9d-bDd"/>
+                            <constraint firstItem="7Tm-Iz-GYB" firstAttribute="top" secondItem="d0U-x0-opa" secondAttribute="bottom" constant="17" id="KlI-xj-ZnX"/>
                             <constraint firstItem="c8b-kR-TkP" firstAttribute="top" secondItem="7Tm-Iz-GYB" secondAttribute="bottom" constant="10" id="LvH-fp-VGr"/>
                             <constraint firstItem="c8b-kR-TkP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="N2a-WB-n9S"/>
                             <constraint firstItem="zQK-vA-SNW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OaX-16-fCh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="J2Q-7A-uSF" secondAttribute="bottom" constant="17.5" id="Sm4-Oo-G7D"/>
-                            <constraint firstItem="7Tm-Iz-GYB" firstAttribute="top" secondItem="30j-IR-q9s" secondAttribute="bottom" constant="40" id="SmY-8Q-NJS"/>
                             <constraint firstItem="J2Q-7A-uSF" firstAttribute="top" secondItem="H6H-7t-lEc" secondAttribute="bottom" constant="18.5" id="XtS-G3-wu2"/>
                             <constraint firstItem="zQK-vA-SNW" firstAttribute="top" secondItem="c8b-kR-TkP" secondAttribute="bottom" constant="15.5" id="dHG-3f-WPd"/>
+                            <constraint firstItem="d0U-x0-opa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="egv-rE-9So"/>
                             <constraint firstItem="zQK-vA-SNW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gvq-iB-vwc"/>
                             <constraint firstItem="H6H-7t-lEc" firstAttribute="top" secondItem="zQK-vA-SNW" secondAttribute="bottom" constant="8" symbolic="YES" id="i8R-KY-Mkf"/>
-                            <constraint firstItem="30j-IR-q9s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="jYX-Wk-qNR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Tm-Iz-GYB" secondAttribute="trailing" constant="72" id="n2z-hd-HZf"/>
                             <constraint firstItem="H6H-7t-lEc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nZ0-Mk-Zob"/>
+                            <constraint firstItem="d0U-x0-opa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qC4-9B-WMc"/>
                             <constraint firstItem="7Tm-Iz-GYB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="srg-Qh-hq1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="30j-IR-q9s" secondAttribute="trailing" constant="19" id="txA-RP-a7e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J2Q-7A-uSF" secondAttribute="trailing" constant="18.5" id="xW4-GU-Aif"/>
                         </constraints>
                     </view>
@@ -113,13 +110,16 @@
                         <outlet property="collectionPaging" destination="H6H-7t-lEc" id="ns0-rN-zoC"/>
                         <outlet property="collectionView" destination="Hz2-0F-RJ7" id="fiA-8O-fhL"/>
                         <outlet property="descriptionLabel" destination="7Tm-Iz-GYB" id="Sdr-vH-q7E"/>
+                        <outlet property="headerView" destination="d0U-x0-opa" id="xzT-Bv-FV7"/>
                         <outlet property="subtitleLabel" destination="c8b-kR-TkP" id="98q-bA-0Fk"/>
-                        <segue destination="3fN-uB-bHj" kind="show" identifier="AlreadyLoggedIn" animates="NO" id="Hj1-er-w1U"/>
+                        <segue destination="3fN-uB-bHj" kind="show" identifier="AlreadyLoggedIn" id="Hj1-er-w1U"/>
+                        <segue destination="3fN-uB-bHj" kind="show" identifier="SkipToHome" id="9f4-FC-1y7"/>
+                        <segue destination="WJM-Zw-MhU" kind="show" identifier="SkipToLogin" id="mrP-JY-LSK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="108"/>
+            <point key="canvasLocation" x="31.884057971014496" y="107.8125"/>
         </scene>
         <!--SignUpIn-->
         <scene sceneID="faE-K6-Ule">
@@ -133,13 +133,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiP-sw-X7N" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="295" y="68" width="105" height="31"/>
+                                <rect key="frame" x="295" y="62" width="105" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="NO THANKS">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="3fN-uB-bHj" kind="show" animates="NO" id="mnp-0H-5wQ"/>
+                                    <segue destination="3fN-uB-bHj" kind="show" id="mnp-0H-5wQ"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dxU-tU-uE1">
@@ -160,7 +160,7 @@
                                             <color key="baseForegroundColor" name="violetBlue"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="NS1-xm-8Tk" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="L6c-bp-eNK"/>
+                                            <segue destination="NS1-xm-8Tk" kind="show" id="L6c-bp-eNK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY3-1l-njI">
@@ -179,7 +179,7 @@
                                             <color key="baseForegroundColor" name="violetBlue"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="GK3-uX-X9m" kind="presentation" animates="NO" id="C4h-VD-kpI"/>
+                                            <segue destination="GK3-uX-X9m" kind="show" id="C4h-VD-kpI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -188,7 +188,7 @@
                         <viewLayoutGuide key="safeArea" id="obZ-ci-Rz5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="OiP-sw-X7N" firstAttribute="top" secondItem="obZ-ci-Rz5" secondAttribute="top" constant="24" id="7Pj-H5-mEG"/>
+                            <constraint firstItem="OiP-sw-X7N" firstAttribute="top" secondItem="obZ-ci-Rz5" secondAttribute="top" constant="18" id="7Pj-H5-mEG"/>
                             <constraint firstItem="obZ-ci-Rz5" firstAttribute="trailing" secondItem="dxU-tU-uE1" secondAttribute="trailing" constant="48" id="JTR-eE-b5J"/>
                             <constraint firstItem="obZ-ci-Rz5" firstAttribute="bottom" secondItem="dxU-tU-uE1" secondAttribute="bottom" constant="76" id="K0G-Si-RpB"/>
                             <constraint firstItem="dxU-tU-uE1" firstAttribute="leading" secondItem="obZ-ci-Rz5" secondAttribute="leading" constant="48" id="OjP-DT-8SO"/>
@@ -208,13 +208,13 @@
         <!--Login-->
         <scene sceneID="XwN-IK-4Q2">
             <objects>
-                <viewController id="NS1-xm-8Tk" userLabel="Login" customClass="SignInViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="NS1-xm-8Tk" userLabel="Login" customClass="SignInViewController" customModule="Petish_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NsK-VP-m0k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vth-IB-Pmu">
-                                <rect key="frame" x="56" y="116" width="68.5" height="67"/>
+                                <rect key="frame" x="30" y="116" width="68.5" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="yf4-FX-tW6"/>
                                 </constraints>
@@ -224,17 +224,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNV-km-Rpv" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="343.5" y="60" width="54.5" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="moP-JA-ujh"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="SKIP"/>
-                                <connections>
-                                    <segue destination="3fN-uB-bHj" kind="show" animates="NO" id="F03-Gx-G9V"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSP-fX-L0W" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
                                 <rect key="frame" x="30" y="395" width="354" height="48"/>
                                 <constraints>
@@ -260,7 +249,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09D-Hk-WGH">
-                                <rect key="frame" x="30" y="463" width="354" height="48"/>
+                                <rect key="frame" x="30" y="459" width="354" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="UNW-h2-AxN"/>
                                 </constraints>
@@ -271,41 +260,52 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8e-so-Nwh" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="115" y="527" width="184" height="31"/>
+                                <rect key="frame" x="115" y="523" width="184" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0N-rw-hY8" customClass="HeaderUIView" customModule="Petish_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="7hn-m7-s0c"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xv1-q0-NPj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xv1-q0-NPj" firstAttribute="trailing" secondItem="gNV-km-Rpv" secondAttribute="trailing" constant="16" id="58R-9W-zst"/>
-                            <constraint firstItem="gNV-km-Rpv" firstAttribute="top" secondItem="xv1-q0-NPj" secondAttribute="top" constant="16" id="5WX-Q0-au5"/>
                             <constraint firstItem="C8e-so-Nwh" firstAttribute="top" secondItem="09D-Hk-WGH" secondAttribute="bottom" constant="16" id="981-ZQ-nJw"/>
                             <constraint firstItem="edS-iE-3uc" firstAttribute="leading" secondItem="ZLH-jW-hCv" secondAttribute="leading" id="APu-HP-XdY"/>
                             <constraint firstItem="xv1-q0-NPj" firstAttribute="trailing" secondItem="C8e-so-Nwh" secondAttribute="trailing" constant="115" id="AUZ-ab-oMC"/>
-                            <constraint firstItem="Vth-IB-Pmu" firstAttribute="top" secondItem="gNV-km-Rpv" secondAttribute="bottom" constant="16" id="AoM-ox-QOD"/>
-                            <constraint firstItem="Vth-IB-Pmu" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="56" id="Cng-Nb-qFA"/>
+                            <constraint firstItem="o0N-rw-hY8" firstAttribute="top" secondItem="NsK-VP-m0k" secondAttribute="top" id="FF1-11-js6"/>
+                            <constraint firstItem="o0N-rw-hY8" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" id="JFc-oS-Ah2"/>
                             <constraint firstItem="edS-iE-3uc" firstAttribute="top" secondItem="ZLH-jW-hCv" secondAttribute="bottom" constant="10" id="SX8-HK-oif"/>
-                            <constraint firstItem="09D-Hk-WGH" firstAttribute="top" secondItem="JSP-fX-L0W" secondAttribute="bottom" constant="20" id="SsA-95-lUb"/>
+                            <constraint firstItem="09D-Hk-WGH" firstAttribute="top" secondItem="JSP-fX-L0W" secondAttribute="bottom" constant="16" id="SsA-95-lUb"/>
                             <constraint firstItem="09D-Hk-WGH" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="30" id="Tn5-Rm-rRa"/>
                             <constraint firstItem="JSP-fX-L0W" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="30" id="UBW-kL-X2O"/>
                             <constraint firstItem="C8e-so-Nwh" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="115" id="Xdv-kZ-Kul"/>
                             <constraint firstItem="xv1-q0-NPj" firstAttribute="trailing" secondItem="JSP-fX-L0W" secondAttribute="trailing" constant="30" id="d5a-K6-f3t"/>
                             <constraint firstItem="xv1-q0-NPj" firstAttribute="trailing" secondItem="09D-Hk-WGH" secondAttribute="trailing" constant="30" id="j28-zr-nMy"/>
                             <constraint firstItem="ZLH-jW-hCv" firstAttribute="leading" secondItem="xv1-q0-NPj" secondAttribute="leading" constant="30" id="jRl-es-zA0"/>
+                            <constraint firstItem="Vth-IB-Pmu" firstAttribute="top" secondItem="o0N-rw-hY8" secondAttribute="bottom" constant="16" id="rhL-wt-Rrt"/>
+                            <constraint firstItem="o0N-rw-hY8" firstAttribute="trailing" secondItem="xv1-q0-NPj" secondAttribute="trailing" id="snp-ty-Nk0"/>
                             <constraint firstItem="edS-iE-3uc" firstAttribute="trailing" secondItem="ZLH-jW-hCv" secondAttribute="trailing" id="tAw-Dc-QAF"/>
                             <constraint firstItem="ZLH-jW-hCv" firstAttribute="top" secondItem="Vth-IB-Pmu" secondAttribute="bottom" constant="62" id="tvg-xI-Ydk"/>
                             <constraint firstItem="xv1-q0-NPj" firstAttribute="trailing" secondItem="ZLH-jW-hCv" secondAttribute="trailing" constant="30" id="unT-ly-tmk"/>
                             <constraint firstItem="JSP-fX-L0W" firstAttribute="top" secondItem="ZLH-jW-hCv" secondAttribute="bottom" constant="40" id="yJq-9d-th0"/>
+                            <constraint firstItem="Vth-IB-Pmu" firstAttribute="leading" secondItem="ZLH-jW-hCv" secondAttribute="leading" id="zDp-Yu-hRU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="D3A-cG-ZZZ"/>
                     <connections>
+                        <outlet property="headerView" destination="o0N-rw-hY8" id="D3F-SK-VGT"/>
                         <outlet property="loginErrLabel" destination="edS-iE-3uc" id="ulQ-ht-uJK"/>
                         <outlet property="loginWithFacebook" destination="09D-Hk-WGH" id="K0g-z8-aRR"/>
                         <outlet property="signInButton" destination="JSP-fX-L0W" id="uQT-pk-7Kz"/>
                         <outlet property="tableView" destination="ZLH-jW-hCv" id="M94-MR-pkP"/>
-                        <segue destination="3fN-uB-bHj" kind="show" identifier="LoginSuccess" animates="NO" id="fSf-Ho-hHt"/>
+                        <segue destination="3fN-uB-bHj" kind="show" identifier="LoginSuccess" id="fSf-Ho-hHt"/>
+                        <segue destination="3fN-uB-bHj" kind="show" identifier="SkipToHome" id="sFI-7G-yI0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ed6-r0-PF9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -320,7 +320,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOF-2F-Yxm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1949" y="889"/>
+            <point key="canvasLocation" x="1835" y="670"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="9Qu-Cw-7oY">
@@ -330,17 +330,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7t-DS-9PG" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="343.5" y="60" width="54.5" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="jqX-hd-2WY"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="SKIP"/>
-                                <connections>
-                                    <segue destination="3fN-uB-bHj" kind="show" animates="NO" id="MtH-xJ-1kC"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJ1-9e-fPf">
                                 <rect key="frame" x="86.5" y="819" width="241" height="19"/>
                                 <subviews>
@@ -355,7 +344,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                         <connections>
-                                            <segue destination="NS1-xm-8Tk" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="k98-uF-HMo"/>
+                                            <segue destination="NS1-xm-8Tk" kind="show" id="k98-uF-HMo"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -364,7 +353,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocb-Uz-j44">
-                                <rect key="frame" x="31" y="116" width="160.5" height="67"/>
+                                <rect key="frame" x="31" y="117" width="160.5" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="ijB-g5-nkw"/>
                                 </constraints>
@@ -375,7 +364,7 @@ Your account</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="lnW-lr-DGe">
-                                <rect key="frame" x="30" y="431" width="354" height="34"/>
+                                <rect key="frame" x="30" y="413" width="354" height="34"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qin-PK-tE9" customClass="Checkbox" customModule="Petish_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
@@ -397,14 +386,14 @@ service and privacy policy</string>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rtR-Me-qth">
-                                <rect key="frame" x="30" y="245" width="354" height="170"/>
+                                <rect key="frame" x="30" y="227" width="354" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="Q5p-Xv-rFa"/>
                                 </constraints>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ifT-sL-cRN">
-                                <rect key="frame" x="30" y="509" width="354" height="112"/>
+                                <rect key="frame" x="30" y="491" width="354" height="112"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5H-kn-9JW" customClass="FilledPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="48"/>
@@ -444,16 +433,24 @@ service and privacy policy</string>
                                     <constraint firstItem="G5H-kn-9JW" firstAttribute="leading" secondItem="ifT-sL-cRN" secondAttribute="leading" id="LDe-qe-TWR"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKV-3M-pKu" customClass="HeaderUIView" customModule="Petish_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="T4o-os-iag"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Y6-LZ-avh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ocb-Uz-j44" firstAttribute="top" secondItem="sKV-3M-pKu" secondAttribute="bottom" constant="17" id="6GL-eF-xgO"/>
                             <constraint firstItem="4Y6-LZ-avh" firstAttribute="trailing" secondItem="rtR-Me-qth" secondAttribute="trailing" constant="30" id="6hB-H3-D6a"/>
                             <constraint firstItem="ifT-sL-cRN" firstAttribute="leading" secondItem="lnW-lr-DGe" secondAttribute="leading" id="94f-3Y-BDk"/>
-                            <constraint firstItem="4Y6-LZ-avh" firstAttribute="trailing" secondItem="D7t-DS-9PG" secondAttribute="trailing" constant="16" id="Dat-3M-Keg"/>
                             <constraint firstItem="lnW-lr-DGe" firstAttribute="leading" secondItem="rtR-Me-qth" secondAttribute="leading" id="EhW-jv-0cY"/>
+                            <constraint firstItem="sKV-3M-pKu" firstAttribute="leading" secondItem="4Y6-LZ-avh" secondAttribute="leading" id="GyG-rz-ZDx"/>
                             <constraint firstItem="bbp-D5-4JD" firstAttribute="top" secondItem="rtR-Me-qth" secondAttribute="bottom" constant="16" id="MDS-KM-LQU"/>
-                            <constraint firstItem="ocb-Uz-j44" firstAttribute="top" secondItem="D7t-DS-9PG" secondAttribute="bottom" constant="16" id="Mec-RS-x8m"/>
+                            <constraint firstItem="sKV-3M-pKu" firstAttribute="trailing" secondItem="4Y6-LZ-avh" secondAttribute="trailing" id="OSk-hp-2bN"/>
                             <constraint firstItem="ifT-sL-cRN" firstAttribute="top" secondItem="lnW-lr-DGe" secondAttribute="bottom" constant="44" id="RW2-P8-wHH"/>
                             <constraint firstItem="4Y6-LZ-avh" firstAttribute="bottom" secondItem="RJ1-9e-fPf" secondAttribute="bottom" constant="24" id="Tcz-cx-XcR"/>
                             <constraint firstItem="rtR-Me-qth" firstAttribute="leading" secondItem="4Y6-LZ-avh" secondAttribute="leading" constant="30" id="YX2-Oi-fbb"/>
@@ -461,60 +458,41 @@ service and privacy policy</string>
                             <constraint firstItem="lnW-lr-DGe" firstAttribute="trailing" secondItem="rtR-Me-qth" secondAttribute="trailing" id="e3M-0D-FDm"/>
                             <constraint firstItem="ocb-Uz-j44" firstAttribute="leading" secondItem="4Y6-LZ-avh" secondAttribute="leading" constant="31" id="edL-cn-5NA"/>
                             <constraint firstItem="ifT-sL-cRN" firstAttribute="trailing" secondItem="lnW-lr-DGe" secondAttribute="trailing" id="gPY-aV-yy2"/>
-                            <constraint firstItem="rtR-Me-qth" firstAttribute="top" secondItem="ocb-Uz-j44" secondAttribute="bottom" constant="62" id="ldT-Qk-Gca"/>
+                            <constraint firstItem="rtR-Me-qth" firstAttribute="top" secondItem="ocb-Uz-j44" secondAttribute="bottom" constant="43" id="ldT-Qk-Gca"/>
                             <constraint firstItem="RJ1-9e-fPf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ifT-sL-cRN" secondAttribute="bottom" constant="20" id="moM-i6-Owe"/>
-                            <constraint firstItem="D7t-DS-9PG" firstAttribute="top" secondItem="4Y6-LZ-avh" secondAttribute="top" constant="16" id="ot5-6k-M61"/>
+                            <constraint firstItem="sKV-3M-pKu" firstAttribute="top" secondItem="RS1-QZ-wP4" secondAttribute="top" id="voT-0h-Gqb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ga1-VA-1nP"/>
                     <connections>
                         <outlet property="checkboxView" destination="Qin-PK-tE9" id="FEi-Wd-SJx"/>
+                        <outlet property="headerView" destination="sKV-3M-pKu" id="PHw-aI-fgp"/>
                         <outlet property="signUpButton" destination="G5H-kn-9JW" id="G71-Jx-skV"/>
                         <outlet property="signUpFacebook" destination="cwb-9z-67I" id="O5V-t8-W1A"/>
                         <outlet property="tableView" destination="rtR-Me-qth" id="umS-Uh-C6l"/>
-                        <segue destination="zdx-R5-qnm" kind="presentation" identifier="SignUpSuccess" animates="NO" modalPresentationStyle="fullScreen" id="PnM-iy-NEB"/>
+                        <segue destination="3fN-uB-bHj" kind="show" identifier="SkipToHome" id="H0r-e2-YT8"/>
+                        <segue destination="Fb5-q3-FLW" kind="show" identifier="SignUpSuccess" id="iat-9o-QVD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cO-ku-uwK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1834.7826086956522" y="-273.21428571428572"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hNB-Ww-OUp">
+        <!--CreatePet-->
+        <scene sceneID="2fg-3t-yB7">
             <objects>
-                <viewController id="zdx-R5-qnm" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bx1-UY-2Yd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5w-xc-mvo" customClass="TransparentPurpleButton" customModule="Petish_iOS" customModuleProvider="target">
-                                <rect key="frame" x="343.5" y="60" width="54.5" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="LNZ-lO-wNr"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="SKIP"/>
-                                <connections>
-                                    <segue destination="3fN-uB-bHj" kind="show" animates="NO" id="od2-b5-KXc"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="CfI-G2-ifw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Y5w-xc-mvo" firstAttribute="top" secondItem="CfI-G2-ifw" secondAttribute="top" constant="16" id="ZGq-jd-Hsp"/>
-                            <constraint firstItem="CfI-G2-ifw" firstAttribute="trailing" secondItem="Y5w-xc-mvo" secondAttribute="trailing" constant="16" id="kY4-59-2sg"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j97-Of-OYM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="CreatePet" id="Fb5-q3-FLW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="H8g-5A-qIq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBW-6Q-XRP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3692.753623188406" y="-273.21428571428572"/>
+            <point key="canvasLocation" x="2730" y="-520"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fSf-Ho-hHt"/>
-        <segue reference="k98-uF-HMo"/>
-        <segue reference="zNo-ox-YVL"/>
+        <segue reference="9f4-FC-1y7"/>
+        <segue reference="L6c-bp-eNK"/>
+        <segue reference="mrP-JY-LSK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Rectangle 2" width="373" height="667"/>

@@ -5,13 +5,13 @@ class SignUpViewModel: NSObject{
     
     private let firebaseManager = FirebaseManager()
     private var userData = UserData()
-    let fieldPlaceholderArray: [TextFieldData]
+    let fieldPlaceholderArray: [CellData]
     
     override init(){
         fieldPlaceholderArray = [
-            TextFieldData(placeholder: "Name", isSecure: false, validateByType: FieldType.name),
-            TextFieldData(placeholder: "Email", isSecure: false, validateByType: FieldType.email),
-            TextFieldData(placeholder: "Password", isSecure: true, validateByType: FieldType.password)
+            CellData(placeholder: "Name", cellType: .textField, cellDataType: .name ,validateByType: .name),
+            CellData(placeholder: "Email", cellType: .textField, cellDataType: .email, validateByType: .email),
+            CellData(placeholder: "Password", isSecure: true, cellType: .textField, cellDataType: .password, validateByType: .password)
         ]
     }
     
@@ -29,13 +29,15 @@ class SignUpViewModel: NSObject{
         return flag
     }
     
-    func addUserData(_ data: String,_ type: FieldType ,_ completion: @escaping ( () -> Void ) ){
-        switch type {
-        case FieldType.name:
+    func addUserData(_ data: String,_ type: CellDataType ,_ completion: @escaping ( () -> Void ) ){
+        
+        if type == CellDataType.name{
             userData.name = data
-        case FieldType.email:
+        }
+        else if type == CellDataType.email{
             userData.email = data
-        case FieldType.password:
+        }
+        else if type == CellDataType.password{
             userData.password = data
         }
         completion()
@@ -52,7 +54,7 @@ class SignUpViewModel: NSObject{
             }
             
             // login successful
-            self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, userId: userId, data: [
+            self.firebaseManager.addDocumentToCollectionWith(collectionName: Constants.Firestore.Collections.users, userId: userId, data: [
                 "user_uid": userId,
                 "name": name], completionHandler: completion)
         }
@@ -81,7 +83,7 @@ class SignUpViewModel: NSObject{
             // Successfully logged in, add user to database
             Profile.loadCurrentProfile { (profile, error) in
                 if let name = Profile.current?.name, let userId = AccessToken.current?.userID {
-                    self.firebaseManager.addDocumentToCollection(collectionName: Constants.FirestoreUserCollection, userId: userId, data: [
+                    self.firebaseManager.addDocumentToCollectionWith(collectionName: Constants.Firestore.Collections.users, userId: userId, data: [
                         "user_uid": userId,
                         "name": name], completionHandler: completion)
                 }

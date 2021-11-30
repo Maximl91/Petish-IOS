@@ -5,6 +5,14 @@ protocol TextFieldValidatorDelegate {
     func hideErrorMsg()
 }
 
+enum TextFieldValidationType: Int{
+    case name = 0
+    case email
+    case password
+    // pet create types
+    case petDimensions
+}
+
 class TextFieldValidator{
     
     var delegate: TextFieldValidatorDelegate?
@@ -13,13 +21,17 @@ class TextFieldValidator{
         var flag = false
         if let type = textField.getFieldType(){
             
-            switch type {
-            case FieldType.name:
+            if type == TextFieldValidationType.name{
                 flag = validateName(textField)
-            case FieldType.email:
+            }
+            else if type == TextFieldValidationType.email{
                 flag = validateEmail(textField)
-            case FieldType.password:
+            }
+            else if type == TextFieldValidationType.password{
                 flag = validatePassword(textField)
+            }
+            else if type == TextFieldValidationType.petDimensions{
+                flag = validateDimension(textField)
             }
             
             if flag {
@@ -56,6 +68,19 @@ class TextFieldValidator{
         
         if(passLength! < 6){
             delegate?.showErrorMsg(errString: "password too short!")
+            return false
+        }
+        
+        return true
+    }
+    
+    func validateDimension(_ field: BottomBorderTextField)-> Bool{
+        
+        var isValid: Bool {
+            NSPredicate(format: "SELF MATCHES %@", "^[1-9][0-9]?$|^100$").evaluate(with: field.text)}
+        
+        if(!isValid){
+            delegate?.showErrorMsg(errString: "invalid value, 1-100 only")
             return false
         }
         

@@ -1,10 +1,12 @@
 import Foundation
 import Firebase
 import UIKit
+import FirebaseStorage
 
 class FirebaseManager: NSObject {
     
     private let db = Firestore.firestore()
+    private let storage = Storage.storage().reference()
     
     func createUserWith(email: String, password: String, completionHandler: @escaping (String?,String?)->Void ){
         // returns userId on successful completion
@@ -25,12 +27,12 @@ class FirebaseManager: NSObject {
     }
     
     
-    func addDocumentToCollection(collectionName: String,userId: String, data: [String:Any], completionHandler: @escaping (String?,String?)->Void ){
+    func addDocumentToCollectionWith(collectionName: String, userId: String, data: [String:Any], completionHandler: @escaping (String?,String?)->Void ){
         
         db.collection(collectionName).document(userId).setData(data){ err in
             if let err = err {
                 let errorString = self.firebaseErrorToString(error: err)
-                print("Error adding user data: \(errorString)")
+                print("Error adding data: \(errorString)")
                 completionHandler(userId, errorString)
             }else {
                 completionHandler(userId ,nil)
@@ -38,7 +40,21 @@ class FirebaseManager: NSObject {
         }
     }
     
-    func signInWithEmailAndPassword(email: String, password: String, completionHandler: @escaping (String?)->Void ){
+    func addDocumentToCollection(collectionName: String, data: [String:Any], completionHandler: @escaping (String,String?)->Void ){
+        let documentId = db.collection(Constants.Firestore.Collections.dogs).document().documentID
+        
+        db.collection(collectionName).document(documentId).setData(data){ err in
+            if let err = err {
+                let errorString = self.firebaseErrorToString(error: err)
+                print("Error adding data: \(errorString)")
+                completionHandler(documentId, errorString)
+            }else {
+                completionHandler(documentId, nil)
+            }
+        }
+    }
+    
+    func signInWith(email: String, password: String, completionHandler: @escaping (String?)->Void ){
         Auth.auth().signIn(withEmail: email, password: password, completion:{ (authResult, error) in
             if let e = error {
                 let errorString = self.firebaseErrorToString(error: e)
@@ -50,11 +66,27 @@ class FirebaseManager: NSObject {
         })
     }
     
-    func firebaseErrorToString(error: Error)-> String{
-        let castedError = error as NSError
-        let firebaseError = castedError.userInfo
-        let errorString = firebaseError["NSLocalizedDescription"] as! String
-        return errorString
+    func uploadImageToStorage(image: UIImage, path: String, completionHandler: @escaping (String?)->Void ){
+        if let imageData = image.pngData(){
+            storage.child(path).putData(imageData, metadata: nil){ (result, error) -> Void in
+                if let e = error {
+                    let errorString = self.firebaseErrorToString(error: e)
+                    print(errorString)
+                    completionHandler(errorString)
+                }else{
+                    completionHandler(nil)
+                }
+            }
+        }else{
+            completionHandler("No image data to upload")
+        }
     }
-    
-}
+        
+        func firebaseErrorToString(error: Error)-> String{
+            let castedError = error as NSError
+            let firebaseError = castedError.userInfo
+            let errorString = firebaseError["NSLocalizedDescription"] as! String
+            return errorString
+        }
+        
+    }

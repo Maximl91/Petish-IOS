@@ -3,14 +3,14 @@ import FBSDKLoginKit
 
 class SignInViewModel: NSObject{
     
-    let fieldPlaceholderArray: [TextFieldData]
+    let fieldPlaceholderArray: [CellData]
     private var userData = UserData()
     private let firebaseManager = FirebaseManager()
     
     override init(){
         fieldPlaceholderArray = [
-            TextFieldData(placeholder: "Email", isSecure: false, validateByType: FieldType.email),
-            TextFieldData(placeholder: "Password", isSecure: true, validateByType: FieldType.password)
+            CellData(placeholder: "Email", cellType: .textField, cellDataType: .email, validateByType: .email),
+            CellData(placeholder: "Password", isSecure: true, cellType: .textField, cellDataType: .password, validateByType: .password)
         ]
     }
     
@@ -31,20 +31,21 @@ class SignInViewModel: NSObject{
         return flag
     }
     
-    func addUserData(_ data: String,_ type: FieldType ,_ completion: @escaping ( () -> Void ) ){
-        switch type {
-        case FieldType.name:
+    func addUserData(_ data: String,_ type: CellDataType ,_ completion: @escaping ( () -> Void ) ){
+        if type == CellDataType.name{
             userData.name = data
-        case FieldType.email:
+        }
+        else if type == CellDataType.email{
             userData.email = data
-        case FieldType.password:
+        }
+        else if type == CellDataType.password{
             userData.password = data
         }
         completion()
     }
     
     func signInClicked(_ completion: @escaping ( (String?)->Void )){
-        firebaseManager.signInWithEmailAndPassword(email: userData.email, password: userData.password, completionHandler: completion)
+        firebaseManager.signInWith(email: userData.email, password: userData.password, completionHandler: completion)
     }
     
     func signInFacebookClicked(listener: UIViewController,_ completion: @escaping ( (String?)->Void )){

@@ -3,7 +3,7 @@ import UIKit
 class FilledPurpleButton: UIButton {
     
     required init?(coder aDecoder: NSCoder) {
-       super.init(coder: aDecoder)
+        super.init(coder: aDecoder)
         
         configureStyle()
         setAttributedLabel()
@@ -33,5 +33,4 @@ class FilledPurpleButton: UIButton {
             setAttributedTitle(myAttrString , for: .normal)
         }
     }
-    
 }

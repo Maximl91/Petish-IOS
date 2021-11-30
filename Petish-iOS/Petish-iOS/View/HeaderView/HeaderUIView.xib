@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderUIView" customModule="Petish_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="klP-ZQ-JUE" id="KXo-TE-W75"/>
+                <outlet property="rightButton" destination="dgw-Zo-QNJ" id="eqs-EE-Ttf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFit" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eUk-7O-98c">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klP-ZQ-JUE">
+                            <rect key="frame" x="13" y="18" width="65" height="51"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="65" id="JfY-1Y-gys"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </backgroundConfiguration>
+                                <attributedString key="attributedTitle">
+                                    <fragment content="BACK">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="baseForegroundColor" name="violetBlue"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="backPressed:" destination="-1" eventType="touchUpInside" id="fWk-m8-Zft"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgw-Zo-QNJ">
+                            <rect key="frame" x="297" y="18" width="65" height="51"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="65" id="dpe-5j-MTf"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled">
+                                <backgroundConfiguration key="background">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </backgroundConfiguration>
+                                <attributedString key="attributedTitle">
+                                    <fragment content="SKIP">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="baseForegroundColor" name="violetBlue"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="rightPressed:" destination="-1" eventType="touchUpInside" id="CQQ-eJ-Ac8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="dgw-Zo-QNJ" firstAttribute="top" secondItem="eUk-7O-98c" secondAttribute="top" constant="18" id="K0y-PU-eii"/>
+                        <constraint firstAttribute="bottom" secondItem="klP-ZQ-JUE" secondAttribute="bottom" constant="11" id="RTl-1j-LlW"/>
+                        <constraint firstAttribute="trailing" secondItem="dgw-Zo-QNJ" secondAttribute="trailing" constant="13" id="Uau-3r-JWb"/>
+                        <constraint firstAttribute="bottom" secondItem="dgw-Zo-QNJ" secondAttribute="bottom" constant="11" id="dqK-Wh-Q3K"/>
+                        <constraint firstItem="klP-ZQ-JUE" firstAttribute="top" secondItem="eUk-7O-98c" secondAttribute="top" constant="18" id="hVF-QG-z9A"/>
+                        <constraint firstItem="klP-ZQ-JUE" firstAttribute="leading" secondItem="eUk-7O-98c" secondAttribute="leading" constant="13" id="wmA-xw-wlI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="dNH-Pp-zvk"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <accessibility key="accessibilityConfiguration">
+                <accessibilityTraits key="traits" header="YES"/>
+            </accessibility>
+            <constraints>
+                <constraint firstItem="eUk-7O-98c" firstAttribute="leading" secondItem="dNH-Pp-zvk" secondAttribute="leading" id="DAs-Z6-2lv"/>
+                <constraint firstItem="eUk-7O-98c" firstAttribute="top" secondItem="dNH-Pp-zvk" secondAttribute="top" id="iNK-yS-E9O"/>
+                <constraint firstItem="eUk-7O-98c" firstAttribute="bottom" secondItem="dNH-Pp-zvk" secondAttribute="bottom" id="j0j-Xi-i3Y"/>
+                <constraint firstItem="eUk-7O-98c" firstAttribute="trailing" secondItem="dNH-Pp-zvk" secondAttribute="trailing" id="tdT-JR-pm3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="152.80000000000001" y="101.64917541229386"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="violetBlue">
+            <color red="0.33700001239776611" green="0.050999999046325684" blue="0.64300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

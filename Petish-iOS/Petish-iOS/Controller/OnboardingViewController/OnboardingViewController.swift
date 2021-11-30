@@ -2,8 +2,7 @@ import UIKit
 import Firebase
 import FBSDKLoginKit
 
-class OnboardingViewController: UIViewController {
-    private let images = OnboardingData.images
+class OnboardingViewController: BaseViewController {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
@@ -12,9 +11,11 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        headerView?.configureBackButton(title: "BACK", hidden: true)
+    
         configureCollectionView()
         currentPagingView(index: 0)
+        collectionPaging.numberOfPages = onboardingData.count
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,9 +30,13 @@ class OnboardingViewController: UIViewController {
         }
     }
     
+    override func rightAction() {
+        self.performSegue(withIdentifier: SegueIdentifiers.SkipToLogin , sender: self)
+    }
+    
     func currentPagingView(index: Int){
-        descriptionLabel?.text = OnboardingData.descriptionTexts[index]
-        subtitleLabel?.text = OnboardingData.subtitleTexts[index]
+        descriptionLabel?.text = onboardingData[index].descriptionTexts
+        subtitleLabel?.text = onboardingData[index].subtitleTexts
         collectionPaging?.currentPage = index
     }
     
@@ -52,21 +57,21 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return images.count // 3
+        return onboardingData.count // 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.photoCellReuseId, for: indexPath) as! PhotoCell
-        cell.initCell(image: images[indexPath.row])
+        cell.initCell(image: onboardingData[indexPath.row].image)
         return cell
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView){
-        let centerOffset = 0.3
+        let centerOffset = 0.70
         let index = (scrollView.contentOffset.x / scrollView.frame.width )+centerOffset
         let roundedIndex = round(index)
-        let indexInBounds = Int(roundedIndex)%images.count
+        let indexInBounds = Int(roundedIndex)%onboardingData.count
         // once scrolled update outlets
-        currentPagingView(index: indexInBounds)
+        currentPagingView(index: index<1 ? 0 : indexInBounds )
     }
 }
