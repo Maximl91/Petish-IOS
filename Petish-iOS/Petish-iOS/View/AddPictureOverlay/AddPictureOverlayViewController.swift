@@ -1,13 +1,14 @@
 import UIKit
 
 protocol AddPictureOverlayDelegate{
-    func setImage(data: PetImageDetails)
+    func setImage(data: UIImage)
     func resetImage()
 }
 
 class AddPictureOverlayViewController: BaseViewController {
     
-    private var petImageDetails: PetImageDetails?
+//    private var petImageDetails: PetImageDetails?
+    private var petImage: UIImage?
     var delegate: AddPictureOverlayDelegate?
     let imagePickerController = UIImagePickerController()
     
@@ -34,7 +35,7 @@ class AddPictureOverlayViewController: BaseViewController {
     }
     
     @IBAction func uploadPressed(_ sender: FilledPurpleButton) {
-        if let data = petImageDetails{
+        if let data = petImage{
             delegate?.setImage(data: data)
         }
         dismissView()
@@ -49,8 +50,8 @@ extension AddPictureOverlayViewController: UIImagePickerControllerDelegate, UINa
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        if let petImage = info[.originalImage] as? UIImage, let imageUrl = info[.imageURL] as? NSURL {
-            petImageDetails = PetImageDetails(image: petImage, url: imageUrl)
+        if let petImage = info[.originalImage] as? UIImage {
+            self.petImage = petImage
         }
         self.dismiss(animated: true, completion: nil)
         uploadButton.enable()

@@ -2,8 +2,7 @@ import UIKit
 
 class CreatePetViewController: BaseViewController {
     
-    private var petImageDetails: PetImageDetails?
-    
+    private var petImage: UIImage?
     @IBOutlet weak var petUIView: UIView!
     @IBOutlet weak var petImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -21,15 +20,13 @@ class CreatePetViewController: BaseViewController {
     }
     
     @IBAction func nextButton(_ sender: FilledPurpleButton) {
-        self.performSegue(withIdentifier: SegueIdentifiers.CreatePetToDetails , sender: self)
-    }
+  
+        let vc: CreatePetDetailsViewController = (UIStoryboard.init(name: Storyboards.CreatePetStoryboard, bundle: Bundle.main).instantiateViewController(withIdentifier: Storyboards.CreatePet.CreatePetDetailsViewController) as! CreatePetDetailsViewController)
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == SegueIdentifiers.CreatePetToDetails) {
-            if let vc = segue.destination as? CreatePetDetailsViewController{
-                vc.seguePassedPetImageDetails = petImageDetails
-            }
+        if let image = petImage{
+            vc.viewModel.setPetImage(image: image)
         }
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func viewInitialSettings(){
@@ -50,9 +47,9 @@ extension CreatePetViewController: AddPictureOverlayDelegate{
         viewInitialSettings()
     }
     
-    func setImage(data: PetImageDetails) {
-        petImageDetails = data
-        petImageView.image = data.image
+    func setImage(data: UIImage) {
+        petImage = data
+        petImageView.image = data
         descriptionLabel.text = "EDIT PHOTO"
         petImageView.contentMode = .scaleAspectFill
     }

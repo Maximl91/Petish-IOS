@@ -37,8 +37,8 @@ class DropMenuCell: UITableViewCell {
                 delegate?.textFieldStateChanged(data: textToSet, type: typeToSet, isValid: true)
             }
         }
-        dropDown.cancelAction = { [unowned self] in
-            arrowView.image = #imageLiteral(resourceName: "downArrow")
+        dropDown.cancelAction = { ()->Void in
+            self.arrowView.image = #imageLiteral(resourceName: "downArrow")
         }
         dropDown.willShowAction = { [unowned self] in
             arrowView.image = #imageLiteral(resourceName: "upArrow")

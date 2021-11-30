@@ -45,7 +45,7 @@ class SignInViewModel: NSObject{
     }
     
     func signInClicked(_ completion: @escaping ( (String?)->Void )){
-        firebaseManager.signInWithEmailAndPassword(email: userData.email, password: userData.password, completionHandler: completion)
+        firebaseManager.signInWith(email: userData.email, password: userData.password, completionHandler: completion)
     }
     
     func signInFacebookClicked(listener: UIViewController,_ completion: @escaping ( (String?)->Void )){

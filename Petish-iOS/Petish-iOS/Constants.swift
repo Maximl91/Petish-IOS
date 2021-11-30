@@ -33,6 +33,15 @@ struct Constants{
     }
 }
 
+struct Storyboards{
+    static let CreatePetStoryboard = "CreatePet"
+    struct CreatePet{
+        static let CreatePetDetailsViewController = "CreatePetDetailsViewController"
+        static let CreatePetDimensionsViewController = "CreatePetDimensionsViewController"
+    }
+    
+}
+
 
 struct Colors{
     static let battleshipGray = "battleshipGray"

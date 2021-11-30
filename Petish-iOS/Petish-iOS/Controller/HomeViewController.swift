@@ -12,7 +12,7 @@ class HomeViewController: UIViewController { // temp just for testing
         if Auth.auth().currentUser?.uid != nil {
             do {
                 try Auth.auth().signOut()
-                dismiss(animated: false) {}
+                dismiss(animated: true) {}
             } catch let signOutError as NSError {
                 print ("Error signing out: %@", signOutError)
             }
@@ -22,7 +22,7 @@ class HomeViewController: UIViewController { // temp just for testing
             
             if let _ = AccessToken.current { // Access token available -- user already logged in
                 loginManager.logOut()
-                dismiss(animated: false) {}
+                dismiss(animated: true) {}
             }
         }
     }

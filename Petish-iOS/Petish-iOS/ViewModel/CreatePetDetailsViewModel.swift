@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 class CreatePetDetailsViewModel: NSObject{
     
@@ -13,6 +14,11 @@ class CreatePetDetailsViewModel: NSObject{
             CellData(placeholder: "Primary Breed", cellType: .dropMenu, cellDataType: .breed ,dropMenuDataSource: ["Terrier Dog", "German Shepard"]),
             CellData(placeholder: "Weight (kg)", cellType: .slider, cellDataType: .weight)
         ]
+       
+    }
+    
+    func setPetImage(image: UIImage){
+        petData.image = image
     }
     
     func getPetData() -> PetData{
@@ -40,7 +46,7 @@ class CreatePetDetailsViewModel: NSObject{
         else if type == CellDataType.weight{
             petData.weight = data
         }
-        
+ 
         completion()
     }
 }

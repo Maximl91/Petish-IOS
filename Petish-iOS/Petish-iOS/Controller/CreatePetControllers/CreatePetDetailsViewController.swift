@@ -2,8 +2,7 @@ import UIKit
 
 class CreatePetDetailsViewController: BaseViewController {
     
-    private let viewModel = CreatePetDetailsViewModel()
-    var seguePassedPetImageDetails: PetImageDetails? // nil if no image
+    let viewModel = CreatePetDetailsViewModel()
     var tableDataSource: MultiCellReuseableDataSource?
     
     @IBOutlet weak var nextButton: FilledPurpleButton!
@@ -11,23 +10,18 @@ class CreatePetDetailsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         tableDataSource = MultiCellReuseableDataSource(cellsToDisplay: 5, data: viewModel.fieldPlaceholderArray, listener: self)
         nextButton.disable()
         configureTableView()
     }
     
     @IBAction func nextButton(_ sender: FilledPurpleButton) {
-        self.performSegue(withIdentifier: SegueIdentifiers.PetDetailsToDimensions , sender: self)
-    }
+        let vc: CreatePetDimensionsViewController = (UIStoryboard.init(name: Storyboards.CreatePetStoryboard, bundle: Bundle.main).instantiateViewController(withIdentifier: Storyboards.CreatePet.CreatePetDimensionsViewController) as! CreatePetDimensionsViewController)
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == SegueIdentifiers.PetDetailsToDimensions) {
-            if let vc = segue.destination as? CreatePetDimensionsViewController {
-                vc.petData = viewModel.getPetData()
-                vc.petImageData = seguePassedPetImageDetails
-            }
-        }
+        vc.viewModel.petData = viewModel.getPetData()
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func configureTableView(){
@@ -47,7 +41,7 @@ class CreatePetDetailsViewController: BaseViewController {
     }
     
     override func goBack() {
-        navigationController?.popViewController(animated: false)
+        navigationController?.popViewController(animated: true)
     }
     
     override func rightAction() {
@@ -57,9 +51,15 @@ class CreatePetDetailsViewController: BaseViewController {
 
 extension CreatePetDetailsViewController: MultiCellDelegate{
     func textFieldStateChanged(data: String, type: CellDataType, isValid: Bool) {
+        
+//        guard let viewModel = self.viewModel else{
+//            return
+//        }
+        
         viewModel.addPetData(data, type){ () -> Void in
             self.viewModel.isReady() ? self.nextButton.enable() : self.nextButton.disable()
         }
+        
     }
     
     func sliderChanged(data: Int, type: CellDataType) {

@@ -40,7 +40,7 @@ class FirebaseManager: NSObject {
         }
     }
     
-    func signInWithEmailAndPassword(email: String, password: String, completionHandler: @escaping (String?)->Void ){
+    func signInWith(email: String, password: String, completionHandler: @escaping (String?)->Void ){
         Auth.auth().signIn(withEmail: email, password: password, completion:{ (authResult, error) in
             if let e = error {
                 let errorString = self.firebaseErrorToString(error: e)

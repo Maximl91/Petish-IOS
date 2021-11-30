@@ -2,9 +2,7 @@ import UIKit
 
 class CreatePetDimensionsViewController: BaseViewController {
     
-    var petData: PetData?
-    private let viewModel = CreatePetDimensionsViewModel()
-    var petImageData: PetImageDetails? // nil if no image
+    let viewModel = CreatePetDimensionsViewModel()
     var tableDataSource: MultiCellReuseableDataSource?
     
     @IBOutlet weak var tableView: UITableView!
@@ -14,7 +12,7 @@ class CreatePetDimensionsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableDataSource = MultiCellReuseableDataSource(cellsToDisplay: 3, data: viewModel.fieldPlaceholderArray, listener: self)
-        viewModel.petData = petData
+       
         viewInitialSettings()
         configureTableView()
     }
@@ -28,7 +26,7 @@ class CreatePetDimensionsViewController: BaseViewController {
         print(userId) // to display who
         
         showLoader()
-        viewModel.createFirstPetProfile(imageData: petImageData ,userId: userId){ (userId: String?, error: String?)->Void in
+        viewModel.createFirstPetProfile(imageData: viewModel.petData?.image ,userId: userId){ (userId: String?, error: String?)->Void in
                 self.hideLoader()
                 
                 if error == nil{
@@ -39,7 +37,7 @@ class CreatePetDimensionsViewController: BaseViewController {
     }
     
     func viewInitialSettings(){
-        if let pet = petData{
+        if let pet = viewModel.petData{
             titleLabel.text = "\(pet.name)'s Dimensions"
         }
     }
@@ -55,7 +53,7 @@ class CreatePetDimensionsViewController: BaseViewController {
     }
     
     override func goBack() {
-        navigationController?.popViewController(animated: false)
+        navigationController?.popViewController(animated: true)
     }
     
     override func rightAction() {

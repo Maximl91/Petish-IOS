@@ -34,7 +34,7 @@ class DatePickerCell: UITableViewCell {
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let clearButton = UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector(self.clearClick))
-        toolBar.setItems([clearButton, spaceButton, doneButton], animated: false)
+        toolBar.setItems([clearButton, spaceButton, doneButton], animated: true)
         toolBar.isUserInteractionEnabled = true
     }
     

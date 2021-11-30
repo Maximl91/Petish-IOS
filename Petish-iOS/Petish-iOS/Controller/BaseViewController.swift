@@ -40,7 +40,7 @@ class BaseViewController: UIViewController, HeaderViewDelegate {
     }
     
     func goBack() {
-        self.dismiss(animated: false, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     func rightAction() {}

@@ -32,13 +32,3 @@ struct PetDimensions{
         self.back = ""
     }
 }
-
-struct PetImageDetails{
-    let image: UIImage
-    let url: NSURL
-    
-    init(image: UIImage, url: NSURL){
-        self.image = image
-        self.url = url
-    }
-}

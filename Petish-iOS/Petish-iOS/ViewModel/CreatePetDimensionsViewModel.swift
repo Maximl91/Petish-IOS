@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 class CreatePetDimensionsViewModel: NSObject{
     
@@ -29,7 +30,7 @@ class CreatePetDimensionsViewModel: NSObject{
         completion()
     }
     
-    func createFirstPetProfile(imageData: PetImageDetails?, userId: String, _ completion: @escaping (String?, String?)->Void){
+    func createFirstPetProfile(imageData: UIImage?, userId: String, _ completion: @escaping (String?, String?)->Void){
         
         // check if pet data exists
         guard let pet = petData else {
@@ -52,7 +53,7 @@ class CreatePetDimensionsViewModel: NSObject{
             }
             
             // check if theres an image to upload
-            guard let image = imageData?.image else {
+            guard let image = imageData else {
                 print("no image to upload")
                 completion(nil, nil)
                 return

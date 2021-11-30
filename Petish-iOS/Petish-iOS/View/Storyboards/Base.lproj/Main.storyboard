@@ -34,7 +34,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="NEXT"/>
                                 <connections>
-                                    <segue destination="WJM-Zw-MhU" kind="show" animates="NO" id="zNo-ox-YVL"/>
+                                    <segue destination="WJM-Zw-MhU" kind="show" id="zNo-ox-YVL"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQK-vA-SNW">
@@ -112,9 +112,9 @@
                         <outlet property="descriptionLabel" destination="7Tm-Iz-GYB" id="Sdr-vH-q7E"/>
                         <outlet property="headerView" destination="d0U-x0-opa" id="xzT-Bv-FV7"/>
                         <outlet property="subtitleLabel" destination="c8b-kR-TkP" id="98q-bA-0Fk"/>
-                        <segue destination="3fN-uB-bHj" kind="show" identifier="AlreadyLoggedIn" animates="NO" id="Hj1-er-w1U"/>
-                        <segue destination="3fN-uB-bHj" kind="show" identifier="SkipToHome" animates="NO" id="9f4-FC-1y7"/>
-                        <segue destination="WJM-Zw-MhU" kind="show" identifier="SkipToLogin" animates="NO" id="mrP-JY-LSK"/>
+                        <segue destination="3fN-uB-bHj" kind="show" identifier="AlreadyLoggedIn" id="Hj1-er-w1U"/>
+                        <segue destination="3fN-uB-bHj" kind="show" identifier="SkipToHome" id="9f4-FC-1y7"/>
+                        <segue destination="WJM-Zw-MhU" kind="show" identifier="SkipToLogin" id="mrP-JY-LSK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -139,7 +139,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="3fN-uB-bHj" kind="show" animates="NO" id="mnp-0H-5wQ"/>
+                                    <segue destination="3fN-uB-bHj" kind="show" id="mnp-0H-5wQ"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dxU-tU-uE1">
@@ -160,7 +160,7 @@
                                             <color key="baseForegroundColor" name="violetBlue"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="NS1-xm-8Tk" kind="show" animates="NO" id="L6c-bp-eNK"/>
+                                            <segue destination="NS1-xm-8Tk" kind="show" id="L6c-bp-eNK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY3-1l-njI">
@@ -179,7 +179,7 @@
                                             <color key="baseForegroundColor" name="violetBlue"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="GK3-uX-X9m" kind="show" animates="NO" id="C4h-VD-kpI"/>
+                                            <segue destination="GK3-uX-X9m" kind="show" id="C4h-VD-kpI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -304,8 +304,8 @@
                         <outlet property="loginWithFacebook" destination="09D-Hk-WGH" id="K0g-z8-aRR"/>
                         <outlet property="signInButton" destination="JSP-fX-L0W" id="uQT-pk-7Kz"/>
                         <outlet property="tableView" destination="ZLH-jW-hCv" id="M94-MR-pkP"/>
-                        <segue destination="3fN-uB-bHj" kind="show" identifier="LoginSuccess" animates="NO" id="fSf-Ho-hHt"/>
-                        <segue destination="3fN-uB-bHj" kind="show" identifier="SkipToHome" animates="NO" id="sFI-7G-yI0"/>
+                        <segue destination="3fN-uB-bHj" kind="show" identifier="LoginSuccess" id="fSf-Ho-hHt"/>
+                        <segue destination="3fN-uB-bHj" kind="show" identifier="SkipToHome" id="sFI-7G-yI0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ed6-r0-PF9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -344,7 +344,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                         <connections>
-                                            <segue destination="NS1-xm-8Tk" kind="show" animates="NO" id="k98-uF-HMo"/>
+                                            <segue destination="NS1-xm-8Tk" kind="show" id="k98-uF-HMo"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -470,8 +470,8 @@ service and privacy policy</string>
                         <outlet property="signUpButton" destination="G5H-kn-9JW" id="G71-Jx-skV"/>
                         <outlet property="signUpFacebook" destination="cwb-9z-67I" id="O5V-t8-W1A"/>
                         <outlet property="tableView" destination="rtR-Me-qth" id="umS-Uh-C6l"/>
-                        <segue destination="3fN-uB-bHj" kind="show" identifier="SkipToHome" animates="NO" id="H0r-e2-YT8"/>
-                        <segue destination="Fb5-q3-FLW" kind="show" identifier="SignUpSuccess" animates="NO" id="iat-9o-QVD"/>
+                        <segue destination="3fN-uB-bHj" kind="show" identifier="SkipToHome" id="H0r-e2-YT8"/>
+                        <segue destination="Fb5-q3-FLW" kind="show" identifier="SignUpSuccess" id="iat-9o-QVD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cO-ku-uwK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -490,8 +490,8 @@ service and privacy policy</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fSf-Ho-hHt"/>
-        <segue reference="k98-uF-HMo"/>
+        <segue reference="9f4-FC-1y7"/>
+        <segue reference="L6c-bp-eNK"/>
         <segue reference="mrP-JY-LSK"/>
     </inferredMetricsTieBreakers>
     <resources>
