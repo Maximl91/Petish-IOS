@@ -25,6 +25,7 @@ class CreatePetDetailsViewController: BaseViewController {
         if (segue.identifier == SegueIdentifiers.PetDetailsToDimensions) {
             if let vc = segue.destination as? CreatePetDimensionsViewController {
                 vc.petData = viewModel.getPetData()
+                vc.petImageData = seguePassedPetImageDetails
             }
         }
     }

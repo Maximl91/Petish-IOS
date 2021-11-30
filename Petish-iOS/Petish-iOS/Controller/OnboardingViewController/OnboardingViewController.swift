@@ -12,7 +12,7 @@ class OnboardingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         headerView?.configureBackButton(title: "BACK", hidden: true)
-        
+    
         configureCollectionView()
         currentPagingView(index: 0)
         collectionPaging.numberOfPages = onboardingData.count

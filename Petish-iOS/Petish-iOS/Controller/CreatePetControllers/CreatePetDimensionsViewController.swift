@@ -4,6 +4,7 @@ class CreatePetDimensionsViewController: BaseViewController {
     
     var petData: PetData?
     private let viewModel = CreatePetDimensionsViewModel()
+    var petImageData: PetImageDetails? // nil if no image
     var tableDataSource: MultiCellReuseableDataSource?
     
     @IBOutlet weak var tableView: UITableView!
@@ -18,14 +19,22 @@ class CreatePetDimensionsViewController: BaseViewController {
         configureTableView()
     }
     
-    
     @IBAction func donePressed(_ sender: FilledPurpleButton) {
-        if let userId = self.getLoggedUserDetails(){
-            viewModel.createPetProfile(userId: userId){ (userId: String?, error: String?)->Void in
-                print("in callback")
-            }
-        }else{
-            // error
+        
+        guard let userId = self.getLoggedUserDetails() else{
+            print("error user is not logged-in!")
+            return
+        }
+        print(userId) // to display who
+        
+        showLoader()
+        viewModel.createFirstPetProfile(imageData: petImageData ,userId: userId){ (userId: String?, error: String?)->Void in
+                self.hideLoader()
+                
+                if error == nil{
+                    // completed pet creation
+                    // segue to next screen
+                }
         }
     }
     
